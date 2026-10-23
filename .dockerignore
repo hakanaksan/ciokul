@@ -1,0 +1,24 @@
+.git
+.github
+.gitignore
+.dockerignore
+Dockerfile
+__pycache__
+*.pyc
+.venv
+
+# Local-only material; the server reads data from PostgreSQL and files from the DataKey store
+.tmp
+data
+tools
+question_images
+reading_images
+reading_audio
+**/*.pdf
+Baslat.bat
+
+# Secrets
+.env
+.env.*
+DATAKEY-KURULUM.md
+CIOKUL-KURULUM.md

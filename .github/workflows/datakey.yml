@@ -1,0 +1,63 @@
+name: DataKey yayın
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency: datakey-yayin
+
+jobs:
+  yayin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Depoda "Variables" olarak tanımlı açık değişkenler (NEXT_PUBLIC_, VITE_, PUBLIC_)
+      # derlemeye girsin diye .env.production dosyasına eklenir. Gizli değer koymayın.
+      - name: Açık derleme değişkenleri
+        run: |
+          echo "$VARS_JSON" | jq -r 'to_entries[] | select(.key | test("^(NEXT_PUBLIC_|VITE_|PUBLIC_)")) | "\(.key)=\(.value)"' >> .env.production
+        env:
+          VARS_JSON: ${{ toJSON(vars) }}
+
+      - name: İmajı derle ve gönder
+        run: |
+          IMAGE="ghcr.io/${GITHUB_REPOSITORY,,}:${GITHUB_SHA::12}"
+          echo "$GH_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          docker build -t "$IMAGE" .
+          docker push "$IMAGE"
+          echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Sunucunun önündeki ağ koruması, tanımadığı bir adresten gelen ilk bağlantıyı
+      # sıfırlayabiliyor. Önce bağlantı yoklanır; istek sunucuya hiç ulaşmadıysa
+      # (curl 7: bağlanamadı, 35: TLS kurulamadı) yayın isteği yeniden denenir.
+      - name: DataKey'e yayınla
+        run: |
+          for i in 1 2 3 4 5 6; do
+            curl -sS -o /dev/null --max-time 15 "https://datakey.tr/giris" && break
+            echo "Sunucuya bağlanılamadı, tekrar deneniyor ($i/6)..."; sleep 5
+          done
+          jq -n --arg image "$IMAGE" --arg commit "$GITHUB_SHA" --arg message "$MESSAGE" \
+                --arg user "$GITHUB_ACTOR" --arg token "$GH_TOKEN" \
+            '{image: $image, commit: $commit, message: $message, registry_user: $user, registry_token: $token}' \
+            > "$RUNNER_TEMP/istek.json"
+          for i in 1 2 3; do
+            code=0
+            curl --fail-with-body -sS --max-time 600 -X POST "https://datakey.tr/hook/yayin/ciokul" \
+              -H "Authorization: Bearer $DEPLOY_TOKEN" -H "Content-Type: application/json" \
+              -d @"$RUNNER_TEMP/istek.json" || code=$?
+            if [ "$code" != 7 ] && [ "$code" != 35 ]; then exit "$code"; fi
+            echo "Bağlantı kurulamadı (curl $code), tekrar deneniyor ($i/3)..."; sleep 5
+          done
+          exit 1
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DATAKEY_DEPLOY_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: ${{ github.event.head_commit.message }}
