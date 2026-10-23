@@ -3,10 +3,9 @@
 from __future__ import annotations
 
 import json
-import os
 import re
-import tempfile
 import database
+import storage
 import study_features
 from io import BytesIO
 from pathlib import Path
@@ -152,7 +151,10 @@ def reading_question(db, section_id, number):
 
 def source_page(pdf_path, page_number):
     import pypdfium2
-    with pypdfium2.PdfDocument(str(pdf_path)) as document:
+    readable = storage.local_file(pdf_path.relative_to(BASE).as_posix(), pdf_path)
+    if readable is None:
+        raise ValueError("Kaynak PDF bulunamadı.")
+    with pypdfium2.PdfDocument(str(readable)) as document:
         if not 1 <= page_number <= len(document):
             raise ValueError("Kaynak PDF sayfası bulunamadı.")
         return document[page_number - 1].render(scale=2).to_pil().convert("RGB")
@@ -177,9 +179,9 @@ def handle(h, method, path, data, connect, lock, checked_date):
                     LEFT JOIN reading_questions q ON q.section_id=s.id
                     WHERE q.image=? OR (s.pages_json LIKE ? AND a.id IS NOT NULL) LIMIT 1""",
                     (name, f'%"{name}"%')).fetchone()
-        file = IMAGES / name
-        if not allowed or not file.is_file(): h.send_json({"error": "Görsel bulunamadı."}, 404)
-        else: h.send_path(file, "image/png")
+        payload = storage.read(f"reading_images/{name}", IMAGES / name) if allowed else None
+        if payload is None: h.send_json({"error": "Görsel bulunamadı."}, 404)
+        else: h.send_file(payload, "image/png")
         return True
     if not path.startswith("/api/reading"):
         return False
@@ -270,13 +272,9 @@ def handle(h, method, path, data, connect, lock, checked_date):
                 filename = q["image"] if side == "question" else q["answer_image"]
                 if not re.fullmatch(r"R\d{2}_[QA]\d{2}\.png", filename):
                     raise ValueError("Görsel dosyası geçersiz.")
-                with tempfile.NamedTemporaryFile(dir=IMAGES, suffix=".png", delete=False) as target:
-                    temporary = Path(target.name)
-                try:
-                    crop.save(temporary, format="PNG", optimize=True)
-                    os.replace(temporary, IMAGES / filename)
-                finally:
-                    temporary.unlink(missing_ok=True)
+                stream = BytesIO()
+                crop.save(stream, format="PNG", optimize=True)
+                storage.write(f"reading_images/{filename}", IMAGES / filename, stream.getvalue())
                 db.execute("""INSERT INTO reading_image_checks(section_id,number,side,verified,note)
                     VALUES (?,?,?,1,'') ON CONFLICT(section_id,number,side) DO UPDATE SET
                     verified=1,note='',updated_at=CURRENT_TIMESTAMP""", (section_id, number, side))

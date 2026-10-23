@@ -71,3 +71,22 @@ Veli ana sayfasında ders başına yaklaşan bir test ve tüm fasiküllerin öne
 ## Teknik yapı
 
 Uygulama Python standart kütüphanesiyle çalışan yerel HTTP sunucusu, SQLite veritabanı ve bağımsız HTML/CSS/JavaScript arayüzü kullanır. PDF içe aktarma için `pypdfium2` ve Pillow gerekir. `Baslat.bat`, bu bilgisayardaki Codex çalışma ortamının Python 3.10+ yorumlayıcısını kullanır.
+
+## Sunucuda çalıştırma (DataKey)
+
+Aynı uygulama DataKey üzerinde de çalışır: `main` dalına yapılan her push, `.github/workflows/datakey.yml` ile `Dockerfile`'dan imaj derler ve yayına alır. Ortam değişkeni verilmezse uygulama bu bilgisayardaki gibi SQLite ve yerel klasörlerle çalışır.
+
+DataKey panelinde (Ayarlar) tanımlanan değişkenler:
+
+- `DATABASE_URL`: PostgreSQL adresi. Tanımlıysa veriler PostgreSQL'de tutulur (`schema_postgres.sql`).
+- `DOSYA_URL`, `DOSYA_TOKEN`: DataKey dosya deposu. Tanımlıysa görseller, sesler, PDF'ler ve denetim raporları depodan okunur, kesim düzeltmeleri depoya yazılır.
+- `DOSYA_ANAHTARI`: Depo herkese açık olduğu için yalnızca velinin görmesi gereken dosyalar (okuma cevap görselleri, cevap anahtarı sayfaları bulunan PDF'ler, denetim raporları) AES-256-GCM ile şifrelenerek `gizli/` altına yüklenir. Anahtar `.env.datakey` dosyasındadır; bu dosya depoya ve imaja girmez.
+- `SETUP_TOKEN`: Sunucuda ilk kurulum ekranı bu anahtar olmadan çalışmaz.
+
+`HOST`, `PORT`, `TRUST_PROXY`, `COOKIE_SECURE` ve `TZ` imajda ayarlıdır. Oturumlar veritabanında tutulur; hatalı girişler adres ve rol başına sınırlanır.
+
+Araçlar:
+
+- `migrate_sqlite_to_pg.py`: `data/cio_okul.sqlite3` verisini `DATABASE_URL` veritabanına taşır (`--replace` ile üzerine yazar).
+- `upload_files.py`: Yerel içerik dosyalarını depoya yükler; aynı boyuttaki dosyaları atlar (`--force` hepsini yükler, `--new-key` yeni anahtar üretir).
+- Sunucudaki **Yedek indir** tüm tabloları JSON olarak verir; **Yedeği geri yükle** hem bu yedekleri hem de bu bilgisayarda alınmış eski yedekleri kabul eder (görseller hariç).

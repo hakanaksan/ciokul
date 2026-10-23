@@ -29,6 +29,7 @@ from curriculum_schedule import MONTHS, SCHOOL_YEAR, SOURCES, annotate_booklet
 import data_export
 import database
 import reading_module
+import storage
 import study_features
 
 
@@ -322,8 +323,12 @@ def pdf_for_booklet(db, booklet_id):
     source = db.execute("SELECT pdf_path FROM booklets WHERE id=?", (booklet_id,)).fetchone()
     if not source:
         raise ValueError("Fasikül bulunamadı.")
-    path = (BASE / source[0]).resolve()
-    if not path.is_relative_to((BASE / "4_sinif_fasikulleri").resolve()) or not path.is_file():
+    name = Path(source[0]).as_posix()
+    local = (BASE / name).resolve()
+    if not local.is_relative_to((BASE / "4_sinif_fasikulleri").resolve()):
+        raise ValueError("PDF bulunamadı.")
+    path = storage.local_file(name, local)
+    if path is None:
         raise ValueError("PDF bulunamadı.")
     return path
 
@@ -671,6 +676,23 @@ class Handler(BaseHTTPRequestHandler):
         with path.open("rb") as source:
             shutil.copyfileobj(source, self.wfile)
 
+    def send_remote_audio(self, name):
+        header = (self.headers.get("Range") or "").strip()
+        response = storage.open_range(name, header if re.fullmatch(r"bytes=\d*-\d*", header) else "")
+        if response is None:
+            return self.send_json({"error": "Ses bulunamadı."}, 404)
+        with response:
+            self.send_response(response.status)
+            self.send_header("Content-Type", "audio/wav")
+            for header_name in ("Content-Length", "Content-Range", "Accept-Ranges"):
+                if response.headers.get(header_name):
+                    self.send_header(header_name, response.headers[header_name])
+            self.send_header("Cache-Control", "private, max-age=86400")
+            self.send_header("X-Content-Type-Options", "nosniff")
+            self.end_headers()
+            if response.status in (200, 206):
+                shutil.copyfileobj(response, self.wfile, 256 * 1024)
+
     def send_audio_range(self, path):
         size = path.stat().st_size
         start, end, status = 0, size - 1, HTTPStatus.OK
@@ -741,8 +763,12 @@ class Handler(BaseHTTPRequestHandler):
                         allowed = db.execute("SELECT 1 FROM reading_sections WHERE id=?", (section,)).fetchone()
                     else:
                         allowed = db.execute("SELECT 1 FROM reading_assignments WHERE section_id=?", (section,)).fetchone()
+                if not allowed:
+                    return self.send_json({"error": "Ses bulunamadı."}, 404)
+                if storage.IS_REMOTE:
+                    return self.send_remote_audio(f"reading_audio/{name}")
                 audio = READING_AUDIO / name
-                if not allowed or not audio.is_file():
+                if not audio.is_file():
                     return self.send_json({"error": "Ses bulunamadı."}, 404)
                 return self.send_audio_range(audio)
             if path == "/api/state":
@@ -924,18 +950,18 @@ class Handler(BaseHTTPRequestHandler):
                 })
             if path == "/api/audit/status":
                 if not self.require("parent"): return
-                file=DATA/"soru_denetimi_ozet.json"
-                groups=DATA/"ortak_baglam_raporu.json"
-                summary=json.loads(file.read_text(encoding="utf-8")) if file.is_file() else None
-                context=json.loads(groups.read_text(encoding="utf-8")) if groups.is_file() else []
+                file=storage.read("data/soru_denetimi_ozet.json",DATA/"soru_denetimi_ozet.json")
+                groups=storage.read("data/ortak_baglam_raporu.json",DATA/"ortak_baglam_raporu.json")
+                summary=json.loads(file.decode("utf-8")) if file is not None else None
+                context=json.loads(groups.decode("utf-8")) if groups is not None else []
                 return self.send_json({"summary":summary,"sharedGroups":len(context),
                     "contextQuestions":sum(len(item["images"]) for item in context),
                     "trimmedPrevious":sum("trimmed_previous" in item for item in context)})
             if path == "/api/audit/report":
                 if not self.require("parent"): return
-                file=DATA/"soru_denetimi.csv"
-                if not file.is_file(): return self.send_json({"error":"Denetim raporu bulunamadı."},404)
-                return self.send_path(file,"text/csv; charset=utf-8","soru_denetimi.csv")
+                report=storage.read("data/soru_denetimi.csv",DATA/"soru_denetimi.csv")
+                if report is None: return self.send_json({"error":"Denetim raporu bulunamadı."},404)
+                return self.send_file(report,"text/csv; charset=utf-8","soru_denetimi.csv")
             if path == "/api/assignments":
                 if not self.require(): return
                 with connect() as db:
@@ -1097,9 +1123,8 @@ class Handler(BaseHTTPRequestHandler):
                             JOIN assignment_questions aq ON aq.question_id=q.id
                             WHERE q.image_path=? LIMIT 1""", (filename,)).fetchone()
                 if not allowed: return self.send_json({"error": "Görsel bulunamadı."}, 404)
-                file = QUESTION_IMAGES / filename
-                if not file.is_file(): return self.send_json({"error": "Görsel dosyası bulunamadı."}, 404)
-                payload = file.read_bytes()
+                payload = storage.read(f"question_images/{filename}", QUESTION_IMAGES / filename)
+                if payload is None: return self.send_json({"error": "Görsel dosyası bulunamadı."}, 404)
                 self.send_response(200)
                 self.send_header("Content-Type", "image/png")
                 self.send_header("Content-Length", str(len(payload)))
@@ -1408,14 +1433,9 @@ class Handler(BaseHTTPRequestHandler):
                         filename = q["image_path"]
                         if not filename or not re.fullmatch(r"[A-Z0-9_]+\.png",filename):
                             raise ValueError("Görsel dosyası geçersiz.")
-                        QUESTION_IMAGES.mkdir(exist_ok=True)
-                        with tempfile.NamedTemporaryFile(dir=QUESTION_IMAGES,suffix=".png",delete=False) as target:
-                            temporary = Path(target.name)
-                        try:
-                            crop.save(temporary,format="PNG",optimize=True)
-                            os.replace(temporary,QUESTION_IMAGES / filename)
-                        finally:
-                            temporary.unlink(missing_ok=True)
+                        buffer = BytesIO()
+                        crop.save(buffer,format="PNG",optimize=True)
+                        storage.write(f"question_images/{filename}",QUESTION_IMAGES / filename,buffer.getvalue())
                         db.execute("UPDATE questions SET verified=1 WHERE id=?",(qid,))
                         db.execute("DELETE FROM question_flags WHERE question_id=?",(qid,))
                     else:
