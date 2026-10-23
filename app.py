@@ -20,12 +20,13 @@ from contextlib import closing
 from datetime import date
 from io import BytesIO
 from http import HTTPStatus
-from http.cookies import SimpleCookie
+from http.cookies import CookieError, SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from curriculum_schedule import MONTHS, SCHOOL_YEAR, SOURCES, annotate_booklet
+import data_export
 import database
 import reading_module
 import study_features
@@ -38,10 +39,24 @@ WEB = BASE / "web"
 PDF = BASE / "4_sinif_fasikulleri" / "Din_Kulturu_ve_Ahlak_Bilgisi" / "unite_01.pdf"
 QUESTION_IMAGES = BASE / "question_images"
 READING_AUDIO = BASE / "reading_audio"
+# Server settings; the defaults keep the local single-computer setup unchanged.
+HOST = os.environ.get("HOST", "127.0.0.1")
+PORT = int(os.environ.get("PORT", "8765"))
+SETUP_TOKEN = os.environ.get("SETUP_TOKEN", "")
+SETUP_TOKEN_REQUIRED = bool(SETUP_TOKEN) or HOST not in ("127.0.0.1", "localhost", "::1")
+TRUST_PROXY = os.environ.get("TRUST_PROXY") == "1"
+COOKIE_SECURE = os.environ.get("COOKIE_SECURE") == "1"
+SESSION_SECONDS = 60 * 60 * 12
+# Cache of the sessions table: SHA-256 of the cookie token -> (role, expires_at).
 SESSIONS: dict[str, tuple[str, float]] = {}
+LOGIN_WINDOW = 15 * 60
+LOGIN_LIMITS = {"ip": 8, "role": 30}
+LOGIN_FAILURES: dict[str, list[float]] = {}
+LOGIN_LOCK = threading.Lock()
 DB_LOCK = threading.RLock()
 TEST_SIZE = 15
 BACKUP_NAME = "cio_okul_yedek.zip"
+BACKUP_JSON = "cio_okul.json"
 BACKUPS_DIR = DATA / "backups"
 MAX_AUTO_BACKUPS = 7
 
@@ -196,6 +211,11 @@ def init_db():
               resolved_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
               PRIMARY KEY(kind, item_key)
             );
+            CREATE TABLE IF NOT EXISTS sessions (
+              token_hash TEXT PRIMARY KEY,
+              role TEXT NOT NULL CHECK(role IN ('parent','student')),
+              expires_at INTEGER NOT NULL
+            );
             """)
             columns = {row[1] for row in db.execute("PRAGMA table_info(questions)")}
             if "image_path" not in columns:
@@ -231,6 +251,67 @@ def init_db():
 
 def hash_secret(secret: str, salt: str) -> str:
     return hashlib.pbkdf2_hmac("sha256", secret.encode(), bytes.fromhex(salt), 310_000).hex()
+
+
+def token_hash(token: str) -> str:
+    return hashlib.sha256(token.encode()).hexdigest()
+
+
+def create_session(role):
+    """Stores a new session and returns the cookie token. Sessions survive restarts and deploys."""
+    token = secrets.token_urlsafe(32)
+    key, now = token_hash(token), int(time.time())
+    expires = now + SESSION_SECONDS
+    with DB_LOCK, connect() as db:
+        db.execute("DELETE FROM sessions WHERE expires_at < ?", (now,))
+        db.execute("INSERT INTO sessions VALUES (?,?,?)", (key, role, expires))
+    SESSIONS[key] = (role, expires)
+    return token
+
+
+def session_role(token):
+    key, now = token_hash(token), time.time()
+    cached = SESSIONS.get(key)
+    if cached and cached[1] > now:
+        return cached[0]
+    with connect() as db:
+        row = db.execute("SELECT role, expires_at FROM sessions WHERE token_hash=?", (key,)).fetchone()
+    if not row or row[1] < now:
+        SESSIONS.pop(key, None)
+        return None
+    SESSIONS[key] = (row[0], row[1])
+    return row[0]
+
+
+def end_session(token):
+    key = token_hash(token)
+    SESSIONS.pop(key, None)
+    with DB_LOCK, connect() as db:
+        db.execute("DELETE FROM sessions WHERE token_hash=?", (key,))
+
+
+def clear_sessions():
+    SESSIONS.clear()
+    with DB_LOCK, connect() as db:
+        db.execute("DELETE FROM sessions")
+
+
+def login_blocked(keys):
+    """True when any key (client address, role) had too many failed attempts in the window."""
+    now = time.time()
+    with LOGIN_LOCK:
+        for key in keys:
+            recent = [moment for moment in LOGIN_FAILURES.get(key, []) if now - moment < LOGIN_WINDOW]
+            LOGIN_FAILURES[key] = recent
+            if len(recent) >= LOGIN_LIMITS[key.split(":", 1)[0]]:
+                return True
+    return False
+
+
+def record_login_failure(keys):
+    with LOGIN_LOCK:
+        for key in keys:
+            LOGIN_FAILURES.setdefault(key, []).append(time.time())
 
 
 def rows(db, sql, params=()):
@@ -291,6 +372,38 @@ def validate_backup(path):
                 actual = {row[0] for row in check.execute("SELECT name FROM sqlite_master WHERE type='table'")}
                 if not required.issubset(actual):
                     raise ValueError("Yedek bu uygulamaya ait değil.")
+
+
+def restore_postgres_backup(path):
+    """Restores a backup ZIP into PostgreSQL in one transaction.
+
+    Accepts the server's JSON backups and the local app's SQLite backups. Images in the ZIP are
+    not restored here; their count is returned. Everyone is signed out afterwards.
+    """
+    with zipfile.ZipFile(path) as archive:
+        names = set(archive.namelist())
+        if archive.testzip():
+            raise ValueError("Yedek eksik veya bozuk.")
+        if BACKUP_JSON in names:
+            if archive.getinfo(BACKUP_JSON).file_size > 300_000_000:
+                raise ValueError("Yedek dosyası çok büyük.")
+            payload = json.loads(archive.read(BACKUP_JSON).decode("utf-8"))
+        elif "cio_okul.sqlite3" in names:
+            info = archive.getinfo("cio_okul.sqlite3")
+            if info.file_size > 150_000_000:
+                raise ValueError("Yedek dosyası çok büyük.")
+            with tempfile.TemporaryDirectory() as directory:
+                database_file = Path(directory) / "backup.sqlite3"
+                with archive.open(info) as source, database_file.open("wb") as target:
+                    shutil.copyfileobj(source, target)
+                payload = data_export.read_sqlite(database_file)
+        else:
+            raise ValueError("Yedekte veritabanı yok.")
+        images = sum(1 for name in names if name.endswith(".png"))
+    with DB_LOCK, connect() as db:
+        counts = data_export.restore_tables(db, payload)
+    clear_sessions()
+    return counts, images
 
 
 def restore_pending():
@@ -507,13 +620,21 @@ class Handler(BaseHTTPRequestHandler):
         try:
             cookie.load(self.headers.get("Cookie", ""))
             token = cookie["session"].value
-        except (KeyError, ValueError):
+        except (KeyError, ValueError, CookieError):
             return None
-        value = SESSIONS.get(token)
-        if not value or value[1] < time.time():
-            SESSIONS.pop(token, None)
-            return None
-        return value[0]
+        return session_role(token) if token else None
+
+    def client_ip(self):
+        # The proxy in front of the server appends the visitor address as the last entry.
+        if TRUST_PROXY:
+            forwarded = [part.strip() for part in self.headers.get("X-Forwarded-For", "").split(",") if part.strip()]
+            if forwarded:
+                return forwarded[-1]
+        return self.client_address[0]
+
+    def session_cookie(self, token, max_age):
+        return (f"session={token}; HttpOnly; SameSite=Strict; Path=/; Max-Age={max_age}"
+                + ("; Secure" if COOKIE_SECURE else ""))
 
     def send_json(self, data, status=200, cookie=None):
         payload = json.dumps(data, ensure_ascii=False).encode("utf-8")
@@ -628,7 +749,8 @@ class Handler(BaseHTTPRequestHandler):
                 with connect() as db:
                     configured = db.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 2
                     student = db.execute("SELECT name FROM users WHERE role='student'").fetchone()
-                return self.send_json({"configured": configured, "role": self.role(), "studentName": student[0] if student else None})
+                return self.send_json({"configured": configured, "role": self.role(), "studentName": student[0] if student else None,
+                                       "setupTokenRequired": SETUP_TOKEN_REQUIRED})
             if path == "/api/study/dashboard":
                 if not self.require("parent"): return
                 with connect() as db:
@@ -878,7 +1000,14 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/backup":
                 if not self.require("parent"): return
                 if database.IS_POSTGRES:
-                    return self.send_json({"error": "Yedek indirme bu sunucuda henüz hazır değil."}, 501)
+                    with DB_LOCK, connect() as db:
+                        payload = json.dumps(data_export.export_tables(db), ensure_ascii=False).encode("utf-8")
+                        db.execute("""INSERT INTO settings(key,value) VALUES ('last_backup_at',CURRENT_TIMESTAMP)
+                            ON CONFLICT(key) DO UPDATE SET value=CURRENT_TIMESTAMP""")
+                    buffer = BytesIO()
+                    with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+                        archive.writestr(BACKUP_JSON, payload)
+                    return self.send_file(buffer.getvalue(), "application/zip", BACKUP_NAME)
                 DATA.mkdir(exist_ok=True)
                 with tempfile.TemporaryDirectory(dir=DATA) as temporary:
                     directory = Path(temporary)
@@ -1001,13 +1130,13 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if path == "/api/backup/restore":
                 if not self.require("parent"): return
-                if database.IS_POSTGRES:
-                    return self.send_json({"error": "Yedekten geri yükleme bu sunucuda henüz hazır değil."}, 501)
                 length = int(self.headers.get("Content-Length", "0"))
                 if length < 100 or length > 2_000_000_000:
                     raise ValueError("Yedek dosyasının boyutu geçersiz.")
-                DATA.mkdir(exist_ok=True)
-                with tempfile.NamedTemporaryFile(dir=DATA, suffix=".zip", delete=False) as target:
+                if not database.IS_POSTGRES:
+                    DATA.mkdir(exist_ok=True)
+                upload_dir = None if database.IS_POSTGRES else DATA
+                with tempfile.NamedTemporaryFile(dir=upload_dir, suffix=".zip", delete=False) as target:
                     temporary = Path(target.name)
                     remaining = length
                     while remaining:
@@ -1017,6 +1146,10 @@ class Handler(BaseHTTPRequestHandler):
                         target.write(chunk)
                         remaining -= len(chunk)
                 try:
+                    if database.IS_POSTGRES:
+                        counts, images = restore_postgres_backup(temporary)
+                        return self.send_json({"ok": True, "restartRequired": False,
+                                               "restoredRows": sum(counts.values()), "imagesSkipped": images})
                     validate_backup(temporary)
                     os.replace(temporary, DATA / "pending_restore.zip")
                 finally:
@@ -1028,6 +1161,14 @@ class Handler(BaseHTTPRequestHandler):
                     create_auto_backup()
                 return
             if path == "/api/setup":
+                # On a reachable server the first visitor must not become the parent: setup needs SETUP_TOKEN.
+                if SETUP_TOKEN_REQUIRED:
+                    keys = [f"ip:{self.client_ip()}"]
+                    if login_blocked(keys):
+                        return self.send_json({"error": "Çok fazla hatalı deneme. 15 dakika sonra tekrar deneyin."}, 429)
+                    if not SETUP_TOKEN or not hmac.compare_digest(str(data.get("setupToken", "")), SETUP_TOKEN):
+                        record_login_failure(keys)
+                        return self.send_json({"error": "Kurulum anahtarı yanlış veya sunucuda tanımlı değil."}, 403)
                 parent_password = str(data.get("parentPassword", ""))
                 student_pin = str(data.get("studentPin", ""))
                 student_name = str(data.get("studentName", "")).strip()
@@ -1042,18 +1183,26 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json({"ok": True})
             if path == "/api/login":
                 role = data.get("role")
+                if role not in ("parent", "student"):
+                    return self.send_json({"error": "Giriş bilgisi yanlış."}, 401)
+                keys = [f"ip:{self.client_ip()}", f"role:{role}"]
+                if login_blocked(keys):
+                    return self.send_json({"error": "Çok fazla hatalı deneme. 15 dakika sonra tekrar deneyin."}, 429)
                 with connect() as db:
                     user = db.execute("SELECT * FROM users WHERE role=?", (role,)).fetchone()
                 if not user or not hmac.compare_digest(user["secret_hash"], hash_secret(str(data.get("secret", "")), user["salt"])):
+                    record_login_failure(keys)
                     return self.send_json({"error": "Giriş bilgisi yanlış."}, 401)
-                token = secrets.token_urlsafe(32)
-                SESSIONS[token] = (role, time.time() + 60 * 60 * 12)
-                return self.send_json({"role": role, "name": user["name"]}, cookie=f"session={token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=43200")
+                token = create_session(role)
+                return self.send_json({"role": role, "name": user["name"]}, cookie=self.session_cookie(token, SESSION_SECONDS))
             if path == "/api/logout":
                 cookie = SimpleCookie()
-                cookie.load(self.headers.get("Cookie", ""))
-                if "session" in cookie: SESSIONS.pop(cookie["session"].value, None)
-                return self.send_json({"ok": True}, cookie="session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0")
+                try:
+                    cookie.load(self.headers.get("Cookie", ""))
+                except CookieError:
+                    pass
+                if "session" in cookie: end_session(cookie["session"].value)
+                return self.send_json({"ok": True}, cookie=self.session_cookie("", 0))
             if path == "/api/student/mistakes/resolve":
                 if not self.require(): return
                 kind = str(data.get("kind", ""))
@@ -1386,10 +1535,11 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     init_db()
-    server = ThreadingHTTPServer(("127.0.0.1", 8765), Handler)
-    print("CioOkul hazır: http://127.0.0.1:8765", flush=True)
+    server = ThreadingHTTPServer((HOST, PORT), Handler)
+    local_url = f"http://127.0.0.1:{PORT}"
+    print(f"CioOkul hazır: {HOST}:{PORT}" if SETUP_TOKEN_REQUIRED else f"CioOkul hazır: {local_url}", flush=True)
     if os.environ.get("CIO_NO_BROWSER") != "1":
-        webbrowser.open("http://127.0.0.1:8765")
+        webbrowser.open(local_url)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

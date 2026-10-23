@@ -184,5 +184,12 @@ CREATE TABLE IF NOT EXISTS study_repeat_queue (
   PRIMARY KEY(kind,item_key)
 );
 
+-- Login sessions; only a SHA-256 of the cookie token is stored. Not part of backups.
+CREATE TABLE IF NOT EXISTS sessions (
+  token_hash TEXT PRIMARY KEY,
+  role TEXT NOT NULL CHECK(role IN ('parent','student')),
+  expires_at INTEGER NOT NULL
+);
+
 -- Later schema changes go below as idempotent statements, e.g.
 -- ALTER TABLE assignments ADD COLUMN IF NOT EXISTS example TEXT;
