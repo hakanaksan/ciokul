@@ -1,0 +1,667 @@
+/* Print & Worksheet Styles for CioOkul */
+
+/* On-screen Worksheet Preview */
+.print-view-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.print-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #dce7df;
+  border-radius: 14px;
+  padding: 12px 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(20, 60, 40, 0.06);
+}
+
+.print-toolbar-options {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 700;
+  color: #375345;
+}
+
+.print-toolbar-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.print-toolbar-options input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: #08796e;
+}
+
+.print-sheet {
+  background: #ffffff;
+  color: #1a2721;
+  border: 1px solid #dce5df;
+  border-radius: 14px;
+  padding: 32px 36px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* Printable Document Header */
+.print-header {
+  border-bottom: 2px solid #204d3e;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.print-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.print-logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #08796e;
+  letter-spacing: -0.5px;
+}
+
+.print-tag {
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #edf7f2;
+  color: #106f50;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.print-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 6px 0 14px;
+  color: #173629;
+}
+
+.print-meta-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1.3fr 1.2fr;
+  gap: 12px;
+  font-size: 13px;
+  color: #3d5248;
+  background: #f7faf8;
+  border: 1px solid #e1ebe4;
+  border-radius: 8px;
+  padding: 9px 14px;
+}
+
+.print-meta-grid strong {
+  color: #1b382c;
+}
+
+/* Optical Answer Bubble Form */
+.print-optic-box {
+  background: #fbfdfc;
+  border: 1.5px solid #bdd5c8;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 22px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.print-optic-title {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #0d6e53;
+  margin-bottom: 8px;
+}
+
+.print-optic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 20px;
+}
+
+.print-optic-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.print-optic-num {
+  min-width: 22px;
+  color: #2b453a;
+}
+
+.print-optic-bubbles {
+  display: flex;
+  gap: 6px;
+}
+
+.print-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  border: 1.5px solid #5a7d6e;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  color: #274538;
+}
+
+/* Questions on Paper */
+.print-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.print-q-card {
+  border: 1px solid #dce7df;
+  border-radius: 10px;
+  padding: 16px;
+  background: #fff;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.print-q-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 750;
+  color: #176550;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eef3ef;
+}
+
+.print-q-head span {
+  color: #657e72;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.print-q-image {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  margin: 10px auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.print-q-stem {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 10px 0 14px;
+}
+
+.print-q-choices {
+  display: grid;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.print-choice-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.print-choice-bubble {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #4a6c5e;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.print-choice-square {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #4a6c5e;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Handwriting Lines for Written Questions */
+.print-handwriting-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 16px;
+  padding: 6px 0;
+}
+
+.print-handwriting-lines span {
+  display: block;
+  width: 100%;
+  border-bottom: 1px dashed #9cb5a8;
+  height: 1px;
+}
+
+/* Reading Text Section on Paper */
+.print-reading-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.print-reading-page-card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  text-align: center;
+}
+
+.print-reading-page-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #dce5df;
+}
+
+.print-reading-page-caption {
+  font-size: 12px;
+  color: #5d7568;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.print-page-break {
+  break-after: page;
+  page-break-after: always;
+}
+
+/* Answer Key Box at End */
+.print-answer-key {
+  margin-top: 30px;
+  padding: 16px;
+  border: 2px dashed #7a9c8b;
+  border-radius: 10px;
+  background: #fbfdfc;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.print-key-head {
+  font-size: 12px;
+  font-weight: 800;
+  color: #1b533e;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.print-key-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1c3d2e;
+}
+
+/* =====================================================
+   PRINT MEDIA RULES (@media print)
+   ===================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+
+  .topbar,
+  .print-toolbar,
+  .footer-note,
+  #flash,
+  #logout,
+  .ui-preferences,
+  .btn,
+  .link-btn {
+    display: none !important;
+  }
+
+  .shell {
+    min-height: auto !important;
+  }
+
+  .main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-view-wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .print-sheet {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .print-header {
+    border-bottom: 2px solid #000 !important;
+  }
+
+  .print-logo {
+    color: #000 !important;
+  }
+
+  .print-tag {
+    border: 1px solid #000 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+
+  .print-meta-grid {
+    background: transparent !important;
+    border: 1px solid #777 !important;
+    color: #000 !important;
+  }
+
+  .print-meta-grid strong {
+    color: #000 !important;
+  }
+
+  .print-optic-box {
+    background: transparent !important;
+    border: 1.5px solid #000 !important;
+  }
+
+  .print-optic-title {
+    color: #000 !important;
+  }
+
+  .print-bubble,
+  .print-choice-bubble,
+  .print-choice-square {
+    border-color: #000 !important;
+    color: #000 !important;
+  }
+
+  .print-q-card {
+    border: 1px solid #aaa !important;
+    box-shadow: none !important;
+    margin-bottom: 12px;
+  }
+
+  .print-q-head {
+    color: #000 !important;
+    border-bottom: 1px solid #ccc !important;
+  }
+
+  .print-q-head span {
+    color: #444 !important;
+  }
+
+  .print-handwriting-lines span {
+    border-bottom: 1px dashed #666 !important;
+  }
+
+  .print-answer-key {
+    border: 2px dashed #000 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+
+  .print-key-head {
+    color: #000 !important;
+  }
+
+  .print-page-break {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .print-q-card,
+  .print-optic-box,
+  .print-reading-page-card,
+  .print-answer-key,
+  .report-card-sheet {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+/* Report Card & Bulletin Styles */
+.report-card-sheet {
+  padding: 36px 40px;
+}
+.report-header {
+  border-bottom: 2.5px solid #0f172a;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+.report-header-brand h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 6px 0 4px;
+}
+.report-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.report-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 14px;
+  font-size: 13px;
+}
+.report-meta-grid .label {
+  color: #64748b;
+  display: block;
+  font-size: 11px;
+}
+.report-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.report-kpi-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.report-kpi-box.accent {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+.report-kpi-box.accent .kpi-num {
+  color: #15803d;
+}
+.report-kpi-box.gold {
+  background: #fefce8;
+  border-color: #fde047;
+}
+.report-kpi-box.gold .kpi-num {
+  color: #a16207;
+}
+.kpi-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+}
+.kpi-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+.report-section {
+  margin-bottom: 22px;
+}
+.report-sec-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  border-bottom: 1.5px solid #e2e8f0;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.report-table th,
+.report-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.report-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+}
+.report-bar-wrap {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.report-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+}
+.report-bar-fill.good { background: #22c55e; }
+.report-bar-fill.med { background: #eab308; }
+.report-bar-fill.low { background: #ef4444; }
+.report-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.report-skill-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.skill-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748b;
+}
+.report-reasons-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.report-reason-chip {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+}
+.reason-count {
+  font-size: 14px;
+  color: #0f172a;
+}
+.weak-units-summary {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.weak-unit-pill {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #9f1239;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+.report-footer-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px dashed #cbd5e1;
+}
+.report-signatures {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  align-items: flex-end;
+}
+.sig-col {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #475569;
+}
+.sig-line {
+  width: 110px;
+  border-bottom: 1.5px solid #0f172a;
+  margin: 28px auto 4px;
+}
+

@@ -1,0 +1,25 @@
+# Large content: PDFs, generated images and audio (re-creatable with the import scripts)
+/4_sinif_fasikulleri/**/*.pdf
+/4_sinif_okuma_becerileri/*.pdf
+/question_images/
+/reading_images/
+/reading_audio/
+
+# Local data: SQLite database, backups, reports
+/data/
+
+# Text-to-speech tool and voice model
+/tools/
+
+# Scratch work and Python caches
+/.tmp/
+__pycache__/
+*.pyc
+/.venv/
+
+# Secrets: environment files and DataKey setup files (they contain tokens)
+.env
+.env.*
+!.env.example
+DATAKEY-KURULUM.md
+CIOKUL-KURULUM.md

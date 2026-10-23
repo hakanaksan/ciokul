@@ -1,0 +1,278 @@
+{
+  "sayfa": "https://odsgm.meb.gov.tr/www/4-sinif-calisma-fasikulleri/icerik/615",
+  "dosyalar": [
+    {
+      "ders": "Turkce",
+      "dosya": "Turkce/tema_01_02.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14141751_4.sinif_Turkce_1ve2.unite.pdf",
+      "boyut_bayt": 30755517,
+      "sha256": "45523d96a5d13b84dde397aa2c1c2f00e903875cf9e226c9de3d490a28e2a907"
+    },
+    {
+      "ders": "Turkce",
+      "dosya": "Turkce/tema_03_04.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/3ve4_tema_Turkce.pdf",
+      "boyut_bayt": 24391562,
+      "sha256": "47ffd7379a3f88bb23182e1964621e0d04865e7cbfbbff0cc096c44a27a6064a"
+    },
+    {
+      "ders": "Turkce",
+      "dosya": "Turkce/tema_05_06.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_Turkce_tema_5_ve_6.pdf",
+      "boyut_bayt": 32413429,
+      "sha256": "1b9938566ede9289916ce1cd42e5e2266024f747604a4339c114a4c3fca1e753"
+    },
+    {
+      "ders": "Turkce",
+      "dosya": "Turkce/tema_07_08.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/06/odsgm/4.SINIF_TURKCE_7ve8.Tema.pdf",
+      "boyut_bayt": 22394909,
+      "sha256": "c219c8598df03d7b4fcd50d9196ed695630f7cabb0c280c43480cf9b9c9137c6"
+    },
+    {
+      "ders": "Matematik",
+      "dosya": "Matematik/unite_01.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14140410_4.sinif_Matematik_1.unite.pdf",
+      "boyut_bayt": 11044664,
+      "sha256": "46aa0ead1ee0853a24fa27de5618cede157725e61266b4e7b5eadb25509b8c04"
+    },
+    {
+      "ders": "Matematik",
+      "dosya": "Matematik/unite_02.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14140410_4.sinif_Matematik_2.unite.pdf",
+      "boyut_bayt": 11606307,
+      "sha256": "26480f6f90419f000db95112abf2c2c97c812baf538d0db49abe8c2063ed346f"
+    },
+    {
+      "ders": "Matematik",
+      "dosya": "Matematik/unite_03.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/21101025_3_unite_matematik.pdf",
+      "boyut_bayt": 10677812,
+      "sha256": "64ede0f38e42d8b21db784248eb38156f5c10ca9f70b9046784ccb54dc075db3"
+    },
+    {
+      "ders": "Matematik",
+      "dosya": "Matematik/unite_04.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/4_unite_matematik.pdf",
+      "boyut_bayt": 17507108,
+      "sha256": "f052bd2f025ba9f3f404437ae400504549fb4d0a92bc2d035c29102edee1274a"
+    },
+    {
+      "ders": "Matematik",
+      "dosya": "Matematik/unite_05.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_matematik_unite_5.pdf",
+      "boyut_bayt": 9534395,
+      "sha256": "4c5aeafa00f781216e68b2839e27aa1a09dae1bec865724f5ff30cedd5c6ef5a"
+    },
+    {
+      "ders": "Matematik",
+      "dosya": "Matematik/unite_06.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_matematik_unite_6.pdf",
+      "boyut_bayt": 5524487,
+      "sha256": "b8c0e14093e150d4b97961cb80ba559a115b05155760a7d1d2be0aa8200cb8ef"
+    },
+    {
+      "ders": "Din_Kulturu_ve_Ahlak_Bilgisi",
+      "dosya": "Din_Kulturu_ve_Ahlak_Bilgisi/unite_01.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_09/28141914_14134328_4.sinif_DKAB_1.unite.pdf",
+      "boyut_bayt": 2682080,
+      "sha256": "cf16027d0d7595501c9f822396e8c8fdfcbee1bde87b8592118777554f962962"
+    },
+    {
+      "ders": "Din_Kulturu_ve_Ahlak_Bilgisi",
+      "dosya": "Din_Kulturu_ve_Ahlak_Bilgisi/unite_02.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14134328_4.sinif_DKAB_2.unite.pdf",
+      "boyut_bayt": 1760099,
+      "sha256": "09242b12dcf6d635e7db93a3a30195dc5816ad35904e18bd454c5d22789721d9"
+    },
+    {
+      "ders": "Din_Kulturu_ve_Ahlak_Bilgisi",
+      "dosya": "Din_Kulturu_ve_Ahlak_Bilgisi/unite_03.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/3_unite_dinkulturuveahlakbilgisi.pdf",
+      "boyut_bayt": 2227243,
+      "sha256": "a8efd5c8b6a86ae8293805edf54f7d9c87b11259eb988e10b5be4ddfe0d4e194"
+    },
+    {
+      "ders": "Din_Kulturu_ve_Ahlak_Bilgisi",
+      "dosya": "Din_Kulturu_ve_Ahlak_Bilgisi/unite_04.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/4_unite_dinkulturuveahlakbilgisi.pdf",
+      "boyut_bayt": 3141034,
+      "sha256": "b2ab73bf431b75d6afc3580cae8e8b333f45cfa1e79164ab04c2b466144aadc3"
+    },
+    {
+      "ders": "Din_Kulturu_ve_Ahlak_Bilgisi",
+      "dosya": "Din_Kulturu_ve_Ahlak_Bilgisi/unite_05.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_dkab_unite_5.pdf",
+      "boyut_bayt": 2981962,
+      "sha256": "d69a8fc36796eecfc471b2286c7d1d58bdcf49bc093c5a989b62c6bfb62d6f65"
+    },
+    {
+      "ders": "Fen_Bilimleri",
+      "dosya": "Fen_Bilimleri/unite_01.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14134818_4.sinif_FenBilimleri_1.unite.pdf",
+      "boyut_bayt": 7107331,
+      "sha256": "989de23cf53df4ad3970811bd5dbfcad9b753aef39305d9d09b4d6cbce01d885"
+    },
+    {
+      "ders": "Fen_Bilimleri",
+      "dosya": "Fen_Bilimleri/unite_02.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14134819_4.sinif_FenBilimleri_2.unite.pdf",
+      "boyut_bayt": 16559716,
+      "sha256": "fccf438e1cba4556968a2a4f1b3e372fcada6275604364bd03b0335689d26ade"
+    },
+    {
+      "ders": "Fen_Bilimleri",
+      "dosya": "Fen_Bilimleri/unite_03.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/3_unite_fenbilimleri.pdf",
+      "boyut_bayt": 9526890,
+      "sha256": "2339310e3a7ce32011dd193c3d6018a093550be514dee26b56261639b558f3d9"
+    },
+    {
+      "ders": "Fen_Bilimleri",
+      "dosya": "Fen_Bilimleri/unite_04.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/4_unite_fenbilimleri.pdf",
+      "boyut_bayt": 17420946,
+      "sha256": "79b9687712ef304c7c00155a0980cdcceabc5cb75e6b00f7110ab800a21615c7"
+    },
+    {
+      "ders": "Fen_Bilimleri",
+      "dosya": "Fen_Bilimleri/unite_05.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_fen_bilimleri_unite_5.pdf",
+      "boyut_bayt": 6211002,
+      "sha256": "f9079dd0feda20c85d60fff1ac24ec50fe7ec87a1f4926c7f63d3d521a40442a"
+    },
+    {
+      "ders": "Fen_Bilimleri",
+      "dosya": "Fen_Bilimleri/unite_06.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_fen_bilimleri_unite_6.pdf",
+      "boyut_bayt": 18760321,
+      "sha256": "fe663d1d37a5600713c709af5609c902485840d66b7708bb2919d6e94e8a9789"
+    },
+    {
+      "ders": "Fen_Bilimleri",
+      "dosya": "Fen_Bilimleri/unite_07.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_06/18150147_fen_7_290521.pdf",
+      "boyut_bayt": 8743919,
+      "sha256": "5bb628bdefde603d1c84d40ec32279e67887f77f5e5b1383cb6bb93383341777"
+    },
+    {
+      "ders": "Sosyal_Bilgiler",
+      "dosya": "Sosyal_Bilgiler/unite_01.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14140845_4.sinif_sosyal_1.unite.pdf",
+      "boyut_bayt": 4695725,
+      "sha256": "58df722f02a0a833cb69b76636681116b41f5c359639de69bc60ddb8d4a229f9"
+    },
+    {
+      "ders": "Sosyal_Bilgiler",
+      "dosya": "Sosyal_Bilgiler/unite_02.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14140845_4.sinif_sosyal_2.unite.pdf",
+      "boyut_bayt": 13861541,
+      "sha256": "80d8aa9037bb1f5b03a4204937e6f1bf69e84beb5306a41842f14fa53e323b93"
+    },
+    {
+      "ders": "Sosyal_Bilgiler",
+      "dosya": "Sosyal_Bilgiler/unite_03.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/17114631_3_unite_sosyalbilgiler.pdf",
+      "boyut_bayt": 20110469,
+      "sha256": "fe263968eb22665cee917063d7f3b50df6df9c17ec40542d6cef00848369fca0"
+    },
+    {
+      "ders": "Sosyal_Bilgiler",
+      "dosya": "Sosyal_Bilgiler/unite_04.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/17114845_4_unite_sosyalbilgiler.pdf",
+      "boyut_bayt": 7669667,
+      "sha256": "c86b8ca8ce1b144e682742fa57eed6f52f0e241f53aa3b9553cc23c0a955caba"
+    },
+    {
+      "ders": "Sosyal_Bilgiler",
+      "dosya": "Sosyal_Bilgiler/unite_05.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_sosyal_bilgiler_unite_5.pdf",
+      "boyut_bayt": 7800934,
+      "sha256": "ee963366bef293df2c2c57107a7e70ea485b3e18cd356a07048b4b429570e436"
+    },
+    {
+      "ders": "Sosyal_Bilgiler",
+      "dosya": "Sosyal_Bilgiler/unite_06.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_sosyal_bilgiler_unite_6.pdf",
+      "boyut_bayt": 4455014,
+      "sha256": "b8edde95e07f999c4c6287261a32d081f21c2b92b847b5fb4ac50cbc38169044"
+    },
+    {
+      "ders": "Sosyal_Bilgiler",
+      "dosya": "Sosyal_Bilgiler/unite_07.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/06/odsgm/4.SINIF_SOSYAL_BILGILER_7.Unite.pdf",
+      "boyut_bayt": 7379344,
+      "sha256": "159b11696c0119f9e0f7e4c79f6ee88c5a8e1b0791eb0240b0dea955563b2d69"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_01.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14135538_4.sinif_Ingilizce_1.unite.pdf",
+      "boyut_bayt": 21326369,
+      "sha256": "b56c78aafceaa6e33ab193b9d55d7a484efd8119122a825e761bc4f9ff0d036e"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_02.pdf",
+      "kaynak": "https://odsgm.meb.gov.tr/meb_iys_dosyalar/2021_02/14135538_4.sinif_Ingilizce_2.unite.pdf",
+      "boyut_bayt": 18259565,
+      "sha256": "209f1cdf381854863984ee69a5e92dffcf52f5032c8ac99046a78bde7ea40127"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_03.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/3_unite_ingilizce.pdf",
+      "boyut_bayt": 20030914,
+      "sha256": "cb42046745fc3c4551413a3cb244476f7b5016ee8249e4f96d0264e9a6511a9c"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_04.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/02/odsgm/4_unite_ingilizce.pdf",
+      "boyut_bayt": 14084806,
+      "sha256": "11c28580b7361201d6fd278866fcea99525068bcaffea440c627bb9ff64c5259"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_05.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_ingilizce_unite_5.pdf",
+      "boyut_bayt": 15370008,
+      "sha256": "0dfc1cca323dd1d80177666a1c519e3ca3879e13ae46d19ea5bcf8a5c18ddd78"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_06.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/04/odsgm/4_sinif_ingilizce_unite_6.pdf",
+      "boyut_bayt": 20612406,
+      "sha256": "0d07c900223bc35ef0496fde0eb5714b0af5d6f6203af2e716699c1c54dec16c"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_07.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/06/odsgm/4.SINIF_INGILIZCE_7.Unite.pdf",
+      "boyut_bayt": 48616476,
+      "sha256": "291f8831671dacdcc92ecdf2038f27b9db66d946006a7878df5d4f43141f7194"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_08.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/06/odsgm/4.SINIF_INGILIZCE_8.Unite.pdf",
+      "boyut_bayt": 8970678,
+      "sha256": "5fe3d11f6521e6ecd79ebbb182933c840b3b85b6890786cdef6c8f9da55c0968"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_09.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/06/odsgm/4.SINIF_INGILIZCE_9.Unite.pdf",
+      "boyut_bayt": 18424760,
+      "sha256": "ec5e8dc479481ef5c80e9eaeb83787e75c460ce6af00474dca30e0cd6f5460a4"
+    },
+    {
+      "ders": "Ingilizce",
+      "dosya": "Ingilizce/unite_10.pdf",
+      "kaynak": "https://cdn.eba.gov.tr/icerik/2021/06/odsgm/4.SINIF_INGILIZCE_10.Unite.pdf",
+      "boyut_bayt": 34955892,
+      "sha256": "daed6b94cc64c6b2ebc8ff2f90ea42a5ec5540cda78070f4d438230940e06b2f"
+    }
+  ]
+}

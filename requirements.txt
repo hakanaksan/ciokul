@@ -1,0 +1,4 @@
+pypdfium2
+Pillow
+psycopg[binary]==3.2.*
+psycopg-pool==3.2.*
