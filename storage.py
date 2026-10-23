@@ -18,6 +18,7 @@ import re
 import secrets
 import tempfile
 import threading
+import time
 import urllib.error
 import urllib.request
 from collections import OrderedDict
@@ -32,6 +33,8 @@ SECRET = re.compile(r"reading_images/R\d{2}_A\d{2}\.png|.+\.pdf|data/.+")
 NAME = re.compile(r"[A-Za-z0-9._/-]{1,480}")
 MAGIC = b"CIO1"
 TIMEOUT = 60
+# The store accepts at most 25 MB per object; larger files are kept as parts "<name>", "<name>.2", ...
+PART_SIZE = 24 * 1024 * 1024
 MEMORY_LIMIT = 64 * 1024 * 1024
 MEMORY_ITEM_LIMIT = 4 * 1024 * 1024
 FILE_CACHE = Path(tempfile.gettempdir()) / "cio_dosya"
@@ -87,19 +90,29 @@ def decrypt(name, blob):
         raise StorageError("Şifreli dosya açılamadı (anahtar yanlış olabilir).") from None
 
 
-def _request(method, name, data=None, headers=None):
-    request = urllib.request.Request(f"{DOSYA_URL}/{remote_name(name)}", data=data, method=method,
-                                     headers={"Authorization": f"Bearer {DOSYA_TOKEN}", **(headers or {})})
-    try:
-        return urllib.request.urlopen(request, timeout=TIMEOUT)
-    except urllib.error.HTTPError as error:
-        if error.code == 404:
-            return None
-        if error.code == 416:
-            return error
-        raise StorageError(f"Dosya deposu hata verdi ({error.code}).") from None
-    except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
-        raise StorageError("Dosya deposuna ulaşılamadı.") from error
+def _part_name(name, part):
+    return remote_name(name) if part == 1 else f"{remote_name(name)}.{part}"
+
+
+def _request(method, name, data=None, headers=None, part=1):
+    url = f"{DOSYA_URL}/{_part_name(name, part)}"
+    for attempt in range(3):
+        request = urllib.request.Request(url, data=data, method=method,
+                                         headers={"Authorization": f"Bearer {DOSYA_TOKEN}", **(headers or {})})
+        try:
+            return urllib.request.urlopen(request, timeout=TIMEOUT)
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                return None
+            if error.code == 416:
+                return error
+            raise StorageError(f"Dosya deposu hata verdi ({error.code}).") from None
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
+            # The network guard in front of the store sometimes resets a connection; all the
+            # methods used here are idempotent, so they are retried.
+            if attempt == 2:
+                raise StorageError("Dosya deposuna ulaşılamadı.") from error
+            time.sleep(0.5 + attempt)
 
 
 def _remember(name, data):
@@ -118,11 +131,19 @@ def _remember(name, data):
 
 def _download(name):
     # no-cache: a corrected crop must not come back from an intermediate cache.
-    response = _request("GET", name, headers={"Cache-Control": "no-cache"})
-    if response is None:
-        return None
-    with response:
-        blob = response.read()
+    parts, part = [], 1
+    while True:
+        response = _request("GET", name, headers={"Cache-Control": "no-cache"}, part=part)
+        if response is None:
+            if part == 1:
+                return None
+            break
+        with response:
+            parts.append(response.read())
+        if len(parts[-1]) < PART_SIZE:
+            break
+        part += 1
+    blob = b"".join(parts)
     return decrypt(name, blob) if is_secret(name) else blob
 
 
@@ -153,10 +174,16 @@ def write(name, local: Path, data: bytes):
     content_type = "application/octet-stream" if is_secret(name) else (
         mimetypes.guess_type(name)[0] or "application/octet-stream")
     body = encrypt(name, data) if is_secret(name) else data
-    response = _request("PUT", name, data=body, headers={"Content-Type": content_type})
-    if response is None or response.status not in (200, 201):
-        raise StorageError("Dosya depoya yazılamadı.")
-    response.close()
+    chunks = [body[start:start + PART_SIZE] for start in range(0, len(body), PART_SIZE)] or [b""]
+    for part, chunk in enumerate(chunks, 1):
+        response = _request("PUT", name, data=chunk, headers={"Content-Type": content_type}, part=part)
+        if response is None or response.status not in (200, 201):
+            raise StorageError("Dosya depoya yazılamadı.")
+        response.close()
+    part = len(chunks) + 1  # parts left over from a larger earlier version
+    while (response := _request("DELETE", name, part=part)) is not None:
+        response.close()
+        part += 1
     _remember(name, data)
     for cached in FILE_CACHE.glob(f"{_cache_stem(name)}*"):
         cached.unlink(missing_ok=True)
@@ -173,12 +200,18 @@ def exists(name, local: Path):
 
 
 def remote_size(name):
-    """Size stored in the store (encrypted size for secret files), or None."""
-    response = _request("HEAD", name)
-    if response is None:
-        return None
-    with response:
-        return int(response.headers.get("Content-Length", "-1"))
+    """Size stored in the store over all parts (encrypted size for secret files), or None."""
+    total, part = 0, 1
+    while True:
+        response = _request("HEAD", name, part=part)
+        if response is None:
+            return None if part == 1 else total
+        with response:
+            size = int(response.headers.get("Content-Length", "-1"))
+        total += size
+        if size < PART_SIZE:
+            return total
+        part += 1
 
 
 def _cache_stem(name):
@@ -214,4 +247,5 @@ def open_range(name, range_header):
     """
     if is_secret(name):
         raise StorageError("Şifreli dosya parça parça okunamaz.")
+    # Only the first part is streamed; the audio files are well under PART_SIZE.
     return _request("GET", name, headers={"Range": range_header} if range_header else None)
