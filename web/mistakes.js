@@ -8,6 +8,7 @@ const mistakesState = {
 };
 
 async function renderMistakesNotebook() {
+  setRoute('#/hata-defteri');
   try {
     mistakesState.data = await api('/api/student/mistakes');
     drawMistakesNotebook();

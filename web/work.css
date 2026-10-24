@@ -1,0 +1,75 @@
+/* Solving screens, account settings and readability fixes. Loaded after tokens.css. */
+
+/* One-line header on solving screens (instead of the large hero) */
+.work-header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 14px;padding:12px 18px;border-radius:16px;background:linear-gradient(120deg,#08796e,#2eaa83);color:#fff;box-shadow:0 10px 30px #12766620}
+.work-header .back{margin:0;color:#fff;text-decoration:none}
+.work-header .link-btn{color:#e9fff4}
+.work-title{flex:1;min-width:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.work-title .eyebrow{color:#c7f1dc}
+.work-title h1{margin:0;font-size:20px;line-height:1.25;overflow-wrap:anywhere}
+.work-status{padding:4px 11px;border-radius:999px;background:#ffffff2b;font-size:14px;font-weight:700}
+.work-hint{margin:0 0 10px}
+body.high-contrast .work-header{background:#063f35}
+
+/* Question layout: progress, collapsible number list, answer dock */
+.question-progress strong{display:block;margin-bottom:6px}
+.number-details>summary{margin:12px 0 2px;color:#146e6a;font-weight:750;cursor:pointer}
+.number-details .number-nav{margin:10px 0 14px}
+.kicker-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.kicker-answered{display:none}
+.question-layout .answer-dock{flex-direction:column;align-items:stretch;gap:10px;padding:10px 12px}
+.answer-dock .letter-options{margin:0}
+.answer-dock .letter-choice{min-height:50px}
+.answer-dock .dock-nav{display:flex;justify-content:space-between;gap:10px}
+.answer-dock .dock-nav .btn{flex:1;min-height:46px}
+
+/* Calm mode: only the question, its answers and navigation */
+.calm-mode .topbar{display:none}
+.calm-mode .kicker-answered{display:inline}
+.calm-mode .question-layout:not(.reading-work)>aside{display:none}
+.calm-mode .reading-work>aside{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.calm-mode .reading-work>aside .number-details,.calm-mode .reading-work>aside .question-progress,.calm-mode .reading-work>aside #readingSubmit{display:none}
+.calm-mode .reading-work>aside .btn.full{width:auto}
+
+/* Student home */
+.student-due{margin-top:8px;font-size:16px;color:#24563f}
+
+/* Account and security */
+.account-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
+.account-form{padding:16px;border:1px solid #e1e8e2;border-radius:14px;background:#fbfdfb}
+.account-form h3{margin:0 0 10px}
+.account-form .btn{margin-top:4px}
+
+/* Labels without a single control (button groups) */
+.field .field-label{display:block;font-size:13px;font-weight:750;color:#485854}
+
+/* Parent review: keyboard hint */
+.review-keys-hint{margin:8px 0 0}
+.review-keys-hint kbd{padding:0 6px;border:1px solid #cbd8cf;border-bottom-width:2px;border-radius:5px;background:#fff;font:inherit;font-weight:750}
+
+/* Readability: nothing below 12px */
+.eyebrow,.test-grid button small,.calendar-task,.calendar-weekday,.ui-week-col small,.ui-chart-values{font-size:12px}
+
+/* Keyboard hints are useless on touch screens */
+@media (hover:none),(pointer:coarse){.study-shortcut-badge,.review-keys-hint{display:none!important}}
+
+@media(max-width:900px){
+  /* Back and print on the first line, the title below them */
+  .work-header{padding:10px 12px;gap:6px 12px;border-radius:14px}
+  .work-header>.link-btn:not(.back){margin-left:auto}
+  .work-title{order:3;flex-basis:100%;gap:2px 8px}
+  .work-status{order:4}
+  .work-title h1{font-size:17px}
+  /* Progress, the question list toggle and the summary share one compact strip */
+  .question-layout>aside.question-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:10px 14px}
+  .question-nav .question-progress{flex:1;min-width:150px}
+  .question-nav .question-progress strong{margin-bottom:4px;font-size:15px}
+  .question-nav .number-details{order:3;flex-basis:100%}
+  .question-nav .number-details>summary{margin:0}
+  .question-nav>.btn.full{width:auto;padding-inline:16px}
+  .reading-work>aside.question-nav>.btn.full,.reading-work>aside.question-nav .reading-audio-mini{flex-basis:100%}
+  .study-calm-tools{margin:8px 0}
+  .question-card{padding:14px}
+  .question-kicker{flex-wrap:wrap;gap:6px}
+  .answer-dock .letter-choice{min-height:46px;font-size:19px}
+}

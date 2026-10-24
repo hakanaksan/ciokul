@@ -9,7 +9,7 @@ async function fetchBadges(force = false) {
   return badgesCache;
 }
 
-function badgesWidgetMarkup(data) {
+function badgesWidgetMarkup(data, isParent = false) {
   if (!data || !data.badges) return '';
   const { badges, stats } = data;
 
@@ -17,8 +17,8 @@ function badgesWidgetMarkup(data) {
     <section class="card badges-showcase-card">
       <div class="badges-header">
         <div>
-          <h2>🏆 Başarılarım ve Rozetler</h2>
-          <p class="muted small">Çalışmaları tamamladıkça rozetler kazan ve yıldızları topla!</p>
+          <h2>🏆 ${isParent ? 'Öğrencinin rozetleri' : 'Başarılarım ve Rozetler'}</h2>
+          <p class="muted small">${isParent ? 'Çalışmalar tamamlandıkça kazanılan rozetler ve yıldızlar.' : 'Çalışmaları tamamladıkça rozetler kazan ve yıldızları topla!'}</p>
         </div>
         <div class="stars-counter-badge">
           <span class="star-icon">⭐</span>

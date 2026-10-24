@@ -28,6 +28,7 @@ const QUICK_TOPICS = [
 ];
 
 async function renderQuestionSearch(initialQuery = '') {
+  setRoute('#/soru-ara');
   if (initialQuery) {
     searchState.query = initialQuery;
   }

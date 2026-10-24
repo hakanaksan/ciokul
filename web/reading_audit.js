@@ -1,4 +1,5 @@
 async function renderReadingAudit(sectionId=1){
+  setRoute('#/okuma-denetim');
   try{
     const [catalog,data]=await Promise.all([api('/api/reading/catalog'),api(`/api/reading/audit?sectionId=${sectionId}`)]);
     const checked=data.questions.reduce((n,q)=>n+Number(!!q.question_verified)+Number(!!q.answer_verified),0);

@@ -1,6 +1,7 @@
 /* CioOkul Student Progress Report Card Module (Gelişim Karnesi & Veli Bülteni) */
 
 async function renderReportCard(onBack = renderHome) {
+  setRoute('#/karne');
   try {
     const [progress, readingProgress, badgesData, studyDashboard, authInfo] = await Promise.all([
       api('/api/progress'),

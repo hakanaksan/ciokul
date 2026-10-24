@@ -19,7 +19,54 @@ const UI_ACTIONS=[
   {t:'Çalışma takvimi',d:'Araçlar · hedef tarihli takvim',tab:'tools',run:null},
   {t:'Yedek indir / geri yükle',d:'Araçlar · veri güvenliği',tab:'tools',run:null},
   {t:'Soru denetim raporu',d:'Araçlar · otomatik denetim',tab:'tools',run:null},
+  {t:'Şifre / PIN değiştir',d:'Araçlar · hesap ve güvenlik',tab:'tools',run:null},
+  {t:'Tüm oturumları kapat',d:'Araçlar · hesap ve güvenlik',tab:'tools',run:null},
 ];
+const UI_MONTHS_SHORT=['Oca','Şub','Mar','Nis','May','Haz','Tem','Ağu','Eyl','Eki','Kas','Ara'];
+function uiParseDate(value){const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(value||'');return m?new Date(Number(m[1]),Number(m[2])-1,Number(m[3])):null}
+// "30 Ekim Perşembe"; year:true adds the year.
+function uiDate(value,{weekday=true,year=false}={}){const d=uiParseDate(value);return d?d.toLocaleDateString('tr-TR',{day:'numeric',month:'long',...(year?{year:'numeric'}:{}),...(weekday?{weekday:'long'}:{})}):''}
+function uiShortDate(value){const d=uiParseDate(value);return d?`${d.getDate()} ${UI_MONTHS_SHORT[d.getMonth()]}`:''}
+function uiMonth(value){const m=/^(\d{4})-(\d{2})/.exec(value||'');return m?new Date(Number(m[1]),Number(m[2])-1,1).toLocaleDateString('tr-TR',{month:'long',year:'numeric'}):''}
+// Server timestamps are UTC 'YYYY-MM-DD HH:MM:SS'; shown as the local calendar day.
+function uiStamp(value){if(!value)return '';const d=new Date(String(value).replace(' ','T')+'Z');return isNaN(d)?'':d.toLocaleDateString('tr-TR',{day:'numeric',month:'long',year:'numeric'})}
+// "30 Ekim Perşembe · 6 gün kaldı"; finished work shows only the date.
+function uiDueText(value,finished=false){
+  const d=uiParseDate(value);if(!d)return '';
+  if(finished)return uiDate(value);
+  const days=Math.round((d-uiParseDate(localToday()))/86400000);
+  const relative=days===0?'bugün':days===1?'yarın':days>1?`${days} gün kaldı`:`${-days} gün geçti`;
+  return `${uiDate(value)} · ${relative}`;
+}
+// Grading by keyboard for review screens: keys map to a button inside the active card.
+let uiReviewKeyHandler=null;
+function uiBindReviewKeys(cardSelector,keyMap){
+  if(uiReviewKeyHandler)window.removeEventListener('keydown',uiReviewKeyHandler);
+  let active=null;
+  const cards=()=>[...document.querySelectorAll(cardSelector)].filter(card=>!card.hidden);
+  document.querySelectorAll(cardSelector).forEach(card=>{card.addEventListener('focusin',()=>{active=card});card.addEventListener('pointerdown',()=>{active=card})});
+  const handler=uiReviewKeyHandler=e=>{
+    if(!document.querySelector(cardSelector)){window.removeEventListener('keydown',handler);uiReviewKeyHandler=null;return}
+    if(e.ctrlKey||e.metaKey||e.altKey||['INPUT','TEXTAREA','SELECT'].includes(e.target?.tagName))return;
+    const selector=keyMap[e.key.toLocaleLowerCase('tr')];if(!selector)return;
+    const list=cards();if(!list.length)return;
+    if(!active||active.hidden||!document.contains(active))active=list.find(card=>!card.querySelector('[aria-pressed="true"]'))||list[0];
+    const button=active.querySelector(selector);if(!button||button.disabled)return;
+    e.preventDefault();button.click();
+    const next=list[list.indexOf(active)+1];
+    if(next){active=next;next.scrollIntoView({behavior:'smooth',block:'start'})}
+  };
+  window.addEventListener('keydown',handler);
+}
+// Hides cards marked data-auto-ok (answer key already says correct) until the parent asks for all.
+function uiBindReviewFilter(button,cardSelector){
+  if(!button)return;
+  const auto=[...document.querySelectorAll(`${cardSelector}[data-auto-ok]`)];
+  if(!auto.length){button.hidden=true;return}
+  let onlyChecks=true;
+  const apply=()=>{auto.forEach(card=>{card.hidden=onlyChecks});button.textContent=onlyChecks?`Tümünü göster (${auto.length} otomatik doğru gizli)`:'Yalnızca kontrol gerekenler';button.setAttribute('aria-pressed',String(onlyChecks))};
+  button.onclick=()=>{onlyChecks=!onlyChecks;apply()};apply();
+}
 function uiApplyPreferences(){
   const raw=localStorage.getItem('cioFontScale')||'1';
   const map={'0.9':'small','1':'normal','1.15':'large','1.3':'xlarge'};
@@ -77,7 +124,7 @@ function uiInitParentTabs(data,readingData,dashboard,progress){
   move('#studyDashboard',panels.repeat);
   panels.progress.insertAdjacentHTML('afterbegin',uiWeekChart(dashboard.weekSeries||[])+uiHeatmap(progress));
   move('#progressSection',panels.progress);move('.reading-progress',panels.progress);
-  for(const selector of ['#auditSummary','#calendarSection','#curriculumSection','#backupSection'])move(selector,panels.tools);
+  for(const selector of ['#accountSection','#auditSummary','#calendarSection','#curriculumSection','#backupSection'])move(selector,panels.tools);
   const resolve=id=>UI_TAB_ALIAS[id]||id;
   const show=id=>{
     id=resolve(id);
@@ -87,7 +134,7 @@ function uiInitParentTabs(data,readingData,dashboard,progress){
     for(const [key] of UI_TABS){const panel=document.querySelector(`#panel-${key}`),tab=document.querySelector(`#tab-${key}`);if(!panel||!tab)continue;panel.hidden=key!==id;tab.setAttribute('aria-selected',String(key===id));tab.tabIndex=key===id?0:-1}
   };
   const initial=resolve((location.hash||'').replace('#tab-',''))||sessionStorage.getItem('cioParentTab')||'overview';
-  window.addEventListener('hashchange',()=>show((location.hash||'').replace('#tab-','')));
+  window.uiShowParentTab=show;  // used by the router in app.js for back/forward between tabs
   const navButtons=[...shell.querySelectorAll('[data-ui-tab]')];
   navButtons.forEach((button,index)=>{button.onclick=()=>show(button.dataset.uiTab);button.onkeydown=e=>{if(!['ArrowRight','ArrowLeft','ArrowDown','ArrowUp','Home','End'].includes(e.key))return;e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?UI_TABS.length-1:(index+((e.key==='ArrowRight'||e.key==='ArrowDown')?1:-1)+UI_TABS.length)%UI_TABS.length;show(UI_TABS[next][0]);navButtons[next].focus()}});
   document.querySelectorAll('[data-go-tab]').forEach(button=>button.onclick=()=>{show(button.dataset.goTab);const target=button.dataset.focusId&&document.querySelector('#'+button.dataset.focusId);target?.scrollIntoView({behavior:'smooth',block:'start'})});
@@ -108,7 +155,7 @@ function uiInitParentTabs(data,readingData,dashboard,progress){
 }
 function uiWeekChart(series){
   const max=Math.max(1,...series.map(x=>Math.max(x.assigned,x.submitted)));
-  return `<section class="card ui-chart-card"><h3>Son 8 hafta</h3><p class="small muted">Atanan ve teslim edilen çalışma sayısı</p><div class="ui-chart-legend"><span><i class="assigned"></i> Atanan</span><span><i class="submitted"></i> Teslim edilen</span></div><div class="ui-week-chart" role="img" aria-label="Son sekiz haftada atanan ve teslim edilen çalışma sayıları">${series.map(x=>`<div class="ui-week-col" title="${esc(x.start)}: ${x.assigned} atanan, ${x.submitted} teslim"><div class="ui-week-bars"><span class="assigned" style="height:${x.assigned?Math.max(7,x.assigned/max*100):0}%"></span><span class="submitted" style="height:${x.submitted?Math.max(7,x.submitted/max*100):0}%"></span></div><small>${esc(x.start.slice(5))}</small><span class="ui-chart-values">${x.assigned}/${x.submitted}</span></div>`).join('')}</div></section>`;
+  return `<section class="card ui-chart-card"><h3>Son 8 hafta</h3><p class="small muted">Atanan ve teslim edilen çalışma sayısı</p><div class="ui-chart-legend"><span><i class="assigned"></i> Atanan</span><span><i class="submitted"></i> Teslim edilen</span></div><div class="ui-week-chart" role="img" aria-label="Son sekiz haftada atanan ve teslim edilen çalışma sayıları">${series.map(x=>`<div class="ui-week-col" title="${esc(uiDate(x.start,{weekday:false}))} haftası: ${x.assigned} atanan, ${x.submitted} teslim"><div class="ui-week-bars"><span class="assigned" style="height:${x.assigned?Math.max(7,x.assigned/max*100):0}%"></span><span class="submitted" style="height:${x.submitted?Math.max(7,x.submitted/max*100):0}%"></span></div><small>${esc(uiShortDate(x.start))}</small><span class="ui-chart-values">${x.assigned}/${x.submitted}</span></div>`).join('')}</div></section>`;
 }
 function uiHeatmap(progress){
   const items=progress.byBooklet||[];
@@ -124,11 +171,14 @@ function uiEnhanceStudentHome(data,readingData){
   const assignments=document.createElement('div');assignments.id='homeAssignments';
   for(const selector of ['#assignmentHeading','#assignmentList','#readingHomeSection']){const node=document.querySelector(selector);if(node)assignments.append(node)}
   focus.insertAdjacentElement('afterend',assignments);
-  const badges=document.querySelector('#badgesWidget');if(badges)focus.insertAdjacentElement('afterend',badges);
   const completed=document.createElement('div');completed.id='completedWork';assignments.insertAdjacentElement('afterend',completed);
+  // Pending work first; badges come after the student's tasks.
+  const badges=document.querySelector('#badgesWidget');if(badges)completed.insertAdjacentElement('afterend',badges);
   const next=pending[0];
-  focus.innerHTML=next?`<section class="student-today"><div><span class="eyebrow">Sıradaki çalışma</span><h2>${esc(next.title)}</h2><p>${next.kind==='reading'?'Okuma Becerileri':'Fasikül'} · ${next.answered}/${next.total} soru yanıtlandı${next.due_date?` · Hedef ${esc(next.due_date)}`:''}</p></div><div class="toolbar"><button class="btn" id="openToday">${next.answered?'Devam et':'Başla'} →</button><button type="button" class="link-btn" id="printToday">🖨 Yazdır</button></div></section>`:'<section class="student-today finished"><h2>Şimdilik yeni çalışma yok</h2><p>Yeni bir çalışma atandığında burada görünecek.</p></section>';
+  const mistakesButton='<button type="button" class="btn secondary" id="openMistakes">📓 Hata Defterim</button>';
+  focus.innerHTML=next?`<section class="student-today"><div><span class="eyebrow">Sıradaki çalışma</span><h2>${esc(next.title)}</h2><p>${next.kind==='reading'?'Okuma Becerileri':'Fasikül'} · ${next.answered}/${next.total} soru yanıtlandı</p>${next.due_date?`<p class="student-due">Hedef: <strong>${esc(uiDueText(next.due_date))}</strong></p>`:''}</div><div class="toolbar"><button class="btn" id="openToday">${next.answered?'Devam et':'Başla'} →</button>${mistakesButton}<button type="button" class="link-btn" id="printToday">🖨 Yazdır</button></div></section>`:`<section class="student-today finished"><div><h2>Şimdilik yeni çalışma yok</h2><p>Yeni bir çalışma atandığında burada görünecek.</p></div><div class="toolbar">${mistakesButton}</div></section>`;
   document.querySelector('#openToday')?.addEventListener('click',()=>next.kind==='reading'?renderReadingAssignment(next.id):renderAssignment(next.id));
+  document.querySelector('#openMistakes')?.addEventListener('click',()=>renderMistakesNotebook());
   document.querySelector('#printToday')?.addEventListener('click',()=>renderPrintWorksheet(next.kind,next.id,renderHome));
   if(next){const selector=next.kind==='reading'?`[data-reading-open="${next.id}"]`:`[data-open="${next.id}"]`;document.querySelector(selector)?.closest('article')?.setAttribute('hidden','')}
   const cards=[...document.querySelectorAll('#homeAssignments [data-open],#homeAssignments [data-reading-open]')].map(b=>b.closest('article')).filter(Boolean);
@@ -162,7 +212,7 @@ function uiModal({title, body, okText='Kaydet', cancelText='Vazgeç'}){
 function uiPrompt(title, value='', opts={}){
   const type=opts.type||'text';
   return uiModal({title, okText:opts.okText||'Kaydet',
-    body:`<div class="field"><label>${esc(opts.label||title)}</label><input data-m="input" type="${type}" maxlength="${opts.max||100}" value="${esc(value)}" placeholder="${esc(opts.placeholder||'')}"></div>${opts.hint?`<p class="small muted">${esc(opts.hint)}</p>`:''}`});
+    body:`<div class="field"><label for="uiPromptInput">${esc(opts.label||title)}</label><input id="uiPromptInput" data-m="input" type="${type}" maxlength="${opts.max||100}" value="${esc(value)}" placeholder="${esc(opts.placeholder||'')}"></div>${opts.hint?`<p class="small muted">${esc(opts.hint)}</p>`:''}`});
 }
 function uiConfirm(title, text, okText='Sil'){
   return uiModal({title, okText, body:`<p>${text}</p>`}).then(v=>v!==null);

@@ -297,6 +297,19 @@ def clear_sessions():
         db.execute("DELETE FROM sessions")
 
 
+def end_other_sessions(keep_token, role=None):
+    """Signs out every session except keep_token (only `role` sessions when given); returns the count."""
+    keep = token_hash(keep_token) if keep_token else ""
+    with DB_LOCK, connect() as db:
+        if role:
+            ended = db.execute("DELETE FROM sessions WHERE token_hash<>? AND role=?", (keep, role)).rowcount
+        else:
+            ended = db.execute("DELETE FROM sessions WHERE token_hash<>?", (keep,)).rowcount
+    for key in [key for key, (session, _) in SESSIONS.items() if key != keep and (not role or session == role)]:
+        SESSIONS.pop(key, None)
+    return ended
+
+
 def login_blocked(keys):
     """True when any key (client address, role) had too many failed attempts in the window."""
     now = time.time()
@@ -620,13 +633,16 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):
         print("[%s] %s" % (self.log_date_time_string(), fmt % args))
 
-    def role(self):
+    def session_token(self):
         cookie = SimpleCookie()
         try:
             cookie.load(self.headers.get("Cookie", ""))
-            token = cookie["session"].value
+            return cookie["session"].value or None
         except (KeyError, ValueError, CookieError):
             return None
+
+    def role(self):
+        token = self.session_token()
         return session_role(token) if token else None
 
     def client_ip(self):
@@ -1228,6 +1244,46 @@ class Handler(BaseHTTPRequestHandler):
                     pass
                 if "session" in cookie: end_session(cookie["session"].value)
                 return self.send_json({"ok": True}, cookie=self.session_cookie("", 0))
+            if path in ("/api/account/password", "/api/account/student", "/api/account/sessions/end"):
+                if not self.require("parent"): return
+                keys = [f"ip:{self.client_ip()}", "role:parent"]
+                if login_blocked(keys):
+                    return self.send_json({"error": "Çok fazla hatalı deneme. 15 dakika sonra tekrar deneyin."}, 429)
+                with connect() as db:
+                    parent = db.execute("SELECT salt, secret_hash FROM users WHERE role='parent'").fetchone()
+                if not parent or not hmac.compare_digest(
+                        parent["secret_hash"], hash_secret(str(data.get("currentPassword", "")), parent["salt"])):
+                    record_login_failure(keys)
+                    return self.send_json({"error": "Mevcut veli şifresi yanlış."}, 403)
+                token = self.session_token()
+                if path == "/api/account/password":
+                    new_password = str(data.get("newPassword", ""))
+                    if len(new_password) < 8:
+                        raise ValueError("Yeni veli şifresi en az 8 karakter olmalı.")
+                    salt = secrets.token_hex(16)
+                    with DB_LOCK, connect() as db:
+                        db.execute("UPDATE users SET salt=?, secret_hash=? WHERE role='parent'",
+                                   (salt, hash_secret(new_password, salt)))
+                    return self.send_json({"ok": True, "endedSessions": end_other_sessions(token, "parent")})
+                if path == "/api/account/student":
+                    new_pin = str(data.get("newPin", ""))
+                    student_name = str(data.get("studentName", "")).strip()
+                    if new_pin and not (new_pin.isdigit() and len(new_pin) >= 4):
+                        raise ValueError("Öğrenci PIN'i en az 4 rakam olmalı.")
+                    if len(student_name) > 50:
+                        raise ValueError("Öğrencinin adı en fazla 50 karakter olabilir.")
+                    if not new_pin and not student_name:
+                        raise ValueError("Değişiklik belirtilmedi.")
+                    with DB_LOCK, connect() as db:
+                        if student_name:
+                            db.execute("UPDATE users SET name=? WHERE role='student'", (student_name,))
+                        if new_pin:
+                            salt = secrets.token_hex(16)
+                            db.execute("UPDATE users SET salt=?, secret_hash=? WHERE role='student'",
+                                       (salt, hash_secret(new_pin, salt)))
+                    ended = end_other_sessions(token, "student") if new_pin else 0
+                    return self.send_json({"ok": True, "endedSessions": ended})
+                return self.send_json({"ok": True, "endedSessions": end_other_sessions(token)})
             if path == "/api/student/mistakes/resolve":
                 if not self.require(): return
                 kind = str(data.get("kind", ""))

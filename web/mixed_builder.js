@@ -17,6 +17,7 @@ const mixedState = {
 };
 
 async function renderMixedBuilder() {
+  setRoute('#/karma-deneme');
   try {
     if (!mixedState.meta) {
       mixedState.meta = await api('/api/catalog/mixed-meta');
