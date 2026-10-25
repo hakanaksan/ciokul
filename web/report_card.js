@@ -8,7 +8,7 @@ async function renderReportCard(onBack = renderHome) {
       api('/api/reading/progress'),
       api('/api/student/badges'),
       api('/api/study/dashboard'),
-      api('/api/auth')
+      api('/api/state')
     ]);
 
     drawReportCard(progress, readingProgress, badgesData, studyDashboard, authInfo, onBack);
@@ -19,7 +19,7 @@ async function renderReportCard(onBack = renderHome) {
 
 function drawReportCard(progress, readingProgress, badgesData, studyDashboard, authInfo, onBack) {
   state.view = 'report_card';
-  const studentName = authInfo?.studentName || 'Cio';
+  const studentName = authInfo?.studentName || state.studentName || 'Öğrenci';
   const today = new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
   const period = new Date().toLocaleDateString('tr-TR', { month: 'long', year: 'numeric' });
 
@@ -44,7 +44,8 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
   const skills = readingProgress?.bySkill || [];
 
   // Reasons breakdown
-  const reasons = studyDashboard?.reflectionCounts || {};
+  // /api/study/dashboard sends reasons as [{reason, total}]
+  const reasons = Object.fromEntries((studyDashboard?.reasons || []).map(r => [r.reason, r.total]));
   const reasonLabels = {
     attention: 'Dikkat Hatası',
     topic: 'Konuyu Öğrenmeli',
@@ -188,7 +189,7 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
             <div class="weak-units-summary">
               ${progress.weakUnits.slice(0, 4).map(u => `
                 <span class="weak-unit-pill">
-                  <strong>${esc(u.course)}:</strong> ${esc(u.booklet_title)} (Başarı: %${u.rate || 0})
+                  <strong>${esc(u.course)}:</strong> ${esc(u.title)} (Başarı: %${u.reviewed ? Math.round(u.correct / u.reviewed * 100) : 0})
                 </span>
               `).join('')}
             </div>
