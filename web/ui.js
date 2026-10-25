@@ -202,7 +202,8 @@ function uiModal({title, body, okText='Kaydet', cancelText='Vazgeç'}){
     wrap.addEventListener('pointerdown',e=>{if(e.target===wrap)close(null)});
     wrap.querySelector('[data-m=ok]').onclick=()=>{
       const input=wrap.querySelector('[data-m=input]');
-      close(input?input.value:null);
+      // Prompts resolve to the typed value; confirmations (no input) to true. Only cancel gives null.
+      close(input?input.value:true);
     };
     const input=wrap.querySelector('[data-m=input]');
     if(input){input.focus();input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();wrap.querySelector('[data-m=ok]').click()}if(e.key==='Escape')close(null)})}
