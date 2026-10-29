@@ -2,6 +2,7 @@ const UI_TABS=[
   ['overview','Özet','📊','Bekleyen işler ve hızlı başlat'],
   ['tests','Fasikül Çalışmaları','📝','Test ata, aç ve kontrol et'],
   ['reading','Okuma Çalışmaları','📖','Metin ata, dinle ve değerlendir'],
+  ['lessons','Video Dersler','🎬','Konu anlatım videoları ve mini testler'],
   ['repeat','Tekrar & Hafta','🔁','Tekrar kuyruğu ve haftalık durum'],
   ['progress','İlerleme & Karne','📈','Grafikler ve gelişim karnesi'],
   ['tools','Araçlar & Ayarlar','🧰','Arama, takvim, denetim ve yedekleme'],
@@ -122,6 +123,7 @@ function uiInitParentTabs(data,readingData,dashboard,progress){
   move('#badgesWidget',panels.overview);
   for(const selector of ['#assignmentHeading','#assignmentList'])move(selector,panels.tests);
   move('#readingHomeSection',panels.reading);
+  move('#lessonsSection',panels.lessons);
   move('#studyDashboard',panels.repeat);
   panels.progress.insertAdjacentHTML('afterbegin',uiWeekChart(dashboard.weekSeries||[])+uiHeatmap(progress));
   move('#progressSection',panels.progress);move('.reading-progress',panels.progress);
@@ -173,8 +175,9 @@ function uiEnhanceStudentHome(data,readingData){
   for(const selector of ['#assignmentHeading','#assignmentList','#readingHomeSection']){const node=document.querySelector(selector);if(node)assignments.append(node)}
   focus.insertAdjacentElement('afterend',assignments);
   const completed=document.createElement('div');completed.id='completedWork';assignments.insertAdjacentElement('afterend',completed);
-  // Pending work first; badges come after the student's tasks.
-  const badges=document.querySelector('#badgesWidget');if(badges)completed.insertAdjacentElement('afterend',badges);
+  // Pending work first, then video lessons; badges come after the student's tasks.
+  const lessonsSection=document.querySelector('#lessonsSection');if(lessonsSection)completed.insertAdjacentElement('afterend',lessonsSection);
+  const badges=document.querySelector('#badgesWidget');if(badges)(lessonsSection||completed).insertAdjacentElement('afterend',badges);
   const next=pending[0];
   const mistakesButton='<button type="button" class="btn secondary" id="openMistakes">📓 Hata Defterim</button>';
   focus.innerHTML=next?`<section class="student-today"><div><span class="eyebrow">Sıradaki çalışma</span><h2>${esc(next.title)}</h2><p>${next.kind==='reading'?'Okuma Becerileri':'Fasikül'} · ${next.answered}/${next.total} soru yanıtlandı</p>${next.due_date?`<p class="student-due">Hedef: <strong>${esc(uiDueText(next.due_date))}</strong></p>`:''}</div><div class="toolbar"><button class="btn" id="openToday">${next.answered?'Devam et':'Başla'} →</button>${mistakesButton}<button type="button" class="link-btn" id="printToday">🖨 Yazdır</button></div></section>`:`<section class="student-today finished"><div><h2>Şimdilik yeni çalışma yok</h2><p>Yeni bir çalışma atandığında burada görünecek.</p></div><div class="toolbar">${mistakesButton}</div></section>`;

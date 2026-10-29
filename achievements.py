@@ -55,6 +55,7 @@ BADGES = [
     ("reading", "reading_master", "🏅", "Okuma Ustası", "{goal} okuma çalışmasından tam puan al.", (1, 3, 5)),
     ("growth", "mistake_hunter", "🛡️", "Hata Avcısı", "Hata defterinden {goal} soruyu çözüldü olarak işaretle.", (1, 10, 25)),
     ("growth", "honest", "🤔", "Dürüst Düşünür", "{goal} soruda “Bu sorudan emin değilim” işaretini kullan.", (1, 5, 15)),
+    ("growth", "lesson_explorer", "🎬", "Video Dersi Kâşifi", "{goal} video dersi izleyip mini testini çöz.", (1, 3, 5)),
 ]
 LEVELS = [(0, "Çırak"), (5, "Meraklı"), (12, "Kaşif"), (22, "Bilgin"), (35, "Usta"),
           (55, "Uzman"), (80, "Şampiyon"), (110, "Efsane")]
@@ -168,6 +169,7 @@ def _values(db):
         "reading_master": reading_full,
         "mistake_hunter": db.execute("SELECT COUNT(*) FROM mistake_resolutions").fetchone()[0],
         "honest": db.execute("SELECT COUNT(*) FROM study_reflections WHERE uncertain = 1").fetchone()[0],
+        "lesson_explorer": db.execute("SELECT COUNT(*) FROM lesson_progress WHERE quiz_total IS NOT NULL").fetchone()[0],
     }
     values.update({badge: course_tests.get(course, 0) for badge, course in COURSES.items()})
     return values, {"current": current_streak, "best": best_streak}

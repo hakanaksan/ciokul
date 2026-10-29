@@ -1,0 +1,97 @@
+/* Video lessons: player, animated scenes, quiz and the home section. Loaded after badges.css. */
+
+.lesson-card h3{margin:8px 0 6px}
+.lesson-card p{margin:4px 0}
+.lesson-link{margin-top:10px}
+
+/* Player */
+.lesson-player{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:20px;background:#fff;border:1px solid #e1e8e2;box-shadow:0 12px 38px #1e423014}
+.lesson-player:fullscreen{justify-content:center;padding:24px;background:#10241c}
+.lesson-player:fullscreen .lesson-caption{color:#fff;background:#ffffff1a}
+.lesson-stage{position:relative;aspect-ratio:16/9;width:100%;border-radius:16px;overflow:hidden;background:#eaf7ff}
+.lesson-player:fullscreen .lesson-stage{max-height:78vh;width:auto}
+.lesson-stage>svg{display:block;width:100%;height:100%}
+.lesson-stage.quiz{aspect-ratio:auto;min-height:340px;background:linear-gradient(135deg,#f3fbf6,#fffdf3)}
+.lesson-caption{min-height:3.2em;padding:10px 14px;border-radius:12px;background:#f4f8f5;font-size:20px;font-weight:650;line-height:1.45;color:#1f3a2e;text-align:center}
+.lesson-caption.hidden{visibility:hidden}
+.lesson-stage.quiz+.lesson-caption{display:none}
+.lesson-start{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:0;background:#0f2a2066;color:#fff;font:inherit;font-size:22px;font-weight:800;cursor:pointer}
+.lesson-start-icon{display:grid;place-items:center;width:96px;height:96px;border-radius:50%;background:#08796e;font-size:40px;box-shadow:0 10px 30px #0006}
+.lesson-start:hover .lesson-start-icon{transform:scale(1.06)}
+
+.lesson-timeline{display:flex;gap:4px;align-items:center}
+.lesson-timeline button{flex:1 1 0;height:12px;padding:0;border:0;border-radius:999px;background:#e3ebe5;cursor:pointer;overflow:hidden;min-width:10px}
+.lesson-timeline button span{display:block;height:100%;width:0;background:#2eaa83;border-radius:inherit}
+.lesson-timeline button.done span{width:100%!important}
+.lesson-timeline button.current{outline:2px solid #08796e;outline-offset:1px}
+.lesson-timeline .lesson-quiz-segment{flex:0 0 34px;height:24px;background:#fff6cc;color:#8a6a00;font-weight:800}
+.lesson-timeline .lesson-quiz-segment.current{background:#f5c518;color:#3d3510}
+.lesson-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.lesson-controls .btn{min-height:44px}
+#lessonPlay{min-width:130px}
+.lesson-scene-name{flex:1;min-width:160px;font-weight:750;color:#2f4a3e}
+.lesson-option{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:#4b5f55}
+.lesson-info{margin-top:14px}
+
+/* Scene drawing */
+.ls-in{opacity:0;transition:opacity .7s ease,transform .7s ease}
+.ls-in.on{opacity:1}
+.ls-rise{transform:translateY(24px)}.ls-rise.on{transform:none}
+.ls-pop{transform-box:fill-box;transform-origin:center;transform:scale(.6)}.ls-pop.on{transform:scale(1)}
+.ls-drop{transform:translateY(-60px)}.ls-drop.on{transform:none}
+.ls-sink{transform:translateY(-120px) rotate(-8deg);transition-duration:2.2s}.ls-sink.on{transform:none}
+.ls-cover{transform:translateY(40px)}.ls-cover.on{transform:none;transition-duration:1.6s}
+.ls-d1{transition-delay:.25s}.ls-d2{transition-delay:.5s}.ls-d3{transition-delay:.75s}
+.ls-label-bg{fill:#ffffffe6;stroke:#08796e;stroke-width:2}
+.ls-label{font:800 20px Segoe UI,Arial,sans-serif;fill:#0b4f45}
+.ls-cap{font:700 20px Segoe UI,Arial,sans-serif;fill:#22392f}
+.ls-big{font:900 120px Segoe UI,Arial,sans-serif;fill:#e25d3f}
+.ls-neq{font-size:80px;fill:#e25d3f}
+.ls-emoji{font-size:48px}
+.ls-card{fill:#fff;stroke:#dbe6de;stroke-width:2}
+.ls-swim{animation:ls-swim 4s ease-in-out infinite}
+.ls-sun{animation:ls-glow 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.ls-bubbles circle{fill:#ffffff99;animation:ls-bubble 5s linear infinite}
+.ls-bubbles circle:nth-child(2){animation-delay:1.6s}.ls-bubbles circle:nth-child(3){animation-delay:3.1s}
+.ls-flow{stroke-dasharray:30 18;animation:ls-flow 1.4s linear infinite}
+.ls-rain circle,.ls-rain line{animation:ls-fall 1.6s ease-in infinite}
+.ls-rain>*:nth-child(2n){animation-delay:.5s}.ls-rain>*:nth-child(3n){animation-delay:.9s}
+.ls-wind path{animation:ls-wind 2s ease-in-out infinite}
+.ls-brush{animation:ls-brush 1s ease-in-out infinite;transform-box:fill-box;transform-origin:top left}
+.ls-fold{animation:ls-fold 6s ease-out both;transform-origin:400px 420px}
+@keyframes ls-swim{0%,100%{transform:translateX(0)}50%{transform:translateX(40px)}}
+@keyframes ls-glow{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes ls-bubble{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-200px);opacity:0}}
+@keyframes ls-flow{to{stroke-dashoffset:-48}}
+@keyframes ls-fall{0%{transform:translateY(-20px);opacity:0}30%{opacity:1}100%{transform:translateY(60px);opacity:0}}
+@keyframes ls-wind{0%,100%{transform:translateX(0)}50%{transform:translateX(24px)}}
+@keyframes ls-brush{0%,100%{transform:rotate(0)}50%{transform:rotate(-14deg)}}
+@keyframes ls-fold{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+
+/* Quiz */
+.lesson-quiz{padding:22px clamp(14px,4vw,40px)}
+.lesson-quiz-head{display:flex;justify-content:space-between;align-items:center}
+.lesson-quiz h2{margin:12px 0 16px;font-size:24px}
+.lesson-options{display:grid;gap:10px}
+.lesson-options button{display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid #dbe6de;border-radius:14px;background:#fff;font:inherit;font-size:18px;text-align:left;cursor:pointer}
+.lesson-options button:hover:not(:disabled){border-color:#2eaa83}
+.lesson-options button span{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;background:#e5f5ec;color:#08796e;font-weight:900}
+.lesson-options button.right{border-color:#2eaa83;background:#e2f5e8}
+.lesson-options button.wrong{border-color:#e25d3f;background:#fff0eb}
+.lesson-options button:disabled{cursor:default}
+.lesson-feedback{margin:14px 0 10px;padding:12px 14px;border-radius:12px;font-size:17px;line-height:1.45}
+.lesson-feedback.right{background:#e2f5e8;color:#0f5a37}
+.lesson-feedback.wrong{background:#fff4d9;color:#6b4a0b}
+.lesson-result{text-align:center}
+.lesson-result-icon{font-size:72px}
+.lesson-result .toolbar{justify-content:center}
+
+@media (prefers-reduced-motion:reduce){.ls-in,.ls-sink,.ls-cover{transition:opacity .3s}.ls-swim,.ls-sun,.ls-bubbles circle,.ls-flow,.ls-rain>*,.ls-wind path,.ls-brush,.ls-fold{animation:none}}
+@media(max-width:700px){
+  .lesson-player{padding:8px;border-radius:14px}
+  .lesson-caption{font-size:17px}
+  .lesson-scene-name{order:-1;flex-basis:100%}
+  .lesson-controls .btn{flex:1}
+  .lesson-quiz h2{font-size:20px}
+  .lesson-options button{font-size:16px}
+}

@@ -28,6 +28,7 @@ const ROUTES=[
   [/^#\/karma-deneme$/,()=>renderMixedBuilder()],
   [/^#\/okuma-denetim$/,()=>renderReadingAudit()],
   [/^#\/rozetler$/,()=>renderBadgeCollection()],
+  [/^#\/ders\/([a-z0-9-]+)$/,m=>renderLesson(m[1])],
 ];
 let routing=false;
 function setRoute(hash){if(routing||location.hash===hash)return;history.pushState(null,'',hash||location.pathname);state.route=hash}
@@ -107,7 +108,7 @@ async function renderHome(){
   if(state.role)shell(`<div class="hero"><div class="eyebrow">Yükleniyor</div><h1>Çalışmalar hazırlanıyor…</h1></div><div class="grid" style="margin-top:16px"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>`);
   try{
     const isParent=state.role==='parent';
-    const [data,planning,progress,backupStatus,auditStatus,readingData,readingProgress,studyDashboard,badgesData]=await Promise.all([api('/api/assignments'),isParent?api('/api/catalog'):Promise.resolve(null),isParent?api('/api/progress'):Promise.resolve(null),isParent?api('/api/backup/status'):Promise.resolve(null),isParent?api('/api/audit/status'):Promise.resolve(null),api('/api/reading/assignments'),isParent?api('/api/reading/progress'):Promise.resolve(null),isParent?api('/api/study/dashboard'):Promise.resolve(null),api('/api/student/badges')]);
+    const [data,planning,progress,backupStatus,auditStatus,readingData,readingProgress,studyDashboard,badgesData,lessonsData]=await Promise.all([api('/api/assignments'),isParent?api('/api/catalog'):Promise.resolve(null),isParent?api('/api/progress'):Promise.resolve(null),isParent?api('/api/backup/status'):Promise.resolve(null),isParent?api('/api/audit/status'):Promise.resolve(null),api('/api/reading/assignments'),isParent?api('/api/reading/progress'):Promise.resolve(null),isParent?api('/api/study/dashboard'):Promise.resolve(null),api('/api/student/badges'),ensureLessons(true)]);
     if(!state.calendarMonth)state.calendarMonth=localToday().slice(0,7);
     const backupAge=backupStatus?.lastBackupAt?(Date.now()-Date.parse(backupStatus.lastBackupAt.replace(' ','T')+'Z'))/86400000:Infinity;
     const currentMonth=`${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}`;
@@ -120,6 +121,7 @@ async function renderHome(){
       <div class="section-title"><h2>${isParent?'Atanan çalışmalar':'Çalışmalarım'}</h2><div class="toolbar">${isParent?'<button class="btn secondary" id="btnSearchQuestions">🔍 Konu & Soru Ara</button><button class="btn secondary" id="newMixedAssignment">🎯 Karma deneme oluştur</button><button class="btn" id="newAssignment">+ Yeni çalışma</button><button class="btn secondary" id="btnReportCard">📄 Gelişim Karnesi</button>':''}<button class="btn secondary" id="btnMistakes">📓 Hata Defteri${isParent?'':'m'}</button></div></div><div id="flash">${flash()}</div>
       ${data.assignments.length?`<div class="grid">${data.assignments.map(a=>{const[s,c]=assignmentStatus(a);return `<article class="card"><div class="card-top"><div class="eyebrow">${a.total} soru</div><span class="${c}">${esc(s)}</span></div><h3>${esc(a.title)}</h3><p>${a.submitted_at?'Teslim edildi':'Çözülmeyi bekliyor'} · ${esc(uiStamp(a.created_at))}${a.due_date?` · Hedef: ${esc(uiDueText(a.due_date,!!a.submitted_at))}`:''}</p><div class="card-actions"><button class="btn secondary" data-open="${a.id}">${isParent?'Aç ve kontrol et':'Çalışmayı aç'} →</button><button class="link-btn" data-print="${a.id}">Yazdır</button>${isParent?`<button class="link-btn" data-rename="${a.id}">Adı değiştir</button><button class="link-btn" data-due="${a.id}">Hedef tarih</button><button class="link-btn danger" data-delete="${a.id}">Sil</button>`:''}</div></article>`}).join('')}</div>`:`<div class="empty">Henüz fasikül çalışması yok.</div>`}
       ${readingHomeMarkup(readingData.assignments,isParent,readingProgress)}
+      ${lessonsHomeMarkup(lessonsData,isParent)}
       ${isParent?studyDashboardMarkup(studyDashboard):''}
       ${isParent&&auditStatus?.summary?`<section class="planning-section card"><h2>Soru denetimi</h2><p>${auditStatus.summary.clean} / ${auditStatus.summary.questions} soru otomatik dosya, sayfa ve cevap anahtarı denetiminden geçti. ${auditStatus.contextQuestions} sorunun ortak metin veya grafiği görseline eklendi; ${auditStatus.trimmedPrevious} kesimden sonraki soruya ait içerik çıkarıldı.</p><p class="small muted">Otomatik denetim, tek tek insan gözüyle onay anlamına gelmez. Şüpheli bir görseli fasikül listesinden işaretleyip düzeltebilirsiniz.</p><a href="/api/audit/report" download="soru_denetimi.csv">Ayrıntılı denetim raporunu indir</a></section>`:''}
       ${isParent?progressMarkup(progress):''}
@@ -140,6 +142,7 @@ async function renderHome(){
     document.querySelector('#btnReportCard')?.addEventListener('click',()=>renderReportCard(renderHome));
     document.querySelectorAll('[data-action="report-card"]').forEach(b=>b.onclick=()=>renderReportCard(renderHome));
     bindReadingHome(readingData.assignments,isParent);
+    bindLessonLinks();
     if(isParent)bindStudyDashboard(studyDashboard);
     bindBadgesWidget(badgesData);
     document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>renderAssignment(Number(b.dataset.open)));
@@ -285,7 +288,7 @@ function drawCatalog(){
     if(repeated.length&&!await uiConfirm('Bu sorular daha önce verildi',`Seçilen ${state.selected.size} sorudan ${repeated.length} tanesi daha önce bir çalışmada verildi (${repeated.map(q=>q.number).join(', ')}. sorular). Yine de atansın mı?`,'Yine de ata'))return;
     const title=document.querySelector('#title').value.trim();const result=await api('/api/assignments',{method:'POST',body:JSON.stringify({title,dueDate:document.querySelector('#dueDate').value,questionIds:[...state.selected]})});await renderAssignment(result.id)}catch(err){showError(err)}};
 }
-async function renderAssignment(id){setRoute(`#/calisma/${id}`);try{const data=await api(`/api/assignments/${id}`);state.assignment=data;state.questionIndex=state.role==='student'?Math.min(data.assignment.last_question_index||0,data.questions.length-1):0;if(state.role==='parent')drawReview();else drawStudentFull()}catch(err){showError(err)}}
+async function renderAssignment(id){setRoute(`#/calisma/${id}`);try{const [data]=await Promise.all([api(`/api/assignments/${id}`),ensureLessons()]);state.assignment=data;state.questionIndex=state.role==='student'?Math.min(data.assignment.last_question_index||0,data.questions.length-1):0;if(state.role==='parent')drawReview();else drawStudentFull()}catch(err){showError(err)}}
 // Solving screens: a one-line header instead of the hero, so the question starts near the top.
 function workHeader({backId,backText,eyebrow,title,status='',printId=''}){
   return `<header class="work-header"><button class="link-btn back" id="${backId}">← ${esc(backText)}</button><div class="work-title"><span class="eyebrow">${esc(eyebrow)}</span><h1>${esc(title)}</h1></div>${status?`<span class="work-status">${esc(status)}</span>`:''}${printId?`<button class="link-btn" id="${printId}">🖨 Yazdır</button>`:''}</header>`;
@@ -321,9 +324,10 @@ async function drawStudentFull(){
   shell(`${workHeader({backId:'back',backText:'Çalışmalarıma dön',eyebrow:done?'Teslim edildi':'Çalışma sürüyor',title:a.title,status:done?(feedbackReady?'Veli kontrolü tamamlandı':'Veli kontrolü bekleniyor'):'',printId:'printCurrentTest'})}${studyCalmMarkup()}
     <div class="split question-layout"><aside class="card question-nav"><div class="question-progress"><strong>${answered}/${qs.length} soru yanıtlandı</strong><div class="progress"><span style="width:${answered/qs.length*100}%"></span></div></div>${numberNavMarkup(qs,i,'data-index',x=>x.response)}${done?'':submitButtonMarkup('submit',answered,qs.length)}</aside>
     <section class="question-card"><div class="question-kicker"><span>Soru ${i+1} / ${qs.length}<span class="kicker-answered"> · ${answered} yanıt</span></span><div class="kicker-meta"><span class="pill gray" title="Bu soruda geçen süre">⏱️ <span id="studentLiveTimer">00:00</span></span><span>${esc(q.course)} · ${esc(q.booklet_title)} · ${q.number}. soru</span></div></div>${studentQuestion(q,done)}${studyUncertainMarkup(q,done)}
-    ${feedbackReady?`<div class="feedback-box ${esc(q.grade)}"><strong>Veli değerlendirmesi: ${{correct:'Doğru',incorrect:'Yanlış',partial:'Kısmen doğru'}[q.grade]||''}</strong>${q.answer_key?`<span>Doğru cevap: ${esc(q.answer_key)}</span>`:''}${q.note?`<p>Veli notu: ${esc(q.note)}</p>`:''}</div>`:''}
+    ${feedbackReady?`<div class="feedback-box ${esc(q.grade)}"><strong>Veli değerlendirmesi: ${{correct:'Doğru',incorrect:'Yanlış',partial:'Kısmen doğru'}[q.grade]||''}</strong>${q.answer_key?`<span>Doğru cevap: ${esc(q.answer_key)}</span>`:''}${q.note?`<p>Veli notu: ${esc(q.note)}</p>`:''}${q.grade!=='correct'?lessonLinkMarkup(lessonForQuestion(q.course,q.stem),'Konuyu tekrar et'):''}</div>`:''}
     ${answerDockMarkup({options:dockOptions,prevId:'prev',nextId:'next',first:i===0,last:i===qs.length-1,submitId:done?'':'dockSubmit'})}<div id="flash">${flash()}</div></section></div><div id="submitSummary"></div>`);
   uiBindImageZoom();
+  bindLessonLinks();
   bindStudyCalm(drawStudentFull);
   bindStudyShortcuts();
   if(!done){
@@ -408,7 +412,7 @@ function drawReview(){
       ${q.image_path?`<a class="image-zoom" href="/question-images/${encodeURIComponent(q.image_path)}"><img loading="lazy" class="review-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru görseli"><span>Görseli büyüt ↗</span></a>`:`<p class="stem">${esc(q.stem)}</p>`}
       <div class="review-meta"><span>${esc(q.course)} · ${esc(q.booklet_title)} · <a href="/api/source-pdf?bookletId=${q.booklet_id}" target="_blank" rel="noopener">PDF ↗</a></span><span>Öğrencinin yanıtı: <strong>${esc(q.response||'Henüz yok')} ${esc(q.choices.find(c=>c.label===q.response)?.text||'')}</strong></span>
       <span>Doğru cevap: <strong>${q.answer_key?esc(q.answer_key)+' '+esc(q.choices.find(c=>c.label===q.answer_key)?.text||''):'Anahtar yok · veli kontrolü'}</strong></span>${q.uncertain?'<span class="pill amber">Öğrenci emin değildi</span>':''}</div>
-      ${q.flag_note?`<div class="notice">Görsel sorunu: ${esc(q.flag_note)}</div>`:''}<div class="question-tools"><button class="link-btn" data-edit="${q.id}">Kesimi düzelt</button><button class="link-btn" data-flag="${q.id}">Görsel sorunu ${q.flag_note?'düzenle':'işaretle'}</button></div>
+      ${q.flag_note?`<div class="notice">Görsel sorunu: ${esc(q.flag_note)}</div>`:''}<div class="question-tools"><button class="link-btn" data-edit="${q.id}">Kesimi düzelt</button><button class="link-btn" data-flag="${q.id}">Görsel sorunu ${q.flag_note?'düzenle':'işaretle'}</button></div>${lessonLinkMarkup(lessonForQuestion(q.course,q.stem),'Önerilen video ders')}
       <div class="review-controls">${[['correct','Doğru'],['incorrect','Yanlış'],['partial','Kısmen doğru']].map(([v,t])=>`<button data-grade="${v}" class="${selection===v?'active '+v:''}" aria-pressed="${selection===v}" ${submitted?'':'disabled'}>${t}</button>`).join('')}</div>
       ${studyReasonSelect(q.reason||'')}
       <div class="field"><label for="reviewNote${q.id}">Notunuz</label><textarea id="reviewNote${q.id}" maxlength="500" placeholder="İsteğe bağlı kısa açıklama" ${submitted?'':'disabled'}>${esc(q.note||'')}</textarea></div></article>`;
@@ -416,6 +420,7 @@ function drawReview(){
     <div class="review-savebar"><span>Tüm sorular tek işlemde kaydedilir.</span><button class="btn save-all" ${submitted?'':'disabled'}>Tümünü kaydet</button></div>`);
   document.querySelector('#printReviewCurrent')?.addEventListener('click',()=>renderPrintWorksheet('test',a.id,drawReview));
   uiBindImageZoom();
+  bindLessonLinks();
   state.leaveGuard=()=>!dirty||confirm('Kaydedilmemiş değerlendirmeler var. Sayfadan çıkılsın mı?');
   uiBindReviewFilter(document.querySelector('#reviewFilter'),'[data-review]');
   if(submitted)uiBindReviewKeys('[data-review]',{d:'[data-grade=correct]',y:'[data-grade=incorrect]',k:'[data-grade=partial]'});

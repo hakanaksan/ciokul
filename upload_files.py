@@ -23,6 +23,7 @@ SOURCES = [
     ("question_images", "*.png"),
     ("reading_images", "*.png"),
     ("reading_audio", "*.wav"),
+    ("lesson_audio", "**/*.wav"),
     ("4_sinif_fasikulleri", "**/*.pdf"),
     ("4_sinif_okuma_becerileri", "*.pdf"),
 ]

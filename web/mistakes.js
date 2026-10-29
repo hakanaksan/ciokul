@@ -10,7 +10,7 @@ const mistakesState = {
 async function renderMistakesNotebook() {
   setRoute('#/hata-defteri');
   try {
-    mistakesState.data = await api('/api/student/mistakes');
+    [mistakesState.data] = await Promise.all([api('/api/student/mistakes'), ensureLessons()]);
     drawMistakesNotebook();
   } catch (err) {
     showError(err);
@@ -133,6 +133,7 @@ function drawMistakesNotebook() {
                   <button class="btn ${isResolved ? 'secondary' : ''} btn-toggle-resolve" data-kind="${m.kind}" data-item-key="${m.item_key}" data-resolved="${isResolved ? 'true' : 'false'}">
                     ${isResolved ? '↩️ Yeniden Listeye Al' : '✅ Anladım & Kavradım'}
                   </button>
+                  ${lessonLinkMarkup(lessonForQuestion(m.course, m.stem), 'Video ders')}
                 </div>
               </article>
             `;
@@ -148,6 +149,7 @@ function drawMistakesNotebook() {
   `);
 
   bindMistakesNotebook();
+  bindLessonLinks();
 }
 
 function bindMistakesNotebook() {

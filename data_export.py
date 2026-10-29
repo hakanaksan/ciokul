@@ -15,6 +15,7 @@ TABLES = [
     "responses", "reviews", "question_flags", "plan_overrides", "settings", "mistake_resolutions",
     "reading_sections", "reading_questions", "reading_assignments", "reading_responses",
     "reading_reviews", "reading_image_checks", "study_reflections", "study_repeat_queue",
+    "lesson_progress",
 ]
 IDENTITY_TABLES = ("booklets", "questions", "assignments", "reading_sections", "reading_assignments")
 REQUIRED_TABLES = {"users", "booklets", "questions", "assignments", "responses", "reviews"}

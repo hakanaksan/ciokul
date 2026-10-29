@@ -1,0 +1,159 @@
+{
+  "id": "fosiller",
+  "title": "Fosiller Nasıl Oluşur?",
+  "course": "Fen Bilimleri",
+  "unit": "Yer Kabuğu ve Dünya'mızın Hareketleri",
+  "kazanim": {
+    "code": "F.4.1.1.3",
+    "text": "Fosillerin oluşumunu açıklar.",
+    "note": "MEB Fen Bilimleri Dersi Öğretim Programı (2018), 4. sınıf. Programa göre fosil çeşitlerine girilmez."
+  },
+  "summary": "Fosilin ne olduğunu, nasıl oluştuğunu, hangi şartlarda oluştuğunu ve bize neler anlattığını adım adım öğren.",
+  "match": {"course": "Fen Bilimleri", "keywords": ["fosil", "paleontolo"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Çölde balık mı?", "visual": "desert-fish",
+      "sentences": [
+        "Merhaba! Bugün birlikte zamanda çok uzun bir yolculuğa çıkacağız.",
+        "Bilim insanları Sahra Çölü'ndeki dağlarda binlerce balık fosili buldular.",
+        "Kumdan ve kayalardan oluşan bir çölde balık izleri nasıl olabilir?",
+        "Bu sorunun cevabını bulmak için önce fosilin ne olduğunu öğrenelim."
+      ]
+    },
+    {
+      "id": "s02", "title": "Fosil nedir?", "visual": "fossil-examples",
+      "sentences": [
+        "Fosil, milyonlarca yıl önce yaşamış bitki ve hayvanların kayaçlar içinde korunarak günümüze ulaşan kalıntıları ya da izleridir.",
+        "Bir dinozorun kemiği, bir köpek balığının dişi ya da bir deniz canlısının kabuğu fosil olabilir.",
+        "Kayaya basılmış bir yaprağın izi de bir fosildir.",
+        "Fosiller taş gibi serttir, çünkü canlının kalıntısı zamanla taşlaşmıştır."
+      ]
+    },
+    {
+      "id": "s03", "title": "Hikâye başlıyor", "visual": "form-death",
+      "sentences": [
+        "Peki bir fosil nasıl oluşur? Bunu bir balığın hikâyesiyle izleyelim.",
+        "Milyonlarca yıl önce bir denizde yaşayan bu balık öldü ve denizin dibine battı.",
+        "Balığın yumuşak kısımları kısa sürede çürüdü. Geriye kemikleri gibi sert kısımları kaldı."
+      ]
+    },
+    {
+      "id": "s04", "title": "Tortu örtüyor", "visual": "form-bury",
+      "sentences": [
+        "Akarsuların taşıdığı çamur ve kum, denizin dibine çöktü.",
+        "Bu birikintilere tortu denir. Tortu, balığın kalıntısının üzerini hemen örttü.",
+        "Böylece kalıntının hava ile teması kesildi ve kalıntı bozulmadan korunabildi."
+      ]
+    },
+    {
+      "id": "s05", "title": "Katmanlar taşlaşıyor", "visual": "form-layers",
+      "sentences": [
+        "Yıllar geçtikçe tortuların üzerine yeni tortular birikti ve katmanlar oluştu.",
+        "Üstteki katmanların ağırlığıyla alttaki katmanlar sıkıştı ve zamanla taşlaştı.",
+        "Bu sırada balığın kemikleri de taşa dönüştü. İşte fosil böyle oluştu.",
+        "Bu olaylar birkaç günde ya da birkaç yılda değil, milyonlarca yılda gerçekleşir."
+      ]
+    },
+    {
+      "id": "s06", "title": "Fosil yüzeye çıkıyor", "visual": "form-uplift",
+      "sentences": [
+        "Milyonlarca yıl içinde yer kabuğu hareket etti. Kayalar kıvrıldı ve yükseldi.",
+        "Denizin dibindeki katmanlar karaya çıktı ve dağları oluşturdu.",
+        "Rüzgâr, yağmur ve akarsular kayaları yavaş yavaş aşındırdı.",
+        "Sonunda fosil yeryüzüne yaklaştı ve bilim insanları onu buldu."
+      ]
+    },
+    {
+      "id": "s07", "title": "Sahra'nın sırrı", "visual": "desert-answer",
+      "sentences": [
+        "Şimdi ilk sorumuza dönelim. Sahra Çölü'nde neden balık fosilleri var?",
+        "Çünkü milyonlarca yıl önce o bölge bir denizdi. Fosiller bize bunu anlatıyor.",
+        "Fosiller, bir yerin geçmişte nasıl bir ortam olduğunu öğrenmemize yardım eder."
+      ]
+    },
+    {
+      "id": "s08", "title": "Fosilleşmenin şartları", "visual": "conditions",
+      "sentences": [
+        "Ölen her canlı fosil olmaz. Fosilleşme için bazı şartlar gerekir.",
+        "Kalıntının üzeri tortuyla hemen örtülmeli ve hava ile teması kesilmelidir.",
+        "Açıkta kalan bir kalıntı ise rüzgâr, güneş ve başka canlılar yüzünden kısa sürede bozulur.",
+        "Bu yüzden fosiller her yerde oluşmaz. Çoğunlukla deniz ve göl diplerinde, tortuların biriktiği yerlerde oluşur.",
+        "Genellikle kemik, diş ve kabuk gibi sert kısımlar fosilleşir. Canlının bütün parçaları korunmaz."
+      ]
+    },
+    {
+      "id": "s09", "title": "Fosiller ne anlatır?", "visual": "layers-time",
+      "sentences": [
+        "Fosiller bize çok şey anlatır.",
+        "Geçmişte yaşamış ve bugün nesli tükenmiş canlıları, örneğin dinozorları, fosiller sayesinde tanıyoruz.",
+        "Canlıların zaman içinde nasıl değiştiğini de fosillerden öğreniriz.",
+        "Kayaç katmanlarında genellikle alttaki katmanlar daha eski, üstteki katmanlar daha yenidir.",
+        "Aynı katmanda bulunan fosillerin canlıları da aynı dönemde yaşamıştır."
+      ]
+    },
+    {
+      "id": "s10", "title": "Fosil dedektifleri", "visual": "scientists",
+      "sentences": [
+        "Fosilleri inceleyen bilim dalına paleontoloji denir.",
+        "Fosilleri araştıran bilim insanlarına da paleontolog denir.",
+        "Paleontologlar fosilleri çok dikkatli kazar, fırçalarla temizler ve inceler.",
+        "Dikkat! Arkeoloji farklı bir bilim dalıdır. Arkeologlar eski insanların yaptığı çanak, çömlek ve alet gibi eserleri inceler."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Fosiller, milyonlarca yıl önce yaşamış canlıların taşlaşmış kalıntıları ya da izleridir.",
+        "Fosiller kısa sürede değil, milyonlarca yılda oluşur.",
+        "Fosiller her yerde oluşmaz. Kalıntının üzeri tortuyla hemen örtülmeli ve hava ile teması kesilmelidir.",
+        "Fosiller kayaç katmanlarının içinde bulunur ve bize Dünya'nın geçmişini anlatır.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Fosil nedir?",
+      "options": ["Yer altından çıkarılan değerli bir taş", "Milyonlarca yıl önce yaşamış canlıların taşlaşmış kalıntıları ya da izleri", "Kayaçları oluşturan mineraller", "Akarsuların taşıdığı kum ve çamur"],
+      "answer": 1,
+      "explain": "Fosiller, çok uzun zaman önce yaşamış canlıların kayaçlar içinde korunarak taşlaşmış kalıntıları ya da izleridir.",
+      "scene": "s02"
+    },
+    {
+      "question": "Fosilleşme için aşağıdakilerden hangisi gereklidir?",
+      "options": ["Kalıntının açık havada kalması", "Kalıntının güneşte kuruması", "Kalıntının üzerinin tortuyla hemen örtülmesi", "Kalıntının rüzgârla taşınması"],
+      "answer": 2,
+      "explain": "Tortu kalıntının üzerini hemen örterse hava ile teması kesilir ve kalıntı bozulmadan korunabilir.",
+      "scene": "s08"
+    },
+    {
+      "question": "Bir fosilin oluşması ne kadar sürer?",
+      "options": ["Birkaç gün", "Birkaç ay", "Birkaç yıl", "Milyonlarca yıl"],
+      "answer": 3,
+      "explain": "Katmanların birikmesi ve taşlaşması çok yavaş olur. Fosiller milyonlarca yılda oluşur.",
+      "scene": "s05"
+    },
+    {
+      "question": "Fosilleşmenin aşamalarından hangisi en son gerçekleşir?",
+      "options": ["Canlı ölür ve deniz dibine batar", "Kalıntının üzeri tortuyla örtülür", "Katmanlar sıkışıp taşlaşır", "Kayalar aşınır ve fosil yeryüzüne yaklaşır"],
+      "answer": 3,
+      "explain": "Önce canlı ölür, sonra tortuyla örtülür, katmanlar taşlaşır. En son kayalar yükselir, aşınır ve fosil yeryüzüne yaklaşır.",
+      "scene": "s06"
+    },
+    {
+      "question": "Sahra Çölü'nde balık fosilleri bulunması bize neyi gösterir?",
+      "options": ["Balıkların çölde yaşayabildiğini", "Bu bölgenin geçmişte deniz olduğunu", "Çölün her zaman çöl olduğunu", "Fosillerin kısa sürede oluştuğunu"],
+      "answer": 1,
+      "explain": "Balık fosilleri, o bölgenin milyonlarca yıl önce bir deniz olduğunu gösterir.",
+      "scene": "s07"
+    },
+    {
+      "question": "Fosilleri inceleyen bilim insanına ne ad verilir?",
+      "options": ["Arkeolog", "Paleontolog", "Astronot", "Meteorolog"],
+      "answer": 1,
+      "explain": "Fosilleri inceleyen bilim dalı paleontoloji, bu bilim insanları paleontologdur. Arkeologlar ise eski insanların yaptığı eserleri inceler.",
+      "scene": "s10"
+    }
+  ]
+}

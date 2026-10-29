@@ -90,3 +90,14 @@ Araçlar:
 - `migrate_sqlite_to_pg.py`: `data/cio_okul.sqlite3` verisini `DATABASE_URL` veritabanına taşır (`--replace` ile üzerine yazar).
 - `upload_files.py`: Yerel içerik dosyalarını depoya yükler; aynı boyuttaki dosyaları atlar (`--force` hepsini yükler, `--new-key` yeni anahtar üretir).
 - Sunucudaki **Yedek indir** tüm tabloları JSON olarak verir; **Yedeği geri yükle** hem bu yedekleri hem de bu bilgisayarda alınmış eski yedekleri kabul eder (görseller hariç).
+
+## Video dersler
+
+Veli ve öğrenci ana sayfasındaki **Video Dersler** bölümünde MEB kazanımlarına göre hazırlanmış, seslendirmeli ve animasyonlu konu anlatımları bulunur. Ders cümle cümle seslendirilir; altyazı ve sahnedeki çizimler anlatımla birlikte ilerler. Sonunda kısa bir test vardır; yanlış cevapta ilgili bölüm tekrar izlenebilir. İzleme ve test sonucu kaydedilir, "Video Dersi Kâşifi" rozetine sayılır. İlgili sorularda (değerlendirilmiş test, hata defteri, veli kontrol ekranı) dersin bağlantısı görünür.
+
+Yeni ders eklemek için:
+
+1. `lessons/<ders>.json` dosyasını yazın: kazanım, sahneler (`id`, `title`, `visual`, `sentences`), mini test ve `match` (ders ve sorularda aranacak kelimeler). Örnek: `lessons/fosiller.json`.
+2. Sahne çizimlerini `web/lesson_scenes.js` içine `visual` adıyla ekleyin. `data-step="n"` olan öğeler anlatım n. cümleye geldiğinde belirir.
+3. Sesleri üretin: `generate_lesson_audio.py <ders>` (Piper, `lesson_audio/<ders>/` ve `lessons/<ders>.audio.json`).
+4. Sunucu için sesleri depoya yükleyin: `upload_files.py --only lesson_audio/`.

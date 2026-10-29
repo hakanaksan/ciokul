@@ -29,6 +29,7 @@ from curriculum_schedule import MONTHS, SCHOOL_YEAR, SOURCES, annotate_booklet
 import achievements
 import data_export
 import database
+import lessons
 import reading_module
 import storage
 import study_features
@@ -219,6 +220,7 @@ def init_db():
               expires_at INTEGER NOT NULL
             );
             """)
+            db.executescript(lessons.SCHEMA_SQLITE)
             columns = {row[1] for row in db.execute("PRAGMA table_info(questions)")}
             if "image_path" not in columns:
                 db.execute("ALTER TABLE questions ADD COLUMN image_path TEXT")
@@ -623,6 +625,29 @@ class Handler(BaseHTTPRequestHandler):
         path = urlparse(self.path).path
         try:
             if reading_module.handle(self, "GET", path, None, connect, DB_LOCK, checked_date): return
+            if path.startswith("/lesson-audio/"):
+                if not self.require(): return
+                parts = path.removeprefix("/lesson-audio/").split("/")
+                name = lessons.audio_name(*parts) if len(parts) == 2 else None
+                if not name:
+                    return self.send_json({"error": "Ses bulunamadı."}, 404)
+                if storage.IS_REMOTE:
+                    return self.send_remote_audio(name)
+                audio = BASE / name
+                if not audio.is_file():
+                    return self.send_json({"error": "Ses bulunamadı."}, 404)
+                return self.send_audio_range(audio)
+            if path == "/api/lessons":
+                if not self.require(): return
+                with connect() as db:
+                    return self.send_json({"lessons": lessons.catalog(db)})
+            if path.startswith("/api/lessons/"):
+                if not self.require(): return
+                with connect() as db:
+                    lesson = lessons.detail(db, path.removeprefix("/api/lessons/"))
+                if not lesson:
+                    return self.send_json({"error": "Video ders bulunamadı."}, 404)
+                return self.send_json(lesson)
             if path.startswith("/reading-audio/"):
                 if not self.require(): return
                 name = path.removeprefix("/reading-audio/")
@@ -1145,6 +1170,12 @@ class Handler(BaseHTTPRequestHandler):
                     ended = end_other_sessions(token, "student") if new_pin else 0
                     return self.send_json({"ok": True, "endedSessions": ended})
                 return self.send_json({"ok": True, "endedSessions": end_other_sessions(token)})
+            if path.startswith("/api/lessons/") and path.endswith("/progress"):
+                # Only the student's own viewing counts.
+                if not self.require("student"): return
+                with DB_LOCK, connect() as db:
+                    lessons.save_progress(db, path.removeprefix("/api/lessons/").removesuffix("/progress"), data)
+                return self.send_json({"ok": True})
             if path == "/api/student/badges/seen":
                 # Only the student's own view marks new badges as celebrated.
                 if not self.require("student"): return
