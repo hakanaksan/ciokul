@@ -81,7 +81,7 @@ function drawLessonPlayer() {
       </div>
       <audio id="lessonAudio" preload="auto"></audio>
     </div>
-    <details class="card lesson-info"><summary>Bu ders hangi kazanıma göre hazırlandı?</summary><p><strong>${esc(lesson.kazanim.code)} · ${esc(lesson.kazanim.text)}</strong></p><p class="small muted">${esc(lesson.kazanim.note)} Ünite: ${esc(lesson.unit)}.</p></details>`);
+    <details class="card lesson-info"><summary>Bu ders hangi kazanıma göre hazırlandı?</summary><p><strong>${esc(lesson.kazanim.code)} · ${esc(lesson.kazanim.text)}</strong></p><p class="small muted">${esc(lesson.kazanim.note)} Ünite: ${esc(lesson.unit)}.</p><p class="small muted">Dersteki anlatıcı sesi yapay zekâ ile üretildi.</p></details>`);
   const audio = document.querySelector('#lessonAudio'), rate = document.querySelector('#lessonRate');
   try { rate.value = localStorage.getItem('cioLessonRate') || '1'; } catch (e) { rate.value = '1'; }
   rate.onchange = () => { audio.playbackRate = Number(rate.value); try { localStorage.setItem('cioLessonRate', rate.value); } catch (e) {} };
