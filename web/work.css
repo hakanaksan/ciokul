@@ -40,6 +40,15 @@ body.high-contrast .work-header{background:#063f35}
 .account-form h3{margin:0 0 10px}
 .account-form .btn{margin-top:4px}
 
+/* New assignment: tests and questions that were already given */
+.test-grid button.given{border-style:dashed;background:#f3f6f3;color:#6f8077}
+.test-grid button.given.active{border-style:solid;border-color:#08796e;background:#e5f5ec;color:#08796e}
+.test-grid button.partial{border-color:#e2c478}
+.test-given{display:block;margin-top:5px;font-size:12px;font-weight:800;color:#107348}
+.test-grid button.partial .test-given{color:#8b6011}
+.question-given{display:block;margin-top:2px;font-size:13px;font-weight:700;color:#107348}
+.test-given-notice{margin:0 0 12px}
+
 /* Labels without a single control (button groups) */
 .field .field-label{display:block;font-size:13px;font-weight:750;color:#485854}
 

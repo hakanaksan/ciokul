@@ -658,11 +658,17 @@ class Handler(BaseHTTPRequestHandler):
                 query = parse_qs(urlparse(self.path).query)
                 booklet_id = int(query.get("bookletId", ["0"])[0])
                 with connect() as db:
-                    booklets = rows(db, """SELECT b.id,b.course,b.title,b.pdf_path,b.source_url,COUNT(q.id) AS count
+                    # assigned_count / times_assigned: questions already given in an existing assignment.
+                    booklets = rows(db, """SELECT b.id,b.course,b.title,b.pdf_path,b.source_url,COUNT(q.id) AS count,
+                        (SELECT COUNT(DISTINCT aq.question_id) FROM assignment_questions aq
+                         JOIN questions q2 ON q2.id=aq.question_id WHERE q2.booklet_id=b.id) AS assigned_count
                         FROM booklets b LEFT JOIN questions q ON q.booklet_id=b.id
                         GROUP BY b.id ORDER BY b.course,b.id""")
                     questions = rows(db, """SELECT q.id,q.booklet_id,q.number,q.page,q.kind,q.stem,q.answer_key,
-                        q.verified,q.image_path,f.note AS flag_note
+                        q.verified,q.image_path,f.note AS flag_note,
+                        (SELECT COUNT(*) FROM assignment_questions aq WHERE aq.question_id=q.id) AS times_assigned,
+                        (SELECT MAX(a.created_at) FROM assignment_questions aq JOIN assignments a ON a.id=aq.assignment_id
+                         WHERE aq.question_id=q.id) AS last_assigned_at
                         FROM questions q LEFT JOIN question_flags f ON f.question_id=q.id
                         WHERE q.booklet_id=? ORDER BY q.number""", (booklet_id,)) if booklet_id else []
                     overrides={(row["booklet_id"],row["test_index"]):row["year_month"]

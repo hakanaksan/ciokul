@@ -185,14 +185,25 @@ async function renderHome(){
     else{uiEnhanceStudentHome(data,readingData);badgesCelebrate(badgesData)}
   }catch(err){showError(err)}
 }
-async function renderCatalog(bookletId,testIndex=0){
+// Which questions of a test were already given in an assignment: status '', 'partial' or 'given'.
+function testGivenInfo(questions){
+  const given=questions.filter(q=>q.times_assigned);
+  const last=given.map(q=>q.last_assigned_at).filter(Boolean).sort().at(-1)||'';
+  const status=!given.length?'':given.length===questions.length?'given':'partial';
+  const label=status==='given'?`✓ Verildi · ${uiStamp(last)}`:status==='partial'?`◐ ${given.length}/${questions.length} soru verildi`:'';
+  return {status,count:given.length,last,label};
+}
+async function renderCatalog(bookletId,testIndex){
   setRoute('#/yeni-calisma');
   try{
     const list=await api('/api/catalog');
-    state.bookletId=(Number.isInteger(bookletId)?bookletId:null)||list.booklets.find(b=>b.count)?.id;
+    state.bookletId=(Number.isInteger(bookletId)?bookletId:null)||(list.booklets.find(b=>b.count&&b.assigned_count<b.count)||list.booklets.find(b=>b.count))?.id;
     const data=await api(`/api/catalog?bookletId=${state.bookletId}`);
     state.catalog=data;
-    state.testIndex=Number.isInteger(testIndex)?testIndex:0;
+    // Without an explicit test, open the first one that still has questions never given.
+    const firstOpen=Array.from({length:Math.ceil(data.questions.length/TEST_SIZE)},(_,i)=>i)
+      .find(i=>testGivenInfo(data.questions.slice(i*TEST_SIZE,(i+1)*TEST_SIZE)).status!=='given');
+    state.testIndex=Number.isInteger(testIndex)?testIndex:(firstOpen??0);
     state.selected=new Set(data.questions.slice(state.testIndex*TEST_SIZE,(state.testIndex+1)*TEST_SIZE).map(q=>q.id));
     const booklet=data.booklets.find(b=>b.id===state.bookletId);
     state.draftTitle=`${booklet.course} · ${booklet.title} · Test ${state.testIndex+1}`;
@@ -232,13 +243,14 @@ function drawCatalog(){
   const data=state.catalog, allQuestions=data.questions, selectedBooklet=data.booklets.find(b=>b.id===state.bookletId);
   const testCount=Math.ceil(allQuestions.length/TEST_SIZE);
   const qs=allQuestions.slice(state.testIndex*TEST_SIZE,(state.testIndex+1)*TEST_SIZE);
+  const currentGiven=testGivenInfo(qs);
   const suggested=selectedBooklet.suggestedTests[state.testIndex];
   const courses=[...new Set(data.booklets.map(b=>b.course))];
   shell(`<button class="link-btn back" id="back">← Çalışmalara dön</button><div class="hero"><div class="eyebrow">Yeni çalışma</div><h1>${esc(selectedBooklet.title)} · Test ${state.testIndex+1}</h1><p>Her test en fazla 15 sorudan oluşur. Görselleri kontrol edip çalışmaya kendi adınızı verin.</p></div><div id="flash">${flash()}</div>
     <div class="split" style="margin-top:20px"><section class="card"><h3>Çalışma bilgileri</h3>
     <div class="field"><label for="course">Ders</label><select id="course">${courses.map(c=>`<option ${c===selectedBooklet.course?'selected':''}>${esc(c)}</option>`).join('')}</select></div>
-    <div class="field"><label for="booklet">Fasikül</label><select id="booklet">${data.booklets.filter(b=>b.course===selectedBooklet.course).map(b=>`<option value="${b.id}" ${b.id===state.bookletId?'selected':''}>${esc(b.title)} · ${Math.ceil(b.count/TEST_SIZE)} test</option>`).join('')}</select></div>
-    <div class="field"><span class="field-label" id="testLabel">Test</span><div class="test-grid" role="group" aria-labelledby="testLabel">${Array.from({length:testCount},(_,index)=>{const part=allQuestions.slice(index*TEST_SIZE,(index+1)*TEST_SIZE);const timing=selectedBooklet.suggestedTests[index];return `<button type="button" data-test="${index}" class="${index===state.testIndex?'active':''}">Test ${index+1}<small>${part[0].number}–${part.at(-1).number}. soru</small><small>${esc(timing.month)}</small></button>`}).join('')}</div></div>
+    <div class="field"><label for="booklet">Fasikül</label><select id="booklet">${data.booklets.filter(b=>b.course===selectedBooklet.course).map(b=>`<option value="${b.id}" ${b.id===state.bookletId?'selected':''}>${esc(b.title)} · ${Math.ceil(b.count/TEST_SIZE)} test${b.assigned_count?(b.assigned_count>=b.count?' · ✓ tamamı verildi':` · ✓ ${b.assigned_count}/${b.count} soru verildi`):''}</option>`).join('')}</select></div>
+    <div class="field"><span class="field-label" id="testLabel">Test</span><div class="test-grid" role="group" aria-labelledby="testLabel">${Array.from({length:testCount},(_,index)=>{const part=allQuestions.slice(index*TEST_SIZE,(index+1)*TEST_SIZE);const timing=selectedBooklet.suggestedTests[index];const given=testGivenInfo(part);return `<button type="button" data-test="${index}" class="${index===state.testIndex?'active':''} ${given.status}">Test ${index+1}<small>${part[0].number}–${part.at(-1).number}. soru</small><small>${esc(timing.month)}</small>${given.label?`<span class="test-given">${esc(given.label)}</span>`:''}</button>`}).join('')}</div></div>
     <div class="timing-notice"><strong>Tahmini zaman: ${esc(suggested.month)}</strong><span>Ünite konuları işlendiğinde verin; okulun yıllık planı daha önce veya sonra olabilir.</span></div>
     <div class="field"><label for="plannedMonth">Öğretmenin ilerleyişine göre planlanan ay</label><input id="plannedMonth" type="month" value="${esc(suggested.yearMonth)}"></div><div class="toolbar"><button class="btn secondary" id="savePlannedMonth">Ayı kaydet</button>${suggested.overridden?'<button class="link-btn" id="resetPlannedMonth">Tahmine dön</button>':''}</div>
     <div class="field"><label for="title">Çalışmanın adı</label><input id="title" maxlength="100" value="${esc(state.draftTitle)}" placeholder="Örneğin: Pazartesi matematik çalışması"></div>
@@ -246,10 +258,10 @@ function drawCatalog(){
     <button class="btn full" id="create" ${state.selected.size?'':'disabled'}>Seçilen ${state.selected.size} soruyu ata</button>
     <div class="notice">Görseller otomatik kesildi. Cevap anahtarı olmayan sorular veli tarafından değerlendirilecektir.</div>
     <a href="/api/source-pdf?bookletId=${state.bookletId}" target="_blank" rel="noopener">Kaynak PDF’yi aç ↗</a></section>
-    <section class="card catalog-list"><div class="card-top"><h3>Test ${state.testIndex+1} · ${qs.length} soru</h3><button class="link-btn" id="toggleAll">${state.selected.size===qs.length?'Tümünü kaldır':'Tümünü seç'}</button></div>
-    ${qs.map(q=>`<div class="catalog-item"><label class="question-row"><input type="checkbox" data-q="${q.id}" ${state.selected.has(q.id)?'checked':''}><div><strong>${q.number}. soru <span>· PDF sayfa ${q.page}</span></strong><span>${q.answer_key?'Anahtar: '+q.answer_key:'Veli kontrolü gerekli'} · ${q.flag_note?'⚠ '+esc(q.flag_note):q.verified?'Kontrol edildi':'Otomatik kesim'}</span></div></label><details><summary>Görseli önizle</summary><img loading="lazy" class="review-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru"></details><div class="question-tools"><button class="link-btn" data-edit="${q.id}">Kesimi düzelt</button><button class="link-btn" data-flag="${q.id}">${q.flag_note?'Sorun notunu düzenle':'Sorun işaretle'}</button><button class="link-btn" data-verify="${q.id}">Doğrulandı</button></div></div>`).join('')}</section></div>`);
+    <section class="card catalog-list">${currentGiven.status?`<div class="notice test-given-notice">${currentGiven.status==='given'?'✓ Bu testin bütün soruları daha önce verildi':`◐ Bu testin ${currentGiven.count} sorusu daha önce verildi`} · son: ${esc(uiStamp(currentGiven.last))}</div>`:''}<div class="card-top"><h3>Test ${state.testIndex+1} · ${qs.length} soru</h3><button class="link-btn" id="toggleAll">${state.selected.size===qs.length?'Tümünü kaldır':'Tümünü seç'}</button></div>
+    ${qs.map(q=>`<div class="catalog-item"><label class="question-row"><input type="checkbox" data-q="${q.id}" ${state.selected.has(q.id)?'checked':''}><div><strong>${q.number}. soru <span>· PDF sayfa ${q.page}</span></strong><span>${q.answer_key?'Anahtar: '+q.answer_key:'Veli kontrolü gerekli'} · ${q.flag_note?'⚠ '+esc(q.flag_note):q.verified?'Kontrol edildi':'Otomatik kesim'}</span>${q.times_assigned?`<span class="question-given">✓ Daha önce verildi${q.times_assigned>1?` (${q.times_assigned} kez)`:''} · ${esc(uiStamp(q.last_assigned_at))}</span>`:''}</div></label><details><summary>Görseli önizle</summary><img loading="lazy" class="review-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru"></details><div class="question-tools"><button class="link-btn" data-edit="${q.id}">Kesimi düzelt</button><button class="link-btn" data-flag="${q.id}">${q.flag_note?'Sorun notunu düzenle':'Sorun işaretle'}</button><button class="link-btn" data-verify="${q.id}">Doğrulandı</button></div></div>`).join('')}</section></div>`);
   document.querySelector('#back').onclick=renderHome;
-  document.querySelector('#course').onchange=e=>renderCatalog(data.booklets.find(b=>b.course===e.target.value&&b.count)?.id);
+  document.querySelector('#course').onchange=e=>{const inCourse=data.booklets.filter(b=>b.course===e.target.value&&b.count);renderCatalog((inCourse.find(b=>b.assigned_count<b.count)||inCourse[0])?.id)};
   document.querySelector('#booklet').onchange=e=>renderCatalog(Number(e.target.value));
   document.querySelector('#title').oninput=e=>{state.draftTitle=e.target.value};
   document.querySelector('#dueDate').oninput=e=>{state.draftDueDate=e.target.value};
@@ -268,7 +280,10 @@ function drawCatalog(){
   document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>renderCropEditor(qs.find(q=>q.id===Number(b.dataset.edit)),refreshCatalog));
   document.querySelectorAll('[data-flag]').forEach(b=>b.onclick=()=>{const q=qs.find(x=>x.id===Number(b.dataset.flag));updateQuestionFlag(q.id,q.flag_note,refreshCatalog)});
   document.querySelectorAll('[data-verify]').forEach(b=>b.onclick=()=>verifyQuestion(Number(b.dataset.verify),refreshCatalog));
-  document.querySelector('#create').onclick=async()=>{try{const title=document.querySelector('#title').value.trim();const result=await api('/api/assignments',{method:'POST',body:JSON.stringify({title,dueDate:document.querySelector('#dueDate').value,questionIds:[...state.selected]})});await renderAssignment(result.id)}catch(err){showError(err)}};
+  document.querySelector('#create').onclick=async()=>{try{
+    const repeated=allQuestions.filter(q=>state.selected.has(q.id)&&q.times_assigned);
+    if(repeated.length&&!await uiConfirm('Bu sorular daha önce verildi',`Seçilen ${state.selected.size} sorudan ${repeated.length} tanesi daha önce bir çalışmada verildi (${repeated.map(q=>q.number).join(', ')}. sorular). Yine de atansın mı?`,'Yine de ata'))return;
+    const title=document.querySelector('#title').value.trim();const result=await api('/api/assignments',{method:'POST',body:JSON.stringify({title,dueDate:document.querySelector('#dueDate').value,questionIds:[...state.selected]})});await renderAssignment(result.id)}catch(err){showError(err)}};
 }
 async function renderAssignment(id){setRoute(`#/calisma/${id}`);try{const data=await api(`/api/assignments/${id}`);state.assignment=data;state.questionIndex=state.role==='student'?Math.min(data.assignment.last_question_index||0,data.questions.length-1):0;if(state.role==='parent')drawReview();else drawStudentFull()}catch(err){showError(err)}}
 // Solving screens: a one-line header instead of the hero, so the question starts near the top.
