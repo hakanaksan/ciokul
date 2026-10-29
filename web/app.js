@@ -27,6 +27,7 @@ const ROUTES=[
   [/^#\/soru-ara$/,()=>renderQuestionSearch()],
   [/^#\/karma-deneme$/,()=>renderMixedBuilder()],
   [/^#\/okuma-denetim$/,()=>renderReadingAudit()],
+  [/^#\/rozetler$/,()=>renderBadgeCollection()],
 ];
 let routing=false;
 function setRoute(hash){if(routing||location.hash===hash)return;history.pushState(null,'',hash||location.pathname);state.route=hash}
@@ -140,7 +141,7 @@ async function renderHome(){
     document.querySelectorAll('[data-action="report-card"]').forEach(b=>b.onclick=()=>renderReportCard(renderHome));
     bindReadingHome(readingData.assignments,isParent);
     if(isParent)bindStudyDashboard(studyDashboard);
-    bindBadgesWidget();
+    bindBadgesWidget(badgesData);
     document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>renderAssignment(Number(b.dataset.open)));
     document.querySelectorAll('[data-print]').forEach(b=>b.onclick=()=>renderPrintWorksheet('test',Number(b.dataset.print),renderHome));
     document.querySelectorAll('[data-planned]').forEach(b=>b.onclick=()=>renderCatalog(Number(b.dataset.planned),Number(b.dataset.testIndex)));
@@ -181,7 +182,7 @@ async function renderHome(){
     });
     if(isParent)bindAccount();
     if(isParent)uiInitParentTabs(data,readingData,studyDashboard,progress);
-    else uiEnhanceStudentHome(data,readingData);
+    else{uiEnhanceStudentHome(data,readingData);badgesCelebrate(badgesData)}
   }catch(err){showError(err)}
 }
 async function renderCatalog(bookletId,testIndex=0){

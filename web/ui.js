@@ -19,6 +19,7 @@ const UI_ACTIONS=[
   {t:'Çalışma takvimi',d:'Araçlar · hedef tarihli takvim',tab:'tools',run:null},
   {t:'Yedek indir / geri yükle',d:'Araçlar · veri güvenliği',tab:'tools',run:null},
   {t:'Soru denetim raporu',d:'Araçlar · otomatik denetim',tab:'tools',run:null},
+  {t:'Rozetler ve seviye',d:'Öğrencinin rozet koleksiyonu',tab:'overview',run:()=>renderBadgeCollection()},
   {t:'Şifre / PIN değiştir',d:'Araçlar · hesap ve güvenlik',tab:'tools',run:null},
   {t:'Tüm oturumları kapat',d:'Araçlar · hesap ve güvenlik',tab:'tools',run:null},
 ];

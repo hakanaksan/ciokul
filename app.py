@@ -26,6 +26,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from curriculum_schedule import MONTHS, SCHOOL_YEAR, SOURCES, annotate_booklet
+import achievements
 import data_export
 import database
 import reading_module
@@ -481,152 +482,6 @@ def restore_pending():
     pending.unlink()
 
 
-def calculate_badges(db):
-    test_submits = db.execute("SELECT id, title, submitted_at, due_date FROM assignments WHERE submitted_at IS NOT NULL").fetchall()
-    read_submits = db.execute("SELECT id, title, submitted_at, due_date FROM reading_assignments WHERE submitted_at IS NOT NULL").fetchall()
-    total_submitted = len(test_submits) + len(read_submits)
-    read_count = len(read_submits)
-
-    courses_completed = {r[0] for r in db.execute("""
-        SELECT DISTINCT b.course FROM assignments a
-        JOIN assignment_questions aq ON aq.assignment_id = a.id
-        JOIN questions q ON q.id = aq.question_id
-        JOIN booklets b ON b.id = q.booklet_id
-        WHERE a.submitted_at IS NOT NULL
-    """).fetchall()}
-
-    on_time_count = 0
-    for s in list(test_submits) + list(read_submits):
-        if s["due_date"] and s["submitted_at"]:
-            sub_date = s["submitted_at"][:10]
-            if sub_date <= s["due_date"]:
-                on_time_count += 1
-
-    resolved_mistakes = db.execute("SELECT COUNT(*) FROM mistake_resolutions").fetchone()[0]
-
-    perfect_tests = db.execute("""
-        SELECT COUNT(*) FROM (
-            SELECT a.id, COUNT(aq.question_id) AS total_q,
-                   SUM(CASE WHEN r.grade = 'correct' THEN 1 ELSE 0 END) AS correct_q
-            FROM assignments a
-            JOIN assignment_questions aq ON aq.assignment_id = a.id
-            JOIN reviews r ON r.assignment_id = a.id AND r.question_id = aq.question_id
-            WHERE a.submitted_at IS NOT NULL
-            GROUP BY a.id
-            HAVING COUNT(aq.question_id) > 0
-               AND COUNT(aq.question_id) = SUM(CASE WHEN r.grade = 'correct' THEN 1 ELSE 0 END)
-        ) AS graded
-    """).fetchone()[0]
-
-    study_dates = {s["submitted_at"][:10] for s in list(test_submits) + list(read_submits) if s["submitted_at"]}
-    active_days_count = len(study_dates)
-
-    badges = [
-        {
-            "id": "first_step",
-            "title": "İlk Adım",
-            "desc": "İlk çalışmanı başarıyla tamamlayıp teslim ettin!",
-            "icon": "🌟",
-            "earned": total_submitted >= 1,
-            "progress": f"{min(total_submitted, 1)}/1",
-            "stars": 1
-        },
-        {
-            "id": "bookworm",
-            "title": "Kitap Kurdu",
-            "desc": "İlk okuma becerileri metnini ve sorularını tamamladın.",
-            "icon": "📖",
-            "earned": read_count >= 1,
-            "progress": f"{min(read_count, 1)}/1",
-            "stars": 2
-        },
-        {
-            "id": "master_reader",
-            "title": "Usta Okur",
-            "desc": "3 farklı okuma çalışmasını başarıyla bitirdin.",
-            "icon": "📚",
-            "earned": read_count >= 3,
-            "progress": f"{min(read_count, 3)}/3",
-            "stars": 3
-        },
-        {
-            "id": "math_explorer",
-            "title": "Matematik Kaşifi",
-            "desc": "Bir Matematik fasikül çalışmasını tamamladın.",
-            "icon": "📐",
-            "earned": "Matematik" in courses_completed,
-            "progress": "1/1" if "Matematik" in courses_completed else "0/1",
-            "stars": 2
-        },
-        {
-            "id": "young_scientist",
-            "title": "Genç Bilim İnsanı",
-            "desc": "Bir Fen Bilimleri çalışmasını tamamladın.",
-            "icon": "🔬",
-            "earned": "Fen Bilimleri" in courses_completed,
-            "progress": "1/1" if "Fen Bilimleri" in courses_completed else "0/1",
-            "stars": 2
-        },
-        {
-            "id": "on_time",
-            "title": "Hedefi Tutturan",
-            "desc": "Hedef teslim tarihinden önce veya gününde çalışma bitirdin.",
-            "icon": "🎯",
-            "earned": on_time_count >= 1,
-            "progress": f"{min(on_time_count, 1)}/1",
-            "stars": 2
-        },
-        {
-            "id": "mistake_hunter",
-            "title": "Hata Avcısı",
-            "desc": "Hata Defteri'ndeki soruları kavrayıp başarıyla çözdün.",
-            "icon": "🛡️",
-            "earned": resolved_mistakes >= 1,
-            "progress": f"{min(resolved_mistakes, 1)}/1",
-            "stars": 2
-        },
-        {
-            "id": "super_focus",
-            "title": "Süper Odak",
-            "desc": "Toplam 5 veya daha fazla çalışmayı tamamladın.",
-            "icon": "🏆",
-            "earned": total_submitted >= 5,
-            "progress": f"{min(total_submitted, 5)}/5",
-            "stars": 3
-        },
-        {
-            "id": "consistent_streak",
-            "title": "İstikrarlı Öğrenci",
-            "desc": "Farklı 3 günde düzenli çalışma tamamladın.",
-            "icon": "🔥",
-            "earned": active_days_count >= 3,
-            "progress": f"{min(active_days_count, 3)}/3",
-            "stars": 3
-        },
-        {
-            "id": "perfect_score",
-            "title": "Yıldız Başarı",
-            "desc": "Bir testteki tüm soruları eksiksiz doğru yanıtladın.",
-            "icon": "💯",
-            "earned": perfect_tests >= 1,
-            "progress": f"{min(perfect_tests, 1)}/1",
-            "stars": 3
-        }
-    ]
-
-    earned_badges = [b for b in badges if b["earned"]]
-    total_stars = sum(b["stars"] for b in earned_badges)
-
-    return {
-        "badges": badges,
-        "stats": {
-            "earnedCount": len(earned_badges),
-            "totalCount": len(badges),
-            "totalStars": total_stars
-        }
-    }
-
-
 class Handler(BaseHTTPRequestHandler):
     server_version = "CioOkul/0.1"
 
@@ -952,7 +807,7 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/student/badges":
                 if not self.require(): return
                 with connect() as db:
-                    result = calculate_badges(db)
+                    result = achievements.calculate(db)
                 return self.send_json(result)
             if path == "/api/backup/status":
                 if not self.require("parent"): return
@@ -1284,6 +1139,12 @@ class Handler(BaseHTTPRequestHandler):
                     ended = end_other_sessions(token, "student") if new_pin else 0
                     return self.send_json({"ok": True, "endedSessions": ended})
                 return self.send_json({"ok": True, "endedSessions": end_other_sessions(token)})
+            if path == "/api/student/badges/seen":
+                # Only the student's own view marks new badges as celebrated.
+                if not self.require("student"): return
+                with DB_LOCK, connect() as db:
+                    achievements.mark_seen(db, achievements.calculate(db)["badges"])
+                return self.send_json({"ok": True})
             if path == "/api/student/mistakes/resolve":
                 if not self.require(): return
                 kind = str(data.get("kind", ""))
