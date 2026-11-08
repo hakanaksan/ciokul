@@ -16,6 +16,7 @@ const SCRATCH_TOOLS = {
   pen: { name: 'Kurşun Kalem', color: '#1e293b', size: 2.5, alpha: 1, isEraser: false },
   red: { name: 'Kırmızı Kalem', color: '#dc2626', size: 2.5, alpha: 1, isEraser: false },
   blue: { name: 'Mavi Kalem', color: '#2563eb', size: 2.5, alpha: 1, isEraser: false },
+  green: { name: 'Yeşil Kalem', color: '#16a34a', size: 2.5, alpha: 1, isEraser: false },
   highlighter: { name: 'Vurgulayıcı', color: '#facc15', size: 16, alpha: 0.45, isEraser: false },
   eraser: { name: 'Silgi', color: '#000000', size: 20, alpha: 1, isEraser: true }
 };
@@ -27,7 +28,9 @@ function scratchpadToolbarMarkup() {
     <div class="scratch-toolbar-wrap ${active ? 'active' : ''}" id="scratchToolbarWrap">
       <div class="scratch-toggle-row">
         <button type="button" class="btn secondary scratch-toggle-btn" id="scratchToggleBtn" aria-pressed="${active}">
-          ${active ? '✏️ Karalamayı Kapat' : '✏️ Karalama & İşlem Kalemi'}
+          ${scratchpadState.autoActive
+            ? (active ? '✋ Kalemi kapat (sayfayı kaydırmak için)' : '✏️ Kalemi aç, cevabını yaz')
+            : (active ? '✏️ Karalamayı Kapat' : '✏️ Karalama & İşlem Kalemi')}
         </button>
         ${active ? `
           <div class="scratch-tools" role="toolbar" aria-label="Çizim araçları">
@@ -39,6 +42,9 @@ function scratchpadToolbarMarkup() {
             </button>
             <button type="button" data-scratch-tool="blue" class="scratch-tool-btn ${current === 'blue' ? 'active' : ''}" title="Mavi Kalem">
               <span class="tool-dot" style="background:#2563eb"></span> Mavi
+            </button>
+            <button type="button" data-scratch-tool="green" class="scratch-tool-btn ${current === 'green' ? 'active' : ''}" title="Yeşil Kalem">
+              <span class="tool-dot" style="background:#16a34a"></span> Yeşil
             </button>
             <button type="button" data-scratch-tool="highlighter" class="scratch-tool-btn ${current === 'highlighter' ? 'active' : ''}" title="Fosforlu Vurgulayıcı">
               <span class="tool-dot" style="background:#facc15"></span> Vurgula
@@ -59,22 +65,44 @@ function scratchpadToolbarMarkup() {
   `;
 }
 
-function initScratchpad(containerSelector, storageKey) {
+// Drawings saved as answers use a compact form: [{t: tool, p: [x1, y1, x2, y2, …]}] with
+// coordinates relative to the image (0–1). The colours and sizes come from SCRATCH_TOOLS.
+function scratchToCompact(strokes) {
+  return strokes.filter(s => s.points?.length).map(s => ({
+    t: s.tool, p: s.points.flatMap(pt => [Math.round(pt.x * 10000) / 10000, Math.round(pt.y * 10000) / 10000])
+  }));
+}
+function scratchFromCompact(compact) {
+  return (compact || []).filter(s => SCRATCH_TOOLS[s.t] && Array.isArray(s.p)).map(s => {
+    const tool = SCRATCH_TOOLS[s.t], points = [];
+    for (let i = 0; i + 1 < s.p.length; i += 2) points.push({ x: s.p[i], y: s.p[i + 1] });
+    return { tool: s.t, color: tool.color, size: tool.size, alpha: tool.alpha, isEraser: tool.isEraser, points };
+  });
+}
+
+// options.strokes: compact strokes to start with (instead of this tab's karalama);
+// options.onChange(compact): called after every change, used to save a written answer.
+function initScratchpad(containerSelector, storageKey, options = {}) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
   scratchpadState.container = container;
   scratchpadState.storageKey = storageKey;
+  scratchpadState.onChange = options.onChange || null;
   const image = container.querySelector('img.question-image');
   if (!image) return;
   scratchpadState.image = image;
 
   // Restore saved strokes for this question
-  try {
-    const raw = sessionStorage.getItem('cio_scratch_' + storageKey);
-    scratchpadState.strokes = raw ? JSON.parse(raw) : [];
-  } catch {
-    scratchpadState.strokes = [];
+  if (options.strokes) {
+    scratchpadState.strokes = scratchFromCompact(options.strokes);
+  } else {
+    try {
+      const raw = sessionStorage.getItem('cio_scratch_' + storageKey);
+      scratchpadState.strokes = raw ? JSON.parse(raw) : [];
+    } catch {
+      scratchpadState.strokes = [];
+    }
   }
 
   // Ensure canvas exists in stage
@@ -206,6 +234,9 @@ function handlePointerMove(e) {
   const normX = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
   const normY = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
 
+  // Points closer than about one screen pixel add nothing but make a saved answer larger.
+  const last = scratchpadState.currentStroke.points.at(-1);
+  if (last && Math.abs(normX - last.x) * rect.width < 1.5 && Math.abs(normY - last.y) * rect.height < 1.5) return;
   scratchpadState.currentStroke.points.push({ x: normX, y: normY });
   redrawScratchpad();
 }
@@ -218,6 +249,10 @@ function handlePointerUp(e) {
 }
 
 function saveScratchpad() {
+  if (scratchpadState.onChange) {
+    scratchpadState.onChange(scratchToCompact(scratchpadState.strokes));
+    return;
+  }
   if (!scratchpadState.storageKey) return;
   try {
     if (scratchpadState.strokes.length) {
@@ -232,13 +267,42 @@ function redrawScratchpad() {
   const canvas = scratchpadState.canvas;
   const ctx = scratchpadState.ctx;
   if (!canvas || !ctx) return;
+  paintScratchStrokes(canvas, scratchpadState.strokes);
+}
 
+// Shows a saved drawing (compact strokes) over every .answer-drawing image; read-only.
+// Used where a parent checks the answer and where the student sees a submitted answer.
+function bindAnswerDrawings(root = document) {
+  root.querySelectorAll('.answer-drawing').forEach(box => {
+    const image = box.querySelector('img');
+    let strokes = [];
+    try { strokes = scratchFromCompact(JSON.parse(box.dataset.strokes || '[]')); } catch {}
+    const canvas = document.createElement('canvas');
+    canvas.className = 'answer-drawing-canvas';
+    box.append(canvas);
+    const paint = () => {
+      const rect = image.getBoundingClientRect();
+      if (!rect.width || !box.isConnected) return;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.round(rect.width * dpr);
+      canvas.height = Math.round(rect.height * dpr);
+      canvas.style.width = rect.width + 'px';
+      canvas.style.height = rect.height + 'px';
+      paintScratchStrokes(canvas, strokes);
+    };
+    if (image.complete) paint(); else image.addEventListener('load', paint);
+    new ResizeObserver(paint).observe(image);
+  });
+}
+
+function paintScratchStrokes(canvas, strokes) {
+  const ctx = canvas.getContext('2d');
   const w = canvas.width;
   const h = canvas.height;
   const dpr = window.devicePixelRatio || 1;
   ctx.clearRect(0, 0, w, h);
 
-  for (const stroke of scratchpadState.strokes) {
+  for (const stroke of strokes) {
     if (!stroke.points || stroke.points.length < 1) continue;
 
     ctx.save();

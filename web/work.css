@@ -82,3 +82,25 @@ body.high-contrast .work-header{background:#063f35}
   .question-kicker{flex-wrap:wrap;gap:6px}
   .answer-dock .letter-choice{min-height:46px;font-size:19px}
 }
+
+/* Written questions answered on the question image (see writtenPanelMarkup in app.js).
+   The image must fill its box exactly: the drawing is stored relative to the box, so a
+   letterboxed (object-fit) image would put the strokes in another place on other screens. */
+.written-stage .question-image,.answer-drawing .question-image{max-height:none;object-fit:fill}
+.written-stage .scratch-canvas{cursor:crosshair}
+.written-answer{margin-top:12px;display:grid;gap:10px}
+.written-hint{margin:0;padding:10px 12px;border-radius:12px;background:#eef8f2;color:#1f3a2e;line-height:1.45}
+.written-actions{display:flex;flex-wrap:wrap;gap:8px}
+.written-actions .btn{min-height:44px}
+.written-actions .btn.active{background:#fff4d9;border-color:#d39b12;color:#6b4a0b}
+.written-status{margin:0;font-size:14px;font-weight:700;color:#2f6b52}
+.written-text{padding:10px 12px;border-radius:12px;background:#f6f8f7}
+.written-text p{margin:4px 0 0;white-space:pre-wrap}
+.answer-drawing{position:relative;line-height:0}
+.answer-drawing-canvas{position:absolute;top:0;left:0;pointer-events:none}
+/* "Büyük ekranda yaz": the question card fills the window so small answers are easier to write. */
+.question-card.drawing-focus{position:fixed;inset:0;z-index:80;margin:0;max-width:none;border-radius:0;overflow:auto;background:#fff;padding:12px clamp(10px,3vw,40px) 90px}
+.question-card.drawing-focus .scratch-toolbar-wrap{position:sticky;top:-12px;z-index:5;background:#fff;padding-block:6px}
+body.drawing-focus-open{overflow:hidden}
+.question-card.drawing-focus .answer-dock,.question-card.drawing-focus .written-hint,.question-card.drawing-focus .question-kicker{display:none}
+.question-card.drawing-focus .written-answer{position:sticky;bottom:-90px;z-index:5;background:#fff;padding:10px 0;margin-bottom:-90px;box-shadow:0 -10px 20px #ffffffd9}

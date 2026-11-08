@@ -232,6 +232,8 @@ def init_db():
             resp_columns = {row[1] for row in db.execute("PRAGMA table_info(responses)")}
             if "duration_seconds" not in resp_columns:
                 db.execute("ALTER TABLE responses ADD COLUMN duration_seconds INTEGER NOT NULL DEFAULT 0")
+            if "answer_extra" not in resp_columns:
+                db.execute("ALTER TABLE responses ADD COLUMN answer_extra TEXT")
         reading_module.install(db)
         study_features.install(db)
         db.execute("INSERT INTO booklets VALUES (1,?,?,?,?) ON CONFLICT DO NOTHING", (
@@ -365,6 +367,43 @@ def checked_date(value):
         raise ValueError("Hedef tarihi geçersiz.")
     date.fromisoformat(value)
     return value
+
+
+# Written questions (fill in, match, colour, puzzles…) can be answered by drawing on the question
+# image, by typing, or by marking them as solved on paper. The drawing is stored as strokes with
+# coordinates relative to the image (0–1), so it is shown the same at any screen size.
+ANSWER_PATH = re.compile(r"/api/assignments/\d+/answers/\d+")
+ANSWER_BODY_LIMIT = 400_000
+WRITTEN_DRAWN = "✏️ Görselin üzerinde cevaplandı"
+WRITTEN_PAPER = "📄 Kâğıtta çözüldü"
+DRAWING_TOOLS = {"pen", "red", "blue", "green", "highlighter", "eraser"}
+
+
+def written_answer(data):
+    """Returns (choice, answer_extra) for a written question; choice is the text or a marker."""
+    text = str(data.get("text", "")).strip()
+    if len(text) > 4000:
+        raise ValueError("Yanıt en çok 4000 karakter olabilir.")
+    strokes = data.get("strokes") or []
+    if not isinstance(strokes, list) or len(strokes) > 600:
+        raise ValueError("Çizim geçersiz ya da çok uzun.")
+    clean, points = [], 0
+    for stroke in strokes:
+        if not isinstance(stroke, dict) or stroke.get("t") not in DRAWING_TOOLS or not isinstance(stroke.get("p"), list):
+            raise ValueError("Çizim geçersiz.")
+        values = stroke["p"]
+        if not values or len(values) % 2 or not all(isinstance(v, (int, float)) and not isinstance(v, bool) and 0 <= v <= 1 for v in values):
+            raise ValueError("Çizim geçersiz.")
+        points += len(values) // 2
+        clean.append({"t": stroke["t"], "p": [round(v, 4) for v in values]})
+    if points > 25_000:
+        raise ValueError("Çizim çok uzun; birkaç çizgiyi silip tekrar dene.")
+    paper = data.get("paper") is True
+    if not (text or clean or paper):
+        raise ValueError("Yanıt boş olamaz.")
+    choice = text or (WRITTEN_PAPER if paper else WRITTEN_DRAWN)
+    extra = json.dumps({"strokes": clean, "paper": paper}, separators=(",", ":")) if clean or paper else None
+    return choice, extra
 
 
 def validate_backup(path):
@@ -605,9 +644,9 @@ class Handler(BaseHTTPRequestHandler):
                 self.wfile.write(chunk)
                 remaining -= len(chunk)
 
-    def body(self):
+    def body(self, limit=20_000):
         length = int(self.headers.get("Content-Length", "0"))
-        if length > 20_000:
+        if length > limit:
             raise ValueError("İstek çok büyük")
         return json.loads(self.rfile.read(length) or b"{}")
 
@@ -977,7 +1016,7 @@ class Handler(BaseHTTPRequestHandler):
                     if not assignment: return self.send_json({"error": "Çalışma bulunamadı."}, 404)
                     questions = rows(db, """SELECT q.id,q.number,q.page,q.kind,q.stem,q.booklet_id,q.answer_key,q.image_path,
                         b.course,b.title AS booklet_title,
-                        r.choice AS response,COALESCE(r.duration_seconds, 0) AS duration_seconds,v.grade,v.note,f.note AS flag_note,
+                        r.choice AS response,r.answer_extra AS response_extra,COALESCE(r.duration_seconds, 0) AS duration_seconds,v.grade,v.note,f.note AS flag_note,
                         COALESCE(sf.uncertain,0) AS uncertain,COALESCE(sf.reason,'') AS reason
                         FROM assignment_questions aq JOIN questions q ON q.id=aq.question_id
                         JOIN booklets b ON b.id=q.booklet_id
@@ -1308,8 +1347,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_PUT(self):
         try:
-            data = self.body()
             path = urlparse(self.path).path
+            # A written answer may carry a drawing made on the question image.
+            data = self.body(ANSWER_BODY_LIMIT if ANSWER_PATH.fullmatch(path) else 20_000)
             if reading_module.handle(self, "PUT", path, data, connect, DB_LOCK, checked_date): return
             parts = urlparse(self.path).path.strip("/").split("/")
             if len(parts) == 6 and parts[:3] == ["api", "study", "reflections"]:
@@ -1438,21 +1478,21 @@ class Handler(BaseHTTPRequestHandler):
                     if not self.require("student"): return
                     if db.execute("SELECT submitted_at FROM assignments WHERE id=?", (aid,)).fetchone()[0]:
                         return self.send_json({"error": "Teslim edilmiş çalışma değiştirilemez."}, 409)
+                    extra = None
                     if assigned["kind"] == "written":
-                        choice = str(data.get("text", "")).strip()
-                        if not choice or len(choice) > 4000:
-                            raise ValueError("Yanıt 1–4000 karakter olmalı.")
+                        choice, extra = written_answer(data)
                     else:
                         choice = data.get("choice")
                         if choice not in ("A", "B", "C", "D"):
                             raise ValueError("Geçersiz şık.")
                     duration = max(int(data.get("durationSeconds", 0)), 0)
-                    db.execute("""INSERT INTO responses(assignment_id,question_id,choice,duration_seconds,updated_at)
-                        VALUES (?,?,?,?,CURRENT_TIMESTAMP)
+                    db.execute("""INSERT INTO responses(assignment_id,question_id,choice,duration_seconds,answer_extra,updated_at)
+                        VALUES (?,?,?,?,?,CURRENT_TIMESTAMP)
                         ON CONFLICT(assignment_id,question_id) DO UPDATE SET
                         choice=excluded.choice,
+                        answer_extra=excluded.answer_extra,
                         duration_seconds=responses.duration_seconds + excluded.duration_seconds,
-                        updated_at=CURRENT_TIMESTAMP""", (aid, qid, choice, duration))
+                        updated_at=CURRENT_TIMESTAMP""", (aid, qid, choice, duration, extra))
                 elif action == "reviews":
                     if not self.require("parent"): return
                     if not db.execute("SELECT submitted_at FROM assignments WHERE id=?", (aid,)).fetchone()[0]:

@@ -204,3 +204,6 @@ CREATE TABLE IF NOT EXISTS lesson_progress (
 
 -- Later schema changes go below as idempotent statements, e.g.
 -- ALTER TABLE assignments ADD COLUMN IF NOT EXISTS example TEXT;
+
+-- Written answers: a drawing on the question image and/or "solved on paper" (JSON, see written_answer in app.py).
+ALTER TABLE responses ADD COLUMN IF NOT EXISTS answer_extra TEXT;

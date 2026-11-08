@@ -311,16 +311,59 @@ function scrollQuestionIntoView(){const card=document.querySelector('.question-c
 function submitButtonMarkup(id,answered,total){
   return `<button class="btn ${answered===total?'':'secondary'} full" id="${id}">${answered===total?'Teslim et →':'Teslim özeti'}</button>`;
 }
+// Written questions (fill in, match, colour, puzzles) are answered on the question image with the
+// pen; typing and "solved on paper" are the other ways. Markers match WRITTEN_* in app.py.
+const WRITTEN_DRAWN='✏️ Görselin üzerinde cevaplandı',WRITTEN_PAPER='📄 Kâğıtta çözüldü';
+function writtenAnswerState(q){
+  let extra={};try{extra=JSON.parse(q.response_extra||'{}')||{}}catch(e){}
+  const text=[WRITTEN_DRAWN,WRITTEN_PAPER].includes(q.response)?'':(q.response||'');
+  return {text,strokes:extra.strokes||[],paper:!!extra.paper};
+}
+function answerDrawingMarkup(q,strokes){
+  return `<div class="answer-drawing" data-strokes="${esc(JSON.stringify(strokes))}"><img class="question-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru ve öğrencinin görsel üzerindeki cevabı"></div>`;
+}
+function writtenStatusText(w){
+  if(w.paper)return '📄 Kâğıtta çözdüğünü işaretledin. Velin kâğıttan kontrol edecek.';
+  if(w.strokes.length||w.text)return '✓ Cevabın kaydedildi.';
+  return 'Henüz cevap yok.';
+}
+function writtenPanelMarkup(q,w,done){
+  if(done)return `<div class="written-answer done">${w.paper?'<span class="pill amber">📄 Kâğıtta çözüldü</span>':''}${w.text?`<div class="written-text"><strong>Yazdığın cevap</strong><p>${esc(w.text)}</p></div>`:''}${!w.paper&&!w.text&&!w.strokes.length?'<p class="small muted">Bu soruya cevap verilmedi.</p>':''}</div>`;
+  return `<div class="written-answer">
+    <p class="written-hint"><strong>✏️ Cevabını görselin üzerine yaz.</strong> Boşlukları doldur, eşleştir, daire içine al ya da boya. Parmağınla, kalemle ya da fareyle yazabilirsin; yazdıkların kendiliğinden kaydedilir.</p>
+    <div class="written-actions"><button type="button" class="btn secondary" id="drawFocus" aria-pressed="false">⛶ Büyük ekranda yaz</button><button type="button" class="btn secondary" id="writtenTypeToggle" aria-expanded="${w.text?'true':'false'}">⌨️ Yazarak cevapla</button><button type="button" class="btn secondary ${w.paper?'active':''}" id="writtenPaper" aria-pressed="${w.paper}">📄 Kâğıtta çözdüm</button></div>
+    <div class="field" id="writtenTypeField" ${w.text?'':'hidden'}><label for="writtenAnswer">Yazılı cevabın</label><textarea id="writtenAnswer" maxlength="4000" rows="4" placeholder="Cevabını buraya yaz">${esc(w.text)}</textarea></div>
+    <p class="written-status" id="writtenStatus" aria-live="polite">${writtenStatusText(w)}</p></div>`;
+}
 function studentQuestion(q,done){
+  if(q.image_path&&q.kind==='written'){
+    const w=writtenAnswerState(q);
+    if(done)return `${w.strokes.length?answerDrawingMarkup(q,w.strokes):`<img class="question-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru görseli">`}${writtenPanelMarkup(q,w,true)}`;
+    return `${scratchpadToolbarMarkup()}<div class="scratchpad-stage written-stage" id="questionScratchStage"><img class="question-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru görseli"></div>${writtenPanelMarkup(q,w,false)}`;
+  }
   if(q.image_path)return `${scratchpadToolbarMarkup()}<div class="scratchpad-stage" id="questionScratchStage"><a class="image-zoom" href="/question-images/${encodeURIComponent(q.image_path)}" target="_blank" rel="noopener"><img class="question-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru görseli"><span>Görseli büyüt ↗</span></a></div>${q.kind==='written'?`<div class="field"><label for="writtenAnswer">Yanıtın</label><textarea id="writtenAnswer" maxlength="4000" rows="5" placeholder="Yanıtını buraya yaz" ${done?'disabled':''}>${esc(q.response||'')}</textarea></div>`:''}`;
   return `<p class="stem">${esc(q.stem)}</p><div class="choices">${q.choices.map(c=>`<label class="choice ${q.response===c.label?'selected':''}"><input type="radio" name="answer" value="${c.label}" ${q.response===c.label?'checked':''} ${done?'disabled':''}><span class="letter">${c.label}</span><span>${esc(c.text)}</span></label>`).join('')}</div>`;
 }
+// Updates the answered counters in place (used when a drawing is saved, so the canvas is not redrawn).
+function refreshAnsweredProgress(qs,index){
+  const answered=qs.filter(x=>x.response).length,total=qs.length;
+  const strong=document.querySelector('.question-progress strong');if(strong)strong.textContent=`${answered}/${total} soru yanıtlandı`;
+  const bar=document.querySelector('.question-progress .progress span');if(bar)bar.style.width=`${answered/total*100}%`;
+  const kicker=document.querySelector('.kicker-answered');if(kicker)kicker.textContent=` · ${answered} yanıt`;
+  const button=document.querySelector(`[data-index="${index}"]`);if(button){button.classList.toggle('answered',!!qs[index].response);button.setAttribute('aria-label',`${index+1}. soru${qs[index].response?', yanıtlandı':''}`)}
+  const submit=document.querySelector('#submit');if(submit){submit.classList.toggle('secondary',answered!==total);submit.textContent=answered===total?'Teslim et →':'Teslim özeti'}
+}
 async function drawStudentFull(){
   state.view='assignment';
+  document.body.classList.remove('drawing-focus-open');
   const {assignment:a,questions:qs}=state.assignment;
   const i=state.questionIndex,q=qs[i],done=!!a.submitted_at,answered=qs.filter(x=>x.response).length;
   const feedbackReady=state.assignment.feedbackReady;
   const dockOptions=q.image_path&&q.kind!=='written'?letterOptionsMarkup(q,done,'answer'):'';
+  // The pen is ready on written questions; it goes back to off when moving to a multiple-choice one.
+  const writtenOnImage=q.kind==='written'&&!!q.image_path;
+  if(writtenOnImage&&!done){scratchpadState.active=true;scratchpadState.autoActive=true}
+  else if(scratchpadState.autoActive){scratchpadState.active=false;scratchpadState.autoActive=false}
   shell(`${workHeader({backId:'back',backText:'Çalışmalarıma dön',eyebrow:done?'Teslim edildi':'Çalışma sürüyor',title:a.title,status:done?(feedbackReady?'Veli kontrolü tamamlandı':'Veli kontrolü bekleniyor'):'',printId:'printCurrentTest'})}${studyCalmMarkup()}
     <div class="split question-layout"><aside class="card question-nav"><div class="question-progress"><strong>${answered}/${qs.length} soru yanıtlandı</strong><div class="progress"><span style="width:${answered/qs.length*100}%"></span></div></div>${numberNavMarkup(qs,i,'data-index',x=>x.response)}${done?'':submitButtonMarkup('submit',answered,qs.length)}</aside>
     <section class="question-card"><div class="question-kicker"><span>Soru ${i+1} / ${qs.length}<span class="kicker-answered"> · ${answered} yanıt</span></span><div class="kicker-meta"><span class="pill gray" title="Bu soruda geçen süre">⏱️ <span id="studentLiveTimer">00:00</span></span><span>${esc(q.course)} · ${esc(q.booklet_title)} · ${q.number}. soru</span></div></div>${studentQuestion(q,done)}${studyUncertainMarkup(q,done)}
@@ -334,20 +377,64 @@ async function drawStudentFull(){
     bindStudyUncertain('test',a.id,String(q.id),q);
     resetStudentTimer();
   }
-  initScratchpad('#questionScratchStage', `test_${a.id}_${q.id}`);
   document.querySelector('#printCurrentTest')?.addEventListener('click',()=>renderPrintWorksheet('test',a.id,drawStudentFull));
-  const saveWritten=async()=>{
-    const field=document.querySelector('#writtenAnswer');
-    if(!field||done)return true;
-    const text=field.value.trim();
-    if(text===String(q.response||''))return true;
-    const durationSeconds = consumeQuestionDuration();
-    if(!text){
-      if(q.response){try{await api(`/api/assignments/${a.id}/answers/${q.id}`,{method:'DELETE'});q.response=null}catch(err){showError(err);return false}}
-      return true;
-    }
-    try{await api(`/api/assignments/${a.id}/answers/${q.id}`,{method:'PUT',body:JSON.stringify({text,durationSeconds})});q.response=text;q.duration_seconds=(q.duration_seconds||0)+durationSeconds;return true}catch(err){showError(err);return false}
-  };
+  let saveWritten=async()=>true;
+  if(writtenOnImage&&done){
+    bindAnswerDrawings();
+  }else if(writtenOnImage){
+    // One answer holds the drawing, the typed text and the "solved on paper" mark; it is saved
+    // a moment after each change and before leaving the question.
+    const w=writtenAnswerState(q),bodyOf=()=>({text:w.text,strokes:w.strokes,paper:w.paper});
+    let savedKey=JSON.stringify(bodyOf()),timer=null;
+    const status=text=>{const el=document.querySelector('#writtenStatus');if(el)el.textContent=text};
+    saveWritten=async()=>{
+      clearTimeout(timer);
+      const field=document.querySelector('#writtenAnswer');
+      if(field)w.text=field.value.trim();
+      const body=bodyOf(),key=JSON.stringify(body);
+      if(key===savedKey)return true;
+      const wasAnswered=!!q.response,durationSeconds=consumeQuestionDuration();
+      try{
+        if(!body.text&&!body.strokes.length&&!body.paper){
+          if(q.response)await api(`/api/assignments/${a.id}/answers/${q.id}`,{method:'DELETE'});
+          q.response=null;q.response_extra=null;
+        }else{
+          await api(`/api/assignments/${a.id}/answers/${q.id}`,{method:'PUT',body:JSON.stringify({...body,durationSeconds})});
+          q.response=body.text||(body.paper?WRITTEN_PAPER:WRITTEN_DRAWN);
+          q.response_extra=body.strokes.length||body.paper?JSON.stringify({strokes:body.strokes,paper:body.paper}):null;
+          q.duration_seconds=(q.duration_seconds||0)+durationSeconds;
+        }
+        savedKey=key;status(writtenStatusText(w));
+        if(wasAnswered!==!!q.response)refreshAnsweredProgress(qs,i);
+        return true;
+      }catch(err){status('Kaydedilemedi, tekrar deneniyor…');showError(err);return false}
+    };
+    const later=()=>{clearTimeout(timer);status('Kaydediliyor…');timer=setTimeout(saveWritten,900)};
+    initScratchpad('#questionScratchStage',`test_${a.id}_${q.id}`,{strokes:w.strokes,onChange:strokes=>{w.strokes=strokes;later()}});
+    document.querySelector('#writtenAnswer')?.addEventListener('input',later);
+    document.querySelector('#writtenTypeToggle').onclick=e=>{const field=document.querySelector('#writtenTypeField');field.hidden=!field.hidden;e.currentTarget.setAttribute('aria-expanded',String(!field.hidden));if(!field.hidden)document.querySelector('#writtenAnswer').focus()};
+    document.querySelector('#writtenPaper').onclick=e=>{w.paper=!w.paper;e.currentTarget.classList.toggle('active',w.paper);e.currentTarget.setAttribute('aria-pressed',String(w.paper));saveWritten()};
+    document.querySelector('#drawFocus').onclick=e=>{
+      const card=document.querySelector('.question-card'),on=!card.classList.contains('drawing-focus');
+      card.classList.toggle('drawing-focus',on);document.body.classList.toggle('drawing-focus-open',on);
+      e.currentTarget.textContent=on?'✕ Küçült':'⛶ Büyük ekranda yaz';e.currentTarget.setAttribute('aria-pressed',String(on));
+      scratchpadState._onResize?.();if(on)card.scrollTop=0;
+    };
+  }else{
+    initScratchpad('#questionScratchStage', `test_${a.id}_${q.id}`);
+    saveWritten=async()=>{
+      const field=document.querySelector('#writtenAnswer');
+      if(!field||done)return true;
+      const text=field.value.trim();
+      if(text===String(q.response||''))return true;
+      const durationSeconds = consumeQuestionDuration();
+      if(!text){
+        if(q.response){try{await api(`/api/assignments/${a.id}/answers/${q.id}`,{method:'DELETE'});q.response=null}catch(err){showError(err);return false}}
+        return true;
+      }
+      try{await api(`/api/assignments/${a.id}/answers/${q.id}`,{method:'PUT',body:JSON.stringify({text,durationSeconds})});q.response=text;q.duration_seconds=(q.duration_seconds||0)+durationSeconds;return true}catch(err){showError(err);return false}
+    };
+  }
   state.leaveGuard=saveWritten;
   document.querySelector('#back').onclick=async()=>{if(await saveWritten())renderHome()};
   document.querySelector('#dockSubmit')?.addEventListener('click',()=>document.querySelector('#submit')?.click());
@@ -409,7 +496,8 @@ function drawReview(){
       const selection=draft.get(q.id).grade;
       const autoCorrect=!!q.answer_key&&q.kind==='multiple_choice'&&q.response===q.answer_key&&!q.uncertain&&!q.flag_note;
       return `<article class="review-card" data-review="${q.id}" ${autoCorrect?'data-auto-ok':''}><div class="card-top"><strong>${q.number}. soru</strong><div style="display:flex;align-items:center;gap:6px">${formatDurationBadge(q.duration_seconds)}<span class="pill gray">PDF sayfa ${q.page}</span></div></div>
-      ${q.image_path?`<a class="image-zoom" href="/question-images/${encodeURIComponent(q.image_path)}"><img loading="lazy" class="review-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru görseli"><span>Görseli büyüt ↗</span></a>`:`<p class="stem">${esc(q.stem)}</p>`}
+      ${q.kind==='written'&&q.image_path&&writtenAnswerState(q).strokes.length?`${answerDrawingMarkup(q,writtenAnswerState(q).strokes)}<p class="small muted">Öğrencinin soru görseli üzerindeki cevabı · <a class="image-zoom-link" href="/question-images/${encodeURIComponent(q.image_path)}" target="_blank" rel="noopener">boş görseli aç ↗</a></p>`:q.image_path?`<a class="image-zoom" href="/question-images/${encodeURIComponent(q.image_path)}"><img loading="lazy" class="review-image" src="/question-images/${encodeURIComponent(q.image_path)}" alt="${q.number}. soru görseli"><span>Görseli büyüt ↗</span></a>`:`<p class="stem">${esc(q.stem)}</p>`}
+      ${q.kind==='written'&&writtenAnswerState(q).paper?'<span class="pill amber">📄 Öğrenci kâğıtta çözdü · kitapçıktan kontrol edin</span>':''}
       <div class="review-meta"><span>${esc(q.course)} · ${esc(q.booklet_title)} · <a href="/api/source-pdf?bookletId=${q.booklet_id}" target="_blank" rel="noopener">PDF ↗</a></span><span>Öğrencinin yanıtı: <strong>${esc(q.response||'Henüz yok')} ${esc(q.choices.find(c=>c.label===q.response)?.text||'')}</strong></span>
       <span>Doğru cevap: <strong>${q.answer_key?esc(q.answer_key)+' '+esc(q.choices.find(c=>c.label===q.answer_key)?.text||''):'Anahtar yok · veli kontrolü'}</strong></span>${q.uncertain?'<span class="pill amber">Öğrenci emin değildi</span>':''}</div>
       ${q.flag_note?`<div class="notice">Görsel sorunu: ${esc(q.flag_note)}</div>`:''}<div class="question-tools"><button class="link-btn" data-edit="${q.id}">Kesimi düzelt</button><button class="link-btn" data-flag="${q.id}">Görsel sorunu ${q.flag_note?'düzenle':'işaretle'}</button></div>${lessonLinkMarkup(lessonForQuestion(q.course,q.stem,q.booklet_title),'Önerilen video ders')}
@@ -420,6 +508,7 @@ function drawReview(){
     <div class="review-savebar"><span>Tüm sorular tek işlemde kaydedilir.</span><button class="btn save-all" ${submitted?'':'disabled'}>Tümünü kaydet</button></div>`);
   document.querySelector('#printReviewCurrent')?.addEventListener('click',()=>renderPrintWorksheet('test',a.id,drawReview));
   uiBindImageZoom();
+  bindAnswerDrawings();
   bindLessonLinks();
   state.leaveGuard=()=>!dirty||confirm('Kaydedilmemiş değerlendirmeler var. Sayfadan çıkılsın mı?');
   uiBindReviewFilter(document.querySelector('#reviewFilter'),'[data-review]');

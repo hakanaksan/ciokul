@@ -57,6 +57,7 @@ Kaynak PDF'ler ve [kaynak bilgisi](4_sinif_okuma_becerileri/KAYNAK.md) `4_sinif_
 - Yanlış oranı yüksek ünitelerden önerilen tekrar çalışmaları oluşturulabilir; veli önerilen soruları kaldırıp çalışmanın adını düzenleyebilir.
 - Veli panelinde hedef tarihli çalışmalar aylık takvimde gösterilir. Fasikül seçerken her testin tahmini ayı öğretmenin ilerleyişine göre değiştirilebilir.
 - Son yedekten 14 gün geçince veli paneli yeni yedek hatırlatması gösterir.
+- Yazılı sorular (boşluk doldurma, eşleştirme, boyama, bulmaca, D/Y) **soru görselinin üzerinde** kalemle cevaplanır: kalem kendiliğinden açılır, çizim birkaç saniye içinde kendiliğinden kaydedilir, **Büyük ekranda yaz** soruyu pencereye yayar. İstenirse **Yazarak cevapla** ile metin yazılır ya da **Kâğıtta çözdüm** ile soru kitapçıkta çözüldü olarak işaretlenir. Veli kontrolünde çocuğun çizimi soru görselinin üzerinde gösterilir. Çizim, görsele göre oranlı koordinatlarla (`responses.answer_extra`) saklandığı için her ekran boyutunda aynı yerde görünür.
 
 ## Soru denetimi
 
