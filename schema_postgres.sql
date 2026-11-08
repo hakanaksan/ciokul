@@ -202,6 +202,14 @@ CREATE TABLE IF NOT EXISTS lesson_progress (
   updated_at TEXT NOT NULL DEFAULT cio_now()
 );
 
+-- Bugünün planı: the steps of each day (daily_plan.py).
+CREATE TABLE IF NOT EXISTS daily_plans (
+  day TEXT PRIMARY KEY,
+  items TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT cio_now(),
+  completed_at TEXT
+);
+
 -- Later schema changes go below as idempotent statements, e.g.
 -- ALTER TABLE assignments ADD COLUMN IF NOT EXISTS example TEXT;
 

@@ -89,10 +89,10 @@ function uiBindPreferences(){
   document.querySelector('#uiFontScale')?.addEventListener('change',e=>{localStorage.setItem('cioFontScale',e.target.value);uiApplyPreferences()});
   document.querySelector('#uiHighContrast')?.addEventListener('change',e=>{localStorage.setItem('cioHighContrast',e.target.checked?'1':'0');uiApplyPreferences()});
 }
-function uiOverviewMarkup(data,readingData,dashboard){
+function uiOverviewMarkup(data,readingData,dashboard,plan){
   const all=[...data.assignments.map(a=>({...a,kind:'test'})),...readingData.assignments.map(a=>({...a,kind:'reading'}))];
   const pending=all.filter(a=>a.submitted_at&&a.reviewed<a.total),active=all.filter(a=>!a.submitted_at);
-  return `<section class="ui-overview"><div class="ui-action-grid"><button type="button" class="ui-action-card" data-go-tab="tests"><span class="ui-action-icon">✓</span><strong>${pending.length}</strong><span>Kontrol bekleyen çalışma</span><small>${pending.length?'Aç ve değerlendir →':'Kontroller tamam'}</small></button><button type="button" class="ui-action-card" data-go-tab="repeat" data-focus-id="studyDashboard"><span class="ui-action-icon">↻</span><strong>${dashboard.dueCount}</strong><span>Tekrar zamanı gelen soru</span><small>${dashboard.dueCount?'Tekrar kuyruğuna git →':'Şimdilik hazır soru yok'}</small></button><button type="button" class="ui-action-card" data-go-tab="progress"><span class="ui-action-icon">▥</span><strong>${dashboard.week.submitted}</strong><span>Bu hafta teslim edilen</span><small>İlerlemeyi incele →</small></button></div>
+  return `${dailyPlanMarkup(plan,{isParent:true,dueCount:dashboard.dueCount})}<section class="ui-overview"><div class="ui-action-grid"><button type="button" class="ui-action-card" data-go-tab="tests"><span class="ui-action-icon">✓</span><strong>${pending.length}</strong><span>Kontrol bekleyen çalışma</span><small>${pending.length?'Aç ve değerlendir →':'Kontroller tamam'}</small></button><button type="button" class="ui-action-card" data-go-tab="repeat" data-focus-id="studyDashboard"><span class="ui-action-icon">↻</span><strong>${dashboard.dueCount}</strong><span>Tekrar zamanı gelen soru</span><small>${dashboard.dueCount?'Tekrar kuyruğuna git →':'Şimdilik hazır soru yok'}</small></button><button type="button" class="ui-action-card" data-go-tab="progress"><span class="ui-action-icon">▥</span><strong>${dashboard.week.submitted}</strong><span>Bu hafta teslim edilen</span><small>İlerlemeyi incele →</small></button></div>
     ${pending.length?`<div class="ui-quick-list"><h3>Kontrol sırası</h3>${pending.slice(0,4).map(a=>`<button type="button" data-quick-open="${a.kind}" data-assignment-id="${a.id}"><span>${esc(a.title)}</span><small>${a.answered}/${a.total} yanıt · ${a.kind==='reading'?'Okuma':'Fasikül'}</small></button>`).join('')}</div>`:''}
     ${active.length?`<p class="small muted">${active.length} çalışma öğrencinin çözmesini bekliyor.</p>`:''}</section>`;
 }
@@ -105,7 +105,7 @@ function uiPrepareHomeNodes(){
   if(list?.nextElementSibling)list.nextElementSibling.id='readingHomeSection';
   for(const section of main.querySelectorAll('section')){const title=section.querySelector(':scope > h2,:scope > .section-title > h2')?.textContent||'';if(title==='Soru denetimi')section.id='auditSummary';else if(title==='Tahmini müfredat takvimi')section.id='curriculumSection';else if(title.startsWith('Yedekleme'))section.id='backupSection'}
 }
-function uiInitParentTabs(data,readingData,dashboard,progress){
+function uiInitParentTabs(data,readingData,dashboard,progress,plan){
   uiPrepareHomeNodes();
   const main=document.querySelector('.main'),hero=main?.querySelector('.hero');if(!hero)return;
   const shell=document.createElement('div');shell.className='admin-shell';shell.id='homeTabs';
@@ -117,7 +117,7 @@ function uiInitParentTabs(data,readingData,dashboard,progress){
   hero.insertAdjacentElement('afterend',shell);
   const content=shell.querySelector('.admin-content');
   const panels=Object.fromEntries(UI_TABS.map(([id])=>{const panel=document.createElement('section');panel.id=`panel-${id}`;panel.className='ui-tab-panel';content.append(panel);return [id,panel]}));
-  panels.overview.innerHTML=uiOverviewMarkup(data,readingData,dashboard);
+  panels.overview.innerHTML=uiOverviewMarkup(data,readingData,dashboard,plan);
   const move=(selector,panel)=>{const node=document.querySelector(selector);if(node)panel.append(node)};
   const flash=document.querySelector('#flash');if(flash)content.prepend(flash);
   move('#badgesWidget',panels.overview);
@@ -164,7 +164,7 @@ function uiHeatmap(progress){
   const items=progress.byBooklet||[];
   return `<section class="card ui-chart-card"><h3>Ders ve ünite görünümü</h3><p class="small muted">Yüzde için en az 5 soru değerlendirilmiş olmalı. Renklerin yanında sonuç sayısı da yazılır.</p>${items.length?`<div class="ui-heatmap">${items.map(x=>{const percent=Math.round(x.correct/x.reviewed*100),level=x.reviewed<5?'limited':percent>=80?'strong':percent>=50?'middle':'needs-work';return `<div class="ui-heat-cell ${level}"><strong>${esc(x.course)}</strong><span>${esc(x.title)}</span><small>${x.correct}/${x.reviewed} doğru${x.reviewed>=5?` · %${percent}`:' · Veri az'}</small></div>`}).join('')}</div>`:'<div class="empty">Ünite grafiği ilk değerlendirmelerden sonra oluşacak.</div>'}</section>`;
 }
-function uiEnhanceStudentHome(data,readingData){
+function uiEnhanceStudentHome(data,readingData,plan){
   uiPrepareHomeNodes();
   const pending=[...data.assignments.map(a=>({...a,kind:'test'})),...readingData.assignments.map(a=>({...a,kind:'reading'}))].filter(a=>!a.submitted_at);
   pending.sort((a,b)=>(a.due_date||'9999-99-99').localeCompare(b.due_date||'9999-99-99')||b.id-a.id);
@@ -178,9 +178,11 @@ function uiEnhanceStudentHome(data,readingData){
   // Pending work first, then video lessons; badges come after the student's tasks.
   const lessonsSection=document.querySelector('#lessonsSection');if(lessonsSection)completed.insertAdjacentElement('afterend',lessonsSection);
   const badges=document.querySelector('#badgesWidget');if(badges)(lessonsSection||completed).insertAdjacentElement('afterend',badges);
-  const next=pending[0];
+  // With a plan, the plan card leads the page and every open work stays in the list below it.
+  const next=plan?null:pending[0];
   const mistakesButton='<button type="button" class="btn secondary" id="openMistakes">📓 Hata Defterim</button>';
-  focus.innerHTML=next?`<section class="student-today"><div><span class="eyebrow">Sıradaki çalışma</span><h2>${esc(next.title)}</h2><p>${next.kind==='reading'?'Okuma Becerileri':'Fasikül'} · ${next.answered}/${next.total} soru yanıtlandı</p>${next.due_date?`<p class="student-due">Hedef: <strong>${esc(uiDueText(next.due_date))}</strong></p>`:''}</div><div class="toolbar"><button class="btn" id="openToday">${next.answered?'Devam et':'Başla'} →</button>${mistakesButton}<button type="button" class="link-btn" id="printToday">🖨 Yazdır</button></div></section>`:`<section class="student-today finished"><div><h2>Şimdilik yeni çalışma yok</h2><p>Yeni bir çalışma atandığında burada görünecek.</p></div><div class="toolbar">${mistakesButton}</div></section>`;
+  if(plan)hero.querySelector('.stat-row')?.remove();
+  focus.innerHTML=plan?dailyPlanMarkup(plan):next?`<section class="student-today"><div><span class="eyebrow">Sıradaki çalışma</span><h2>${esc(next.title)}</h2><p>${next.kind==='reading'?'Okuma Becerileri':'Fasikül'} · ${next.answered}/${next.total} soru yanıtlandı</p>${next.due_date?`<p class="student-due">Hedef: <strong>${esc(uiDueText(next.due_date))}</strong></p>`:''}</div><div class="toolbar"><button class="btn" id="openToday">${next.answered?'Devam et':'Başla'} →</button>${mistakesButton}<button type="button" class="link-btn" id="printToday">🖨 Yazdır</button></div></section>`:`<section class="student-today finished"><div><h2>Şimdilik yeni çalışma yok</h2><p>Yeni bir çalışma atandığında burada görünecek.</p></div><div class="toolbar">${mistakesButton}</div></section>`;
   document.querySelector('#openToday')?.addEventListener('click',()=>next.kind==='reading'?renderReadingAssignment(next.id):renderAssignment(next.id));
   document.querySelector('#openMistakes')?.addEventListener('click',()=>renderMistakesNotebook());
   document.querySelector('#printToday')?.addEventListener('click',()=>renderPrintWorksheet(next.kind,next.id,renderHome));

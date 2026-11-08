@@ -11,6 +11,7 @@ import json
 from collections import defaultdict
 from datetime import date, timedelta
 
+import daily_plan
 import database
 import lessons
 import reading_module
@@ -41,6 +42,7 @@ BADGES = [
     ("habit", "week_star", "📅", "Haftanın Yıldızı", "Aynı hafta içinde {goal} çalışma teslim et.", (3, 5, 7, 10, 14)),
     ("habit", "on_time", "🎯", "Hedefi Tutturan", "{goal} çalışmayı hedef tarihinde ya da daha önce teslim et.", (1, 5, 15, 30, 50)),
     ("habit", "early_bird", "🐦", "Erken Kuş", "{goal} çalışmayı hedef tarihten en az bir gün önce teslim et.", (1, 5, 10, 20, 35)),
+    ("habit", "planner", "📋", "Planlı Çalışkan", "Bugünün planının tamamını {goal} gün bitir (art arda olması gerekmez).", (3, 10, 25, 50, 100)),
     ("habit", "weekend", "🏖️", "Hafta Sonu Kahramanı", "Hafta sonu {goal} çalışma teslim et.", (1, 5, 10, 20, 35)),
     ("success", "perfect", "💯", "Yıldız Başarı", "{goal} testin bütün sorularını doğru yap (video ders testleri de sayılır).", (1, 3, 10, 20, 35)),
     ("success", "sharpshooter", "🏹", "Keskin Nişancı", "{goal} testte soruların en az %80'ini doğru yap (video ders testleri de sayılır).", (1, 5, 15, 30, 50)),
@@ -183,6 +185,7 @@ def _values(db):
         "reading_master": reading_full,
         "mistake_hunter": db.execute("SELECT COUNT(*) FROM mistake_resolutions").fetchone()[0],
         "honest": db.execute("SELECT COUNT(*) FROM study_reflections WHERE uncertain = 1").fetchone()[0],
+        "planner": daily_plan.completed_days(db),
         "lesson_explorer": len(quizzes),
         "lesson_champion": lesson_full,
         "lesson_courses": len({q["course"] for q in quizzes}),

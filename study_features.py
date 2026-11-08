@@ -166,3 +166,67 @@ def dashboard(db):
         "improvingSkills": improving,
         "weekSeries": week_series,
     }
+
+
+def student_mistakes(db):
+    """Questions in the mistake notebook: answered wrong or partly right, or marked uncertain."""
+    test_mistakes = [dict(r) for r in db.execute("""
+        SELECT DISTINCT
+            'test' AS kind,
+            CAST(q.id AS TEXT) AS item_key,
+            q.id AS question_id,
+            q.number,
+            q.stem,
+            q.image_path,
+            q.answer_key,
+            b.course,
+            b.title AS booklet_title,
+            r.grade,
+            COALESCE(r.note, '') AS parent_note,
+            COALESCE(sf.reason, '') AS reason,
+            COALESCE(sf.uncertain, 0) AS uncertain,
+            a.id AS assignment_id,
+            a.title AS assignment_title,
+            a.submitted_at,
+            mr.resolved_at
+        FROM assignments a
+        JOIN assignment_questions aq ON aq.assignment_id = a.id
+        JOIN questions q ON q.id = aq.question_id
+        JOIN booklets b ON b.id = q.booklet_id
+        LEFT JOIN reviews r ON r.assignment_id = a.id AND r.question_id = q.id
+        LEFT JOIN study_reflections sf ON sf.kind = 'test' AND sf.assignment_id = a.id AND sf.item_key = CAST(q.id AS TEXT)
+        LEFT JOIN mistake_resolutions mr ON mr.kind = 'test' AND mr.item_key = CAST(q.id AS TEXT)
+        WHERE a.submitted_at IS NOT NULL
+          AND (r.grade IN ('incorrect', 'partial') OR sf.uncertain = 1)
+        ORDER BY a.submitted_at DESC, a.id DESC, q.id
+    """)]
+    reading_mistakes = [dict(r) for r in db.execute("""
+        SELECT DISTINCT
+            'reading' AS kind,
+            (ra.section_id || '_' || rq.number) AS item_key,
+            rq.number AS question_id,
+            rq.number,
+            rq.prompt AS stem,
+            rq.image AS image_path,
+            COALESCE(rq.answer_key, '') AS answer_key,
+            'Okuma Becerileri' AS course,
+            rs.title AS booklet_title,
+            CASE WHEN rv.score = 0 THEN 'incorrect' ELSE 'partial' END AS grade,
+            COALESCE(rv.note, '') AS parent_note,
+            COALESCE(sf.reason, '') AS reason,
+            COALESCE(sf.uncertain, 0) AS uncertain,
+            ra.id AS assignment_id,
+            ra.title AS assignment_title,
+            ra.submitted_at,
+            mr.resolved_at
+        FROM reading_assignments ra
+        JOIN reading_sections rs ON rs.id = ra.section_id
+        JOIN reading_questions rq ON rq.section_id = ra.section_id
+        LEFT JOIN reading_reviews rv ON rv.assignment_id = ra.id AND rv.number = rq.number
+        LEFT JOIN study_reflections sf ON sf.kind = 'reading' AND sf.assignment_id = ra.id AND sf.item_key = (ra.section_id || '_' || rq.number)
+        LEFT JOIN mistake_resolutions mr ON mr.kind = 'reading' AND mr.item_key = (ra.section_id || '_' || rq.number)
+        WHERE ra.submitted_at IS NOT NULL
+          AND ((rv.score IS NOT NULL AND rv.score < rq.max_score) OR sf.uncertain = 1)
+        ORDER BY ra.submitted_at DESC, ra.id DESC, rq.number
+    """)]
+    return test_mistakes + reading_mistakes

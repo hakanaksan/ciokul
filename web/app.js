@@ -122,7 +122,7 @@ async function renderHome(){
   if(state.role)shell(`<div class="hero"><div class="eyebrow">Yükleniyor</div><h1>Çalışmalar hazırlanıyor…</h1></div><div class="grid" style="margin-top:16px"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>`);
   try{
     const isParent=state.role==='parent';
-    const [data,planning,progress,backupStatus,auditStatus,readingData,readingProgress,studyDashboard,badgesData,lessonsData]=await Promise.all([api('/api/assignments'),isParent?api('/api/catalog'):Promise.resolve(null),isParent?api('/api/progress'):Promise.resolve(null),isParent?api('/api/backup/status'):Promise.resolve(null),isParent?api('/api/audit/status'):Promise.resolve(null),api('/api/reading/assignments'),isParent?api('/api/reading/progress'):Promise.resolve(null),isParent?api('/api/study/dashboard'):Promise.resolve(null),api('/api/student/badges'),ensureLessons(true)]);
+    const [data,planning,progress,backupStatus,auditStatus,readingData,readingProgress,studyDashboard,badgesData,lessonsData,dailyPlan]=await Promise.all([api('/api/assignments'),isParent?api('/api/catalog'):Promise.resolve(null),isParent?api('/api/progress'):Promise.resolve(null),isParent?api('/api/backup/status'):Promise.resolve(null),isParent?api('/api/audit/status'):Promise.resolve(null),api('/api/reading/assignments'),isParent?api('/api/reading/progress'):Promise.resolve(null),isParent?api('/api/study/dashboard'):Promise.resolve(null),api('/api/student/badges'),ensureLessons(true),api('/api/daily-plan').catch(()=>null)]);
     if(!state.calendarMonth)state.calendarMonth=localToday().slice(0,7);
     const backupAge=backupStatus?.lastBackupAt?(Date.now()-Date.parse(backupStatus.lastBackupAt.replace(' ','T')+'Z'))/86400000:Infinity;
     const currentMonth=`${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}`;
@@ -198,8 +198,9 @@ async function renderHome(){
       try{const response=await fetch('/api/backup/restore',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/zip'},body:file});const result=await response.json();if(!response.ok)throw new Error(result.error||'Geri yükleme başarısız.');if(result.restartRequired){setFlash('Yedek hazır. Uygulamayı kapatıp yeniden açın.');document.querySelector('#flash').innerHTML=flash()}else{setFlash('Yedek geri yüklendi'+(result.imagesSkipped?' (görsel düzeltmeleri bu sunucuda yüklenmedi)':'')+'. Lütfen yeniden giriş yapın.');state.role=null;renderLogin()}}catch(err){showError(err)}
     });
     if(isParent)bindAccount();
-    if(isParent)uiInitParentTabs(data,readingData,studyDashboard,progress);
-    else{uiEnhanceStudentHome(data,readingData);badgesCelebrate(badgesData)}
+    if(isParent)uiInitParentTabs(data,readingData,studyDashboard,progress,dailyPlan);
+    else{uiEnhanceStudentHome(data,readingData,dailyPlan);badgesCelebrate(badgesData)}
+    bindDailyPlan();
   }catch(err){showError(err)}
 }
 // Which questions of a test were already given in an assignment: status '', 'partial' or 'given'.

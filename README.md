@@ -30,6 +30,10 @@ Veli ana sayfasındaki **Bu haftanın özeti**, atanan ve teslim edilen çalış
 
 Öğrenci çalışma ekranındaki **Sakin çalışma modu** soruyu büyütür ve gezinme alanını sadeleştirir. **Tam ekran** seçeneği tarayıcı penceresini büyütür. Sakin modda 20 dakikada bir isteğe bağlı kısa mola hatırlatması görünür; süre sınırı veya otomatik teslim yoktur. Sakin mod tercihi bu tarayıcıda saklanır.
 
+## Bugünün planı
+
+Öğrenci ana sayfasının en üstünde günün kısa planı görünür. Plan sırayla şunlardan dolar: hedef tarihi en yakın (ya da geçmiş) teslim edilmemiş çalışma, son yanlışlara bağlı ve testi henüz tam puanla bitmemiş video ders, hata defterinden 3 soruyu yeniden deneme, ikinci çalışma ve yeni bir video ders (dersler gün gün sırayla). Adım sayısını veli Özet sekmesindeki **Günlük yük** ile seçer: Hafif 2, Normal 3, Yoğun 4. Adımlar iş yapılınca kendiliğinden tiklenir: çalışma teslim edilince, video dersin testi o gün çözülünce, hata defterinden o gün yeterli soru çözüldü olarak işaretlenince. Plan günün ilk açılışında hazırlanır ve gün boyunca değişmez (`daily_plans` tablosu); gün içinde hedef tarihi bugün olan bir çalışma atanırsa plana eklenir. Veli aynı planı Özet sekmesinde görür; tekrar zamanı gelen sorular varsa oradan atanabilir. Planın tamamını bitirdiği her gün **Planlı Çalışkan** rozetine sayılır (art arda olması gerekmez).
+
 ## Yeni ekran düzeni
 
 Veli paneli **Özet**, **Çalışmalar**, **İlerleme** ve **İçerik ve araçlar** sekmelerine ayrılmıştır. Özet ekranı bekleyen kontrolleri ve tekrarları öne çıkarır. İlerleme sekmesinde son sekiz haftanın atanan/teslim edilen çalışma grafiği ve ders/ünite sonuçları bulunur; beşten az değerlendirilmiş sorusu olan ünitede başarı yüzdesi gösterilmez. Öğrenci ana sayfasında sıradaki çalışma büyük bir kartta açılır, tamamlananlar ayrı bir bölümde toplanır.

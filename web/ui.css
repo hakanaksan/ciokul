@@ -753,3 +753,30 @@ body.high-contrast{background:#fff;color:#101910}body.high-contrast .shell,body.
   outline: none;
   box-shadow: 0 2px 10px rgba(37, 99, 235, 0.25);
 }
+
+/* Bugünün planı (daily_plan.js) */
+.daily-plan{margin:24px 0 10px;padding:22px 26px;border:1px solid #8bc7a3;border-radius:var(--radius-lg);background:linear-gradient(115deg,#e5f7e9,#f8fcf6);box-shadow:0 8px 28px #1b764218}
+.daily-plan.complete{border-color:#e0b84a;background:linear-gradient(115deg,#fff6dc,#fffdf5)}
+.plan-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.plan-head h2{margin:4px 0 0;font-size:24px}
+.plan-count{flex:none;padding:6px 13px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--brand-ink);font-weight:800;font-size:17px}
+.plan-bar{height:10px;margin:14px 0 6px;border-radius:999px;background:#d7e9dc;overflow:hidden}
+.plan-bar span{display:block;height:100%;border-radius:inherit;background:var(--brand);transition:width .4s}
+.daily-plan.complete .plan-bar span{background:#d39b14}
+.plan-complete{margin:10px 0 2px;font-weight:700;color:#7a5600}
+.plan-free{margin:12px 0 4px;color:var(--muted)}
+.plan-steps{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:9px}
+.plan-step{display:flex;align-items:center;gap:13px;padding:12px 14px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+.plan-check{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#eef5f0;font-size:19px}
+.plan-step.done .plan-check{background:var(--brand);color:#fff;font-weight:900}
+.plan-text{flex:1;min-width:0;display:grid;gap:2px}
+.plan-text strong{font-size:17px;overflow-wrap:anywhere}
+.plan-text small{color:var(--muted);font-size:14px}
+.plan-step.done{background:#f6faf7}
+.plan-step.done .plan-text strong{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px}
+.plan-step .btn{flex:none;min-width:110px}
+.plan-tools{margin-top:12px}
+.plan-settings{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:14px}
+.plan-settings label{display:flex;align-items:center;gap:8px;font-weight:700}
+.plan-settings select{min-height:40px;padding:4px 8px;border:1px solid var(--border);border-radius:9px;background:var(--surface);font:inherit}
+@media(max-width:700px){.daily-plan{padding:18px 14px}.plan-step{flex-wrap:wrap}.plan-step .btn{width:100%}.plan-head h2{font-size:21px}}

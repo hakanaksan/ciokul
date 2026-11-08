@@ -27,6 +27,7 @@ from urllib.parse import parse_qs, urlparse
 
 from curriculum_schedule import MONTHS, SCHOOL_YEAR, SOURCES, annotate_booklet
 import achievements
+import daily_plan
 import data_export
 import database
 import lessons
@@ -221,6 +222,7 @@ def init_db():
             );
             """)
             db.executescript(lessons.SCHEMA_SQLITE)
+            db.executescript(daily_plan.SCHEMA_SQLITE)
             columns = {row[1] for row in db.execute("PRAGMA table_info(questions)")}
             if "image_path" not in columns:
                 db.execute("ALTER TABLE questions ADD COLUMN image_path TEXT")
@@ -816,66 +818,7 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/student/mistakes":
                 if not self.require(): return
                 with connect() as db:
-                    test_mistakes = rows(db, """
-                        SELECT DISTINCT
-                            'test' AS kind,
-                            CAST(q.id AS TEXT) AS item_key,
-                            q.id AS question_id,
-                            q.number,
-                            q.stem,
-                            q.image_path,
-                            q.answer_key,
-                            b.course,
-                            b.title AS booklet_title,
-                            r.grade,
-                            COALESCE(r.note, '') AS parent_note,
-                            COALESCE(sf.reason, '') AS reason,
-                            COALESCE(sf.uncertain, 0) AS uncertain,
-                            a.id AS assignment_id,
-                            a.title AS assignment_title,
-                            a.submitted_at,
-                            mr.resolved_at
-                        FROM assignments a
-                        JOIN assignment_questions aq ON aq.assignment_id = a.id
-                        JOIN questions q ON q.id = aq.question_id
-                        JOIN booklets b ON b.id = q.booklet_id
-                        LEFT JOIN reviews r ON r.assignment_id = a.id AND r.question_id = q.id
-                        LEFT JOIN study_reflections sf ON sf.kind = 'test' AND sf.assignment_id = a.id AND sf.item_key = CAST(q.id AS TEXT)
-                        LEFT JOIN mistake_resolutions mr ON mr.kind = 'test' AND mr.item_key = CAST(q.id AS TEXT)
-                        WHERE a.submitted_at IS NOT NULL
-                          AND (r.grade IN ('incorrect', 'partial') OR sf.uncertain = 1)
-                        ORDER BY a.submitted_at DESC, a.id DESC, q.id
-                    """)
-                    reading_mistakes = rows(db, """
-                        SELECT DISTINCT
-                            'reading' AS kind,
-                            (ra.section_id || '_' || rq.number) AS item_key,
-                            rq.number AS question_id,
-                            rq.number,
-                            rq.prompt AS stem,
-                            rq.image AS image_path,
-                            COALESCE(rq.answer_key, '') AS answer_key,
-                            'Okuma Becerileri' AS course,
-                            rs.title AS booklet_title,
-                            CASE WHEN rv.score = 0 THEN 'incorrect' ELSE 'partial' END AS grade,
-                            COALESCE(rv.note, '') AS parent_note,
-                            COALESCE(sf.reason, '') AS reason,
-                            COALESCE(sf.uncertain, 0) AS uncertain,
-                            ra.id AS assignment_id,
-                            ra.title AS assignment_title,
-                            ra.submitted_at,
-                            mr.resolved_at
-                        FROM reading_assignments ra
-                        JOIN reading_sections rs ON rs.id = ra.section_id
-                        JOIN reading_questions rq ON rq.section_id = ra.section_id
-                        LEFT JOIN reading_reviews rv ON rv.assignment_id = ra.id AND rv.number = rq.number
-                        LEFT JOIN study_reflections sf ON sf.kind = 'reading' AND sf.assignment_id = ra.id AND sf.item_key = (ra.section_id || '_' || rq.number)
-                        LEFT JOIN mistake_resolutions mr ON mr.kind = 'reading' AND mr.item_key = (ra.section_id || '_' || rq.number)
-                        WHERE ra.submitted_at IS NOT NULL
-                          AND ((rv.score IS NOT NULL AND rv.score < rq.max_score) OR sf.uncertain = 1)
-                        ORDER BY ra.submitted_at DESC, ra.id DESC, rq.number
-                    """)
-                    all_mistakes = test_mistakes + reading_mistakes
+                    all_mistakes = study_features.student_mistakes(db)
                     total = len(all_mistakes)
                     resolved = sum(1 for m in all_mistakes if m.get("resolved_at"))
                     pending = total - resolved
@@ -883,6 +826,11 @@ class Handler(BaseHTTPRequestHandler):
                         "mistakes": all_mistakes,
                         "stats": {"total": total, "pending": pending, "resolved": resolved}
                     })
+            if path == "/api/daily-plan":
+                if not self.require(): return
+                with DB_LOCK, connect() as db:
+                    result = daily_plan.today_plan(db)
+                return self.send_json(result)
             if path == "/api/student/badges":
                 if not self.require(): return
                 with connect() as db:
@@ -1363,6 +1311,12 @@ class Handler(BaseHTTPRequestHandler):
             data = self.body(ANSWER_BODY_LIMIT if ANSWER_PATH.fullmatch(path) else 20_000)
             if reading_module.handle(self, "PUT", path, data, connect, DB_LOCK, checked_date): return
             parts = urlparse(self.path).path.strip("/").split("/")
+            if path == "/api/daily-plan/size":
+                if not self.require("parent"): return
+                with DB_LOCK, connect() as db:
+                    daily_plan.set_size(db, data.get("size"))
+                    result = daily_plan.today_plan(db)
+                return self.send_json(result)
             if len(parts) == 6 and parts[:3] == ["api", "study", "reflections"]:
                 if not self.require("student"): return
                 kind, aid, key = parts[3], int(parts[4]), parts[5]
