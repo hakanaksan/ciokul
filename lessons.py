@@ -58,7 +58,8 @@ def catalog(db):
             "scenes": len(lesson["scenes"]), "duration": lesson["audio"].get("duration", 0),
             "progress": progress.get(lesson["id"]),
         })
-    return items
+    # Curriculum order: by course, then by outcome code (F.4.1.1.3 before F.4.2.1.1).
+    return sorted(items, key=lambda item: (item["course"], item["kazanim"]["code"]))
 
 
 def detail(db, lesson_id):

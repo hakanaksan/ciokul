@@ -9,11 +9,18 @@ async function ensureLessons(force = false) {
   return lessonsCache;
 }
 
-// The video lesson for a question, matched by course and words in the question text.
-function lessonForQuestion(course, text) {
+// The video lesson for a question, matched by course, booklet (when known) and words in the
+// question text; the lesson with the most matching words wins. The booklet keeps a word like
+// "mineral" in the rocks unit from linking a nutrition lesson.
+function lessonForQuestion(course, text, booklet) {
   const value = String(text || '').toLocaleLowerCase('tr');
-  return (lessonsCache || []).find(l => (!l.match?.course || l.match.course === course)
-    && (l.match?.keywords || []).some(k => value.includes(k.toLocaleLowerCase('tr'))));
+  let best = null, bestHits = 0;
+  for (const l of lessonsCache || []) {
+    if ((l.match?.course && l.match.course !== course) || (l.match?.booklet && booklet && l.match.booklet !== booklet)) continue;
+    const hits = (l.match?.keywords || []).filter(k => value.includes(k.toLocaleLowerCase('tr'))).length;
+    if (hits > bestHits) { best = l; bestHits = hits; }
+  }
+  return best;
 }
 
 function lessonLinkMarkup(lesson, label = 'Bu konunun video dersini izle') {

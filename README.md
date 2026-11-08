@@ -97,7 +97,7 @@ Veli ve öğrenci ana sayfasındaki **Video Dersler** bölümünde MEB kazanıml
 
 Yeni ders eklemek için:
 
-1. `lessons/<ders>.json` dosyasını yazın: kazanım, sahneler (`id`, `title`, `visual`, `sentences`), mini test ve `match` (ders ve sorularda aranacak kelimeler). Örnek: `lessons/fosiller.json`.
+1. `lessons/<ders>.json` dosyasını yazın: kazanım, sahneler (`id`, `title`, `visual`, `sentences`), mini test ve `match` (ders, fasikül ve sorularda aranacak kelimeler; bir soruya en çok kelimesi geçen ders bağlanır). Örnek: `lessons/fosiller.json`.
 2. Sahne çizimlerini `web/lesson_scenes.js` içine `visual` adıyla ekleyin. `data-step="n"` olan öğeler anlatım n. cümleye geldiğinde belirir.
 3. Sesleri üretin: `generate_lesson_audio.py <ders>` (`lesson_audio/<ders>/` ve `lessons/<ders>.audio.json`). Ses DataKey ses servisinden (`https://ses.app.datakey.tr`) cümle cümle alınır; token `SES_TOKEN` ortam değişkeninden ya da `.env.datakey` içindeki `SES_TOKEN=...` satırından okunur ve yalnızca bu betikte kullanılır. Bir ad ya da terim yanlış okunursa servisin telaffuz sözlüğüne ekleyin. `--piper` yerel Piper sesini kullanır; `--force` var olan sesleri yeniden üretir.
 4. Sunucu için sesleri depoya yükleyin: `upload_files.py --only lesson_audio/` (yeniden üretilen sesler için `--force` ekleyin).

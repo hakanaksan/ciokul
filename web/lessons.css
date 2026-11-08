@@ -41,10 +41,12 @@
 .ls-drop{transform:translateY(-60px)}.ls-drop.on{transform:none}
 .ls-sink{transform:translateY(-120px) rotate(-8deg);transition-duration:2.2s}.ls-sink.on{transform:none}
 .ls-cover{transform:translateY(40px)}.ls-cover.on{transform:none;transition-duration:1.6s}
-.ls-d1{transition-delay:.25s}.ls-d2{transition-delay:.5s}.ls-d3{transition-delay:.75s}
+.ls-d1{transition-delay:.25s}.ls-d2{transition-delay:.5s}.ls-d3{transition-delay:.75s}.ls-d4{transition-delay:1s}.ls-d5{transition-delay:1.25s}
 .ls-label-bg{fill:#ffffffe6;stroke:#08796e;stroke-width:2}
 .ls-label{font:800 20px Segoe UI,Arial,sans-serif;fill:#0b4f45}
 .ls-cap{font:700 20px Segoe UI,Arial,sans-serif;fill:#22392f}
+.ls-small{font:700 17px Segoe UI,Arial,sans-serif;fill:#22392f}
+.ls-pill{font:800 20px Segoe UI,Arial,sans-serif;fill:#fff}
 .ls-big{font:900 120px Segoe UI,Arial,sans-serif;fill:#e25d3f}
 .ls-neq{font-size:80px;fill:#e25d3f}
 .ls-emoji{font-size:48px}

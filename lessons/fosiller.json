@@ -9,7 +9,7 @@
     "note": "MEB Fen Bilimleri Dersi Öğretim Programı (2018), 4. sınıf. Programa göre fosil çeşitlerine girilmez."
   },
   "summary": "Fosilin ne olduğunu, nasıl oluştuğunu, hangi şartlarda oluştuğunu ve bize neler anlattığını adım adım öğren.",
-  "match": {"course": "Fen Bilimleri", "keywords": ["fosil", "paleontolo"]},
+  "match": {"course": "Fen Bilimleri", "booklet": "Ünite 01", "keywords": ["fosil", "paleontolo"]},
   "scenes": [
     {
       "id": "s01", "title": "Çölde balık mı?", "visual": "desert-fish",

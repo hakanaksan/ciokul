@@ -1,0 +1,156 @@
+{
+  "id": "dengeli-beslenme",
+  "title": "Dengeli ve Sağlıklı Beslenme",
+  "course": "Fen Bilimleri",
+  "unit": "Besinlerimiz",
+  "kazanim": {
+    "code": "F.4.2.1.3, F.4.2.1.4",
+    "text": "Sağlıklı bir yaşam için besinlerin tazeliğinin ve doğallığının önemini tartışır. İnsan sağlığı ile dengeli beslenmeyi ilişkilendirir.",
+    "note": "MEB Fen Bilimleri Dersi Öğretim Programı (2018), 4. sınıf. Dondurulmuş ve paketlenmiş besinler, son kullanma tarihi ve besinlerin temizliği; obezitenin beslenme alışkanlığıyla ilişkisi ve besin israfı üzerinde durulur."
+  },
+  "summary": "Dengeli beslenmeyi, besin piramidini, obeziteyi ve israfı; taze, doğal ve güvenli besin seçmeyi örneklerle öğren.",
+  "match": {"course": "Fen Bilimleri", "booklet": "Ünite 02", "keywords": ["dengeli", "obezite", "pirami", "en çok tüket", "en az tüket", "sağlıklı besin", "menü", "israf", "son kullanma", "mevsim", "katkı madde", "dondur", "sakla", "ambalaj", "doğal", "taze"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "İki öğle yemeği", "visual": "two-lunches",
+      "sentences": [
+        "Merhaba! Bugün iki arkadaşın öğle yemeğine bakalım.",
+        "Can her gün patates kızartması, hamburger ve gazlı içecek seçiyor.",
+        "Ece'nin tabağında ise mercimek çorbası, tavuk, bulgur pilavı, salata ve bir bardak ayran var.",
+        "Sence hangisi daha sağlıklı beslendi? Cevabını birlikte bulacağız."
+      ]
+    },
+    {
+      "id": "s02", "title": "Dengeli beslenme", "visual": "balanced-plate",
+      "sentences": [
+        "Sağlıklı olmak için dengeli beslenmeliyiz.",
+        "Dengeli beslenmek, her besin grubundan ihtiyacımız kadar tüketmektir.",
+        "Dikkat! Dengeli beslenmek, her besinden eşit miktarda yemek demek değildir.",
+        "Tek çeşit besinle beslenmek de vücudumuza yetmez. Her gün farklı besinler yemeliyiz.",
+        "Ne kadar yememiz gerektiği, yaşımıza ve ne kadar hareket ettiğimize göre değişir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Besin piramidi", "visual": "food-pyramid",
+      "sentences": [
+        "Hangi besinden ne kadar tüketmemiz gerektiğini besin piramidi gösterir.",
+        "Piramidin en alt basamağında ekmek, makarna, pirinç ve bulgur gibi tahıllar vardır. En çok bu gruptan tüketiriz.",
+        "İkinci basamakta sebzeler ve meyveler bulunur.",
+        "Üçüncü basamakta et, balık, yumurta ve kuru baklagiller ile süt, yoğurt ve peynir vardır.",
+        "En üst basamakta yağlar, şekerli yiyecekler ve tatlılar bulunur. Bunları en az tüketmeliyiz."
+      ]
+    },
+    {
+      "id": "s04", "title": "Hangisi dengeli?", "visual": "lunch-answer",
+      "sentences": [
+        "Şimdi ilk sorumuza dönelim.",
+        "Ece'nin tabağında tahıl, sebze, et ve süt ürünü var. Ece dengeli beslendi.",
+        "Can'ın yiyecekleri ise yağ ve şeker bakımından çok zengin. Bu besinleri, piramidin tepesindekiler gibi az tüketmeliyiz.",
+        "Kızartma yerine haşlanmış ya da fırında pişmiş yiyecekleri, gazlı içecek yerine su ya da ayranı seçebiliriz."
+      ]
+    },
+    {
+      "id": "s05", "title": "Obezite", "visual": "obesity",
+      "sentences": [
+        "İhtiyacımızdan fazla yiyip az hareket ettiğimizde vücudumuzda fazla yağ birikir.",
+        "Vücutta aşırı yağ birikmesine obezite denir.",
+        "Obezite önemli bir sağlık sorunudur ve başka birçok hastalığa yol açabilir.",
+        "Obeziteden korunmak için dengeli beslenmeli, öğün atlamamalı ve düzenli spor yapmalıyız.",
+        "Yağlı ve şekerli yiyecekleri, gazlı içecekleri ve hazır yiyecekleri az tüketmeliyiz."
+      ]
+    },
+    {
+      "id": "s06", "title": "İsrafı önleyelim", "visual": "food-waste",
+      "sentences": [
+        "Besinlerin tüketilmeden çöpe gitmesine besin israfı denir.",
+        "İhtiyacımız kadar alışveriş yapmalı, tabağımıza yiyebileceğimiz kadar yemek koymalıyız.",
+        "Bayatlayan ekmeği atmak yerine kızartarak ya da başka yemeklerde kullanarak değerlendirebiliriz.",
+        "Artan yemekleri buzdolabında saklayıp bir sonraki öğünde tüketebiliriz."
+      ]
+    },
+    {
+      "id": "s07", "title": "Taze ve doğal besinler", "visual": "fresh-natural",
+      "sentences": [
+        "Sağlıklı bir yaşam için besinlerin taze ve doğal olması da önemlidir.",
+        "Bahçeden ya da tarladan geldiği gibi tüketilen taze meyve ve sebzeler doğal besinlerdir.",
+        "Meyve ve sebzeleri kendi mevsiminde tüketmeliyiz. Mevsiminde yetişenler daha lezzetli ve besleyicidir.",
+        "Örneğin çilek yaz başında, portakal ise kışın yetişir.",
+        "Fabrikada çeşitli işlemlerden geçen besinler ise doğallığını kaybeder."
+      ]
+    },
+    {
+      "id": "s08", "title": "Paketli besinler", "visual": "packaged-food",
+      "sentences": [
+        "Markette aldığımız paketli besinlerde nelere dikkat etmeliyiz?",
+        "Önce son kullanma tarihine bakmalıyız. Tarihi geçmiş besinler tüketilmez.",
+        "Ambalajın yırtık, şişkin ya da ezik olmamasına dikkat etmeliyiz.",
+        "Paketin üzerinde Türk Standartları Enstitüsünün damgası gibi onay işaretleri bulunmalıdır.",
+        "Bazı paketli besinlere tat ve renk vermek ya da uzun süre saklamak için katkı maddeleri eklenir. Bu yüzden doğal besinleri tercih etmeliyiz."
+      ]
+    },
+    {
+      "id": "s09", "title": "Saklama ve temizlik", "visual": "storage-clean",
+      "sentences": [
+        "Besinlerin bozulmaması için onları uygun koşullarda saklamalıyız.",
+        "Süt, et ve peynir gibi çabuk bozulan besinleri buzdolabında saklarız.",
+        "Dondurulacak besinler taze ve temiz olmalıdır. Çözülen besinler kısa sürede tüketilmeli ve yeniden dondurulmamalıdır.",
+        "Meyve ve sebzeleri yemeden önce bol suyla yıkamalı, yemekten önce ve sonra ellerimizi de yıkamalıyız."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "balanced-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Dengeli beslenmek, her besin grubundan ihtiyacımız kadar tüketmektir.",
+        "Besin piramidinin altındaki tahıllardan en çok, tepesindeki yağ ve şekerlerden en az tüketiriz.",
+        "Dengesiz beslenme ve hareketsizlik obeziteye yol açabilir. Besinleri israf etmemeliyiz.",
+        "Taze, doğal ve mevsiminde besinleri seçmeli; paketli besinlerde son kullanma tarihine bakmalıyız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Dengeli beslenme ile ilgili hangisi doğrudur?",
+      "options": ["Her besinden eşit miktarda yemektir", "Her besin grubundan ihtiyacımız kadar tüketmektir", "Yalnızca en sevdiğimiz besinleri yemektir", "Tek çeşit besinle beslenmektir"],
+      "answer": 1,
+      "explain": "Dengeli beslenmek, her besin grubundan ihtiyacımız kadar tüketmektir. Eşit miktarda yemek demek değildir.",
+      "scene": "s02"
+    },
+    {
+      "question": "Besin piramidine göre en az tüketmemiz gereken besinler hangileridir?",
+      "options": ["Ekmek, makarna ve bulgur", "Sebzeler ve meyveler", "Süt, yoğurt ve peynir", "Yağlar ve şekerli yiyecekler"],
+      "answer": 3,
+      "explain": "Yağlar, şekerli yiyecekler ve tatlılar piramidin en üst basamağındadır. Bunları en az tüketmeliyiz.",
+      "scene": "s03"
+    },
+    {
+      "question": "Obezitenin en önemli sebebi hangisidir?",
+      "options": ["Düzenli spor yapmak", "İhtiyacımızdan fazla yiyip az hareket etmek", "Mevsiminde meyve yemek", "Yeterince su içmek"],
+      "answer": 1,
+      "explain": "İhtiyacımızdan fazla yiyip az hareket edersek vücudumuzda fazla yağ birikir. Buna obezite denir.",
+      "scene": "s05"
+    },
+    {
+      "question": "Besin israfını önlemek için hangisi yapılmalıdır?",
+      "options": ["Tabağımıza yiyebileceğimiz kadar yemek koymak", "Bayatlayan ekmeği çöpe atmak", "İhtiyacımızdan fazla alışveriş yapmak", "Artan yemekleri hemen atmak"],
+      "answer": 0,
+      "explain": "Tabağımıza yiyebileceğimiz kadar yemek koyarsak besinler çöpe gitmez.",
+      "scene": "s06"
+    },
+    {
+      "question": "Özge ocak ayında pazarda çilek görüyor. Doğal beslenmeye önem veren annesi ona ne demelidir?",
+      "options": ["Çilek her mevsim aynı lezzettedir, alalım.", "Çileği mevsimi gelince alalım.", "Çileğin paketlisini alalım.", "Çilek yerine gazlı içecek alalım."],
+      "answer": 1,
+      "explain": "Meyve ve sebzeleri kendi mevsiminde tüketmeliyiz. Çilek yaz başında yetişir.",
+      "scene": "s07"
+    },
+    {
+      "question": "Paketli bir besin alırken ilk neye bakmalıyız?",
+      "options": ["Paketin renkli olmasına", "Son kullanma tarihine", "Paketin büyüklüğüne", "Paketteki resimlere"],
+      "answer": 1,
+      "explain": "Son kullanma tarihi geçmiş besinler tüketilmez. Ambalajın sağlam olmasına ve onay işaretine de bakmalıyız.",
+      "scene": "s08"
+    }
+  ]
+}

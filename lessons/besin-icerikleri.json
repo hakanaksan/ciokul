@@ -1,0 +1,161 @@
+{
+  "id": "besin-icerikleri",
+  "title": "Besinler ve İçerikleri",
+  "course": "Fen Bilimleri",
+  "unit": "Besinlerimiz",
+  "kazanim": {
+    "code": "F.4.2.1.1, F.4.2.1.2",
+    "text": "Canlı yaşamı ve besin içerikleri arasındaki ilişkiyi açıklar. Su ve minerallerin bütün besinlerde bulunduğu çıkarımını yapar.",
+    "note": "MEB Fen Bilimleri Dersi Öğretim Programı (2018), 4. sınıf. Programa göre besin içeriklerinin ayrıntılı yapısına girilmez, yalnızca önemleri vurgulanır; vitamin çeşitlerine girilmez."
+  },
+  "summary": "Neden beslendiğimizi, altı besin içeriğinin vücudumuzdaki görevlerini ve su ile minerallerin neden her besinde bulunduğunu öğren.",
+  "match": {"course": "Fen Bilimleri", "booklet": "Ünite 02", "keywords": ["karbonhidrat", "protein", "vitamin", "mineral", "besin içeri", "besin grub", "yapıcı ve onarıcı", "düzenleyici", "enerji ver", "iyileş", "kırıl", "suyun"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Neden besin yeriz?", "visual": "food-energy",
+      "sentences": [
+        "Merhaba! Sabah kahvaltı yapmadan okula gittiğin bir günü düşün.",
+        "Biraz sonra karnın acıkır, yorulursun ve derse odaklanmakta zorlanırsın.",
+        "Çünkü vücudumuz, besinlerden aldığı enerjiyle çalışır.",
+        "Büyümek, hareket etmek, ısınmak ve hastalıklardan korunmak için de besinlere ihtiyacımız var."
+      ]
+    },
+    {
+      "id": "s02", "title": "Bütün canlılar beslenir", "visual": "living-food",
+      "sentences": [
+        "Besinlere yalnızca insanlar ihtiyaç duymaz. Bütün canlılar beslenir.",
+        "Bitkiler besinlerini kendileri üretir. Hayvanlar ise bitkilerle ya da başka hayvanlarla beslenir.",
+        "Biz de besinlerimizin bazılarını bitkilerden, bazılarını hayvanlardan elde ederiz.",
+        "Ekmek, elma ve havuç bitkisel besinlerdir. Süt, yumurta ve balık ise hayvansal besinlerdir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Besin içerikleri", "visual": "nutrient-groups",
+      "sentences": [
+        "Her besinin içinde vücudumuzun ihtiyaç duyduğu maddeler vardır. Bunlara besin içerikleri denir.",
+        "Besin içerikleri şunlardır: karbonhidratlar, yağlar, proteinler, vitaminler, su ve mineraller.",
+        "Her birinin vücudumuzda öncelikli bir görevi vardır.",
+        "Bazıları enerji verir, bazıları vücudumuzu yapar ve onarır, bazıları da vücudumuzun düzenli çalışmasını sağlar."
+      ]
+    },
+    {
+      "id": "s04", "title": "Karbonhidratlar", "visual": "carbs",
+      "sentences": [
+        "Karbonhidratların öncelikli görevi vücudumuza enerji vermektir.",
+        "Koşmak, oynamak, hatta düşünmek için bile enerjiye ihtiyacımız var.",
+        "Ekmek, makarna, pirinç, bulgur ve patates karbonhidrat bakımından zengindir. Bal ve pekmez de karbonhidrat içerir.",
+        "Beynimiz de enerjisini karbonhidratlardan alır."
+      ]
+    },
+    {
+      "id": "s05", "title": "Yağlar", "visual": "fats",
+      "sentences": [
+        "Yağlar da vücudumuza enerji verir.",
+        "Vücudumuz fazla yağı depolar. Uzun süre aç kaldığımızda bu depodaki yağı kullanır.",
+        "Yağlar vücudumuzu soğuktan korur ve organlarımızı dış etkilere karşı korur.",
+        "Tereyağı, zeytinyağı, ayçiçek yağı ve fındık, ceviz gibi kuruyemişler yağ bakımından zengindir. Ama yağları fazla tüketmemeliyiz."
+      ]
+    },
+    {
+      "id": "s06", "title": "Proteinler", "visual": "proteins",
+      "sentences": [
+        "Proteinler vücudumuzda yapıcı ve onarıcı olarak görev yapar.",
+        "Büyüyüp gelişmemizi, boyumuzun uzamasını, saçlarımızın ve tırnaklarımızın uzamasını sağlar.",
+        "Kırılan bir kemiğin ya da bir yaranın iyileşmesine de yardım eder.",
+        "Et, tavuk, balık, yumurta, peynir ve süt protein bakımından zengindir. Nohut, mercimek ve kuru fasulye de protein içerir."
+      ]
+    },
+    {
+      "id": "s07", "title": "Vitaminler", "visual": "vitamins",
+      "sentences": [
+        "Vitaminler vücudumuzda düzenleyici olarak görev yapar.",
+        "Vücudumuzun direncini artırır ve bizi hastalıklara karşı korur.",
+        "Meyveler ve sebzeler vitamin bakımından zengindir.",
+        "Bu yüzden her gün farklı renklerde meyve ve sebze yemeliyiz."
+      ]
+    },
+    {
+      "id": "s08", "title": "Su ve mineraller", "visual": "water-minerals",
+      "sentences": [
+        "Su ve mineraller de vücudumuzda düzenleyici olarak görev yapar.",
+        "Vücudumuzun büyük bir bölümü sudur. Bu yüzden her gün yeterince su içmeliyiz.",
+        "Kalsiyum, demir ve potasyum birer mineraldir.",
+        "Mineraller kemiklerimizin, dişlerimizin, kaslarımızın ve organlarımızın düzenli çalışmasına yardım eder."
+      ]
+    },
+    {
+      "id": "s09", "title": "Su her besinde var", "visual": "water-in-food",
+      "sentences": [
+        "Peki su hangi besinlerde bulunur? Bunu birkaç gözlemle keşfedelim.",
+        "Bir portakalı sıktığımızda suyu çıkar.",
+        "Üzüm kurutulunca küçülür ve hafifler, çünkü içindeki suyun çoğu buharlaşır.",
+        "Tuzlanan salata bir süre bekleyince tabağın dibinde su birikir.",
+        "Kuru görünen ekmekte, pirinçte ve fasulyede bile az da olsa su vardır."
+      ]
+    },
+    {
+      "id": "s10", "title": "Mineraller de her besinde", "visual": "minerals-everywhere",
+      "sentences": [
+        "Mineraller de bütün besinlerde bulunur.",
+        "Bitkiler, topraktaki mineralleri suyla birlikte kökleriyle alır.",
+        "Bitkileri yiyen hayvanlara ve bu besinleri tüketen bizlere de mineraller geçer.",
+        "Yani su ve mineraller, bitkisel ve hayvansal bütün besinlerde vardır."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "nutrient-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Karbonhidratlar ve yağlar vücudumuza enerji verir.",
+        "Proteinler yapıcı ve onarıcıdır. Büyümemizi ve iyileşmemizi sağlar.",
+        "Vitaminler, su ve mineraller düzenleyicidir. Vücudumuzun düzenli çalışmasını sağlar.",
+        "Su ve mineraller bütün besinlerde bulunur.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Karbonhidratların öncelikli görevi nedir?",
+      "options": ["Vücudumuza enerji vermek", "Kırılan kemikleri onarmak", "Organlarımızı dış etkilere karşı korumak", "Saçlarımızın uzamasını sağlamak"],
+      "answer": 0,
+      "explain": "Karbonhidratlar öncelikle enerji verir. Ekmek, makarna, pirinç ve patates karbonhidrat bakımından zengindir.",
+      "scene": "s04"
+    },
+    {
+      "question": "Tuna'nın kırılan kolu daha hızlı iyileşsin. Hangi besin içeriğinden zengin besinleri daha çok tüketmelidir?",
+      "options": ["Karbonhidratlar", "Yağlar", "Proteinler", "Su"],
+      "answer": 2,
+      "explain": "Proteinler yapıcı ve onarıcıdır. Kırılan kemiklerin ve yaraların iyileşmesine yardım eder.",
+      "scene": "s06"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi protein bakımından zengindir?",
+      "options": ["Makarna", "Yumurta", "Tereyağı", "Elma"],
+      "answer": 1,
+      "explain": "Yumurta, et, balık, süt ve peynir protein bakımından zengindir. Makarna karbonhidrat, tereyağı yağ, elma vitamin bakımından zengindir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Vitaminlerin vücudumuzdaki görevi nedir?",
+      "options": ["Vücudumuzu soğuktan korumak", "Vücudumuzun direncini artırıp bizi hastalıklara karşı korumak", "Uzun süre aç kaldığımızda enerji deposu olmak", "Kırılan kemikleri onarmak"],
+      "answer": 1,
+      "explain": "Vitaminler düzenleyicidir. Vücudumuzun direncini artırır ve bizi hastalıklara karşı korur.",
+      "scene": "s07"
+    },
+    {
+      "question": "Kurutulan üzümün küçülüp hafiflemesi bize neyi gösterir?",
+      "options": ["Üzümün içinde su bulunduğunu", "Üzümde hiç mineral olmadığını", "Kurutmanın besinleri büyüttüğünü", "Üzümün protein bakımından zengin olduğunu"],
+      "answer": 0,
+      "explain": "Üzüm kururken içindeki suyun çoğu buharlaşır. Bu yüzden küçülür ve hafifler.",
+      "scene": "s09"
+    },
+    {
+      "question": "Su ve mineraller hangi besinlerde bulunur?",
+      "options": ["Yalnızca meyvelerde", "Yalnızca hayvansal besinlerde", "Yalnızca içeceklerde", "Bütün besinlerde"],
+      "answer": 3,
+      "explain": "Su ve mineraller, bitkisel ve hayvansal bütün besinlerde bulunur.",
+      "scene": "s10"
+    }
+  ]
+}

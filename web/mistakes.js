@@ -133,7 +133,7 @@ function drawMistakesNotebook() {
                   <button class="btn ${isResolved ? 'secondary' : ''} btn-toggle-resolve" data-kind="${m.kind}" data-item-key="${m.item_key}" data-resolved="${isResolved ? 'true' : 'false'}">
                     ${isResolved ? '↩️ Yeniden Listeye Al' : '✅ Anladım & Kavradım'}
                   </button>
-                  ${lessonLinkMarkup(lessonForQuestion(m.course, m.stem), 'Video ders')}
+                  ${lessonLinkMarkup(lessonForQuestion(m.course, m.stem, m.booklet_title), 'Video ders')}
                 </div>
               </article>
             `;
