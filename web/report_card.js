@@ -23,20 +23,12 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
   const today = new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
   const period = new Date().toLocaleDateString('tr-TR', { month: 'long', year: 'numeric' });
 
-  // Calculate totals
-  let totalQuestions = 0;
-  let totalCorrect = 0;
-  let totalIncorrect = 0;
-  let totalPartial = 0;
+  // Fasikül reviews and video lesson quizzes together (see courseResults in app.js).
+  const results = courseResults(progress);
+  const totalQuestions = results.reviewed;
+  const overallRate = results.rate;
+  const quizzes = progress.lessonQuizzes || [];
 
-  progress.byCourse.forEach(c => {
-    totalQuestions += c.reviewed;
-    totalCorrect += c.correct;
-    totalIncorrect += c.incorrect;
-    totalPartial += c.partial;
-  });
-
-  const overallRate = totalQuestions > 0 ? Math.round(((totalCorrect + totalPartial * 0.5) / totalQuestions) * 100) : 0;
   const starsCount = badgesData?.stats?.totalStars || 0;
   const earnedBadgesCount = badgesData?.stats?.earnedCount || 0;
 
@@ -91,6 +83,10 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
             <span class="kpi-label">Genel Başarı Oranı</span>
           </div>
           <div class="report-kpi-box">
+            <span class="kpi-num">${results.quizzes ? `${results.quizCorrect}/${results.quizTotal}` : '–'}</span>
+            <span class="kpi-label">Video Ders Testi (${results.quizzes} ders)</span>
+          </div>
+          <div class="report-kpi-box">
             <span class="kpi-num">${readingProgress?.completed || 0}</span>
             <span class="kpi-label">Okunan Metin</span>
           </div>
@@ -103,46 +99,74 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
         <!-- Subject Performance Table -->
         <section class="report-section">
           <h2 class="report-sec-title">1. Ders Bazında Soru ve Başarı Dağılımı</h2>
-          ${progress.byCourse.length ? `
+          ${results.rows.length ? `
             <table class="report-table">
               <thead>
                 <tr>
                   <th>Ders Adı</th>
-                  <th style="text-align:center">Çözülen Soru</th>
+                  <th style="text-align:center">Fasikül Sorusu</th>
                   <th style="text-align:center">Doğru</th>
                   <th style="text-align:center">Yanlış / Kısmi</th>
-                  <th style="width:200px">Başarı Grafiği</th>
+                  <th style="text-align:center">Video Ders Testi</th>
+                  <th style="width:170px">Başarı Grafiği</th>
                   <th style="text-align:right">Yüzde</th>
                 </tr>
               </thead>
               <tbody>
-                ${progress.byCourse.map(c => {
-                  const rate = c.reviewed > 0 ? Math.round(((c.correct + c.partial * 0.5) / c.reviewed) * 100) : 0;
-                  return `
+                ${results.rows.map(c => `
                     <tr>
                       <td><strong>${esc(c.course)}</strong></td>
                       <td style="text-align:center">${c.reviewed}</td>
                       <td style="text-align:center;color:#16a34a;font-weight:600">${c.correct}</td>
                       <td style="text-align:center;color:#dc2626">${c.incorrect + c.partial}</td>
+                      <td style="text-align:center">${c.quizzes ? `${c.quizCorrect}/${c.quizTotal}` : '–'}</td>
                       <td>
                         <div class="report-bar-wrap">
-                          <div class="report-bar-fill ${rate >= 70 ? 'good' : rate >= 50 ? 'med' : 'low'}" style="width:${rate}%"></div>
+                          <div class="report-bar-fill ${c.rate >= 70 ? 'good' : c.rate >= 50 ? 'med' : 'low'}" style="width:${c.rate}%"></div>
                         </div>
                       </td>
-                      <td style="text-align:right;font-weight:bold">%${rate}</td>
+                      <td style="text-align:right;font-weight:bold">%${c.rate}</td>
                     </tr>
-                  `;
-                }).join('')}
+                  `).join('')}
               </tbody>
             </table>
+            <p class="muted report-note">Yüzde, fasikül değerlendirmeleri ile video ders testlerinin birlikte sonucudur (kısmen doğru yarım sayılır; video ders testinde son deneme esas alınır).</p>
           ` : `
-            <p class="muted">Henüz değerlendirilmiş fasikül çalışması bulunmuyor.</p>
+            <p class="muted">Henüz değerlendirilmiş fasikül çalışması veya video ders testi bulunmuyor.</p>
           `}
         </section>
 
+        ${quizzes.length ? `
+          <section class="report-section">
+            <h2 class="report-sec-title">2. Video Ders Testleri</h2>
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>Ders</th>
+                  <th>Video Ders</th>
+                  <th style="text-align:center">Son Deneme</th>
+                  <th style="text-align:center">En İyi</th>
+                  <th style="text-align:right">Yüzde</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${quizzes.map(q => `
+                  <tr>
+                    <td>${esc(q.course)}</td>
+                    <td><strong>${esc(q.title)}</strong></td>
+                    <td style="text-align:center">${q.score}/${q.total}</td>
+                    <td style="text-align:center">${q.best}/${q.total}</td>
+                    <td style="text-align:right;font-weight:bold">%${Math.round(q.score / q.total * 100)}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </section>
+        ` : ''}
+
         <!-- Reading Skills Breakdown -->
         <section class="report-section">
-          <h2 class="report-sec-title">2. Türkçe ve Okuma Becerileri Kazanım Analizi</h2>
+          <h2 class="report-sec-title">${quizzes.length ? 3 : 2}. Türkçe ve Okuma Becerileri Kazanım Analizi</h2>
           ${skills.length ? `
             <div class="report-skills-grid">
               ${skills.map(s => {
@@ -168,7 +192,7 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
 
         <!-- Focus & Difficulty Diagnostics -->
         <section class="report-section">
-          <h2 class="report-sec-title">3. Zorlanma Nedenleri ve Pedagojik Teşhis Dağılımı</h2>
+          <h2 class="report-sec-title">${quizzes.length ? 4 : 3}. Zorlanma Nedenleri ve Pedagojik Teşhis Dağılımı</h2>
           <div class="report-reasons-row">
             ${Object.entries(reasonLabels).map(([key, label]) => {
               const count = reasons[key] || 0;
@@ -185,7 +209,7 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
         <!-- Recommended Review Units & Focus Areas -->
         ${progress.weakUnits && progress.weakUnits.length ? `
           <section class="report-section">
-            <h2 class="report-sec-title">4. Tekrar Edilmesi Önerilen Konu ve Üniteler</h2>
+            <h2 class="report-sec-title">${quizzes.length ? 5 : 4}. Tekrar Edilmesi Önerilen Konu ve Üniteler</h2>
             <div class="weak-units-summary">
               ${progress.weakUnits.slice(0, 4).map(u => `
                 <span class="weak-unit-pill">

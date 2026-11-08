@@ -961,9 +961,11 @@ class Handler(BaseHTTPRequestHandler):
                                 selected.append({"id":question["id"],"number":question["number"],
                                                  "reason":"Henüz çözülmedi"})
                         weak_units.append({**unit,"questions":selected})
+                    lesson_quizzes=lessons.quiz_results(db)
                 return self.send_json({"byCourse":by_course,"byBooklet":by_booklet,
                                        "trend":trend,"wrongQuestions":wrong,
-                                       "weakUnits":weak_units})
+                                       "weakUnits":weak_units,
+                                       "lessonQuizzes":lesson_quizzes})
             if path == "/api/backup":
                 if not self.require("parent"): return
                 if database.IS_POSTGRES:

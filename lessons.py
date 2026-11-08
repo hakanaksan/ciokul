@@ -62,6 +62,17 @@ def catalog(db):
     return sorted(items, key=lambda item: (item["course"], item["kazanim"]["code"]))
 
 
+def quiz_results(db):
+    """Finished lesson quizzes for the progress report, in curriculum order.
+
+    The latest attempt is what counts (like a re-checked question); the best score is shown beside it.
+    """
+    return [{"id": item["id"], "title": item["title"], "course": item["course"],
+             "score": item["progress"]["quiz_score"], "best": item["progress"]["best_score"],
+             "total": item["progress"]["quiz_total"], "completedAt": item["progress"]["completed_at"]}
+            for item in catalog(db) if item["progress"] and item["progress"]["quiz_total"]]
+
+
 def detail(db, lesson_id):
     lesson = _load(lesson_id)
     if lesson:

@@ -94,7 +94,7 @@ Araçlar:
 
 ## Video dersler
 
-Veli ve öğrenci ana sayfasındaki **Video Dersler** bölümünde MEB kazanımlarına göre hazırlanmış, seslendirmeli ve animasyonlu konu anlatımları bulunur. Ders cümle cümle seslendirilir; altyazı ve sahnedeki çizimler anlatımla birlikte ilerler. Sonunda kısa bir test vardır; yanlış cevapta ilgili bölüm tekrar izlenebilir. İzleme ve test sonucu kaydedilir, "Video Dersi Kâşifi" rozetine sayılır. İlgili sorularda (değerlendirilmiş test, hata defteri, veli kontrol ekranı) dersin bağlantısı görünür.
+Veli ve öğrenci ana sayfasındaki **Video Dersler** bölümünde MEB kazanımlarına göre hazırlanmış, seslendirmeli ve animasyonlu konu anlatımları bulunur. Ders cümle cümle seslendirilir; altyazı ve sahnedeki çizimler anlatımla birlikte ilerler. Sonunda kısa bir test vardır; yanlış cevapta ilgili bölüm tekrar izlenebilir. İzleme ve test sonucu kaydedilir, "Video Dersi Kâşifi" rozetine sayılır. Test sonuçları veli panelindeki **İlerleme ve tekrar** kartlarına ve **Gelişim Karnesi**ne de girer: her test sorusu değerlendirilmiş bir soru gibi derse göre başarı yüzdesine ve genel başarı oranına katılır (son deneme sayılır, en iyi sonuç yanında gösterilir). İlgili sorularda (değerlendirilmiş test, hata defteri, veli kontrol ekranı) dersin bağlantısı görünür.
 
 Yeni ders eklemek için:
 
