@@ -212,7 +212,7 @@ def handle(h, method, path, data, connect, lock, checked_date):
         if not h.require("parent"): return True
         with connect() as db:
             attempts = rows(db, """SELECT a.id,a.title,a.submitted_at,s.title AS reading_title,
-                COUNT(v.number) AS reviewed,COALESCE(SUM(v.score),0) AS earned,
+                COUNT(q.number) AS total,COUNT(v.number) AS reviewed,COALESCE(SUM(v.score),0) AS earned,
                 COALESCE(SUM(CASE WHEN v.number IS NOT NULL THEN q.max_score ELSE 0 END),0) AS possible
                 FROM reading_assignments a JOIN reading_sections s ON s.id=a.section_id
                  JOIN reading_questions q ON q.section_id=a.section_id AND

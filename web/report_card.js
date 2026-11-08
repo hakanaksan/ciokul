@@ -3,18 +3,41 @@
 async function renderReportCard(onBack = renderHome) {
   setRoute('#/karne');
   try {
-    const [progress, readingProgress, badgesData, studyDashboard, authInfo] = await Promise.all([
+    const [progress, readingProgress, storyResults, badgesData, studyDashboard, authInfo] = await Promise.all([
       api('/api/progress'),
       api('/api/reading/progress'),
+      api('/api/stories/results').catch(() => null),
       api('/api/student/badges'),
       api('/api/study/dashboard'),
       api('/api/state')
     ]);
 
-    drawReportCard(progress, readingProgress, badgesData, studyDashboard, authInfo, onBack);
+    drawReportCard(progress, reportReading(readingProgress, storyResults), badgesData, studyDashboard, authInfo, onBack);
   } catch (err) {
     showError(err);
   }
+}
+
+// Reading for the report: assigned reading work (points given by the parent) and Hikâye Kitaplığı
+// stories (auto-scored, latest attempt). The same skill (e.g. "Çıkarım yapma") adds up from both.
+function reportReading(readingProgress, storyResults) {
+  const attempts = (readingProgress?.attempts || []).filter(a => a.submitted_at);
+  const names = { ...(readingProgress?.skillNames || {}) };
+  const skills = new Map();
+  const add = (key, name, score, possible) => {
+    if (!possible) return;
+    const s = skills.get(key) || { key, name: names[key] || name || key, score: 0, possible: 0 };
+    s.score += score; s.possible += possible; skills.set(key, s);
+  };
+  for (const s of readingProgress?.skills || []) add(s.skill, names[s.skill], Number(s.earned) || 0, Number(s.possible) || 0);
+  for (const s of storyResults?.skills || []) add(s.key, s.name, s.correct, s.total);
+  return {
+    assignments: attempts.length,
+    waiting: attempts.filter(a => a.reviewed < a.total).length,
+    stories: storyResults?.stories || [],
+    completed: attempts.length + (storyResults?.stories?.length || 0),
+    bySkill: [...skills.values()],
+  };
 }
 
 function drawReportCard(progress, readingProgress, badgesData, studyDashboard, authInfo, onBack) {
@@ -88,7 +111,7 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
           </div>
           <div class="report-kpi-box">
             <span class="kpi-num">${readingProgress?.completed || 0}</span>
-            <span class="kpi-label">Okunan Metin</span>
+            <span class="kpi-label">Okunan Metin (${readingProgress.assignments} okuma, ${readingProgress.stories.length} hikâye)</span>
           </div>
           <div class="report-kpi-box gold">
             <span class="kpi-num">⭐ ${starsCount}</span>
@@ -185,9 +208,16 @@ function drawReportCard(progress, readingProgress, badgesData, studyDashboard, a
                 `;
               }).join('')}
             </div>
+            <p class="muted report-note">Beceri yüzdeleri, okuma çalışmalarında verilen puanlar ile Hikâye Kitaplığı sorularının (son deneme) birlikte sonucudur.</p>
           ` : `
-            <p class="muted">Henüz değerlendirilmiş okuma becerileri çalışması bulunmuyor.</p>
+            <p class="muted">${readingProgress.completed ? 'Okuma becerisi puanı henüz oluşmadı.' : 'Henüz okuma çalışması ya da hikâye tamamlanmadı.'}</p>
           `}
+          ${readingProgress.waiting ? `<p class="muted report-note">${readingProgress.waiting} okuma çalışması teslim edildi; puanları veli değerlendirmesinden sonra bu tabloya eklenecek.</p>` : ''}
+          ${readingProgress.stories.length ? `
+            <table class="report-table" style="margin-top:12px">
+              <thead><tr><th>Hikâye Kitaplığı</th><th style="text-align:center">Seviye</th><th style="text-align:center">Son Deneme</th><th style="text-align:center">En İyi</th><th style="text-align:right">Yüzde</th></tr></thead>
+              <tbody>${readingProgress.stories.map(s => `<tr><td><strong>${esc(s.title)}</strong></td><td style="text-align:center">${['', 'Kolay', 'Orta', 'Zor'][s.level] || ''}</td><td style="text-align:center">${s.score}/${s.total}</td><td style="text-align:center">${s.best}/${s.total}</td><td style="text-align:right;font-weight:bold">%${Math.round(s.score / s.total * 100)}</td></tr>`).join('')}</tbody>
+            </table>` : ''}
         </section>
 
         <!-- Focus & Difficulty Diagnostics -->
