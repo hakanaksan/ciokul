@@ -1,0 +1,204 @@
+{
+  "id": "kavanozdaki-sabir",
+  "title": "Kavanozdaki Sabır",
+  "theme": "Erdemler",
+  "level": 3,
+  "summary": "Ekin, okul şenliği için anneannesinin ekşi mayalı ekmeğini yapmaya karar verir ama ekmeğin acele etmeye hiç niyeti yoktur.",
+  "icon": "🍞",
+  "color": "#fbefd6",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#fbefd6\"/><rect x=\"0\" y=\"0\" width=\"320\" height=\"18\" fill=\"#f3dcae\"/><path d=\"M0 18 L20 30 L40 18 L60 30 L80 18 L100 30 L120 18 L140 30 L160 18 L180 30 L200 18 L220 30 L240 18 L260 30 L280 18 L300 30 L320 18 Z\" fill=\"#f3dcae\"/><rect x=\"0\" y=\"140\" width=\"320\" height=\"40\" fill=\"#c99566\"/><rect x=\"0\" y=\"140\" width=\"320\" height=\"6\" fill=\"#b5804f\"/><rect x=\"78\" y=\"44\" width=\"54\" height=\"10\" rx=\"3\" fill=\"#e8e1d2\" stroke=\"#b8ae99\" stroke-width=\"1.5\"/><path d=\"M74 54 L136 54 L140 66 L140 134 Q 140 142 132 142 L78 142 Q 70 142 70 134 L70 66 Z\" fill=\"#eef7fb\" fill-opacity=\"0.85\" stroke=\"#a9c3cf\" stroke-width=\"2\"/><path d=\"M72 70 Q 90 62 105 70 Q 120 78 138 68 L138 134 Q 138 140 132 140 L78 140 Q 72 140 72 134 Z\" fill=\"#f4e6c6\"/><circle cx=\"86\" cy=\"86\" r=\"3\" fill=\"#fffaf0\" stroke=\"#e0caa0\"/><circle cx=\"104\" cy=\"96\" r=\"4\" fill=\"#fffaf0\" stroke=\"#e0caa0\"/><circle cx=\"122\" cy=\"84\" r=\"2.5\" fill=\"#fffaf0\" stroke=\"#e0caa0\"/><circle cx=\"94\" cy=\"112\" r=\"2.5\" fill=\"#fffaf0\" stroke=\"#e0caa0\"/><circle cx=\"118\" cy=\"110\" r=\"3.5\" fill=\"#fffaf0\" stroke=\"#e0caa0\"/><circle cx=\"84\" cy=\"126\" r=\"2\" fill=\"#fffaf0\" stroke=\"#e0caa0\"/><circle cx=\"110\" cy=\"128\" r=\"2.5\" fill=\"#fffaf0\" stroke=\"#e0caa0\"/><rect x=\"70\" y=\"100\" width=\"70\" height=\"5\" fill=\"#e3574f\"/><circle cx=\"96\" cy=\"74\" r=\"1.8\" fill=\"#6b4a2e\"/><circle cx=\"112\" cy=\"74\" r=\"1.8\" fill=\"#6b4a2e\"/><path d=\"M98 80 Q 104 84 110 80\" stroke=\"#6b4a2e\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"226\" cy=\"134\" rx=\"66\" ry=\"8\" fill=\"#b5804f\"/><path d=\"M164 132 Q 162 92 226 88 Q 290 92 288 132 Z\" fill=\"#d9944a\"/><path d=\"M172 128 Q 172 98 226 94 Q 280 98 280 128\" fill=\"#e6a85c\"/><path d=\"M196 104 Q 206 96 214 106 M222 100 Q 232 92 240 102 M248 104 Q 258 96 266 108\" stroke=\"#f6d39a\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M212 80 Q 206 70 212 60 Q 218 50 212 40\" stroke=\"#ffffff\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.8\"/><path d=\"M236 78 Q 230 68 236 58 Q 242 48 236 38\" stroke=\"#ffffff\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.8\"/><ellipse cx=\"34\" cy=\"150\" rx=\"20\" ry=\"4\" fill=\"#e9dcc3\"/><path d=\"M18 150 Q 34 128 50 150 Z\" fill=\"#fbf8f1\"/><circle cx=\"34\" cy=\"146\" r=\"1.5\" fill=\"#e3d6bb\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Ekin'in okulunda iki hafta sonra bir hasat şenliği yapılacaktı.",
+          "Her öğrenci, evde kendi hazırladığı bir şeyi getirip arkadaşlarıyla paylaşacaktı.",
+          "Ekin hemen anneannesi Saniye Hanım'ın ekşi mayalı ekmeğini düşündü.",
+          "O ekmeğin kokusu bütün sokağı sarar, kabuğu ısırınca çıtır çıtır ses çıkarırdı."
+        ],
+        [
+          "— Anneanne, şenlik için ben de senin ekmeğinden yapmak istiyorum, dedi Ekin.",
+          "Saniye Hanım, dolabın üstünden boş bir cam kavanoz indirdi.",
+          "— O zaman işe mayadan başlayacağız, dedi.",
+          "— Ama bu iş biraz sabır ister.",
+          "Ekin omuz silkti, çünkü iki hafta ona upuzun bir süre gibi geliyordu."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Ekşi maya yapmak, Ekin'in tahmin ettiğinden çok daha basitti.",
+          "Kavanoza iki kaşık un ve biraz ılık su koyup güzelce karıştırdılar.",
+          "Sonra ağzını bir bezle örtüp mutfağın ılık bir köşesine bıraktılar."
+        ],
+        [
+          "Saniye Hanım, unun içinde ve havada gözle görülmeyen minik canlılar olduğunu anlattı.",
+          "Bu canlılar unla beslenip çoğalacak ve hamuru kabartan gazı üretecekti.",
+          "— Her gün biraz un ve su ekleyip onu besleyeceğiz, dedi anneanne.",
+          "Ekin, kavanozun üstüne kocaman harflerle bir ad yazdı: Pofuduk.",
+          "O gece yatmadan önce kavanozu üç kez kontrol etti ama hiçbir şey değişmemişti."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "İkinci gün mayanın üstünde birkaç minik kabarcık belirdi ve Ekin sevinçle mutfakta zıpladı.",
+          "Üçüncü gün ise Ekin'in sabrı tükendi.",
+          "Anneannesi pazara gittiğinde Pofuduk'un yarısını una karıştırıp bir hamur yoğurdu.",
+          "Hamuru tepsiye koyup saatlerce bekledi ama hamur kabarmadı, olduğu yerde yayılıp kaldı."
+        ],
+        [
+          "Saniye Hanım eve dönüp tepsiyi görünce hiç kızmadı.",
+          "— Hadi yine de pişirelim, ne olacağını görelim, dedi.",
+          "Fırından çıkan ekmek yassı ve taş gibi sertti.",
+          "Ekin'in gözleri doldu.",
+          "Anneannesi, kavanozu pencereden gelen ışığa tuttu.",
+          "— Pofuduk henüz bir bebek, dedi.",
+          "— Bir ekmeği kabartacak kadar güçlenmesi için zamana ihtiyacı var."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Ekin o günden sonra Pofuduk'u her sabah aynı saatte besledi.",
+          "Anneannesinin önerisiyle kavanozun dışına bir lastik geçirdi.",
+          "Her beslemeden sonra lastiği mayanın üst seviyesine kaydırıyordu.",
+          "Böylece mayanın ne kadar kabardığını gözüyle görebiliyordu."
+        ],
+        [
+          "Beşinci gün maya, lastiğin biraz üstüne çıktı.",
+          "Bazı sabahlar kabarcıklar azdı, bazı sabahlarsa maya kavanozun yarısına kadar yükseliyordu.",
+          "Altıncı gün mutfağa hafif ekşi, yoğurdu andıran bir koku yayıldı.",
+          "Ekin artık kavanozun başında bekleyip durmuyor, gözlemlerini küçük bir deftere yazıyordu.",
+          "Beklemek ona eskisi kadar zor gelmiyordu, çünkü her gün küçük bir değişiklik fark ediyordu.",
+          "Saniye Hanım defteri görünce hiçbir şey söylemedi ama gözleri gülüyordu."
+        ]
+      ]
+    },
+    {
+      "id": "p05",
+      "paragraphs": [
+        [
+          "Sekizinci gün Ekin mutfağa girince olduğu yerde donakaldı.",
+          "Pofuduk, beslendikten birkaç saat sonra iki katına çıkmış, neredeyse kavanozun kapağına dayanmıştı.",
+          "Üstü, sabun köpüğü gibi irili ufaklı kabarcıklarla doluydu.",
+          "— Artık hazır, dedi Saniye Hanım gülümseyerek.",
+          "Ekin sevinçle anneannesinin boynuna sarıldı."
+        ],
+        [
+          "Şenlikten bir gün önce hamuru birlikte yoğurdular.",
+          "Bu kez hamur, Ekin'in avuçlarının altında yumuşacık ve canlı gibiydi.",
+          "Hamur bütün gece serin bir köşede yavaş yavaş kabardı.",
+          "Sabah fırından çıkan ekmeklerin kabuğu altın rengindeydi.",
+          "Ekin bir dilim kopardı ve kabuğun çıtırtısını duyunca ağzı kulaklarına vardı."
+        ]
+      ]
+    },
+    {
+      "id": "p06",
+      "paragraphs": [
+        [
+          "Şenlikte Ekin'in masası en kalabalık masalardan biriydi.",
+          "Ekmeği tadan arkadaşları, birer birer tarifini sormaya başladı.",
+          "Ekin bir an düşündü, çünkü maya olmadan tarifin hiçbir işe yaramayacağını biliyordu."
+        ],
+        [
+          "Pazartesi günü okula bir sepet dolusu küçük kavanozla geldi.",
+          "Her kavanozda Pofuduk'tan birer kaşık maya ve Ekin'in el yazısıyla bir not vardı.",
+          "Notta yalnızca şu yazıyordu: Her gün besle, acele etme, kabarcıkları izle.",
+          "Arkadaşları kavanozları alınca sevinçle birbirine gösterdi.",
+          "Bazıları kendi mayasına Bulut, Köpük ya da Pofuduk'un Kardeşi adını verdi.",
+          "Birkaç hafta sonra Pofuduk, mahallenin dört bir yanında pek çok mutfakta kabarıyordu.",
+          "Ekin'in kavanozundaki maya ise her paylaşımdan sonra yeniden beslenip büyümeye devam ediyordu."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Ekin, mayasına hangi adı verdi?",
+      "options": [
+        "Kabarcık",
+        "Pofuduk",
+        "Altın",
+        "Bebek"
+      ],
+      "answer": 1,
+      "explain": "Ekin, kavanozun üstüne kocaman harflerle “Pofuduk” yazıyor.",
+      "page": "p02"
+    },
+    {
+      "skill": "locate",
+      "question": "Ekin, mayanın ne kadar kabardığını görmek için kavanoza ne geçirdi?",
+      "options": [
+        "Bir kurdele",
+        "Bir ip",
+        "Bir etiket",
+        "Bir lastik"
+      ],
+      "answer": 3,
+      "explain": "Ekin, anneannesinin önerisiyle kavanoza bir lastik geçiriyor ve her beslemeden sonra lastiği mayanın seviyesine kaydırıyor.",
+      "page": "p04"
+    },
+    {
+      "skill": "inference",
+      "question": "Üçüncü gün yapılan hamur neden kabarmadı?",
+      "options": [
+        "Maya henüz yeterince güçlenmemişti.",
+        "Fırın yeterince ısınmamıştı.",
+        "Hamura çok su konmuştu.",
+        "Ekin una tuz koymayı unutmuştu."
+      ],
+      "answer": 0,
+      "explain": "Anneanne, Pofuduk'un henüz bir bebek olduğunu ve güçlenmesi için zamana ihtiyacı olduğunu söylüyor. Yani maya hamuru kabartacak kadar hazır değildi.",
+      "page": "p03"
+    },
+    {
+      "skill": "inference",
+      "question": "Saniye Hanım, yassı hamuru gördüğü hâlde neden kızmamış olabilir?",
+      "options": [
+        "Ekmeği zaten sevmediği için",
+        "Pazardan çok yorgun döndüğü için",
+        "Ekin'in bu denemeden bir şey öğreneceğini bildiği için",
+        "Ekin'i cezalandırmayı düşündüğü için"
+      ],
+      "answer": 2,
+      "explain": "Saniye Hanım kızmak yerine ekmeği pişirip sonucu Ekin'e gösteriyor ve nedenini açıklıyor. Bu da Ekin'in bu denemeden öğrenmesini istediğini gösterir.",
+      "page": "p03"
+    },
+    {
+      "skill": "comment",
+      "question": "Ekin'in arkadaşlarına maya dağıtması için hangisi söylenebilir?",
+      "options": [
+        "Mayasından kurtulmak istemiştir.",
+        "Paylaşmanın, sahip olduklarını azaltmadığını göstermiştir.",
+        "Arkadaşlarından karşılık beklemiştir.",
+        "Anneannesinin sözünü dinlememiştir."
+      ],
+      "answer": 1,
+      "explain": "Ekin mayasını paylaştı ama kendi mayası beslenip büyümeye devam etti. Üstelik Pofuduk artık pek çok mutfakta yaşıyordu.",
+      "page": "p06"
+    },
+    {
+      "skill": "vocab",
+      "question": "“Ekin bir dilim kopardı ve kabuğun çıtırtısını duyunca ağzı kulaklarına vardı.” cümlesinde “ağzı kulaklarına varmak” ne anlama gelir?",
+      "options": [
+        "Çok şaşırıp korkmak",
+        "Ağzını kocaman açıp esnemek",
+        "Çok sevinmek",
+        "Yemeğini hızlıca yemek"
+      ],
+      "answer": 2,
+      "explain": "“Ağzı kulaklarına varmak” çok sevinmek demektir. Ekin, emeğinin sonunda ekmeğin kabardığını görünce çok mutlu oldu.",
+      "page": "p05"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "son-atis",
+  "title": "Son Atış",
+  "theme": "Sağlık ve Spor",
+  "level": 1,
+  "summary": "Ecrin, takımının ilk basketbol maçında son atışı yapmak üzeredir.",
+  "icon": "🏀",
+  "color": "#ffe6d5",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#ffe6d5\"/><rect y=\"140\" width=\"320\" height=\"40\" fill=\"#e8b98a\"/><line x1=\"0\" y1=\"152\" x2=\"320\" y2=\"152\" stroke=\"#d49a66\" stroke-width=\"2\"/><path d=\"M120 180 Q160 150 200 180\" fill=\"none\" stroke=\"#d49a66\" stroke-width=\"2\"/><rect x=\"252\" y=\"50\" width=\"8\" height=\"92\" fill=\"#7a8794\"/><rect x=\"196\" y=\"20\" width=\"64\" height=\"42\" rx=\"4\" fill=\"#ffffff\" stroke=\"#c0392b\" stroke-width=\"3\"/><rect x=\"216\" y=\"32\" width=\"24\" height=\"18\" fill=\"none\" stroke=\"#c0392b\" stroke-width=\"2\"/><path d=\"M214 66 L220 88 L236 88 L242 66\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M217 74 L239 74 M219 81 L237 81 M222 66 L226 88 M234 66 L230 88\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"1.5\"/><ellipse cx=\"228\" cy=\"65\" rx=\"15\" ry=\"4\" fill=\"none\" stroke=\"#e67e22\" stroke-width=\"3\"/><path d=\"M92 96 Q120 40 160 52\" fill=\"none\" stroke=\"#c98b5a\" stroke-width=\"2\" stroke-dasharray=\"4 6\"/><circle cx=\"176\" cy=\"56\" r=\"16\" fill=\"#f08a24\"/><path d=\"M160 56 H192 M176 40 V72\" stroke=\"#7a3d0c\" stroke-width=\"2\"/><path d=\"M165 44 Q174 56 165 68 M187 44 Q178 56 187 68\" fill=\"none\" stroke=\"#7a3d0c\" stroke-width=\"2\"/><ellipse cx=\"94\" cy=\"104\" rx=\"5\" ry=\"9\" fill=\"#5a3825\"/><circle cx=\"80\" cy=\"104\" r=\"13\" fill=\"#f3c9a0\"/><path d=\"M67 102 Q80 84 93 102 Z\" fill=\"#5a3825\"/><circle cx=\"75\" cy=\"106\" r=\"1.8\" fill=\"#333333\"/><circle cx=\"85\" cy=\"106\" r=\"1.8\" fill=\"#333333\"/><path d=\"M75 111 Q80 115 85 111\" fill=\"none\" stroke=\"#333333\" stroke-width=\"1.5\"/><rect x=\"69\" y=\"117\" width=\"22\" height=\"25\" rx=\"6\" fill=\"#d64545\"/><rect x=\"76\" y=\"123\" width=\"8\" height=\"10\" rx=\"1\" fill=\"#ffffff\"/><line x1=\"71\" y1=\"121\" x2=\"64\" y2=\"100\" stroke=\"#f3c9a0\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"89\" y1=\"121\" x2=\"98\" y2=\"100\" stroke=\"#f3c9a0\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"75\" y1=\"142\" x2=\"73\" y2=\"160\" stroke=\"#2c3e50\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"85\" y1=\"142\" x2=\"88\" y2=\"160\" stroke=\"#2c3e50\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"30\" cy=\"30\" r=\"4\" fill=\"#ffffff\"/><circle cx=\"48\" cy=\"22\" r=\"3\" fill=\"#ffffff\"/><circle cx=\"290\" cy=\"110\" r=\"4\" fill=\"#ffffff\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Ecrin, okulun basketbol takımı Martılar'ın en hızlı oyuncusuydu.",
+          "Cumartesi günü ilk maçlarını yapacaklardı.",
+          "Bütün hafta okul bahçesinde top sektirdi, potaya atış çalıştı.",
+          "Akşamları da sebzeli yemekler yedi, bol su içti ve erkenden uyudu.",
+          "Beden eğitimi öğretmeni Sevgi Hanım, iyi bir sporcunun iyi beslenmesi ve iyi dinlenmesi gerektiğini söylemişti."
+        ],
+        [
+          "Maç günü spor salonu tıklım tıklımdı.",
+          "Tribünde babası, elinde kocaman bir pankartla oturuyordu.",
+          "Ecrin'in kalbi bir serçe gibi pır pır ediyordu."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Maç çok çekişmeli geçti.",
+          "Rakip takım Yıldızlar, topu birbirine çok güzel paslıyordu.",
+          "Son saniyelerde Yıldızlar bir sayı öndeydi ve top Ecrin'deydi.",
+          "Ecrin derin bir nefes aldı, topu potaya fırlattı.",
+          "Top çemberin üstünde iki kez döndü ama dışarı düştü.",
+          "Hemen ardından düdük çaldı ve maç bitti."
+        ],
+        [
+          "Ecrin öfkeyle ayağını yere vurdu.",
+          "Rakiplerinin uzattığı ellere bakmadan soyunma odasına koştu.",
+          "Gözlerinden yaşlar süzülüyordu."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Biraz sonra Sevgi Hanım yanına oturdu.",
+          "— Kaybetmek canını yaktı, değil mi? diye sordu yumuşak bir sesle.",
+          "— Hep benim yüzümden oldu, dedi Ecrin hıçkırarak.",
+          "— Sahada beş kişiydiniz, kazanırken de kaybederken de birliktesiniz, dedi öğretmeni.",
+          "Sonra Yıldızlar'ın pasları sayesinde kazandığını, Martılar'ın da bunu öğrenebileceğini anlattı."
+        ],
+        [
+          "Ecrin gözlerini sildi.",
+          "Rakiplerine teşekkür etmeden kaçtığı için biraz utandı.",
+          "Koşup Yıldızlar'ın oyuncularını buldu ve hepsiyle tek tek tokalaştı.",
+          "Takımın kaptanı Melis, ona sıcacık bir gülümsemeyle karşılık verdi."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Sonraki iki hafta Martılar çok çalıştı.",
+          "Bu kez yalnızca atış değil, pas da çalıştılar.",
+          "Ecrin topu tek başına götürmek yerine boşta kalan arkadaşına vermeyi öğrendi.",
+          "Yıldızlar'la yeniden karşılaştıkları gün, son saniyede topu arkadaşı Batu'ya pasladı.",
+          "Batu'nun atışı filelere gitti ve Martılar bir sayı farkla kazandı."
+        ],
+        [
+          "Tribünler alkışla inledi.",
+          "Ecrin sevinçle zıpladı ama sonra Melis'in başının öne eğik olduğunu gördü.",
+          "Hemen yanına gidip elini uzattı.",
+          "— Harika oynadınız, dedi içtenlikle.",
+          "Melis gülümseyerek elini sıktı.",
+          "O gün Ecrin, maçın skorundan daha değerli bir şey kazandığını hissetti."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Ecrin maçtan önceki hafta akşamları ne yaptı?",
+      "options": [
+        "Sebzeli yemekler yedi ve erkenden uyudu",
+        "Geç saatlere kadar oyun oynadı",
+        "Babasıyla pankart hazırladı",
+        "Her akşam yüzmeye gitti"
+      ],
+      "answer": 0,
+      "explain": "Birinci sayfada Ecrin'in akşamları sebzeli yemekler yediği, bol su içtiği ve erkenden uyuduğu yazıyor.",
+      "page": "p01"
+    },
+    {
+      "skill": "locate",
+      "question": "İlk maçın son saniyelerinde ne oldu?",
+      "options": [
+        "Batu üç sayılık bir atış yaptı",
+        "Ecrin'in attığı top çemberden dışarı düştü",
+        "Hakem maçı durdurdu",
+        "Melis topu Ecrin'e pasladı"
+      ],
+      "answer": 1,
+      "explain": "Metinde topun çemberin üstünde iki kez dönüp dışarı düştüğü, sonra maçın bittiği anlatılıyor.",
+      "page": "p02"
+    },
+    {
+      "skill": "inference",
+      "question": "Ecrin, rakiplerinin elini sıkmadan neden soyunma odasına koştu?",
+      "options": [
+        "Çok yorulduğu için",
+        "Babası onu çağırdığı için",
+        "Kaybettiği için çok üzgün ve öfkeli olduğu için",
+        "Rakiplerini tanımadığı için"
+      ],
+      "answer": 2,
+      "explain": "Ecrin ayağını öfkeyle yere vurmuş ve ağlamıştı; bu da maçı kaybettiği için çok üzüldüğünü gösteriyor.",
+      "page": "p02"
+    },
+    {
+      "skill": "inference",
+      "question": "Martılar ikinci maçı kazanmayı en çok neye borçludur?",
+      "options": [
+        "Ecrin'in tek başına sayı atmasına",
+        "Rakiplerin eksik oyuncuyla gelmesine",
+        "Tribündeki kalabalığa",
+        "Pas çalışıp birlikte oynamayı öğrenmelerine"
+      ],
+      "answer": 3,
+      "explain": "Martılar iki hafta pas çalıştı ve Ecrin topu boştaki Batu'ya verdi; galibiyet bu takım oyunuyla geldi.",
+      "page": "p04"
+    },
+    {
+      "skill": "comment",
+      "question": "Ecrin'in ikinci maçtan sonra Melis'in yanına gitmesi için ne söylenebilir?",
+      "options": [
+        "Gereksiz bir davranıştır",
+        "Melis'le alay etmek istemiştir",
+        "Kazanırken de saygılı olmayı öğrendiğini gösterir",
+        "Öğretmeni zorladığı için yapmıştır"
+      ],
+      "answer": 2,
+      "explain": "Ecrin kaybetmenin ne kadar zor olduğunu bildiği için Melis'i tebrik etti; bu, kazanırken de saygılı olduğunu gösterir.",
+      "page": "p04"
+    },
+    {
+      "skill": "vocab",
+      "question": "\"Tribünler alkışla inledi.\" cümlesinde \"inledi\" ne anlama geliyor?",
+      "options": [
+        "Acıdan sızlandı",
+        "Büyük bir sesle çınladı",
+        "Birden sessizleşti",
+        "Yavaş yavaş boşaldı"
+      ],
+      "answer": 1,
+      "explain": "Burada \"inlemek\", tribünlerin alkış sesiyle çınlaması, gürültüyle dolması anlamında kullanılmış.",
+      "page": "p04"
+    }
+  ]
+}

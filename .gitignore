@@ -5,6 +5,7 @@
 /reading_images/
 /reading_audio/
 /lesson_audio/
+/story_audio/
 
 # Local data: SQLite database, backups, reports
 /data/

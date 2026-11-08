@@ -1,0 +1,186 @@
+{
+  "id": "yuzume-bakarak-soyle",
+  "title": "Yüzüme Bakarak Söyle",
+  "theme": "Birey ve Toplum",
+  "level": 2,
+  "summary": "Yeni okulundaki ilk haftasında Ilgın'ı arkadaşları yanlış anlar ve Ilgın bir karar vermek zorunda kalır.",
+  "icon": "🤝",
+  "color": "#fde7e1",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#fde7e1\"/><rect x=\"0\" y=\"130\" width=\"320\" height=\"50\" fill=\"#f3cfc4\"/><rect x=\"20\" y=\"20\" width=\"90\" height=\"70\" rx=\"4\" fill=\"#cfe9f7\" stroke=\"#ffffff\" stroke-width=\"5\"/><line x1=\"65\" y1=\"20\" x2=\"65\" y2=\"90\" stroke=\"#ffffff\" stroke-width=\"4\"/><line x1=\"20\" y1=\"55\" x2=\"110\" y2=\"55\" stroke=\"#ffffff\" stroke-width=\"4\"/><circle cx=\"45\" cy=\"40\" r=\"9\" fill=\"#fff4b8\"/><rect x=\"230\" y=\"22\" width=\"70\" height=\"44\" rx=\"3\" fill=\"#3f6b55\"/><rect x=\"230\" y=\"66\" width=\"70\" height=\"4\" fill=\"#c49a6c\"/><path d=\"M240 34 L250 34 M240 44 L262 44 M270 36 L288 52\" stroke=\"#e9f2ec\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 180 L140 150 Q 140 125 168 125 Q 196 125 196 150 L196 180 Z\" fill=\"#f2a65a\"/><circle cx=\"168\" cy=\"98\" r=\"24\" fill=\"#f5cfa8\"/><path d=\"M144 98 Q 144 70 168 70 Q 192 70 192 98 Q 186 82 168 82 Q 150 82 144 98 Z\" fill=\"#5a3a24\"/><path d=\"M188 80 Q 214 82 206 112 Q 200 96 190 92 Z\" fill=\"#5a3a24\"/><ellipse cx=\"192\" cy=\"100\" rx=\"4\" ry=\"6\" fill=\"#f0c49c\"/><path d=\"M193 92 Q 199 96 195 106\" stroke=\"#d9a07a\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"160\" cy=\"98\" r=\"2.5\" fill=\"#3a2a20\"/><circle cx=\"176\" cy=\"98\" r=\"2.5\" fill=\"#3a2a20\"/><path d=\"M161 108 Q 168 114 175 108\" stroke=\"#b5544a\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"155\" cy=\"105\" r=\"3.5\" fill=\"#f4a9a0\" opacity=\"0.7\"/><circle cx=\"181\" cy=\"105\" r=\"3.5\" fill=\"#f4a9a0\" opacity=\"0.7\"/><path d=\"M218 180 L218 156 Q 218 134 242 134 Q 266 134 266 156 L266 180 Z\" fill=\"#5e9bd1\"/><circle cx=\"242\" cy=\"110\" r=\"21\" fill=\"#e8b98e\"/><path d=\"M221 108 Q 222 86 242 86 Q 262 86 263 108 Q 254 96 242 98 Q 230 96 221 108 Z\" fill=\"#2e2a28\"/><circle cx=\"235\" cy=\"110\" r=\"2.3\" fill=\"#2e2a28\"/><circle cx=\"249\" cy=\"110\" r=\"2.3\" fill=\"#2e2a28\"/><path d=\"M236 119 Q 242 124 248 119\" stroke=\"#9c4a3c\" stroke-width=\"2\" fill=\"none\"/><path d=\"M266 150 Q 282 132 286 112\" stroke=\"#e8b98e\" stroke-width=\"9\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"287\" cy=\"108\" r=\"7\" fill=\"#e8b98e\"/><circle cx=\"120\" cy=\"150\" r=\"4\" fill=\"#f7b9c8\"/><circle cx=\"108\" cy=\"160\" r=\"3\" fill=\"#f7b9c8\"/><circle cx=\"292\" cy=\"150\" r=\"3\" fill=\"#f7b9c8\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Ilgın, yeni okulunun kapısında durup derin bir nefes aldı.",
+          "Ailesi, babasının işi yüzünden Bursa'ya taşınmıştı ve bugün yeni sınıfındaki ilk günüydü.",
+          "Saçlarını o sabah özenle kulaklarının üstüne taramıştı.",
+          "Çünkü sağ kulağında küçük, ten rengi bir işitme cihazı vardı.",
+          "Ilgın, cihazını kimsenin fark etmesini istemiyordu.",
+          "Sınıfın kapısından girerken kalbi küt küt atıyordu."
+        ],
+        [
+          "Öğretmenleri Cemile Hanım, onu sınıfa tanıttı ve Toprak'ın yanına oturttu.",
+          "Toprak, kocaman bir gülümsemeyle ona yer açtı.",
+          "Ilgın'ın içindeki düğüm biraz olsun gevşedi."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Ama ilk hafta hiç de kolay geçmedi.",
+          "Teneffüslerde herkes aynı anda konuşuyor, bahçe bir arı kovanı gibi uğulduyordu.",
+          "Bu kalabalıkta Ilgın, hangi sesin kime ait olduğunu ayırt edemiyordu."
+        ],
+        [
+          "Bir gün Doruk, arkasından ona üç kez seslendi.",
+          "Ilgın duymadı ve yürümeye devam etti.",
+          "— Bu yeni kız bizi duymazdan geliyor, dedi Doruk arkadaşlarına.",
+          "— Bence kendini bizden üstün görüyor.",
+          "Ilgın bu sözleri duymadı ama çocukların ona tuhaf tuhaf baktığını fark etti.",
+          "Bahçenin bir köşesinde tek başına oturup diğerlerini izledi.",
+          "O akşam eve dönünce odasına kapandı ve sessizce ağladı."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Toprak'ın ise dikkatini bir şey çekmişti.",
+          "Ilgın, yüzüne bakarak konuşulduğunda her şeyi hemen anlıyordu.",
+          "Ama arkasından seslenildiğinde ya da sınıf çok gürültülüyken hiç cevap vermiyordu.",
+          "Toprak, bunun bir rastlantı olmadığını düşündü."
+        ],
+        [
+          "Ertesi gün resim dersinde Toprak, ona dönüp yavaşça sordu.",
+          "— Seni arkadan çağırınca duyamıyor musun?",
+          "Ilgın bir an kızardı, sonra saçını kulağının arkasına attı.",
+          "— Bende işitme cihazı var, dedi alçak sesle.",
+          "— Gürültüde sesler birbirine karışıyor, o yüzden konuşanın dudaklarına da bakıyorum.",
+          "Toprak başını salladı.",
+          "— Bunu sınıfa anlatsan bence herkes yardım eder, dedi."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Ilgın o gece uzun uzun düşündü.",
+          "Çocukların gülmesinden korkuyordu ama yanlış anlaşılmak onu daha çok üzüyordu.",
+          "Sabah Cemile Hanım'dan izin aldı ve tahtanın önüne çıktı."
+        ],
+        [
+          "Sesi titreyerek işitme cihazını arkadaşlarına gösterdi.",
+          "Cihazın sesleri büyüttüğünü ama kalabalıkta onları birbirinden ayırmanın zor olduğunu anlattı.",
+          "— Bana bir şey söyleyecekseniz önce adımı söyleyin ve yüzüme bakın, dedi.",
+          "Sınıfta derin bir sessizlik oldu.",
+          "Ilgın, avuçlarının terlediğini hissetti.",
+          "Sonra Doruk yavaşça parmak kaldırdı.",
+          "— Ben seni kibirli sanmıştım, özür dilerim."
+        ]
+      ]
+    },
+    {
+      "id": "p05",
+      "paragraphs": [
+        [
+          "O günden sonra sınıfta yeni bir alışkanlık başladı.",
+          "Çocuklar Ilgın'a seslenmeden önce omzuna hafifçe dokunuyor, sonra yüzüne bakarak konuşuyordu.",
+          "Bahçedeki oyunlarda gürültüde anlaşmak için el işaretleri bile uydurdular.",
+          "Ilgın da onlara kendi bildiği birkaç işareti öğretti.",
+          "Bu işaretler o kadar eğlenceliydi ki kısa sürede sınıfın gizli dili oldu."
+        ],
+        [
+          "Bir ay sonra Ilgın, saçlarını at kuyruğu yaparak okula geldi.",
+          "İşitme cihazı artık açıkça görünüyordu ve bu, onu hiç rahatsız etmiyordu.",
+          "Doruk, bahçenin öbür ucundan ona el salladı.",
+          "Ilgın da gülümseyerek sınıfın gizli işaretiyle ona cevap verdi."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Ilgın'ın ailesi hangi şehre taşınmıştı?",
+      "options": [
+        "İzmir'e",
+        "Bursa'ya",
+        "Ankara'ya",
+        "Trabzon'a"
+      ],
+      "answer": 1,
+      "explain": "Hikâyenin başında, Ilgın'ın ailesinin babasının işi yüzünden Bursa'ya taşındığı yazıyor.",
+      "page": "p01"
+    },
+    {
+      "skill": "locate",
+      "question": "Ilgın, gürültüde konuşanları anlamak için ne yapıyordu?",
+      "options": [
+        "Gözlerini kapatıyordu.",
+        "Arkadaşlarından yazmalarını istiyordu.",
+        "Sınıftan dışarı çıkıyordu.",
+        "Konuşanın dudaklarına da bakıyordu."
+      ],
+      "answer": 3,
+      "explain": "Ilgın, Toprak'a gürültüde seslerin karıştığını, bu yüzden konuşanın dudaklarına da baktığını söylüyor.",
+      "page": "p03"
+    },
+    {
+      "skill": "inference",
+      "question": "Ilgın tahtanın önünde konuşurken sesi neden titriyor olabilir?",
+      "options": [
+        "Hasta olduğu için",
+        "Doruk'a çok kızdığı için",
+        "Heyecanlandığı ve çekindiği için",
+        "Cemile Hanım onu azarladığı için"
+      ],
+      "answer": 2,
+      "explain": "Ilgın, çocukların gülmesinden korkuyordu. İlk kez herkesin önünde cihazını anlattığı için heyecanlanmış ve çekinmişti.",
+      "page": "p04"
+    },
+    {
+      "skill": "inference",
+      "question": "Ilgın'ın bir ay sonra saçlarını at kuyruğu yapması neyi gösterir?",
+      "options": [
+        "Artık cihazını saklama gereği duymadığını",
+        "Saçlarının çok uzadığını",
+        "Okulda yeni bir kural çıktığını",
+        "Doruk'a hâlâ kırgın olduğunu"
+      ],
+      "answer": 0,
+      "explain": "İlk gün cihazını saçlarıyla saklayan Ilgın, artık onu açıkça gösteriyor. Bu, kendini sınıfında rahat ve güvende hissettiğini gösterir.",
+      "page": "p05"
+    },
+    {
+      "skill": "comment",
+      "question": "Toprak'ın davranışı için hangisi söylenebilir?",
+      "options": [
+        "Ilgın'ın sırrını herkese anlatmıştır.",
+        "Doruk'un sözlerine hemen inanmıştır.",
+        "Ilgın'ı yargılamadan önce onu anlamaya çalışmıştır.",
+        "Ilgın'la hiç ilgilenmemiştir."
+      ],
+      "answer": 2,
+      "explain": "Toprak, Ilgın hakkında hemen bir yargıya varmadı. Onu dikkatle izledi ve nazikçe sorarak gerçeği öğrendi.",
+      "page": "p03"
+    },
+    {
+      "skill": "vocab",
+      "question": "“Ilgın'ın içindeki düğüm biraz olsun gevşedi.” cümlesinde “içindeki düğüm” ne anlama gelir?",
+      "options": [
+        "Ayakkabısının bağcığı",
+        "Duyduğu kaygı ve gerginlik",
+        "Midesindeki ağrı",
+        "Çantasındaki ip"
+      ],
+      "answer": 1,
+      "explain": "Burada “düğüm” mecaz anlamda kullanılmış. Ilgın'ın ilk gün duyduğu kaygı ve gerginlik, Toprak'ın gülümsemesiyle biraz azaldı.",
+      "page": "p01"
+    }
+  ]
+}

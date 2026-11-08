@@ -1,0 +1,187 @@
+{
+  "id": "arka-bahcede-imece",
+  "title": "Arka Bahçede İmece",
+  "theme": "Birey ve Toplum",
+  "level": 2,
+  "summary": "Papatya Apartmanı'nın çocukları, yıllardır unutulmuş arka bahçeyi yeniden canlandırmaya karar verir.",
+  "icon": "🏡",
+  "color": "#e6f5d8",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#dff1fb\"/><circle cx=\"286\" cy=\"28\" r=\"16\" fill=\"#ffd34d\"/><rect x=\"0\" y=\"10\" width=\"250\" height=\"92\" fill=\"#ecd6b8\"/><rect x=\"0\" y=\"6\" width=\"250\" height=\"8\" fill=\"#c98f63\"/><rect x=\"20\" y=\"26\" width=\"30\" height=\"24\" fill=\"#a7cdea\"/><rect x=\"80\" y=\"26\" width=\"30\" height=\"24\" fill=\"#a7cdea\"/><rect x=\"140\" y=\"26\" width=\"30\" height=\"24\" fill=\"#a7cdea\"/><rect x=\"200\" y=\"26\" width=\"30\" height=\"24\" fill=\"#a7cdea\"/><rect x=\"20\" y=\"62\" width=\"30\" height=\"24\" fill=\"#a7cdea\"/><rect x=\"140\" y=\"62\" width=\"30\" height=\"24\" fill=\"#a7cdea\"/><rect x=\"200\" y=\"62\" width=\"30\" height=\"24\" fill=\"#a7cdea\"/><rect x=\"80\" y=\"62\" width=\"30\" height=\"24\" fill=\"#f6e7a1\"/><rect y=\"100\" width=\"320\" height=\"80\" fill=\"#a6d98b\"/><rect x=\"28\" y=\"98\" width=\"88\" height=\"8\" rx=\"2\" fill=\"#a8703f\"/><rect x=\"28\" y=\"112\" width=\"88\" height=\"8\" rx=\"2\" fill=\"#a8703f\"/><rect x=\"28\" y=\"124\" width=\"88\" height=\"8\" rx=\"2\" fill=\"#a8703f\"/><rect x=\"34\" y=\"132\" width=\"7\" height=\"18\" fill=\"#8a5a33\"/><rect x=\"103\" y=\"132\" width=\"7\" height=\"18\" fill=\"#8a5a33\"/><rect x=\"34\" y=\"98\" width=\"6\" height=\"34\" fill=\"#8a5a33\"/><rect x=\"104\" y=\"98\" width=\"6\" height=\"34\" fill=\"#8a5a33\"/><rect x=\"138\" y=\"146\" width=\"112\" height=\"14\" rx=\"7\" fill=\"#8a5a3b\"/><path d=\"M152 146 Q148 134 140 132 M152 146 Q156 134 164 132\" fill=\"none\" stroke=\"#3f9a4b\" stroke-width=\"3\"/><path d=\"M182 146 Q178 134 170 132 M182 146 Q186 134 194 132\" fill=\"none\" stroke=\"#3f9a4b\" stroke-width=\"3\"/><path d=\"M212 146 Q208 134 200 132 M212 146 Q216 134 224 132\" fill=\"none\" stroke=\"#3f9a4b\" stroke-width=\"3\"/><path d=\"M238 146 Q234 136 228 134 M238 146 Q242 136 248 134\" fill=\"none\" stroke=\"#3f9a4b\" stroke-width=\"3\"/><polygon points=\"252,112 298,112 290,132 260,132\" fill=\"#5b8fc7\"/><circle cx=\"268\" cy=\"142\" r=\"9\" fill=\"#444b5a\"/><circle cx=\"268\" cy=\"142\" r=\"3\" fill=\"#c7ccd6\"/><line x1=\"296\" y1=\"124\" x2=\"314\" y2=\"140\" stroke=\"#8a5a33\" stroke-width=\"4\"/><line x1=\"282\" y1=\"132\" x2=\"290\" y2=\"150\" stroke=\"#8a5a33\" stroke-width=\"4\"/><circle cx=\"66\" cy=\"164\" r=\"10\" fill=\"#e8434f\"/><path d=\"M58 158 Q66 166 74 158\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Papatya Apartmanı'nın arka bahçesi yıllardır unutulmuştu.",
+          "Kırık sandalyeler, eski bir dolap ve paslı bir bisiklet otların arasında yatıyordu.",
+          "Otlar o kadar uzamıştı ki neredeyse Melis'in boyuna ulaşmıştı."
+        ],
+        [
+          "Apartmanın çocukları Melis, Kaan ve Ayaz top oynayacak bir yer bulamıyordu.",
+          "Kaldırımda oynadıklarında top hep yola kaçıyor, anneleri de pencereden seslenip duruyordu.",
+          "Bir akşam Kaan, arka bahçeye bakan pencereden içini çekti.",
+          "— Burası temizlense ne güzel olurdu, dedi.",
+          "Melis'in gözleri parladı.",
+          "— O zaman temizleyelim!"
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Ertesi gün üç arkadaş, apartman yöneticisi Sevim Hanım'ın kapısını çaldı.",
+          "Sevim Hanım onları dikkatle dinledi.",
+          "— Fikriniz çok güzel ama bu iş üç çocukla bitmez, dedi.",
+          "— Bütün apartmanın el ele vermesi gerekir."
+        ],
+        [
+          "Çocuklar o akşam renkli kalemlerle bir ilan hazırladı.",
+          "İlanda “Cumartesi sabahı arka bahçede imece var, herkes elinden geleni getirsin!” yazıyordu.",
+          "Kâğıdı giriş kapısının yanındaki panoya astılar.",
+          "Sonra kat kat dolaşıp herkese tek tek haber verdiler.",
+          "Bazı kapılar hemen açıldı, bazıları ise hiç açılmadı."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Ama herkes bu habere sevinmedi.",
+          "Zemin kattaki Hüsnü Bey kapıyı aralayıp kaşlarını çattı.",
+          "— Bahçe açılırsa gürültü olur, ben öğlenleri uyurum, dedi.",
+          "Ayaz ne diyeceğini bilemeden arkadaşlarına baktı."
+        ],
+        [
+          "Sonra Melis yavaşça öne çıktı.",
+          "— Hüsnü Bey, öğle saatlerinde bahçede top oynamayacağız, söz veriyoruz, dedi.",
+          "— Topumuz pencerenize gelmesin diye en uzak köşede oynarız.",
+          "Hüsnü Bey bir süre çocukları süzdü.",
+          "— Bakalım, dedi yalnızca ve kapıyı kapattı.",
+          "Kaan omuz silkip arkadaşlarına döndü.",
+          "— Bence o gelmez, diye fısıldadı."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Cumartesi sabahı bahçeye beklenenden çok kişi geldi.",
+          "Emekli marangoz Bekir Amca, kırık bankı onarmak için alet çantasını getirmişti.",
+          "Nurten Hanım, balkonunda yetiştirdiği fesleğen ve biber fidelerini taşıdı.",
+          "Dördüncü kattaki genç çift otları biçti, çocuklar da çöpleri torbalara doldurdu."
+        ],
+        [
+          "Sıra eski dolaba gelince herkes durdu.",
+          "Dolap öyle ağırdı ki iki kişi onu yerinden kımıldatamadı.",
+          "Tam o sırada zemin kattaki kapı açıldı.",
+          "Hüsnü Bey, elinde bir el arabasıyla bahçeye çıktı.",
+          "— Bunu böyle kaldıramazsınız, dedi.",
+          "Altı kişi birden dolabı kaldırıp el arabasına yükledi."
+        ]
+      ]
+    },
+    {
+      "id": "p05",
+      "paragraphs": [
+        [
+          "Akşama doğru bahçe bambaşka görünüyordu.",
+          "Bank yeniden sağlamdı, fideler toprağa dikilmişti.",
+          "Melis, Kaan ve Ayaz yorgunluktan bankın üstüne yığıldı ama yüzleri gülüyordu.",
+          "Sevim Hanım herkese birer bardak ayran dağıttı."
+        ],
+        [
+          "Çocuklar bir kartona bahçe kurallarını yazdı.",
+          "Kartta üç kural vardı: öğle saatlerinde top yok, çöpler yere atılmaz, fideleri sulamak herkesin görevidir.",
+          "Kartonu panoya asarlarken Hüsnü Bey yanlarından geçti.",
+          "— Fideleri sulama işini bana bırakın, dedi gülümseyerek."
+        ],
+        [
+          "O günden sonra arka bahçe, Papatya Apartmanı'nın en sevilen köşesi oldu."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Çocuklar hazırladıkları ilanı nereye astı?",
+      "options": [
+        "Asansörün içine",
+        "Bahçe duvarına",
+        "Sevim Hanım'ın kapısına",
+        "Giriş kapısının yanındaki panoya"
+      ],
+      "answer": 3,
+      "explain": "İkinci sayfada “Kâğıdı giriş kapısının yanındaki panoya astılar.” yazıyor.",
+      "page": "p02"
+    },
+    {
+      "skill": "locate",
+      "question": "Emekli marangoz Bekir Amca imeceye ne getirdi?",
+      "options": [
+        "Kırık bankı onarmak için alet çantasını",
+        "Fesleğen ve biber fidelerini",
+        "Ağır dolap için el arabasını",
+        "Herkese dağıtmak için ayranı"
+      ],
+      "answer": 0,
+      "explain": "Dördüncü sayfada Bekir Amca'nın kırık bankı onarmak için alet çantasını getirdiği anlatılıyor. Fideleri Nurten Hanım, el arabasını Hüsnü Bey getirdi.",
+      "page": "p04"
+    },
+    {
+      "skill": "inference",
+      "question": "Hüsnü Bey, imeceye karşı çıktığı hâlde neden el arabasıyla yardıma gelmiş olabilir?",
+      "options": [
+        "Sevim Hanım onu zorladığı için",
+        "Çocukların sözüne güvenip çabalarını gördüğü için",
+        "El arabasını satmak istediği için",
+        "Bahçeden bir eşya almak istediği için"
+      ],
+      "answer": 1,
+      "explain": "Melis, öğle saatlerinde top oynamayacaklarına söz vermişti. Hüsnü Bey çocukların ne kadar çalıştığını görünce onlara güvendi ve yardım etmek istedi.",
+      "page": "p04"
+    },
+    {
+      "skill": "inference",
+      "question": "Hüsnü Bey'in fideleri sulamak istemesinden ne anlıyoruz?",
+      "options": [
+        "Bahçeye girilmesini istemiyor.",
+        "Fidelerden hiç hoşlanmıyor.",
+        "Artık o da bahçeye sahip çıkmak istiyor.",
+        "Çocuklara yeniden kızmış."
+      ],
+      "answer": 2,
+      "explain": "İlk başta bahçeye karşı olan Hüsnü Bey, sonunda bir görev üstleniyor. Bu, onun da bahçeyi benimsediğini gösteriyor.",
+      "page": "p05"
+    },
+    {
+      "skill": "comment",
+      "question": "Bu hikâyenin ana fikri hangisidir?",
+      "options": [
+        "Birlikte çalışınca tek başına çözülemeyen sorunlar çözülür.",
+        "Eski eşyalar hemen atılmalıdır.",
+        "Top oynamak için en iyi yer kaldırımdır.",
+        "Yöneticiler bütün işleri tek başına yapmalıdır."
+      ],
+      "answer": 0,
+      "explain": "Bahçe, ancak bütün komşular bildiği bir işle katkı verince temizlendi. Hikâye, el ele vermenin gücünü anlatıyor.",
+      "page": "p05"
+    },
+    {
+      "skill": "vocab",
+      "question": "“Cumartesi sabahı arka bahçede imece var, herkes elinden geleni getirsin!” cümlesindeki “imece” ne demektir?",
+      "options": [
+        "Bir yarışma",
+        "Bir işi hep birlikte, gönüllü olarak yapma",
+        "Bir doğum günü kutlaması",
+        "Bir satış pazarı"
+      ],
+      "answer": 1,
+      "explain": "İmece, bir topluluğun ortak bir işi karşılık beklemeden hep birlikte yapmasıdır. Komşular da bahçeyi böyle temizledi.",
+      "page": "p02"
+    }
+  ]
+}

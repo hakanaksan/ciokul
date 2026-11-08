@@ -15,6 +15,7 @@ question_images
 reading_images
 reading_audio
 lesson_audio
+story_audio
 **/*.pdf
 Baslat.bat
 

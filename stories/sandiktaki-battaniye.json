@@ -1,0 +1,203 @@
+{
+  "id": "sandiktaki-battaniye",
+  "title": "Sandıktaki Battaniye",
+  "theme": "Millî Mücadele ve Atatürk",
+  "level": 3,
+  "summary": "Ailesinde anlatacak bir anı olmadığını düşünen İpek, büyükannesinin eski sandığını açar.",
+  "icon": "🇹🇷",
+  "color": "#fde3e1",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#fde3e1\"/><path d=\"M0 140 Q80 112 160 136 Q240 158 320 128 L320 180 L0 180 Z\" fill=\"#ffffff\"/><line x1=\"268\" y1=\"34\" x2=\"268\" y2=\"136\" stroke=\"#7a5230\" stroke-width=\"4\"/><rect x=\"270\" y=\"34\" width=\"42\" height=\"28\" fill=\"#e30a17\"/><circle cx=\"285\" cy=\"48\" r=\"9\" fill=\"#ffffff\"/><circle cx=\"287.5\" cy=\"48\" r=\"7.2\" fill=\"#e30a17\"/><polygon points=\"295,48 304,45.1 298.5,52.8 298.5,43.2 304,50.9\" fill=\"#ffffff\"/><ellipse cx=\"62\" cy=\"116\" rx=\"26\" ry=\"14\" fill=\"#8a6a4f\"/><circle cx=\"36\" cy=\"106\" r=\"10\" fill=\"#8a6a4f\"/><path d=\"M30 98 L24 90 M40 98 L44 90\" stroke=\"#e9dcc3\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"33\" cy=\"105\" r=\"1.6\" fill=\"#333333\"/><line x1=\"48\" y1=\"128\" x2=\"48\" y2=\"142\" stroke=\"#8a6a4f\" stroke-width=\"5\"/><line x1=\"76\" y1=\"128\" x2=\"76\" y2=\"142\" stroke=\"#8a6a4f\" stroke-width=\"5\"/><line x1=\"86\" y1=\"116\" x2=\"116\" y2=\"116\" stroke=\"#6b4a2b\" stroke-width=\"4\"/><rect x=\"112\" y=\"96\" width=\"112\" height=\"26\" rx=\"3\" fill=\"#a87447\"/><rect x=\"122\" y=\"76\" width=\"34\" height=\"22\" fill=\"#6b4a2b\"/><rect x=\"160\" y=\"76\" width=\"34\" height=\"22\" fill=\"#6b4a2b\"/><path d=\"M116 98 Q118 70 158 68 Q200 66 220 98 Z\" fill=\"#c0392b\"/><path d=\"M130 80 Q160 72 204 80 M122 90 Q162 82 214 90\" fill=\"none\" stroke=\"#f6d27a\" stroke-width=\"3\"/><circle cx=\"138\" cy=\"130\" r=\"20\" fill=\"#8b5a2b\"/><circle cx=\"138\" cy=\"130\" r=\"13\" fill=\"none\" stroke=\"#5e3b1a\" stroke-width=\"3\"/><circle cx=\"138\" cy=\"130\" r=\"4\" fill=\"#5e3b1a\"/><circle cx=\"200\" cy=\"130\" r=\"20\" fill=\"#8b5a2b\"/><circle cx=\"200\" cy=\"130\" r=\"13\" fill=\"none\" stroke=\"#5e3b1a\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"130\" r=\"4\" fill=\"#5e3b1a\"/><circle cx=\"40\" cy=\"30\" r=\"3\" fill=\"#ffffff\"/><circle cx=\"90\" cy=\"18\" r=\"2.5\" fill=\"#ffffff\"/><circle cx=\"150\" cy=\"34\" r=\"3\" fill=\"#ffffff\"/><circle cx=\"210\" cy=\"20\" r=\"2.5\" fill=\"#ffffff\"/><circle cx=\"120\" cy=\"50\" r=\"2\" fill=\"#ffffff\"/><circle cx=\"240\" cy=\"60\" r=\"3\" fill=\"#ffffff\"/><circle cx=\"20\" cy=\"70\" r=\"2.5\" fill=\"#ffffff\"/><circle cx=\"300\" cy=\"90\" r=\"2.5\" fill=\"#ffffff\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Ekim ayının son haftasıydı ve okulun koridorları ay yıldızlı bayraklarla süslenmişti.",
+          "Gülay Öğretmen, Cumhuriyet Bayramı için sınıfa ilginç bir ödev verdi.",
+          "— Ailenizin büyüklerine Millî Mücadele yıllarından kalan bir anı sorun, dedi.",
+          "Herkes bulduğu anıyı bayramdan bir gün önce sınıfta anlatacaktı."
+        ],
+        [
+          "İpek o gün eve dönerken düşünceliydi.",
+          "Arkadaşlarından biri dedesinin dedesinin madalyasından söz etmişti, bir başkası eski bir mektuptan.",
+          "Onun ailesinde ise ne bir madalya ne de eski bir mektup vardı.",
+          "İçinden, anlatacak hiçbir şeyi olmadığını düşündü.",
+          "Sırtındaki çanta bile ona her zamankinden ağır geliyordu."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Akşam yemeğinden sonra İpek, ödevi büyükannesi Saadet'e anlattı.",
+          "Büyükannesi bir süre sessizce çayını karıştırdı.",
+          "Sonra yavaşça ayağa kalktı ve İpek'i yatak odasına götürdü.",
+          "Odanın köşesinde, kapağı oymalı, ceviz ağacından eski bir sandık duruyordu.",
+          "İpek bu sandığı yıllardır görüyordu ama içini hiç merak etmemişti."
+        ],
+        [
+          "Kapak açılınca odaya lavanta kokusu yayıldı.",
+          "İçinde katlanmış örtüler, eski fotoğraflar ve bir çift el örgüsü patik vardı.",
+          "Büyükannesi, işlemeli yazmaların altından kalın, yün bir battaniye çıkardı.",
+          "Battaniyenin rengi solmuş, bir köşesi de özenle yamanmıştı.",
+          "— Bu battaniye ailemizin en değerli yadigârıdır, dedi büyükannesi."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Büyükanne battaniyeyi kucağına aldı ve anlatmaya başladı.",
+          "Bu anıyı ona kendi anneannesi Hatice anlatmıştı.",
+          "Hatice, Kurtuluş Savaşı yıllarında Kastamonu'nun bir köyünde yaşayan on dört yaşında bir kızmış.",
+          "O yıllarda ordunun ihtiyacı olan cephane, Karadeniz kıyısındaki İnebolu'dan Ankara'ya taşınıyormuş.",
+          "Yollar dağlık, kışlar ise çok sertmiş."
+        ],
+        [
+          "Köyün kadınları da kağnılarını koşup bu zorlu yolculuğa katılmışlar.",
+          "Kağnı, öküzlerin çektiği, tahta tekerlekli bir arabaymış.",
+          "Bir gece yolda kar bastırmış.",
+          "Hatice'nin annesi, sandıklar ıslanmasın diye evden getirdiği bu battaniyeyi üstlerine örtmüş.",
+          "Kendileri soğuktan titrerken battaniyeyi bir an bile geri almamışlar."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "İpek, battaniyenin yamalı köşesine parmaklarıyla dokundu.",
+          "— Peki, hiç üşümemişler mi? diye sordu.",
+          "— Elbette üşümüşler ama herkes elinden geleni yapıyormuş, dedi büyükannesi."
+        ],
+        [
+          "Büyükannesi, o yıllarda Anadolu'nun dört bir yanında insanların ellerindeki her şeyi paylaştığını anlattı.",
+          "Kimi yün çorap örmüş, kimi ekmeğini bölüşmüş, kimi de kağnısıyla yola düşmüş.",
+          "Bu büyük mücadeleye Mustafa Kemal Paşa önderlik etmiş.",
+          "Savaş kazanıldıktan sonra, bin dokuz yüz yirmi üç yılında Cumhuriyet ilan edilmiş.",
+          "Hatice ise Cumhuriyet'in ilk yıllarında açılan Millet Mekteplerinde okuma yazma öğrenmiş.",
+          "Battaniyeyi de ömrü boyunca sandığında saklamış, kimseye kullandırmamış."
+        ]
+      ]
+    },
+    {
+      "id": "p05",
+      "paragraphs": [
+        [
+          "Ertesi gün İpek, battaniyeyi özenle katlayıp okula götürdü.",
+          "Sıra ona gelince battaniyeyi masanın üstüne serdi ve Hatice'nin hikâyesini anlattı.",
+          "Sınıfta çıt çıkmıyordu.",
+          "Herkes yamalı köşeye ve solmuş renklere hayranlıkla bakıyordu.",
+          "Gülay Öğretmen, böyle eşyaların tarihi bize daha yakından hissettirdiğini söyledi."
+        ],
+        [
+          "Teneffüste sınıf arkadaşı Kuzey yanına geldi.",
+          "— Benim ailemde böyle bir anı yok, dedi boynunu bükerek.",
+          "İpek, bir gün önce kendisinin de aynı şeyi düşündüğünü hatırladı.",
+          "— O yıllarda herkes elinden geleni yapmış, bu hikâye hepimizin hikâyesi, dedi.",
+          "Kuzey'in yüzü aydınlandı, akşam o da büyükleriyle konuşmaya karar verdi."
+        ]
+      ]
+    },
+    {
+      "id": "p06",
+      "paragraphs": [
+        [
+          "Cumhuriyet Bayramı sabahı okul bahçesi rengârenkti.",
+          "İstiklal Marşı okunurken İpek, gönderde dalgalanan bayrağa baktı.",
+          "Gözünün önüne karla kaplı bir dağ yolu, gıcırdayan tahta tekerlekler ve sandıkları örten bir battaniye geldi.",
+          "Bayram, ona hiç bu kadar yakın gelmemişti.",
+          "Tören bitince Kuzey koşarak yanına geldi.",
+          "Dedesinin babasının, o yıllarda köyünden askerlere un gönderdiğini öğrenmişti."
+        ],
+        [
+          "Akşam battaniyeyi büyükannesiyle birlikte yeniden sandığa yerleştirdiler.",
+          "— Bir gün sen de bu hikâyeyi kendi torununa anlatacaksın, dedi büyükannesi.",
+          "İpek gülümseyerek başını salladı, çünkü artık anlatacak çok değerli bir hikâyesi vardı."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Hatice'nin annesi battaniyeyi ne için kullanmıştı?",
+      "options": [
+        "Öküzleri ısıtmak için",
+        "Sandıklar ıslanmasın diye üstlerini örtmek için",
+        "Kağnının tekerleğini sarmak için",
+        "Hatice'yi uyutmak için"
+      ],
+      "answer": 1,
+      "explain": "Üçüncü sayfada, kar bastırınca Hatice'nin annesinin sandıklar ıslanmasın diye battaniyeyi üstlerine örttüğü yazıyor.",
+      "page": "p03"
+    },
+    {
+      "skill": "locate",
+      "question": "Hikâyeye göre cephane nereden nereye taşınıyordu?",
+      "options": [
+        "İstanbul'dan İzmir'e",
+        "Samsun'dan Sivas'a",
+        "Ankara'dan Kastamonu'ya",
+        "İnebolu'dan Ankara'ya"
+      ],
+      "answer": 3,
+      "explain": "Büyükanne, cephanenin Karadeniz kıyısındaki İnebolu'dan Ankara'ya taşındığını anlatıyor.",
+      "page": "p03"
+    },
+    {
+      "skill": "inference",
+      "question": "İpek o gün eve dönerken neden düşünceliydi?",
+      "options": [
+        "Ailesinde anlatacak bir anı olmadığını sandığı için",
+        "Ödevini okulda unuttuğu için",
+        "Öğretmenine kırıldığı için",
+        "Bayram törenine katılamayacağı için"
+      ],
+      "answer": 0,
+      "explain": "İpek, arkadaşlarının anlatacak anıları olduğunu ama kendi ailesinde hiçbir şey bulunmadığını düşünüyordu.",
+      "page": "p01"
+    },
+    {
+      "skill": "inference",
+      "question": "Hatice, battaniyeyi ömrü boyunca neden kimseye kullandırmamış olabilir?",
+      "options": [
+        "Battaniye çok küçük olduğu için",
+        "Yün battaniyeleri sevmediği için",
+        "Onun için o günlerin değerli bir hatırası olduğu için",
+        "Battaniyeyi satmayı düşündüğü için"
+      ],
+      "answer": 2,
+      "explain": "Battaniye, Hatice'ye zorlu yolculuğu ve o günlerdeki fedakârlığı hatırlatıyordu; bu yüzden onu bir hatıra gibi sakladı.",
+      "page": "p04"
+    },
+    {
+      "skill": "comment",
+      "question": "İpek'in Kuzey'e verdiği cevaptan hangi düşünceye ulaşabiliriz?",
+      "options": [
+        "Millî Mücadele'yi yalnızca askerler kazanmıştır",
+        "Aile anıları yalnızca o aileyi ilgilendirir",
+        "Millî Mücadele'de halkın emeği hepimizin ortak mirasıdır",
+        "Eski eşyaları saklamaya gerek yoktur"
+      ],
+      "answer": 2,
+      "explain": "İpek, o yıllarda herkesin elinden geleni yaptığını söyledi; yani bu emek hepimizin ortak mirasıdır.",
+      "page": "p05"
+    },
+    {
+      "skill": "vocab",
+      "question": "\"Sınıfta çıt çıkmıyordu.\" cümlesi sınıf hakkında ne anlatıyor?",
+      "options": [
+        "Sınıf çok gürültülüydü",
+        "Sınıf derin bir sessizlik içindeydi",
+        "Sınıfta kimse yoktu",
+        "Sınıfın kapısı kapalıydı"
+      ],
+      "answer": 1,
+      "explain": "\"Çıt çıkmamak\", hiç ses çıkmaması, derin bir sessizlik olması demektir; herkes İpek'i dikkatle dinliyordu.",
+      "page": "p05"
+    }
+  ]
+}

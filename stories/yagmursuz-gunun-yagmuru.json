@@ -1,0 +1,209 @@
+{
+  "id": "yagmursuz-gunun-yagmuru",
+  "title": "Yağmursuz Günün Yağmuru",
+  "theme": "Bilim ve Teknoloji",
+  "level": 3,
+  "summary": "Gökyüzü masmavi olduğu hâlde okulun yağmur ölçerinde su birikir ve Lal ile Sarp bu gizemin peşine düşer.",
+  "icon": "🔍",
+  "color": "#e4ebfa",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#e4ebfa\"/><circle cx=\"270\" cy=\"38\" r=\"20\" fill=\"#ffd96a\"/><path d=\"M270 8 L270 14 M270 62 L270 68 M240 38 L246 38 M294 38 L300 38 M249 17 L253 21 M287 55 L291 59 M249 59 L253 55 M287 21 L291 17\" stroke=\"#ffc93c\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect y=\"128\" width=\"320\" height=\"52\" fill=\"#9fd08a\"/><path d=\"M0 128 Q 80 120 160 128 T 320 128 L320 136 L0 136 Z\" fill=\"#8ac476\"/><rect x=\"16\" y=\"118\" width=\"80\" height=\"18\" rx=\"6\" fill=\"#a8744a\"/><circle cx=\"28\" cy=\"112\" r=\"8\" fill=\"#f27b9b\"/><circle cx=\"48\" cy=\"108\" r=\"8\" fill=\"#f7c948\"/><circle cx=\"68\" cy=\"112\" r=\"8\" fill=\"#b388eb\"/><circle cx=\"86\" cy=\"108\" r=\"7\" fill=\"#f27b9b\"/><path d=\"M28 120 L28 116 M48 120 L48 116 M68 120 L68 116 M86 120 L86 115\" stroke=\"#4f8a3c\" stroke-width=\"2\"/><rect x=\"104\" y=\"128\" width=\"8\" height=\"10\" fill=\"#6d7680\"/><path d=\"M108 128 Q 130 72 162 92\" stroke=\"#7cc4f0\" stroke-width=\"2\" stroke-dasharray=\"4 5\" fill=\"none\"/><path d=\"M108 128 Q 118 86 146 82\" stroke=\"#7cc4f0\" stroke-width=\"2\" stroke-dasharray=\"4 5\" fill=\"none\"/><circle cx=\"162\" cy=\"96\" r=\"2.5\" fill=\"#5bb3ea\"/><circle cx=\"158\" cy=\"104\" r=\"2\" fill=\"#5bb3ea\"/><circle cx=\"166\" cy=\"102\" r=\"2\" fill=\"#5bb3ea\"/><polygon points=\"148,98 176,98 166,110 158,110\" fill=\"#cfd8e3\" stroke=\"#7b8794\" stroke-width=\"1.5\"/><rect x=\"157\" y=\"110\" width=\"10\" height=\"34\" fill=\"#f4f8fc\" stroke=\"#7b8794\" stroke-width=\"1.5\"/><rect x=\"158\" y=\"130\" width=\"8\" height=\"13\" fill=\"#7cc4f0\"/><line x1=\"157\" y1=\"118\" x2=\"161\" y2=\"118\" stroke=\"#7b8794\"/><line x1=\"157\" y1=\"124\" x2=\"161\" y2=\"124\" stroke=\"#7b8794\"/><line x1=\"157\" y1=\"130\" x2=\"161\" y2=\"130\" stroke=\"#7b8794\"/><line x1=\"157\" y1=\"136\" x2=\"161\" y2=\"136\" stroke=\"#7b8794\"/><rect x=\"158\" y=\"144\" width=\"8\" height=\"12\" fill=\"#7b8794\"/><circle cx=\"232\" cy=\"122\" r=\"22\" fill=\"#ffffff\" fill-opacity=\"0.45\" stroke=\"#3b4a6b\" stroke-width=\"6\"/><line x1=\"248\" y1=\"138\" x2=\"270\" y2=\"162\" stroke=\"#3b4a6b\" stroke-width=\"9\" stroke-linecap=\"round\"/><path d=\"M222 112 Q 228 106 236 108\" stroke=\"#ffffff\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 40 Q 70 28 84 34 Q 98 24 108 38 Q 120 40 116 50 L56 50 Q 50 44 60 40 Z\" fill=\"#ffffff\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Okulun bilim kulübü, eylül başında bahçeye küçük bir hava istasyonu kurmuştu.",
+          "İstasyonda bir termometre, rüzgârın yönünü gösteren bir rüzgâr gülü ve bir yağmur ölçer vardı.",
+          "Yağmur ölçer, ağzı huni biçiminde, üzerinde çizgiler bulunan şeffaf ve uzun bir tüptü.",
+          "Her sabah ders başlamadan önce Lal ile Sarp, ölçümleri kulübün defterine yazıyordu.",
+          "Lal, en küçük ayrıntıyı bile fark eden, gözü keskin bir kızdı.",
+          "Sarp ise soruları hiç bitmeyen, meraklı bir çocuktu."
+        ],
+        [
+          "Geçen hafta okul görevlisi Hüsnü Amca çimleri biçmişti.",
+          "Makine rahatça geçebilsin diye yağmur ölçeri bahçenin ortasından alıp çiçek tarhlarının kenarına koymuştu.",
+          "Çocuklar bu küçük değişikliği çabucak unutmuştu."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Ekimin ilk salı sabahı Lal, tüpe bakınca gözlerine inanamadı.",
+          "Tüpte dört milimetre su birikmişti.",
+          "Lal gözlerini ovuşturup bir kez daha baktı ama su hâlâ oradaydı.",
+          "— Sarp, dün gece yağmur mu yağdı?",
+          "Sarp kaşlarını çattı.",
+          "— Hayır, hava durumu bütün hafta güneşli olacak demişti."
+        ],
+        [
+          "Cuma sabahı aynı şey yeniden oldu.",
+          "Gökyüzü masmavi olduğu hâlde tüpte yine dört milimetre su vardı.",
+          "Kulübün öğretmeni Nilüfer Hanım, ikisine birer büyüteç uzatıp göz kırptı.",
+          "— Bir bilim insanı gibi düşünün, dedi.",
+          "— Önce ipuçlarını toplayın, sonra her olasılığı tek tek sınayın."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Sarp'ın ilk tahmini, gece kısa bir yağmurun geçmiş olmasıydı.",
+          "Lal ise bahçeyi dikkatle inceledi.",
+          "Basketbol sahası kupkuruydu, bankların üstünde de tek bir damla yoktu.",
+          "— Yağmur yağsaydı her yer ıslanırdı, dedi Lal."
+        ],
+        [
+          "Sarp bu kez çiyi düşündü.",
+          "Açık gecelerde soğuyan yüzeylerde minik su damlacıkları oluştuğunu derste öğrenmişlerdi.",
+          "Ama çiy, tüpü bu kadar dolduramazdı.",
+          "Üstelik bütün hafta gökyüzü açıktı, oysa su yalnızca salı ve cuma sabahları birikiyordu.",
+          "— O zaman biri bize şaka yapıyor, dedi Sarp.",
+          "— Belki de büyük sınıflardan biri gece tüpe su döküyordur."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Lal, şaka fikrini hemen bir kenara atmadı ama aceleyle de kabul etmedi.",
+          "Önce yağmur ölçerin çevresindeki çimlere eğilip büyüteciyle baktı.",
+          "Tüpün çiçek tarhına bakan tarafındaki çimler ıslaktı, öbür taraftakiler ise kupkuruydu.",
+          "Tarhtaki çiçeklerin yaprakları da damla damla parlıyordu."
+        ],
+        [
+          "— Biri su dökseydi yalnızca tüpü doldururdu, dedi Lal.",
+          "— Oysa bu ıslaklık geniş bir alana yayılmış.",
+          "Sarp, defterdeki tabloya bakıp parmağıyla iki günü gösterdi.",
+          "— Hep salı ve hep cuma, dedi.",
+          "— Bu bir şakaysa çok düzenli bir şaka.",
+          "Lal'in gözleri parladı.",
+          "— Bu kadar düzenli bir işi belki de bir makine yapıyordur."
+        ]
+      ]
+    },
+    {
+      "id": "p05",
+      "paragraphs": [
+        [
+          "Çocuklar soluk soluğa Hüsnü Amca'nın yanına koştu.",
+          "— Çiçekleri kim suluyor, Hüsnü Amca?",
+          "— Toprağın altındaki borularla otomatik sulama yapılıyor, dedi Hüsnü Amca.",
+          "Sonra onları duvardaki gri kutunun önüne götürdü.",
+          "Kutunun kapağındaki küçük notta salı ve cuma günleri, sabah saat altıda, on beş dakika sulama yapılacağı yazıyordu."
+        ],
+        [
+          "Lal ile Sarp aynı anda birbirine baktı.",
+          "Fıskiyeler sabah altıda çalışıyorsa, okula geldiklerinde tüpte su bulmaları çok doğaldı.",
+          "Bilmece çözülmek üzereydi ama Nilüfer Hanım'ın sözünü unutmamışlardı.",
+          "Tahminlerini sınamak için küçük bir deney tasarladılar.",
+          "Pazartesi akşamı, aynı genişlikte ikinci bir kabı bahçenin tam ortasına, tarhlardan uzağa yerleştirdiler."
+        ]
+      ]
+    },
+    {
+      "id": "p06",
+      "paragraphs": [
+        [
+          "Salı sabahı tarhın yanındaki ölçer yine dört milimetre su gösteriyordu.",
+          "Bahçenin ortasındaki kap ise bomboştu.",
+          "Demek ki gece yağmur yağmamıştı, su yalnızca tarhın yanına düşüyordu.",
+          "Hüsnü Amca, onlar izlesin diye sulamayı bir dakikalığına çalıştırdı.",
+          "Fıskiyeden fışkıran su, havada bir kavis çizip tam yağmur ölçerin hunisine düştü.",
+          "— İşte bizim gizemli yağmurumuz, diye güldü Sarp."
+        ],
+        [
+          "Çocuklar ölçeri ağaçlardan ve duvarlardan uzak, açık bir yere taşıdı.",
+          "Defterdeki salı ve cuma ölçümlerinin yanına da “hatalı ölçüm” notunu düştüler.",
+          "Böylece kulübün ölçümleri yeniden güvenilir hâle geldi.",
+          "Nilüfer Hanım ikisini kutladı.",
+          "— İyi bir alet bile yanlış yerde yanlış bilgi verir, dedi.",
+          "— Siz de kafa yorup ipuçlarını birleştirdiniz ve gerçeği buldunuz."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Yağmur ölçerdeki su hangi sabahlar birikiyordu?",
+      "options": [
+        "Pazartesi ve perşembe",
+        "Her sabah",
+        "Salı ve cuma",
+        "Yalnızca hafta sonu"
+      ],
+      "answer": 2,
+      "explain": "Çocukların defterinde su, yalnızca salı ve cuma sabahları birikmiş görünüyordu. Sarp da bunu “Hep salı ve hep cuma.” diye söylüyor.",
+      "page": "p04"
+    },
+    {
+      "skill": "locate",
+      "question": "Sulamanın hangi gün ve saatte yapıldığı nerede yazıyordu?",
+      "options": [
+        "Kulübün defterinde",
+        "Duvardaki gri kutunun kapağında",
+        "Okulun panosunda",
+        "Yağmur ölçerin üstünde"
+      ],
+      "answer": 1,
+      "explain": "Hüsnü Amca çocukları duvardaki gri kutuya götürüyor. Sulama saatleri bu kutunun kapağındaki notta yazıyordu.",
+      "page": "p05"
+    },
+    {
+      "skill": "inference",
+      "question": "Lal, “büyük sınıflar şaka yapıyor” fikrine neden pek güvenmedi?",
+      "options": [
+        "Islaklık geniş bir alana yayılmış ve hep aynı günlerde olmuştu.",
+        "Büyük sınıfların o hafta okula gelmediğini biliyordu.",
+        "Hüsnü Amca ona öyle söylemişti.",
+        "Tüpteki su çok soğuktu."
+      ],
+      "answer": 0,
+      "explain": "Biri su dökseydi yalnızca tüp dolardı. Oysa çimler ve çiçekler de ıslaktı ve bu her salı ile cuma düzenli olarak tekrarlanıyordu.",
+      "page": "p04"
+    },
+    {
+      "skill": "inference",
+      "question": "Çocuklar ikinci kabı neden tarhlardan uzağa, bahçenin ortasına koydu?",
+      "options": [
+        "Kap ortada daha güzel göründüğü için",
+        "Rüzgârın hızını ölçmek için",
+        "Hüsnü Amca kabı görmesin diye",
+        "Suyun fıskiyeden gelip gelmediğini sınamak için"
+      ],
+      "answer": 3,
+      "explain": "Gerçekten yağmur yağsaydı iki kap da dolardı. Yalnızca tarhın yanındaki kap dolarsa suyun fıskiyeden geldiği anlaşılacaktı.",
+      "page": "p05"
+    },
+    {
+      "skill": "comment",
+      "question": "Bu hikâyenin ana fikri hangisidir?",
+      "options": [
+        "Gizemler ancak büyüklerin yardımıyla çözülür.",
+        "Dikkatli gözlem ve deneyle gerçeğe ulaşılır.",
+        "Hava durumu tahminlerine hiç güvenilmez.",
+        "Şaka yapanlar sonunda mutlaka yakalanır."
+      ],
+      "answer": 1,
+      "explain": "Lal ile Sarp hemen birini suçlamadı. İpuçlarını topladılar, tahminlerini bir deneyle sınadılar ve gerçeği böyle buldular.",
+      "page": "p06"
+    },
+    {
+      "skill": "vocab",
+      "question": "“Siz de kafa yorup ipuçlarını birleştirdiniz ve gerçeği buldunuz.” cümlesinde “kafa yormak” ne anlama gelir?",
+      "options": [
+        "Çok yorulup dinlenmek",
+        "Başı ağrımak",
+        "Bir konu üzerinde uzun uzun düşünmek",
+        "Hemen vazgeçmek"
+      ],
+      "answer": 2,
+      "explain": "“Kafa yormak” bir konu üzerinde emek vererek, uzun uzun düşünmek demektir. Lal ile Sarp da gizemi çözmek için çok düşündü.",
+      "page": "p06"
+    }
+  ]
+}

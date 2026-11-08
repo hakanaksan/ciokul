@@ -1,0 +1,166 @@
+{
+  "id": "kitabin-icindeki-not",
+  "title": "Kitabın İçindeki Not",
+  "theme": "Okuma Kültürü",
+  "level": 1,
+  "summary": "Okuldaki kitap takası gününde Asya'nın en sevdiği kitap ortadan kaybolur.",
+  "icon": "📖",
+  "color": "#e3ecff",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#e8f0ff\"/><circle cx=\"40\" cy=\"36\" r=\"4\" fill=\"#ffd34d\"/><circle cx=\"282\" cy=\"30\" r=\"3\" fill=\"#ffd34d\"/><circle cx=\"292\" cy=\"112\" r=\"4\" fill=\"#f7a8c4\"/><circle cx=\"30\" cy=\"104\" r=\"3\" fill=\"#f7a8c4\"/><rect y=\"142\" width=\"320\" height=\"38\" fill=\"#c99a6e\"/><rect y=\"142\" width=\"320\" height=\"6\" fill=\"#b5855b\"/><rect x=\"94\" y=\"34\" width=\"140\" height=\"112\" rx=\"6\" fill=\"#244f78\"/><rect x=\"88\" y=\"28\" width=\"140\" height=\"112\" rx=\"6\" fill=\"#3f7fbf\"/><rect x=\"88\" y=\"28\" width=\"12\" height=\"112\" fill=\"#2f6aa3\"/><rect x=\"100\" y=\"112\" width=\"128\" height=\"22\" fill=\"#6ec1e4\"/><path d=\"M100 116 Q116 110 132 116 T164 116 T196 116 T228 116\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\"/><polygon points=\"146,112 154,64 174,64 182,112\" fill=\"#ffffff\"/><polygon points=\"149,96 179,96 180,104 148,104\" fill=\"#e2504a\"/><polygon points=\"152,76 176,76 177,84 151,84\" fill=\"#e2504a\"/><rect x=\"154\" y=\"54\" width=\"20\" height=\"10\" fill=\"#ffd34d\"/><polygon points=\"150,54 164,44 178,54\" fill=\"#e2504a\"/><ellipse cx=\"164\" cy=\"40\" rx=\"8\" ry=\"5\" fill=\"#f39a3d\"/><circle cx=\"164\" cy=\"33\" r=\"5\" fill=\"#f39a3d\"/><polygon points=\"160,30 161,24 164,29\" fill=\"#f39a3d\"/><polygon points=\"164,29 167,24 168,30\" fill=\"#f39a3d\"/><path d=\"M172 40 Q180 38 178 30\" fill=\"none\" stroke=\"#f39a3d\" stroke-width=\"2\"/><polygon points=\"216,62 254,54 259,82 222,90\" fill=\"#fffbe6\"/><line x1=\"224\" y1=\"66\" x2=\"250\" y2=\"61\" stroke=\"#c9b98a\" stroke-width=\"2\"/><line x1=\"226\" y1=\"73\" x2=\"252\" y2=\"68\" stroke=\"#c9b98a\" stroke-width=\"2\"/><line x1=\"227\" y1=\"80\" x2=\"244\" y2=\"77\" stroke=\"#c9b98a\" stroke-width=\"2\"/><polygon points=\"200,140 208,140 208,158 204,154 200,158\" fill=\"#e2504a\"/><ellipse cx=\"124\" cy=\"46\" rx=\"12\" ry=\"4\" fill=\"#ffffff\"/><ellipse cx=\"206\" cy=\"40\" rx=\"10\" ry=\"3.5\" fill=\"#ffffff\"/><rect x=\"40\" y=\"126\" width=\"34\" height=\"16\" rx=\"2\" fill=\"#7bbf6a\"/><rect x=\"44\" y=\"114\" width=\"28\" height=\"12\" rx=\"2\" fill=\"#f2c14e\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Cuma günü okulda kitap takası vardı.",
+          "Herkes okuduğu bir kitabı getirip takas masasına bırakacak, yerine başka bir kitap alacaktı.",
+          "Asya, takas için masal kitaplarından birini çantasına koydu.",
+          "Sonra bir an durdu ve en sevdiği kitabı da yanına aldı."
+        ],
+        [
+          "Bu kitabın adı Fenerci Kedi'ydi.",
+          "Kapağında, yüksek bir deniz fenerinin tepesinde oturan turuncu bir kedi vardı.",
+          "Kitabı ona iki yıl önce dedesi almıştı.",
+          "Dedesi, ilk sayfasına kendi el yazısıyla küçük bir not da yazmıştı.",
+          "Notta “Sevgili torunum Asya, kitaplar paylaştıkça çoğalır.” yazıyordu.",
+          "Asya bu kitabı takas etmeyecekti, yalnızca arkadaşlarına göstermek istiyordu."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Asya kitabını arkadaşlarına gösterdikten sonra onu masal kitabının yanına, takas masasının kenarına bıraktı.",
+          "Zil çalınca arkadaşlarıyla birlikte koşarak bahçeye çıktı.",
+          "Sınıfa döndüğünde masa neredeyse boşalmıştı.",
+          "Masal kitabı gitmişti, Fenerci Kedi de ortada yoktu!"
+        ],
+        [
+          "Asya sıraların altına, dolapların içine, çantaların arasına baktı.",
+          "Kitap hiçbir yerde yoktu.",
+          "Asya'nın gözleri doldu.",
+          "Öğretmeni Gül Hanım yanına gelip omzuna dokundu.",
+          "— Kitaplar kaybolmaz, yalnızca yolculuğa çıkar, dedi.",
+          "Asya bu sözü pek anlamadı ama biraz olsun rahatladı."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Hafta sonu Asya'nın hiç keyfi yoktu.",
+          "Kitabı kaybettiğini dedesine nasıl söyleyeceğini düşünüp durdu.",
+          "Pazar akşamı yatağına uzanınca Gül Hanım'ın sözünü yeniden hatırladı.",
+          "Acaba kitabı da şu anda bir yolculukta mıydı?",
+          "Pazartesi sabahı sınıfa girince ilk iş kendi sırasına baktı."
+        ],
+        [
+          "Sıranın üstünde iki kitap duruyordu!",
+          "Birinin turuncu kedili kapağını hemen tanıdı.",
+          "Öteki ise daha önce hiç görmediği, mavi kapaklı bir kitaptı.",
+          "Fenerci Kedi'nin sayfaları arasından katlanmış bir kâğıt sarkıyordu.",
+          "Asya kâğıdı heyecanla açtı."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Kâğıt, sınıfın en sessiz çocuğu Doruk'tandı.",
+          "Doruk, kitabı takas masasında bulduğunu yazmıştı.",
+          "Hafta sonu onu okumadan duramamış, bir solukta bitirmişti.",
+          "İlk sayfadaki notu görünce de kitabın Asya'ya ait olduğunu anlamıştı.",
+          "Teşekkür etmek için kendi en sevdiği kitabı da sıraya bırakmıştı."
+        ],
+        [
+          "Asya, dedesinin notunu şimdi çok daha iyi anlıyordu.",
+          "Kitabı bir yolculuğa çıkmış, dönerken yanında yeni bir kitap ve yeni bir arkadaş getirmişti.",
+          "O gün teneffüste Asya ile Doruk, Fenerci Kedi'nin maceralarını konuşmaktan bahçeye çıkmayı unuttular."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Fenerci Kedi kitabının kapağında ne vardı?",
+      "options": [
+        "Denizde yüzen bir balık",
+        "Fenerin tepesinde oturan turuncu bir kedi",
+        "Bir kayığın içinde uyuyan bir kedi",
+        "Kumsalda oynayan iki çocuk"
+      ],
+      "answer": 1,
+      "explain": "İlk sayfada kapakta “yüksek bir deniz fenerinin tepesinde oturan turuncu bir kedi” olduğu yazıyor.",
+      "page": "p01"
+    },
+    {
+      "skill": "locate",
+      "question": "Fenerci Kedi kitabını Asya'ya kim almıştı?",
+      "options": [
+        "Öğretmeni Gül Hanım",
+        "Annesi",
+        "Arkadaşı Doruk",
+        "Dedesi"
+      ],
+      "answer": 3,
+      "explain": "Metinde “Kitabı ona iki yıl önce dedesi almıştı.” cümlesi var. Kitap, dedesinin bir hediyesiydi.",
+      "page": "p01"
+    },
+    {
+      "skill": "inference",
+      "question": "Asya kitabı kaybedince neden bu kadar üzüldü?",
+      "options": [
+        "Kitap dedesinin hediyesiydi ve içinde onun notu vardı.",
+        "Kitabı henüz okumaya başlamamıştı.",
+        "Öğretmeni ona çok kızmıştı.",
+        "Takastan hiç kitap alamamıştı."
+      ],
+      "answer": 0,
+      "explain": "Kitap, dedesinin aldığı ve içine el yazısıyla not yazdığı özel bir kitaptı. Böyle anısı olan bir eşyayı kaybetmek insanı çok üzer.",
+      "page": "p01"
+    },
+    {
+      "skill": "inference",
+      "question": "Gül Hanım “Kitaplar kaybolmaz, yalnızca yolculuğa çıkar.” derken ne demek istemiş olabilir?",
+      "options": [
+        "Kitapların trenle taşındığını",
+        "Kitabın çöpe atıldığını",
+        "Kitabın şu anda başka birinin elinde okunuyor olabileceğini",
+        "Asya'nın kitabı evde unuttuğunu"
+      ],
+      "answer": 2,
+      "explain": "Gül Hanım, kitabın büsbütün yok olmadığını, birinin onu alıp okuyor olabileceğini anlatmak istedi. Gerçekten de Doruk kitabı okuyordu.",
+      "page": "p02"
+    },
+    {
+      "skill": "comment",
+      "question": "Bu hikâyeden çıkarılabilecek en uygun ders hangisidir?",
+      "options": [
+        "Kitapları paylaşmak hem okumayı hem dostluğu çoğaltır.",
+        "Kitaplar asla başkasına verilmemelidir.",
+        "Teneffüste sınıfta kalmak gerekir.",
+        "Kaybolan eşyalar bir daha bulunmaz."
+      ],
+      "answer": 0,
+      "explain": "Kitap Doruk'un eline geçti, o da okuyup geri getirdi ve kendi kitabını paylaştı. Böylece hem bir kitap daha hem de yeni bir dostluk kazanıldı.",
+      "page": "p04"
+    },
+    {
+      "skill": "vocab",
+      "question": "“Hafta sonu onu okumadan duramamış, bir solukta bitirmişti.” cümlesindeki “bir solukta” ne anlama gelir?",
+      "options": [
+        "Çok yavaş ve sıkılarak",
+        "Ara vermeden, çabucak",
+        "Yüksek sesle",
+        "Nefesini tutarak"
+      ],
+      "answer": 1,
+      "explain": "“Bir solukta” bir işi hiç ara vermeden, hızla yapmak demektir. Doruk kitabı çok sevdiği için elinden bırakamamış.",
+      "page": "p04"
+    }
+  ]
+}

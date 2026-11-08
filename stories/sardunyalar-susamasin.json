@@ -1,0 +1,165 @@
+{
+  "id": "sardunyalar-susamasin",
+  "title": "Sardunyalar Susamasın",
+  "theme": "Erdemler",
+  "level": 1,
+  "summary": "Çınar, komşusunun çiçeklerini sulayacağına söz verir ama aynı akşam büyük bir maç onu beklemektedir.",
+  "icon": "🪴",
+  "color": "#fde8dc",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#ffe6d3\"/><circle cx=\"268\" cy=\"58\" r=\"24\" fill=\"#ffb35c\"/><rect x=\"18\" y=\"22\" width=\"118\" height=\"128\" fill=\"#f1d6b3\"/><rect x=\"18\" y=\"16\" width=\"118\" height=\"10\" fill=\"#c98f63\"/><rect x=\"34\" y=\"38\" width=\"26\" height=\"22\" fill=\"#a7cdea\"/><rect x=\"94\" y=\"38\" width=\"26\" height=\"22\" fill=\"#a7cdea\"/><rect x=\"34\" y=\"78\" width=\"26\" height=\"22\" fill=\"#a7cdea\"/><rect x=\"94\" y=\"78\" width=\"26\" height=\"22\" fill=\"#a7cdea\"/><rect x=\"63\" y=\"108\" width=\"28\" height=\"42\" fill=\"#b07a4f\"/><circle cx=\"85\" cy=\"130\" r=\"2\" fill=\"#f5d27a\"/><rect y=\"146\" width=\"320\" height=\"34\" fill=\"#9fd38b\"/><polygon points=\"148,126 178,126 174,152 152,152\" fill=\"#d9774a\"/><ellipse cx=\"156\" cy=\"121\" rx=\"9\" ry=\"5\" fill=\"#5aa65a\"/><ellipse cx=\"170\" cy=\"121\" rx=\"9\" ry=\"5\" fill=\"#5aa65a\"/><circle cx=\"157\" cy=\"109\" r=\"7\" fill=\"#e8434f\"/><circle cx=\"170\" cy=\"105\" r=\"7\" fill=\"#e8434f\"/><circle cx=\"157\" cy=\"109\" r=\"2\" fill=\"#ffd34d\"/><circle cx=\"170\" cy=\"105\" r=\"2\" fill=\"#ffd34d\"/><polygon points=\"186,126 216,126 212,152 190,152\" fill=\"#d9774a\"/><ellipse cx=\"194\" cy=\"121\" rx=\"9\" ry=\"5\" fill=\"#5aa65a\"/><ellipse cx=\"208\" cy=\"121\" rx=\"9\" ry=\"5\" fill=\"#5aa65a\"/><circle cx=\"195\" cy=\"106\" r=\"7\" fill=\"#f27fb0\"/><circle cx=\"208\" cy=\"110\" r=\"7\" fill=\"#f27fb0\"/><circle cx=\"195\" cy=\"106\" r=\"2\" fill=\"#ffd34d\"/><circle cx=\"208\" cy=\"110\" r=\"2\" fill=\"#ffd34d\"/><polygon points=\"224,126 254,126 250,152 228,152\" fill=\"#d9774a\"/><ellipse cx=\"232\" cy=\"121\" rx=\"9\" ry=\"5\" fill=\"#5aa65a\"/><ellipse cx=\"246\" cy=\"121\" rx=\"9\" ry=\"5\" fill=\"#5aa65a\"/><circle cx=\"239\" cy=\"106\" r=\"8\" fill=\"#e8434f\"/><circle cx=\"239\" cy=\"106\" r=\"2\" fill=\"#ffd34d\"/><rect x=\"270\" y=\"116\" width=\"34\" height=\"30\" rx=\"5\" fill=\"#4caf7a\"/><polygon points=\"270,126 250,108 253,104 270,119\" fill=\"#4caf7a\"/><path d=\"M276 116 Q287 96 298 116\" fill=\"none\" stroke=\"#3a8f62\" stroke-width=\"4\"/><ellipse cx=\"248\" cy=\"114\" rx=\"2\" ry=\"4\" fill=\"#5fb3ee\"/><ellipse cx=\"243\" cy=\"122\" rx=\"2\" ry=\"4\" fill=\"#5fb3ee\"/><ellipse cx=\"252\" cy=\"122\" rx=\"2\" ry=\"4\" fill=\"#5fb3ee\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Çınar'ların apartmanının önünde küçük bir bahçe vardı.",
+          "Bahçedeki saksılarda Nevin Teyze'nin kırmızı ve pembe sardunyaları açardı.",
+          "Mahalleden geçen herkes durup bu rengârenk çiçeklere bakardı."
+        ],
+        [
+          "Bir cuma akşamı Nevin Teyze, elinde yeşil bir sulama kabıyla Çınar'ın yanına geldi.",
+          "— Kızımın yanına gidiyorum, pazartesi akşamı dönerim, dedi.",
+          "— Bu sıcakta çiçeklerimi kim sulayacak, bilmiyorum.",
+          "Çınar hiç düşünmeden atıldı.",
+          "— Ben sularım, söz veriyorum!",
+          "Nevin Teyze sulama kabını ona uzattı.",
+          "— Her akşam güneş batarken sulamalısın, dedi."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Cumartesi akşamı Çınar, sardunyaları tek tek suladı.",
+          "Saksıların dibinden süzülen suyu görünce içi rahatladı."
+        ],
+        [
+          "Pazar günü ise işler karıştı.",
+          "Arkadaşı Tuna, koltuğunun altında topuyla kapıya koştu.",
+          "— Parkta büyük maç var, herkes seni bekliyor, dedi.",
+          "Maç tam güneş batarken başlayacaktı.",
+          "Çınar bir sulama kabına, bir Tuna'nın topuna baktı.",
+          "Midesinde küçük bir düğüm oluştu.",
+          "Çiçekleri bir akşam sulamasa ne olurdu ki?",
+          "Ama bu sıcakta sardunyaların boynu bükülebilirdi."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Sonunda Çınar derin bir nefes aldı.",
+          "— Önce çiçekleri sulamam lazım, Nevin Teyze'ye söz verdim, dedi.",
+          "Tuna'nın yüzü bir an asıldı.",
+          "Sonra topunu yere bırakıp bahçe musluğuna doğru yürüdü."
+        ],
+        [
+          "— İkimiz yaparsak daha çabuk biter, dedi.",
+          "Tuna kabı dolduruyor, Çınar da saksılara taşıyordu.",
+          "On dakika içinde bütün sardunyalar kana kana su içti.",
+          "İki arkadaş parka vardığında maç yeni başlamıştı.",
+          "Takımlar onları sevinçle aralarına aldı."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Pazartesi akşamı Çınar son kez sulama kabını doldururken apartmanın önünde bir taksi durdu.",
+          "Nevin Teyze arabadan inip doğruca saksılarına baktı.",
+          "Sardunyalar dimdikti, yaprakları ışıl ışıl parlıyordu.",
+          "— Çınar, sen sözünün eri bir çocuksun, dedi Nevin Teyze."
+        ],
+        [
+          "Ertesi sabah Çınar'ın kapısının önünde küçük bir saksı duruyordu.",
+          "İçinde pembe bir sardunya filizi vardı.",
+          "Saksıya bağlanmış kartta “Teşekkürler, küçük bahçıvanım!” yazıyordu.",
+          "Çınar o akşam, güneş batarken ilk kez kendi çiçeğini suladı."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Nevin Teyze, çiçeklerin ne zaman sulanmasını istedi?",
+      "options": [
+        "Her sabah erkenden",
+        "Öğle sıcağında",
+        "Her akşam güneş batarken",
+        "İki günde bir"
+      ],
+      "answer": 2,
+      "explain": "Nevin Teyze sulama kabını verirken “Her akşam güneş batarken sulamalısın.” dedi. Bu bilgi ilk sayfada açıkça yazıyor.",
+      "page": "p01"
+    },
+    {
+      "skill": "locate",
+      "question": "Pazar günü Tuna, Çınar'ı nereye çağırdı?",
+      "options": [
+        "Parktaki büyük maça",
+        "Bir doğum günü partisine",
+        "Mahalle kütüphanesine",
+        "Kendi evine"
+      ],
+      "answer": 0,
+      "explain": "Tuna kapıya koşup “Parkta büyük maç var, herkes seni bekliyor.” dedi. Yani onu parktaki maça çağırdı.",
+      "page": "p02"
+    },
+    {
+      "skill": "inference",
+      "question": "Çınar'ın midesinde neden küçük bir düğüm oluştu?",
+      "options": [
+        "Çok acıktığı için",
+        "Hem maça gitmek hem de sözünü tutmak istediği için",
+        "Tuna'ya kızdığı için",
+        "Maçta yenilmekten korktuğu için"
+      ],
+      "answer": 1,
+      "explain": "Maç, çiçekleri sulama saatiyle aynı anda başlayacaktı. Çınar iki şeyi birden istiyordu; bu yüzden ne yapacağını bilemeyip huzursuzlandı.",
+      "page": "p02"
+    },
+    {
+      "skill": "inference",
+      "question": "Nevin Teyze, Çınar'ın kapısına neden bir sardunya filizi bıraktı?",
+      "options": [
+        "Evinde saksı koyacak yer kalmadığı için",
+        "Çınar ondan çiçek istediği için",
+        "Kızı öyle yapmasını söylediği için",
+        "Sözünü tutan Çınar'a teşekkür etmek istediği için"
+      ],
+      "answer": 3,
+      "explain": "Nevin Teyze çiçeklerini sapasağlam bulunca çok sevindi. Kartta “Teşekkürler” yazmasından, filizi bir teşekkür hediyesi olarak bıraktığını anlıyoruz.",
+      "page": "p04"
+    },
+    {
+      "skill": "comment",
+      "question": "Bu hikâyenin ana fikri hangisidir?",
+      "options": [
+        "Verilen söz, zor olsa da tutulmalıdır.",
+        "Çiçekler her gün sulanmalıdır.",
+        "Maçlara asla geç kalınmamalıdır.",
+        "Komşular uzun yolculuğa çıkmamalıdır."
+      ],
+      "answer": 0,
+      "explain": "Çınar, maça gitmeyi çok istediği hâlde önce verdiği sözü tuttu. Hikâye bize sözümüzün arkasında durmanın değerini anlatıyor.",
+      "page": "p03"
+    },
+    {
+      "skill": "vocab",
+      "question": "“Çınar, sen sözünün eri bir çocuksun.” cümlesindeki “sözünün eri” ne anlama gelir?",
+      "options": [
+        "Çok konuşan",
+        "Söz dinlemeyen",
+        "Sözünü tutan, güvenilir",
+        "Güzel konuşan"
+      ],
+      "answer": 2,
+      "explain": "“Sözünün eri” deyimi, verdiği sözü yerine getiren, güvenilir kişi demektir. Çınar da sözünü tuttuğu için böyle övüldü.",
+      "page": "p04"
+    }
+  ]
+}

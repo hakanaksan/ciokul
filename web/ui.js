@@ -1,7 +1,7 @@
 const UI_TABS=[
   ['overview','Özet','📊','Bekleyen işler ve hızlı başlat'],
   ['tests','Fasikül Çalışmaları','📝','Test ata, aç ve kontrol et'],
-  ['reading','Okuma Çalışmaları','📖','Metin ata, dinle ve değerlendir'],
+  ['reading','Okuma & Hikâyeler','📖','Okuma çalışmaları ve hikâye kitaplığı'],
   ['lessons','Video Dersler','🎬','Konu anlatım videoları ve mini testler'],
   ['repeat','Tekrar & Hafta','🔁','Tekrar kuyruğu ve haftalık durum'],
   ['progress','İlerleme & Karne','📈','Grafikler ve gelişim karnesi'],
@@ -123,6 +123,7 @@ function uiInitParentTabs(data,readingData,dashboard,progress,plan){
   move('#badgesWidget',panels.overview);
   for(const selector of ['#assignmentHeading','#assignmentList'])move(selector,panels.tests);
   move('#readingHomeSection',panels.reading);
+  move('#storiesSection',panels.reading);
   move('#lessonsSection',panels.lessons);
   move('#studyDashboard',panels.repeat);
   panels.progress.insertAdjacentHTML('afterbegin',uiWeekChart(dashboard.weekSeries||[])+uiHeatmap(progress));
@@ -176,8 +177,9 @@ function uiEnhanceStudentHome(data,readingData,plan){
   focus.insertAdjacentElement('afterend',assignments);
   const completed=document.createElement('div');completed.id='completedWork';assignments.insertAdjacentElement('afterend',completed);
   // Pending work first, then video lessons; badges come after the student's tasks.
-  const lessonsSection=document.querySelector('#lessonsSection');if(lessonsSection)completed.insertAdjacentElement('afterend',lessonsSection);
-  const badges=document.querySelector('#badgesWidget');if(badges)(lessonsSection||completed).insertAdjacentElement('afterend',badges);
+  const storiesSection=document.querySelector('#storiesSection');if(storiesSection)completed.insertAdjacentElement('afterend',storiesSection);
+  const lessonsSection=document.querySelector('#lessonsSection');if(lessonsSection)(storiesSection||completed).insertAdjacentElement('afterend',lessonsSection);
+  const badges=document.querySelector('#badgesWidget');if(badges)(lessonsSection||storiesSection||completed).insertAdjacentElement('afterend',badges);
   // With a plan, the plan card leads the page and every open work stays in the list below it.
   const next=plan?null:pending[0];
   const mistakesButton='<button type="button" class="btn secondary" id="openMistakes">📓 Hata Defterim</button>';

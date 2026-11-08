@@ -1,0 +1,169 @@
+{
+  "id": "kumdaki-kucuk-kafes",
+  "title": "Kumdaki Küçük Kafes",
+  "theme": "Doğa ve Evren",
+  "level": 1,
+  "summary": "Defne, kumsalda gördüğü küçük tel kafesin neyi koruduğunu merak eder.",
+  "icon": "🐢",
+  "color": "#e2f1f6",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#2f4473\"/><circle cx=\"40\" cy=\"25\" r=\"1.6\" fill=\"#fff8d8\"/><circle cx=\"90\" cy=\"45\" r=\"1.3\" fill=\"#fff8d8\"/><circle cx=\"140\" cy=\"20\" r=\"1.8\" fill=\"#fff8d8\"/><circle cx=\"190\" cy=\"55\" r=\"1.2\" fill=\"#fff8d8\"/><circle cx=\"300\" cy=\"22\" r=\"1.5\" fill=\"#fff8d8\"/><circle cx=\"20\" cy=\"70\" r=\"1.2\" fill=\"#fff8d8\"/><circle cx=\"252\" cy=\"42\" r=\"19\" fill=\"#fdf1bf\"/><circle cx=\"246\" cy=\"38\" r=\"3\" fill=\"#f3e3a0\"/><circle cx=\"258\" cy=\"48\" r=\"2\" fill=\"#f3e3a0\"/><rect y=\"88\" width=\"320\" height=\"50\" fill=\"#3f7fa8\"/><ellipse cx=\"252\" cy=\"100\" rx=\"26\" ry=\"3\" fill=\"#fdf1bf\" opacity=\"0.7\"/><ellipse cx=\"252\" cy=\"110\" rx=\"18\" ry=\"2.5\" fill=\"#fdf1bf\" opacity=\"0.5\"/><ellipse cx=\"252\" cy=\"119\" rx=\"11\" ry=\"2\" fill=\"#fdf1bf\" opacity=\"0.4\"/><path d=\"M0 124 Q 20 118 40 124 T 80 124 T 120 124 T 160 124 T 200 124 T 240 124 T 280 124 T 320 124 L320 134 L0 134 Z\" fill=\"#bfe2f0\"/><path d=\"M0 132 Q 160 120 320 132 L320 180 L0 180 Z\" fill=\"#ecd7a6\"/><rect x=\"28\" y=\"140\" width=\"46\" height=\"24\" fill=\"none\" stroke=\"#8a8f99\" stroke-width=\"2\"/><line x1=\"37\" y1=\"140\" x2=\"37\" y2=\"164\" stroke=\"#8a8f99\" stroke-width=\"1.5\"/><line x1=\"46\" y1=\"140\" x2=\"46\" y2=\"164\" stroke=\"#8a8f99\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"140\" x2=\"55\" y2=\"164\" stroke=\"#8a8f99\" stroke-width=\"1.5\"/><line x1=\"64\" y1=\"140\" x2=\"64\" y2=\"164\" stroke=\"#8a8f99\" stroke-width=\"1.5\"/><line x1=\"28\" y1=\"152\" x2=\"74\" y2=\"152\" stroke=\"#8a8f99\" stroke-width=\"1.5\"/><ellipse cx=\"51\" cy=\"164\" rx=\"20\" ry=\"4\" fill=\"#d9c08a\"/><ellipse cx=\"128\" cy=\"158\" rx=\"5\" ry=\"2\" fill=\"#4d6b2f\" transform=\"rotate(-30 128 158)\"/><ellipse cx=\"146\" cy=\"160\" rx=\"5\" ry=\"2\" fill=\"#4d6b2f\" transform=\"rotate(30 146 160)\"/><ellipse cx=\"137\" cy=\"155\" rx=\"10\" ry=\"7\" fill=\"#5f8a3a\"/><path d=\"M131 152 L137 149 L143 152 L137 158 Z\" fill=\"#7aa84f\"/><circle cx=\"137\" cy=\"146\" r=\"3.5\" fill=\"#6c9944\"/><circle cx=\"136\" cy=\"145\" r=\"0.9\" fill=\"#1f2a14\"/><ellipse cx=\"178\" cy=\"148\" rx=\"4.5\" ry=\"1.8\" fill=\"#4d6b2f\" transform=\"rotate(-30 178 148)\"/><ellipse cx=\"194\" cy=\"150\" rx=\"4.5\" ry=\"1.8\" fill=\"#4d6b2f\" transform=\"rotate(30 194 150)\"/><ellipse cx=\"186\" cy=\"146\" rx=\"9\" ry=\"6\" fill=\"#5f8a3a\"/><path d=\"M181 143 L186 140 L191 143 L186 148 Z\" fill=\"#7aa84f\"/><circle cx=\"186\" cy=\"138\" r=\"3\" fill=\"#6c9944\"/><circle cx=\"185\" cy=\"137\" r=\"0.8\" fill=\"#1f2a14\"/><ellipse cx=\"220\" cy=\"140\" rx=\"4\" ry=\"1.6\" fill=\"#4d6b2f\" transform=\"rotate(-30 220 140)\"/><ellipse cx=\"234\" cy=\"142\" rx=\"4\" ry=\"1.6\" fill=\"#4d6b2f\" transform=\"rotate(30 234 142)\"/><ellipse cx=\"227\" cy=\"139\" rx=\"8\" ry=\"5.5\" fill=\"#5f8a3a\"/><circle cx=\"227\" cy=\"132\" r=\"2.8\" fill=\"#6c9944\"/><circle cx=\"226\" cy=\"131\" r=\"0.8\" fill=\"#1f2a14\"/><path d=\"M150 170 Q 152 166 154 170 M164 166 Q 166 162 168 166 M200 160 Q 202 156 204 160\" stroke=\"#c9ad74\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Defne, yaz tatilini Akdeniz kıyısındaki dedesinin evinde geçiriyordu.",
+          "Her sabah dedesi Rıza ile kumsalda uzun yürüyüşler yapıyorlardı.",
+          "Dalgalar ayaklarını gıdıklıyor, martılar başlarının üstünde dönüp duruyordu.",
+          "Kıyıda kumdan kaleler yapıyor, renk renk deniz kabukları topluyorlardı."
+        ],
+        [
+          "Bir sabah kumların arasında küçük bir tel kafes gördüler.",
+          "Kafes, kumun üstüne ters çevrilmiş bir sepete benziyordu.",
+          "Kafesin yanındaki tabelada bir kaplumbağa resmi vardı.",
+          "Defne, dedesinin elini merakla çekiştirdi.",
+          "— Dede, bu kafes ne için?"
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "O sırada yeşil şapkalı genç bir kadın yanlarına geldi.",
+          "Adı Nehir'di ve deniz kaplumbağalarını koruyan bir gönüllüydü.",
+          "— Bu kafesin altında bir deniz kaplumbağası yuvası var, dedi Nehir."
+        ],
+        [
+          "Nehir, anne kaplumbağanın bir yaz gecesi karaya çıktığını anlattı.",
+          "Anne kaplumbağa, arka yüzgeçleriyle kumu kazıp yumurtalarını bırakmıştı.",
+          "Bir yuvada çoğu zaman yüz kadar yumurta olurmuş.",
+          "Yumurtalar bembeyaz ve pinpon topu büyüklüğündeymiş.",
+          "Sonra yuvayı kumla örtüp yeniden denize dönmüştü.",
+          "Yumurtalar, güneşin ısıttığı kumun içinde yaklaşık iki ay bekleyecekti.",
+          "Kafes ise insanların yuvaya basmasını engelliyordu."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Defne'nin aklına bir soru takıldı.",
+          "— Yavrular yumurtadan çıkınca denizi nasıl bulacak?",
+          "— Yavrular genellikle gece çıkar ve en aydınlık yöne yürür, dedi Nehir.",
+          "— Ay ve yıldızların ışığı denizin üstünde parlar, onlar da bu parıltıyı izler.",
+          "Defne, akşamları denizin üstünde parlayan ay ışığını düşündü."
+        ],
+        [
+          "Sonra Nehir uzaktaki bir evi gösterdi.",
+          "O evin bahçesinde kumsala bakan kocaman bir lamba vardı.",
+          "— Bu parlak ışık, yavruların yolunu şaşırtabilir, dedi.",
+          "Defne o evi hemen tanıdı ve yanakları kızardı.",
+          "Orası dedesinin eviydi!"
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "O akşam dedesi bahçedeki lambayı kapattı ve bir daha yakmadı.",
+          "Aradan haftalar geçti.",
+          "Bir gece Nehir kapıyı çaldı.",
+          "— Yavrular çıkıyor ama fener yakmadan gelmelisiniz, dedi."
+        ],
+        [
+          "Defne ile dedesi kumsala sessizce indiler.",
+          "Ay ışığında, kumun içinden minik kaplumbağalar çıkıyordu.",
+          "Yavrular, küçük yüzgeçlerini çırparak denize doğru telaşla yürüdü.",
+          "Hiçbiri karanlık eve doğru dönmedi.",
+          "Defne, içinden her birine iyi yolculuklar diledi.",
+          "Son yavru da dalgalara karışınca Defne, dedesine sımsıkı sarıldı.",
+          "— Lambamızı kapatmakla iyi ettik, değil mi, dede?",
+          "Dedesi gülümseyerek başını salladı."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Kafesin yanındaki tabelada ne resmi vardı?",
+      "options": [
+        "Bir martı",
+        "Bir kaplumbağa",
+        "Bir balık",
+        "Bir yengeç"
+      ],
+      "answer": 1,
+      "explain": "Metinde tabelada bir kaplumbağa resmi olduğu açıkça yazıyor. Çünkü kafes, bir kaplumbağa yuvasını koruyordu.",
+      "page": "p01"
+    },
+    {
+      "skill": "locate",
+      "question": "Yumurtalar kumun içinde yaklaşık ne kadar bekleyecekti?",
+      "options": [
+        "Bir hafta",
+        "İki gün",
+        "İki ay",
+        "Bir yıl"
+      ],
+      "answer": 2,
+      "explain": "Nehir, yumurtaların güneşin ısıttığı kumda yaklaşık iki ay bekleyeceğini anlatıyor.",
+      "page": "p02"
+    },
+    {
+      "skill": "inference",
+      "question": "Defne, lambanın dedesinin evinde olduğunu anlayınca ne hissetmiş olabilir?",
+      "options": [
+        "Şaşırmış ve biraz mahcup olmuştur.",
+        "Çok sıkılmıştır.",
+        "Uykusu gelmiştir.",
+        "Nehir'e kızmıştır."
+      ],
+      "answer": 0,
+      "explain": "Defne'nin yanakları kızarıyor. Yavruları şaşırtabilecek lambanın kendi evlerinde olduğunu öğrenince şaşırmış ve mahcup olmuştur.",
+      "page": "p03"
+    },
+    {
+      "skill": "inference",
+      "question": "Nehir, neden fener yakmadan gelmelerini istedi?",
+      "options": [
+        "Fenerin pili bitmek üzereydi.",
+        "Fener ışığı yavruların yolunu şaşırtabilirdi.",
+        "Dede karanlıkta daha iyi görüyordu.",
+        "Fener denizdeki balıkları uyandırırdı."
+      ],
+      "answer": 1,
+      "explain": "Yavrular en aydınlık yöne yürüyor. Bir fener de bahçedeki lamba gibi onları denizden uzaklaştırabilirdi.",
+      "page": "p04"
+    },
+    {
+      "skill": "comment",
+      "question": "Bu hikâyeden hangi dersi çıkarabiliriz?",
+      "options": [
+        "Yaz tatili her zaman denizde geçmelidir.",
+        "Kaplumbağalar insanlardan daha hızlı yürür.",
+        "Geceleri kumsala hiç inilmemelidir.",
+        "Küçük bir değişiklik bile doğaya yardım edebilir."
+      ],
+      "answer": 3,
+      "explain": "Dedenin yalnızca bir lambayı kapatması, yavruların denizi bulmasına yardım etti. Küçük bir davranış doğada büyük bir fark yaratabilir.",
+      "page": "p04"
+    },
+    {
+      "skill": "vocab",
+      "question": "“Yavrular, küçük yüzgeçlerini çırparak denize doğru telaşla yürüdü.” cümlesindeki “telaşla” kelimesi ne anlama gelir?",
+      "options": [
+        "Yavaş ve sakin bir şekilde",
+        "Geriye doğru yürüyerek",
+        "Acele ederek, heyecanla",
+        "Uyuyarak"
+      ],
+      "answer": 2,
+      "explain": "“Telaşla” acele ederek ve heyecanla demektir. Yavrular denize bir an önce ulaşmak için hızlı hızlı yürüyordu.",
+      "page": "p04"
+    }
+  ]
+}

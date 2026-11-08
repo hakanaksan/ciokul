@@ -22,6 +22,12 @@ Veli panelindeki **Görselleri denetle**, 118 soru ve resmi cevap görselini yan
 
 On okuma metninin tamamı, bilgisayarın kendi içinde çalışan Piper sesiyle (tr-TR dfki) önceden seslendirilmiştir; internet gerekmez. Öğrenci metin ekranındaki **Metni dinle** çubuğundan, soru çözerken kenardaki küçük oynatıcıdan dinleyebilir; hız 0.8x/1x/1.25x seçilir ve bu tarayıcıda saklanır. Ses dosyaları `reading_audio/R01.wav` biçimindedir (toplam ~124 MB) ve yedeğe dahil değildir; `extract_reading_passages.py` ve `generate_reading_audio.py` ile yeniden üretilebilir. Piper programı ve ses modeli `tools/piper/` içindedir.
 
+## Hikâye Kitaplığı
+
+CioOkul için özgün olarak yazılmış, üç seviyede (Kolay, Orta, Zor) 4. sınıf hikâyeleri. Öğrenci hikâyeyi sayfa sayfa okur; **Dinle** ile yapay zekâ sesi okur ve okunan cümle sarıyla vurgulanır, bir cümleye tıklanınca oradan okumaya başlar. Hikâyenin sonunda 6 çoktan seçmeli soru vardır: metinden bilgi bulma, çıkarım yapma, yorumlama ve kelime anlamı. Sorular kendiliğinden puanlanır; yanlış cevapta açıklama gösterilir ve cevabın bulunduğu sayfaya soruyu bırakmadan bakılabilir. Veli, **Okuma & Hikâyeler** sekmesinde beceri bazında doğru oranlarını görür (her hikâyenin son denemesi). Hikâyeler **Hikâye Kurdu** rozetine; tam puanlar Yıldız Başarı'ya, doğru cevaplar Doğru Cevap Avcısı'na sayılır. Günlük plan, okunmamış hikâyeleri sırayla önerir.
+
+Yeni hikâye eklemek için `stories/<id>.json` yazın (başlık, tema, seviye, kapak çizimi olarak SVG, sayfalar: her öğe tek cümle olan paragraflar, 6 soru: `skill` locate/inference/comment/vocab, `answer`, `explain`, `page`). Sesleri `generate_story_audio.py <id>` üretir (`story_audio/<id>/<sayfa>.wav` ve `stories/<id>.audio.json`; ses servisi ve token video derslerle aynıdır); sunucu için `upload_files.py --only story_audio/` ile depoya yükleyin.
+
 ## Haftalık takip ve sakin çalışma
 
 Öğrenci, fasikül ve okuma sorularında **Bu sorudan emin değilim** işaretini kullanabilir. Veli değerlendirme sırasında zorlanma nedenini seçer: konu, soruyu okuma, dikkat, yöntem veya diğer. Bu seçimler puanla birlikte kaydedilir ve haftalık özette görünür.
@@ -32,7 +38,7 @@ Veli ana sayfasındaki **Bu haftanın özeti**, atanan ve teslim edilen çalış
 
 ## Bugünün planı
 
-Öğrenci ana sayfasının en üstünde günün kısa planı görünür. Plan sırayla şunlardan dolar: hedef tarihi en yakın (ya da geçmiş) teslim edilmemiş çalışma, son yanlışlara bağlı ve testi henüz tam puanla bitmemiş video ders, hata defterinden 3 soruyu yeniden deneme, ikinci çalışma ve yeni bir video ders (dersler gün gün sırayla). Adım sayısını veli Özet sekmesindeki **Günlük yük** ile seçer: Hafif 2, Normal 3, Yoğun 4. Adımlar iş yapılınca kendiliğinden tiklenir: çalışma teslim edilince, video dersin testi o gün çözülünce, hata defterinden o gün yeterli soru çözüldü olarak işaretlenince. Plan günün ilk açılışında hazırlanır ve gün boyunca değişmez (`daily_plans` tablosu); gün içinde hedef tarihi bugün olan bir çalışma atanırsa plana eklenir. Veli aynı planı Özet sekmesinde görür; tekrar zamanı gelen sorular varsa oradan atanabilir. Planın tamamını bitirdiği her gün **Planlı Çalışkan** rozetine sayılır (art arda olması gerekmez).
+Öğrenci ana sayfasının en üstünde günün kısa planı görünür. Plan sırayla şunlardan dolar: hedef tarihi en yakın (ya da geçmiş) teslim edilmemiş çalışma, son yanlışlara bağlı ve testi henüz tam puanla bitmemiş video ders, hata defterinden 3 soruyu yeniden deneme, ikinci çalışma, son olarak yeni bir video ders ya da Hikâye Kitaplığı'ndan okunmamış bir hikâye (gün gün sırayla). Adım sayısını veli Özet sekmesindeki **Günlük yük** ile seçer: Hafif 2, Normal 3, Yoğun 4. Adımlar iş yapılınca kendiliğinden tiklenir: çalışma teslim edilince, video dersin ya da hikâyenin soruları o gün çözülünce, hata defterinden o gün yeterli soru çözüldü olarak işaretlenince. Plan günün ilk açılışında hazırlanır ve gün boyunca değişmez (`daily_plans` tablosu); gün içinde hedef tarihi bugün olan bir çalışma atanırsa plana eklenir. Veli aynı planı Özet sekmesinde görür; tekrar zamanı gelen sorular varsa oradan atanabilir. Planın tamamını bitirdiği her gün **Planlı Çalışkan** rozetine sayılır (art arda olması gerekmez).
 
 ## Yeni ekran düzeni
 

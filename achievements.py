@@ -15,6 +15,7 @@ import daily_plan
 import database
 import lessons
 import reading_module
+import stories
 
 TIER_NAMES = ("Bronz", "Gümüş", "Altın", "Platin", "Elmas")
 CATEGORIES = {
@@ -44,9 +45,9 @@ BADGES = [
     ("habit", "early_bird", "🐦", "Erken Kuş", "{goal} çalışmayı hedef tarihten en az bir gün önce teslim et.", (1, 5, 10, 20, 35)),
     ("habit", "planner", "📋", "Planlı Çalışkan", "Bugünün planının tamamını {goal} gün bitir (art arda olması gerekmez).", (3, 10, 25, 50, 100)),
     ("habit", "weekend", "🏖️", "Hafta Sonu Kahramanı", "Hafta sonu {goal} çalışma teslim et.", (1, 5, 10, 20, 35)),
-    ("success", "perfect", "💯", "Yıldız Başarı", "{goal} testin bütün sorularını doğru yap (video ders testleri de sayılır).", (1, 3, 10, 20, 35)),
+    ("success", "perfect", "💯", "Yıldız Başarı", "{goal} testin bütün sorularını doğru yap (video ders ve hikâye testleri de sayılır).", (1, 3, 10, 20, 35)),
     ("success", "sharpshooter", "🏹", "Keskin Nişancı", "{goal} testte soruların en az %80'ini doğru yap (video ders testleri de sayılır).", (1, 5, 15, 30, 50)),
-    ("success", "correct_hunter", "✅", "Doğru Cevap Avcısı", "Toplam {goal} soruyu doğru yanıtla (video ders testleri de sayılır).", (25, 100, 300, 600, 1000)),
+    ("success", "correct_hunter", "✅", "Doğru Cevap Avcısı", "Toplam {goal} soruyu doğru yanıtla (video ders ve hikâye testleri de sayılır).", (25, 100, 300, 600, 1000)),
     ("success", "patient", "🐢", "Sabırlı Düşünür", "{goal} soruda en az 2 dakika düşünüp doğru yanıtla.", (1, 5, 15, 30, 50)),
     ("success", "comeback", "💪", "Hatasından Öğrenen", "Önce yanlış yaptığın {goal} soruyu sonra doğru yap.", (1, 5, 15, 30, 50)),
     ("courses", "course_math", "📐", "Matematik Kaşifi", "{goal} Matematik testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
@@ -57,6 +58,7 @@ BADGES = [
     ("courses", "course_religion", "🕊️", "Değerler Elçisi", "{goal} Din Kültürü testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
     ("courses", "all_rounder", "🎨", "Çok Yönlü", "{goal} farklı dersten test ya da video ders testi tamamla.", (3, 6)),
     ("reading", "bookworm", "📖", "Kitap Kurdu", "{goal} okuma çalışması tamamla.", (1, 5, 10, 20, 35)),
+    ("reading", "story_reader", "📚", "Hikâye Kurdu", "Hikâye Kitaplığı'ndan {goal} hikâye okuyup sorularını çöz.", (1, 3, 6, 9, 12)),
     ("reading", "reading_master", "🏅", "Okuma Ustası", "{goal} okuma çalışmasından tam puan al.", (1, 3, 5, 10, 20)),
     ("lessons", "lesson_explorer", "🎬", "Video Dersi Kâşifi", "{goal} video dersi izleyip mini testini çöz.", (1, 3, 5, 10, 20)),
     ("lessons", "lesson_champion", "🏆", "Video Testi Şampiyonu", "{goal} video ders testinden tam puan al.", (1, 3, 6, 12, 20)),
@@ -124,6 +126,8 @@ def _values(db):
     graded = [t for t in tests if t["total"] and t["reviewed"] == t["total"]]
 
     quizzes = [q for q in lessons.quiz_results(db)]
+    story_quizzes = stories.results(db)["stories"]
+    story_full = sum(1 for q in story_quizzes if q["best"] == q["total"])
     lesson_full = sum(1 for q in quizzes if q["best"] == q["total"])
     lesson_80 = sum(1 for q in quizzes if q["best"] * 5 >= q["total"] * 4)
     for q in quizzes:
@@ -134,7 +138,7 @@ def _values(db):
             WHERE v.score = q.max_score"""
     correct_total = (db.execute("SELECT COUNT(*) FROM reviews WHERE grade = 'correct'").fetchone()[0]
                      + db.execute(f"SELECT COUNT(*) {full_reading_answers}").fetchone()[0]
-                     + sum(q["best"] for q in quizzes))
+                     + sum(q["best"] for q in quizzes) + sum(q["best"] for q in story_quizzes))
     patient = (db.execute("""SELECT COUNT(*) FROM responses r JOIN reviews v
                 ON v.assignment_id = r.assignment_id AND v.question_id = r.question_id
                 WHERE r.duration_seconds >= 120 AND v.grade = 'correct'""").fetchone()[0]
@@ -175,7 +179,7 @@ def _values(db):
         "on_time": sum(1 for g in gaps if g >= 0),
         "early_bird": sum(1 for g in gaps if g >= 1),
         "weekend": sum(1 for day in days if day.weekday() >= 5),
-        "perfect": sum(1 for t in graded if t["correct"] == t["total"]) + lesson_full,
+        "perfect": sum(1 for t in graded if t["correct"] == t["total"]) + lesson_full + story_full,
         "sharpshooter": sum(1 for t in graded if t["correct"] * 5 >= t["total"] * 4) + lesson_80,
         "correct_hunter": correct_total,
         "patient": patient,
@@ -186,6 +190,7 @@ def _values(db):
         "mistake_hunter": db.execute("SELECT COUNT(*) FROM mistake_resolutions").fetchone()[0],
         "honest": db.execute("SELECT COUNT(*) FROM study_reflections WHERE uncertain = 1").fetchone()[0],
         "planner": daily_plan.completed_days(db),
+        "story_reader": len(story_quizzes),
         "lesson_explorer": len(quizzes),
         "lesson_champion": lesson_full,
         "lesson_courses": len({q["course"] for q in quizzes}),

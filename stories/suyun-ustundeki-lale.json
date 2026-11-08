@@ -1,0 +1,183 @@
+{
+  "id": "suyun-ustundeki-lale",
+  "title": "Suyun Üstündeki Lale",
+  "theme": "Millî Kültürümüz",
+  "level": 2,
+  "summary": "Nehir, sınıftaki sergi için ebru ustası dedesinin lalesinin aynısını yapmaya karar verir.",
+  "icon": "🌷",
+  "color": "#ebe5f8",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#ebe5f8\"/><rect x=\"30\" y=\"40\" width=\"260\" height=\"120\" rx=\"10\" fill=\"#8b5a3c\"/><rect x=\"40\" y=\"50\" width=\"240\" height=\"100\" rx=\"6\" fill=\"#d9eef7\"/><path d=\"M40 62 Q70 54 100 62 T160 62 T220 62 T280 62\" fill=\"none\" stroke=\"#b9dcec\" stroke-width=\"3\"/><path d=\"M40 142 Q70 134 100 142 T160 142 T220 142 T280 142\" fill=\"none\" stroke=\"#b9dcec\" stroke-width=\"3\"/><path d=\"M200 84 Q212 76 224 84 Q236 92 248 84\" fill=\"none\" stroke=\"#c7a8f0\" stroke-width=\"3\"/><path d=\"M60 118 Q72 110 84 118 Q96 126 108 118\" fill=\"none\" stroke=\"#a3d6ef\" stroke-width=\"3\"/><circle cx=\"70\" cy=\"74\" r=\"10\" fill=\"#f6c453\"/><circle cx=\"70\" cy=\"74\" r=\"5\" fill=\"#e65a5a\"/><circle cx=\"92\" cy=\"128\" r=\"5\" fill=\"#ffffff\"/><circle cx=\"250\" cy=\"72\" r=\"5\" fill=\"#f6c453\"/><circle cx=\"92\" cy=\"128\" r=\"12\" fill=\"#7cc4e8\"/><circle cx=\"250\" cy=\"72\" r=\"11\" fill=\"#9b7fd4\"/><circle cx=\"246\" cy=\"124\" r=\"9\" fill=\"#f6c453\"/><circle cx=\"78\" cy=\"102\" r=\"6\" fill=\"#9b7fd4\"/><circle cx=\"230\" cy=\"100\" r=\"6\" fill=\"#7cc4e8\"/><circle cx=\"268\" cy=\"100\" r=\"5\" fill=\"#e65a5a\"/><path d=\"M160 100 Q158 120 160 140\" fill=\"none\" stroke=\"#3f8f4a\" stroke-width=\"4\"/><path d=\"M160 132 Q138 124 132 104 Q152 110 160 128 Z\" fill=\"#4caf5a\"/><path d=\"M160 124 Q180 118 188 100 Q168 104 160 120 Z\" fill=\"#4caf5a\"/><path d=\"M160 102 Q140 98 140 74 Q150 82 154 70 Q160 82 166 70 Q170 82 180 74 Q180 98 160 102 Z\" fill=\"#e14b4b\"/><path d=\"M154 72 Q160 92 160 100 M166 72 Q160 92 160 100\" fill=\"none\" stroke=\"#b52f3a\" stroke-width=\"2\"/><line x1=\"236\" y1=\"10\" x2=\"296\" y2=\"40\" stroke=\"#6b4a2b\" stroke-width=\"4\" stroke-linecap=\"round\"/><ellipse cx=\"230\" cy=\"8\" rx=\"9\" ry=\"5\" fill=\"#d8b98a\"/><circle cx=\"222\" cy=\"22\" r=\"3\" fill=\"#e14b4b\"/><circle cx=\"20\" cy=\"20\" r=\"4\" fill=\"#ffffff\"/><circle cx=\"34\" cy=\"12\" r=\"2.5\" fill=\"#ffffff\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Nehir, yaz tatilini İstanbul'daki dedesinin yanında geçiriyordu.",
+          "Sabri Dede'nin evinin alt katında küçük bir atölye vardı.",
+          "İçeride kavanoz kavanoz renkli boyalar, at kılından fırçalar ve uzun, sığ bir tekne duruyordu.",
+          "Duvarlarda rengârenk ebrular asılıydı; kimi dalgalı bir denize, kimi çiçekli bir bahçeye benziyordu.",
+          "Sabri Dede yıllardır burada ebru yapıyordu."
+        ],
+        [
+          "Okullar açılınca Nehir'in sınıfında bir el sanatları sergisi kurulacaktı.",
+          "Nehir de sergiye dedesinin en sevdiği eseri götürmek istiyordu: kırmızı bir lale ebrusu.",
+          "Ama bu kez o laleyi kendi elleriyle yapacaktı."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "Sabri Dede önce teknedeki suyu gösterdi.",
+          "— Bu suya geven bitkisinden elde edilen kitre adlı zamkı kattım, dedi.",
+          "Kitre, suyu biraz koyulaştırıyor ve boyaların yüzeyde güzelce durmasını sağlıyordu.",
+          "Dede, boyalara da birkaç damla öd karıştırdı.",
+          "Öd, boyanın suyun üstünde yayılmasına yardım ediyordu."
+        ],
+        [
+          "Sonra fırçayı boyaya batırıp teknenin üstünde hafifçe silkeledi.",
+          "Renk damlaları suyun yüzünde küçük çiçekler gibi açıldı.",
+          "Dede, ince uçlu bir çubukla damlaları çekip kıvırdı.",
+          "Birkaç dakika içinde suyun üstünde kırmızı bir lale belirdi.",
+          "Dede kâğıdı suyun yüzüne yavaşça yatırıp kaldırınca lale kâğıda geçti."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Sıra Nehir'e geldi.",
+          "Dedesinin yaptığı her hareketi tıpatıp taklit etti.",
+          "Ama onun damlaları ya fazla büyüdü ya da hemen dağıldı.",
+          "Lale olacak şey, ezilmiş bir domatese benzedi.",
+          "Yanına serptiği mavi damlalar da birbirine karışıp bulanık bir göle döndü."
+        ],
+        [
+          "Nehir ikinci, üçüncü kez denedi.",
+          "Her denemede dudaklarını biraz daha sıktı.",
+          "Her seferinde lale bambaşka bir şekle büründü.",
+          "Sonunda fırçayı bıraktı, kollarını kavuşturdu.",
+          "— Dede, hiçbiri seninkine benzemiyor! dedi dudak bükerek."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Sabri Dede gülümseyerek yanına çömeldi.",
+          "— Biliyor musun, benimkiler de birbirine benzemez, dedi.",
+          "Sonra raftaki eski bir dosyayı açtı.",
+          "İçinde yüzlerce ebru vardı ve hiçbiri ötekinin aynısı değildi.",
+          "— Su her seferinde başka türlü kıpırdar, o yüzden her ebru tektir, dedi."
+        ],
+        [
+          "Dosyanın en altında sararmış, biraz da yamuk bir lale duruyordu.",
+          "— Bunu kim yaptı? diye sordu Nehir.",
+          "— Ben yaptım, senin yaşındayken, kendi dedemin yanında, dedi Sabri Dede.",
+          "Nehir yamuk laleye uzun uzun baktı ve fırçayı yeniden eline aldı."
+        ]
+      ]
+    },
+    {
+      "id": "p05",
+      "paragraphs": [
+        [
+          "Bu kez dedesinin lalesini kopyalamaya çalışmadı.",
+          "Kırmızı yerine mor ve sarı damlalar serpti.",
+          "Lalenin yapraklarını rüzgârda eğiliyormuş gibi kıvırdı.",
+          "Kâğıdı kaldırdığında karşısında bambaşka bir lale vardı.",
+          "Biraz eğriydi ama çok neşeliydi."
+        ],
+        [
+          "Sergi günü Nehir iki ebruyu yan yana astı: dedesinin çocukken yaptığı yamuk laleyi ve kendi mor lalesini.",
+          "Altına şu notu yazdı: Aynı tekne, iki ayrı el, iki ayrı lale.",
+          "Sergiye gelen Sabri Dede'nin gözleri, o notu okurken gururla parladı.",
+          "Sonra da çocuklara ebrunun nasıl yapıldığını gösterdi."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Sabri Dede ebru suyuna ne kattığını söyledi?",
+      "options": [
+        "Bir avuç tuz",
+        "Kitre adlı bir zamk",
+        "Birkaç kaşık şeker",
+        "Biraz zeytinyağı"
+      ],
+      "answer": 1,
+      "explain": "İkinci sayfada dede, suya geven bitkisinden elde edilen kitre adlı zamkı kattığını söylüyor.",
+      "page": "p02"
+    },
+    {
+      "skill": "locate",
+      "question": "Dosyanın en altındaki yamuk laleyi kim yapmıştı?",
+      "options": [
+        "Nehir'in annesi",
+        "Nehir'in öğretmeni",
+        "Sabri Dede, çocukken",
+        "Sabri Dede'nin komşusu"
+      ],
+      "answer": 2,
+      "explain": "Sabri Dede o laleyi Nehir'in yaşındayken, kendi dedesinin yanında yaptığını söylüyor.",
+      "page": "p04"
+    },
+    {
+      "skill": "inference",
+      "question": "Nehir kollarını kavuşturup dudak büktüğünde ne hissediyordu?",
+      "options": [
+        "Hayal kırıklığına uğramıştı",
+        "Gururlu ve mutluydu",
+        "Çok uykusu gelmişti",
+        "Dedesine kızmıştı"
+      ],
+      "answer": 0,
+      "explain": "Nehir defalarca denemiş ama dedesininki gibi bir lale yapamamıştı; bu yüzden hayal kırıklığına uğramıştı.",
+      "page": "p03"
+    },
+    {
+      "skill": "inference",
+      "question": "Sabri Dede, çocukken yaptığı laleyi Nehir'e neden göstermiş olabilir?",
+      "options": [
+        "Onunla şakalaşmak istediği için",
+        "Dosyayı temizlemek istediği için",
+        "Eski ebruyu satmak istediği için",
+        "Herkesin denerek öğrendiğini göstermek için"
+      ],
+      "answer": 3,
+      "explain": "Dede, kendi ilk lalesinin de yamuk olduğunu göstererek Nehir'e herkesin deneye deneye öğrendiğini anlatmak istedi.",
+      "page": "p04"
+    },
+    {
+      "skill": "comment",
+      "question": "Bu hikâyeden hangi sonuç çıkarılabilir?",
+      "options": [
+        "Ebruyu yalnızca büyükler yapabilir",
+        "Bir geleneği öğrenirken ona kendi izimizi de katabiliriz",
+        "Eski eserleri saklamaya gerek yoktur",
+        "Sergiye yalnızca kusursuz işler götürülür"
+      ],
+      "answer": 1,
+      "explain": "Nehir dedesinden ebruyu öğrendi ama kendi renkleriyle kendine özgü bir lale yaptı.",
+      "page": "p05"
+    },
+    {
+      "skill": "vocab",
+      "question": "\"Dedesinin yaptığı her hareketi tıpatıp taklit etti.\" cümlesinde \"tıpatıp\" ne demektir?",
+      "options": [
+        "Hızlı hızlı",
+        "İsteksizce",
+        "Tamamen aynı şekilde",
+        "Sesli sesli"
+      ],
+      "answer": 2,
+      "explain": "\"Tıpatıp\", bir şeyin tamamen aynısı, hiç farksız olarak demektir.",
+      "page": "p03"
+    }
+  ]
+}

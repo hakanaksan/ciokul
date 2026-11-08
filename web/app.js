@@ -29,6 +29,7 @@ const ROUTES=[
   [/^#\/okuma-denetim$/,()=>renderReadingAudit()],
   [/^#\/rozetler$/,()=>renderBadgeCollection()],
   [/^#\/ders\/([a-z0-9-]+)$/,m=>renderLesson(m[1])],
+  [/^#\/hikaye\/([a-z0-9-]+)$/,m=>renderStory(m[1])],
 ];
 let routing=false;
 function setRoute(hash){if(routing||location.hash===hash)return;history.pushState(null,'',hash||location.pathname);state.route=hash}
@@ -122,7 +123,7 @@ async function renderHome(){
   if(state.role)shell(`<div class="hero"><div class="eyebrow">Yükleniyor</div><h1>Çalışmalar hazırlanıyor…</h1></div><div class="grid" style="margin-top:16px"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>`);
   try{
     const isParent=state.role==='parent';
-    const [data,planning,progress,backupStatus,auditStatus,readingData,readingProgress,studyDashboard,badgesData,lessonsData,dailyPlan]=await Promise.all([api('/api/assignments'),isParent?api('/api/catalog'):Promise.resolve(null),isParent?api('/api/progress'):Promise.resolve(null),isParent?api('/api/backup/status'):Promise.resolve(null),isParent?api('/api/audit/status'):Promise.resolve(null),api('/api/reading/assignments'),isParent?api('/api/reading/progress'):Promise.resolve(null),isParent?api('/api/study/dashboard'):Promise.resolve(null),api('/api/student/badges'),ensureLessons(true),api('/api/daily-plan').catch(()=>null)]);
+    const [data,planning,progress,backupStatus,auditStatus,readingData,readingProgress,studyDashboard,badgesData,lessonsData,dailyPlan,storiesData,storyResults]=await Promise.all([api('/api/assignments'),isParent?api('/api/catalog'):Promise.resolve(null),isParent?api('/api/progress'):Promise.resolve(null),isParent?api('/api/backup/status'):Promise.resolve(null),isParent?api('/api/audit/status'):Promise.resolve(null),api('/api/reading/assignments'),isParent?api('/api/reading/progress'):Promise.resolve(null),isParent?api('/api/study/dashboard'):Promise.resolve(null),api('/api/student/badges'),ensureLessons(true),api('/api/daily-plan').catch(()=>null),ensureStories(true),isParent?api('/api/stories/results').catch(()=>null):Promise.resolve(null)]);
     if(!state.calendarMonth)state.calendarMonth=localToday().slice(0,7);
     const backupAge=backupStatus?.lastBackupAt?(Date.now()-Date.parse(backupStatus.lastBackupAt.replace(' ','T')+'Z'))/86400000:Infinity;
     const currentMonth=`${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}`;
@@ -135,6 +136,7 @@ async function renderHome(){
       <div class="section-title"><h2>${isParent?'Atanan çalışmalar':'Çalışmalarım'}</h2><div class="toolbar">${isParent?'<button class="btn secondary" id="btnSearchQuestions">🔍 Konu & Soru Ara</button><button class="btn secondary" id="newMixedAssignment">🎯 Karma deneme oluştur</button><button class="btn" id="newAssignment">+ Yeni çalışma</button><button class="btn secondary" id="btnReportCard">📄 Gelişim Karnesi</button>':''}<button class="btn secondary" id="btnMistakes">📓 Hata Defteri${isParent?'':'m'}</button></div></div><div id="flash">${flash()}</div>
       ${data.assignments.length?`<div class="grid">${data.assignments.map(a=>{const[s,c]=assignmentStatus(a);return `<article class="card"><div class="card-top"><div class="eyebrow">${a.total} soru</div><span class="${c}">${esc(s)}</span></div><h3>${esc(a.title)}</h3><p>${a.submitted_at?'Teslim edildi':'Çözülmeyi bekliyor'} · ${esc(uiStamp(a.created_at))}${a.due_date?` · Hedef: ${esc(uiDueText(a.due_date,!!a.submitted_at))}`:''}</p><div class="card-actions"><button class="btn secondary" data-open="${a.id}">${isParent?'Aç ve kontrol et':'Çalışmayı aç'} →</button><button class="link-btn" data-print="${a.id}">Yazdır</button>${isParent?`<button class="link-btn" data-rename="${a.id}">Adı değiştir</button><button class="link-btn" data-due="${a.id}">Hedef tarih</button><button class="link-btn danger" data-delete="${a.id}">Sil</button>`:''}</div></article>`}).join('')}</div>`:`<div class="empty">Henüz fasikül çalışması yok.</div>`}
       ${readingHomeMarkup(readingData.assignments,isParent,readingProgress)}
+      ${storiesHomeMarkup(storiesData,isParent,storyResults)}
       ${lessonsHomeMarkup(lessonsData,isParent)}
       ${isParent?studyDashboardMarkup(studyDashboard):''}
       ${isParent&&auditStatus?.summary?`<section class="planning-section card"><h2>Soru denetimi</h2><p>${auditStatus.summary.clean} / ${auditStatus.summary.questions} soru otomatik dosya, sayfa ve cevap anahtarı denetiminden geçti. ${auditStatus.contextQuestions} sorunun ortak metin veya grafiği görseline eklendi; ${auditStatus.trimmedPrevious} kesimden sonraki soruya ait içerik çıkarıldı.</p><p class="small muted">Otomatik denetim, tek tek insan gözüyle onay anlamına gelmez. Şüpheli bir görseli fasikül listesinden işaretleyip düzeltebilirsiniz.</p><a href="/api/audit/report" download="soru_denetimi.csv">Ayrıntılı denetim raporunu indir</a></section>`:''}
@@ -157,6 +159,7 @@ async function renderHome(){
     document.querySelectorAll('[data-action="report-card"]').forEach(b=>b.onclick=()=>renderReportCard(renderHome));
     bindReadingHome(readingData.assignments,isParent);
     bindLessonLinks();
+    bindStoryLinks();
     if(isParent)bindStudyDashboard(studyDashboard);
     bindBadgesWidget(badgesData);
     document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>renderAssignment(Number(b.dataset.open)));

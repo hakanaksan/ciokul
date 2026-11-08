@@ -11,12 +11,16 @@ function dailyPlanStep(step, isParent) {
     const why = step.reason === 'mistake' ? 'Son yanlışlarınla ilgili video ders' : 'Yeni video ders';
     detail = step.done ? `Mini test çözüldü · ${step.score}/${step.total}` : `${why} · ${step.course} · ${step.minutes} dk`;
     if (!step.done && !isParent) action = `<button class="btn" data-lesson-open="${esc(step.id)}">İzle →</button>`;
+  } else if (step.kind === 'story') {
+    icon = '📚';
+    detail = step.done ? `Sorular çözüldü · ${step.score}/${step.total}` : `Hikâye Kitaplığı · ${step.levelName} · yaklaşık ${step.minutes} dk`;
+    if (!step.done && !isParent) action = `<button class="btn" data-story-open="${esc(step.id)}">Oku →</button>`;
   } else {
     icon = '📓';
     detail = `${step.solved}/${step.count} soru çözüldü olarak işaretlendi`;
     if (!step.done && !isParent) action = `<button class="btn" data-plan-mistakes>Aç →</button>`;
   }
-  const title = step.kind === 'lesson' ? `Video: ${step.title}` : step.kind === 'reading' ? `Okuma: ${step.title}` : step.title;
+  const title = step.kind === 'lesson' ? `Video: ${step.title}` : step.kind === 'story' ? `Hikâye: ${step.title}` : step.kind === 'reading' ? `Okuma: ${step.title}` : step.title;
   return `<li class="plan-step${step.done ? ' done' : ''}"><span class="plan-check" aria-hidden="true">${step.done ? '✓' : icon}</span>
     <span class="plan-text"><strong>${esc(title)}</strong><small>${esc(detail)}</small></span>
     <span class="sr-only">${step.done ? 'Tamamlandı' : 'Yapılacak'}</span>${action}</li>`;
@@ -50,6 +54,7 @@ function bindDailyPlan(root = document) {
   });
   root.querySelectorAll('[data-plan-mistakes]').forEach(button => { button.onclick = () => renderMistakesNotebook(); });
   bindLessonLinks(root.querySelector('#dailyPlan') || root);
+  bindStoryLinks(root.querySelector('#dailyPlan') || root);
   root.querySelector('#planSize')?.addEventListener('change', async e => {
     try {
       await api('/api/daily-plan/size', { method: 'PUT', body: JSON.stringify({ size: Number(e.target.value) }) });

@@ -210,6 +210,18 @@ CREATE TABLE IF NOT EXISTS daily_plans (
   completed_at TEXT
 );
 
+-- Hikâye Kitaplığı: stories read and their quiz results (stories.py).
+CREATE TABLE IF NOT EXISTS story_progress (
+  story_id TEXT PRIMARY KEY,
+  opened INTEGER NOT NULL DEFAULT 0,
+  quiz_score INTEGER,
+  quiz_total INTEGER,
+  best_score INTEGER,
+  answers TEXT,
+  completed_at TEXT,
+  updated_at TEXT NOT NULL DEFAULT cio_now()
+);
+
 -- Later schema changes go below as idempotent statements, e.g.
 -- ALTER TABLE assignments ADD COLUMN IF NOT EXISTS example TEXT;
 

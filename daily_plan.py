@@ -14,6 +14,7 @@ from datetime import date
 import database
 import lessons
 import reading_module
+import stories
 from study_features import student_mistakes
 
 SIZES = {2: "Hafif", 3: "Normal", 4: "Yoğun"}
@@ -114,12 +115,21 @@ def _fill(db, today, items, limit):
         lesson = next(lesson for lesson in fresh if lesson["course"] == course)
         return {"kind": "lesson", "id": lesson["id"], "reason": "new"}
 
+    def new_story():
+        if has("story"):
+            return None
+        # Easiest unread story first (the catalog is in level order).
+        story = next((s for s in stories.catalog(db) if not (s["progress"] or {}).get("quiz_total")), None)
+        return {"kind": "story", "id": story["id"]} if story else None
+
+    # A new video lesson and a new story take turns as the day's last step.
+    last = [new_lesson, new_story] if date.fromisoformat(today).toordinal() % 2 else [new_story, new_lesson]
     candidates = [
         lambda: work.pop(0) if work else None,
         mistake_lesson,
         lambda: {"kind": "mistakes", "count": min(MISTAKE_STEP, len(pending))} if pending and not has("mistakes") else None,
         lambda: work.pop(0) if work else None,
-        new_lesson,
+        *last,
     ]
     for make in candidates:
         if len(items) >= limit:
@@ -135,6 +145,8 @@ def _stored(item):
         return {"kind": item["kind"], "id": item["id"]}
     if item["kind"] == "lesson":
         return {"kind": "lesson", "id": item["id"], "reason": item.get("reason", "new")}
+    if item["kind"] == "story":
+        return {"kind": "story", "id": item["id"]}
     return {"kind": "mistakes", "count": item["count"]}
 
 
@@ -169,6 +181,15 @@ def _detail(db, today, items):
             p = lesson["progress"] or {}
             result.append({**item, "title": lesson["title"], "course": lesson["course"],
                            "minutes": max(1, round((lesson["duration"] or 0) / 60)),
+                           "done": database.local_date(p.get("completed_at")) == today,
+                           "score": p.get("quiz_score"), "total": p.get("quiz_total")})
+        elif kind == "story":
+            story = next((s for s in stories.catalog(db) if s["id"] == item["id"]), None)
+            if not story:
+                continue
+            p = story["progress"] or {}
+            result.append({**item, "title": story["title"], "levelName": story["levelName"],
+                           "minutes": max(3, round(story["words"] / 70) + 2),
                            "done": database.local_date(p.get("completed_at")) == today,
                            "score": p.get("quiz_score"), "total": p.get("quiz_total")})
         elif kind == "mistakes":

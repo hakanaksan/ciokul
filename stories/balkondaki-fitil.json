@@ -1,0 +1,185 @@
+{
+  "id": "balkondaki-fitil",
+  "title": "Balkondaki Fitil",
+  "theme": "Bilim ve Teknoloji",
+  "level": 2,
+  "summary": "Bir haftalık yolculuk öncesinde Baran, balkondaki fidelerini susuz bırakmamanın yolunu arar.",
+  "icon": "🌱",
+  "color": "#e4f4dc",
+  "cover": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\"><rect width=\"320\" height=\"180\" fill=\"#e4f4dc\"/><circle cx=\"272\" cy=\"36\" r=\"18\" fill=\"#ffd966\"/><rect y=\"150\" width=\"320\" height=\"30\" fill=\"#cdb79e\"/><line x1=\"0\" y1=\"96\" x2=\"320\" y2=\"96\" stroke=\"#9aa5b1\" stroke-width=\"4\"/><line x1=\"20\" y1=\"96\" x2=\"20\" y2=\"150\" stroke=\"#9aa5b1\" stroke-width=\"3\"/><line x1=\"60\" y1=\"96\" x2=\"60\" y2=\"150\" stroke=\"#9aa5b1\" stroke-width=\"3\"/><line x1=\"260\" y1=\"96\" x2=\"260\" y2=\"150\" stroke=\"#9aa5b1\" stroke-width=\"3\"/><line x1=\"300\" y1=\"96\" x2=\"300\" y2=\"150\" stroke=\"#9aa5b1\" stroke-width=\"3\"/><rect x=\"86\" y=\"118\" width=\"62\" height=\"8\" rx=\"2\" fill=\"#a0522d\"/><rect x=\"92\" y=\"126\" width=\"6\" height=\"26\" fill=\"#a0522d\"/><rect x=\"136\" y=\"126\" width=\"6\" height=\"26\" fill=\"#a0522d\"/><rect x=\"98\" y=\"72\" width=\"38\" height=\"46\" rx=\"6\" fill=\"#eaf6ff\" stroke=\"#7fa7c9\" stroke-width=\"2\"/><rect x=\"100\" y=\"88\" width=\"34\" height=\"28\" rx=\"4\" fill=\"#8cc8f0\"/><rect x=\"102\" y=\"66\" width=\"30\" height=\"8\" rx=\"2\" fill=\"#7fa7c9\"/><line x1=\"98\" y1=\"88\" x2=\"106\" y2=\"88\" stroke=\"#33495e\" stroke-width=\"2\"/><ellipse cx=\"60\" cy=\"40\" rx=\"26\" ry=\"10\" fill=\"#ffffff\"/><ellipse cx=\"78\" cy=\"34\" rx=\"16\" ry=\"9\" fill=\"#ffffff\"/><ellipse cx=\"44\" cy=\"36\" rx=\"12\" ry=\"7\" fill=\"#ffffff\"/><path d=\"M178 130 Q182 124 186 130 Q186 136 182 136 Q178 136 178 130 Z\" fill=\"#8cc8f0\"/><path d=\"M206 138 Q210 132 214 138 Q214 144 210 144 Q206 144 206 138 Z\" fill=\"#8cc8f0\"/><path d=\"M120 92 Q150 50 190 98\" fill=\"none\" stroke=\"#f2e2c4\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"166,104 226,104 218,150 174,150\" fill=\"#c8693f\"/><rect x=\"162\" y=\"98\" width=\"68\" height=\"10\" rx=\"3\" fill=\"#b25a33\"/><rect x=\"168\" y=\"98\" width=\"56\" height=\"4\" fill=\"#6b4a2b\"/><path d=\"M196 98 Q194 70 198 40\" fill=\"none\" stroke=\"#4f9a3a\" stroke-width=\"4\"/><ellipse cx=\"184\" cy=\"76\" rx=\"12\" ry=\"6\" fill=\"#5cb247\"/><ellipse cx=\"210\" cy=\"62\" rx=\"12\" ry=\"6\" fill=\"#5cb247\"/><ellipse cx=\"186\" cy=\"50\" rx=\"10\" ry=\"5\" fill=\"#5cb247\"/><circle cx=\"204\" cy=\"40\" r=\"5\" fill=\"#ffd23f\"/><circle cx=\"204\" cy=\"40\" r=\"2\" fill=\"#f4a300\"/><circle cx=\"216\" cy=\"82\" r=\"7\" fill=\"#e74c3c\"/><polygon points=\"246,120 286,120 280,150 252,150\" fill=\"#c8693f\"/><ellipse cx=\"258\" cy=\"112\" rx=\"9\" ry=\"7\" fill=\"#3f8f3a\"/><ellipse cx=\"274\" cy=\"110\" rx=\"9\" ry=\"7\" fill=\"#4aa344\"/><ellipse cx=\"266\" cy=\"102\" rx=\"8\" ry=\"6\" fill=\"#57b450\"/></svg>",
+  "pages": [
+    {
+      "id": "p01",
+      "paragraphs": [
+        [
+          "Haziranın ilk haftasıydı ve Baran'ın balkonu yemyeşildi.",
+          "Baharda ektiği domates fideleri dizine kadar uzamıştı.",
+          "Yanlarındaki fesleğen saksısı da mis gibi kokuyordu.",
+          "Baran her sabah okula gitmeden önce onları sular, yapraklarını tek tek kontrol ederdi."
+        ],
+        [
+          "Bir akşam babası güzel bir haber verdi.",
+          "Kuzeninin düğünü için bir haftalığına Erzurum'a gideceklerdi.",
+          "Baran önce sevinçle zıpladı, sonra birden yüzü asıldı.",
+          "— Peki, benim bitkilerimi kim sulayacak? diye sordu.",
+          "Bitkilere göz kulak olabilecek komşuları Nuran Teyze de tatildeydi.",
+          "Bu sıcakta bir hafta susuz kalan fideler kuruyup gidebilirdi."
+        ]
+      ]
+    },
+    {
+      "id": "p02",
+      "paragraphs": [
+        [
+          "O gece Baran yatağında bir o yana bir bu yana döndü.",
+          "Birden fen dersinde gördükleri bir deney aklına geldi.",
+          "Öğretmenleri bir kâğıt havlunun ucunu mavi boyalı suya batırmıştı.",
+          "Mavi su, havlunun içinde yavaş yavaş yukarı tırmanmıştı.",
+          "Baran, suyun havlunun tepesine ulaşmasını hayranlıkla izlemişti.",
+          "Öğretmen bu olaya kılcallık demişti.",
+          "Suyun, liflerin arasındaki incecik boşluklarda yukarı doğru ilerleyebildiğini anlatmıştı."
+        ],
+        [
+          "Baran yatağında doğruldu.",
+          "— Su kâğıtta tırmanabiliyorsa bir şeritte de yürüyebilir! diye fısıldadı."
+        ]
+      ]
+    },
+    {
+      "id": "p03",
+      "paragraphs": [
+        [
+          "Ertesi sabah kardeşi Duru'yla birlikte işe koyuldular.",
+          "Duru, elinde küçük bir defterle her şeyi not ediyordu.",
+          "Büyük bir cam kavanozu suyla doldurup bir taburenin üstüne, saksının hemen yanına koydular.",
+          "Baran, çekmecede bulduğu parlak, plastik bir ipin bir ucunu suya daldırdı.",
+          "Öbür ucunu da saksının toprağına gömdü."
+        ],
+        [
+          "Akşam toprağa dokundular ama toprak kupkuruydu.",
+          "— Belki de fikrin işe yaramıyor, dedi Duru omuz silkerek.",
+          "Baran pes etmedi, ipi yakından inceledi.",
+          "Bu ip kaygan ve sıkıydı, suyu hiç emmiyordu.",
+          "Kâğıt havlu ise yumuşak ve lifliydi."
+        ]
+      ]
+    },
+    {
+      "id": "p04",
+      "paragraphs": [
+        [
+          "Baran, annesinden eski bir pamuklu tişört istedi.",
+          "Annesi tişörtü uzun şeritler hâlinde kesti.",
+          "Bu kez pamuklu şeridin bir ucunu kavanoza daldırdılar, öbür ucunu toprağa iyice gömdüler.",
+          "Kavanozun üstüne de suyun hizasını gösteren küçük bir çizgi çektiler."
+        ],
+        [
+          "Ertesi sabah Baran koşarak balkona çıktı.",
+          "Şeridin çevresindeki toprak nemli ve serindi!",
+          "Kavanozdaki suyun seviyesi de biraz düşmüştü.",
+          "— Su gerçekten yürümüş! dedi Duru şaşkınlıkla.",
+          "Baran her saksı için ayrı bir kavanoz ve ayrı bir şerit hazırladı.",
+          "Su çabuk buharlaşmasın diye saksıları balkonun gölgeli köşesine taşıdı."
+        ]
+      ]
+    },
+    {
+      "id": "p05",
+      "paragraphs": [
+        [
+          "Bir hafta sonra eve döndüklerinde Baran'ın içi içine sığmıyordu.",
+          "Kapıyı açar açmaz balkona koştu.",
+          "Kavanozların suyu epey azalmıştı ama domatesler dimdik duruyordu.",
+          "Fesleğenler de eskisi gibi mis kokuyordu.",
+          "Hatta bir domates fidesinde ilk küçük, sarı çiçek açmıştı.",
+          "Duru defterine son notunu yazdı: Deney başarılı!"
+        ],
+        [
+          "Eylülde okullar açılınca Baran bu deneyi sınıfta anlattı.",
+          "Öğretmeni, kılcallığın balkondaki fideleri kurtardığını duyunca çok sevindi.",
+          "Ertesi gün birkaç arkadaşı kendi saksıları için Baran'dan pamuklu şerit istedi."
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "skill": "locate",
+      "question": "Baran'ın ilk denemesi neden işe yaramadı?",
+      "options": [
+        "Kavanozda hiç su yoktu",
+        "Kullandığı plastik ip suyu emmiyordu",
+        "Saksı çok büyüktü",
+        "Duru ipi çekip çıkarmıştı"
+      ],
+      "answer": 1,
+      "explain": "Üçüncü sayfada ipin kaygan ve sıkı olduğu, suyu hiç emmediği yazıyor.",
+      "page": "p03"
+    },
+    {
+      "skill": "locate",
+      "question": "Annesi, ikinci deneme için Baran'a ne verdi?",
+      "options": [
+        "Bir kâğıt havlu",
+        "Bir bahçe hortumu",
+        "Eski bir pamuklu tişört",
+        "Yeni bir plastik ip"
+      ],
+      "answer": 2,
+      "explain": "Annesi eski bir pamuklu tişörtü uzun şeritler hâlinde kesip Baran'a verdi.",
+      "page": "p04"
+    },
+    {
+      "skill": "inference",
+      "question": "Baran, Erzurum haberini duyunca yüzü neden asıldı?",
+      "options": [
+        "Düğüne gitmek istemediği için",
+        "Kuzenini özlemediği için",
+        "Uzun yolculuktan sıkıldığı için",
+        "Bitkilerinin susuz kalmasından endişelendiği için"
+      ],
+      "answer": 3,
+      "explain": "Baran hemen bitkilerini kimin sulayacağını sordu; demek ki onların kuruyacağından endişelenmişti.",
+      "page": "p01"
+    },
+    {
+      "skill": "inference",
+      "question": "Kavanozdaki suyun seviyesinin düşmesi neyi gösteriyordu?",
+      "options": [
+        "Suyun şerit boyunca toprağa geçtiğini",
+        "Kavanozun çatlak olduğunu",
+        "Duru'nun suyu içtiğini",
+        "Gece yağmur yağdığını"
+      ],
+      "answer": 0,
+      "explain": "Toprak nemlenmiş, kavanozdaki su da azalmıştı; demek ki su şeritten yürüyerek toprağa geçmişti.",
+      "page": "p04"
+    },
+    {
+      "skill": "comment",
+      "question": "Baran'ın ilk deneme başarısız olunca yaptığı şey için ne söylenebilir?",
+      "options": [
+        "Hemen vazgeçmesi doğruydu",
+        "Nedenini araştırıp yeniden denemesi akıllıcaydı",
+        "Suçu kardeşine atması haksızdı",
+        "Bitkileri komşuya bırakması gerekirdi"
+      ],
+      "answer": 1,
+      "explain": "Baran pes etmedi; ipi inceleyip neden işe yaramadığını buldu ve doğru malzemeyle yeniden denedi.",
+      "page": "p03"
+    },
+    {
+      "skill": "vocab",
+      "question": "\"Bir hafta sonra eve döndüklerinde Baran'ın içi içine sığmıyordu.\" Bu cümlede \"içi içine sığmamak\" ne demektir?",
+      "options": [
+        "Çok yorgun olmak",
+        "Karnı çok tok olmak",
+        "Çok heyecanlı ve sabırsız olmak",
+        "Çok üzgün olmak"
+      ],
+      "answer": 2,
+      "explain": "\"İçi içine sığmamak\", bir şeyi merakla ve heyecanla beklemek, sabırsızlanmak demektir.",
+      "page": "p05"
+    }
+  ]
+}
