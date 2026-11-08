@@ -1,0 +1,154 @@
+{
+  "id": "mat-yuvarlama",
+  "title": "En Yakın Onluğa ve Yüzlüğe Yuvarlama",
+  "course": "Matematik",
+  "unit": "Doğal Sayılar",
+  "kazanim": {
+    "code": "M.4.1.1.4",
+    "text": "Doğal sayıları en yakın onluğa veya yüzlüğe yuvarlar.",
+    "note": "MEB Matematik Dersi Öğretim Programı (2018), 4. sınıf. Açıklama: En çok dört basamaklı sayılarla çalışılır."
+  },
+  "summary": "Sayı doğrusu ve kısa kural ile sayıları en yakın onluğa ve yüzlüğe yuvarlamayı, tersinden sorulan soruları ve sık yapılan hatayı öğren.",
+  "match": {"course": "Matematik", "booklet": "Ünite 01", "keywords": ["yuvarla", "en yakın", "onluğa", "yüzlüğe", "onluk", "yüzlük", "yaklaşık", "tahmin"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Yaklaşık kaç?", "visual": "mat-yuvarlama-intro",
+      "sentences": [
+        "Merhaba! Elif okuduğu kitabı arkadaşına anlatıyor.",
+        "Kitap tam yüz doksan yedi sayfa, ama Elif yaklaşık iki yüz sayfa diyor.",
+        "Bir sayıyı ona yakın ve kolay söylenen bir sayıyla ifade etmeye yuvarlama denir.",
+        "Bugün sayıları en yakın onluğa ve en yakın yüzlüğe yuvarlamayı öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Sayı doğrusunda yuvarlama", "visual": "mat-yuvarlama-dogru",
+      "sentences": [
+        "Kırk yedi sayısını en yakın onluğa yuvarlayalım. Önce onu sayı doğrusunda bulalım.",
+        "Kırk yedi, kırk ile elli arasındadır. Kırk ve elli, kırk yedinin komşu onluklarıdır.",
+        "Kırk yedi, elliye üç adım, kırka ise yedi adım uzaklıktadır.",
+        "Elliye daha yakın olduğu için kırk yedi, en yakın onluğa yuvarlanınca elli olur."
+      ]
+    },
+    {
+      "id": "s03", "title": "Kısa yol: kural", "visual": "mat-yuvarlama-kural",
+      "sentences": [
+        "Her seferinde sayı doğrusu çizmemize gerek yok. Kısa bir kuralımız var.",
+        "En yakın onluğa yuvarlarken birler basamağındaki rakama bakarız.",
+        "Bu rakam sıfır, bir, iki, üç ya da dört ise sayıyı aşağıya, yani küçük olan onluğa yuvarlarız.",
+        "Rakam beş, altı, yedi, sekiz ya da dokuz ise yukarıya, yani büyük olan onluğa yuvarlarız.",
+        "Yuvarlanan sayının birler basamağı her zaman sıfır olur."
+      ]
+    },
+    {
+      "id": "s04", "title": "Onluğa yuvarlama örnekleri", "visual": "mat-yuvarlama-onluk",
+      "sentences": [
+        "Şimdi dört basamaklı sayılarla deneyelim.",
+        "Yedi bin üç yüz doksan beş sayısının birler basamağında beş var. Beş yukarı yuvarlanır.",
+        "Onlar basamağındaki dokuz bir artınca on olur. Bu yüzden sonuç yedi bin dört yüz olur.",
+        "İki bin dört yüz on yedi sayısında birler basamağı yedi. Sonuç iki bin dört yüz yirmi olur.",
+        "Sekiz yüz yetmiş dört sayısında birler basamağı dört. Aşağı yuvarlarız, sonuç sekiz yüz yetmiş olur."
+      ]
+    },
+    {
+      "id": "s05", "title": "En yakın yüzlük", "visual": "mat-yuvarlama-yuzluk",
+      "sentences": [
+        "Şimdi en yakın yüzlüğe yuvarlayalım. Bu kez onlar basamağındaki rakama bakarız.",
+        "Altı bin yedi yüz kırk üç sayısı, altı bin yedi yüz ile altı bin sekiz yüz arasındadır.",
+        "Onlar basamağında dört var. Dört aşağı yuvarlanır.",
+        "Sonuç altı bin yedi yüz olur. Onlar ve birler basamakları sıfır olur."
+      ]
+    },
+    {
+      "id": "s06", "title": "Yüzlüğe yuvarlama örnekleri", "visual": "mat-yuvarlama-yuzluk-ornek",
+      "sentences": [
+        "Başka örneklere de bakalım.",
+        "Üç bin altı yüz elli iki sayısında onlar basamağı beş. Beş yukarı yuvarlanır, sonuç üç bin yedi yüz olur.",
+        "Bin elli sayısında da onlar basamağı beş. Yukarı yuvarlarız ve sonuç bin yüz olur.",
+        "İki bin dokuz yüz altmış sayısında onlar basamağı altı. Yüzler basamağındaki dokuz bir artınca sonuç üç bin olur."
+      ]
+    },
+    {
+      "id": "s07", "title": "Dikkat: Tek basamağa bak!", "visual": "mat-yuvarlama-dikkat",
+      "sentences": [
+        "Dikkat! Yuvarlama yaparken sık yapılan bir hata var.",
+        "Bin dört yüz kırk dokuz sayısını en yakın yüzlüğe yuvarlayalım.",
+        "Bazı öğrenciler önce onluğa yuvarlayıp bin dört yüz elli bulur, sonra yüzlüğe yuvarlayıp bin beş yüz der. Bu yanlıştır!",
+        "Yüzlüğe yuvarlarken yalnızca onlar basamağına bakarız. Orada dört var, sonuç bin dört yüz olur.",
+        "Sayı doğrusunda da bin dört yüz kırk dokuz, bin dört yüze daha yakındır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Tersinden soru", "visual": "mat-yuvarlama-ters",
+      "sentences": [
+        "Bazen soru tersinden sorulur: En yakın onluğa yuvarlanınca iki yüz yetmiş olan sayılar hangileridir?",
+        "İki yüz altmış beşten iki yüz altmış dokuza kadar olan sayılar yukarı yuvarlanır ve iki yüz yetmiş olur.",
+        "İki yüz yetmiş birden iki yüz yetmiş dörde kadar olan sayılar da aşağı yuvarlanır. İki yüz yetmiş beş ise iki yüz seksene yuvarlanır.",
+        "Yani bu sayıların en küçüğü iki yüz altmış beş, en büyüğü iki yüz yetmiş dörttür."
+      ]
+    },
+    {
+      "id": "s09", "title": "Günlük hayatta yuvarlama", "visual": "mat-yuvarlama-hayat",
+      "sentences": [
+        "Yuvarlama, günlük hayatta işimizi çok kolaylaştırır.",
+        "Bir bisiklet bin iki yüz altmış lira ise, en yakın yüzlüğe yuvarlayıp yaklaşık bin üç yüz lira deriz.",
+        "Okula olan yolumuz dokuz yüz seksen yedi metre ise yaklaşık bin metre deriz.",
+        "Yuvarlanmış sayılarla zihinden işlem yapmak da kolaylaşır. Bu yolla yaptığımız işlemlere tahmin denir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "mat-yuvarlama-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "En yakın onluğa yuvarlarken birler basamağına bakarız.",
+        "En yakın yüzlüğe yuvarlarken onlar basamağına bakarız.",
+        "Baktığımız rakam beş, altı, yedi, sekiz ya da dokuzsa yukarı yuvarlarız.",
+        "Sıfır, bir, iki, üç ya da dörtse aşağı yuvarlarız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "7395 sayısı en yakın onluğa yuvarlanırsa hangi sayı elde edilir?",
+      "options": ["7390", "7300", "7400", "7500"],
+      "answer": 2,
+      "explain": "Birler basamağı 5 olduğu için yukarı yuvarlanır. Onlar basamağı 9 + 1 = 10 olur ve sonuç 7400'dür.",
+      "scene": "s04"
+    },
+    {
+      "question": "6743 sayısının en yakın yüzlüğe yuvarlanmış hâli hangisidir?",
+      "options": ["6700", "6740", "6750", "6800"],
+      "answer": 0,
+      "explain": "Yüzlüğe yuvarlarken onlar basamağına bakarız. Onlar basamağı 4 olduğu için aşağı yuvarlanır: 6700.",
+      "scene": "s05"
+    },
+    {
+      "question": "Aşağıdaki sayılardan hangisi en yakın onluğa yanlış yuvarlanmıştır?",
+      "options": ["497 → 500", "676 → 680", "1009 → 1010", "875 → 870"],
+      "answer": 3,
+      "explain": "875 sayısının birler basamağı 5'tir. 5 yukarı yuvarlanır, bu yüzden doğru sonuç 880'dir.",
+      "scene": "s03"
+    },
+    {
+      "question": "1449 sayısı en yakın yüzlüğe yuvarlanırsa hangi sayı elde edilir?",
+      "options": ["1500", "1450", "1400", "1000"],
+      "answer": 2,
+      "explain": "Yalnızca onlar basamağına bakarız. Onlar basamağı 4 olduğu için sonuç 1400'dür. Önce onluğa yuvarlamak yanlış sonuç verir.",
+      "scene": "s07"
+    },
+    {
+      "question": "En yakın onluğa yuvarlandığında 270 olan bir doğal sayı en çok kaç olabilir?",
+      "options": ["265", "274", "275", "279"],
+      "answer": 1,
+      "explain": "271, 272, 273 ve 274 aşağı yuvarlanarak 270 olur. 275 ise 280'e yuvarlanır. Bu yüzden en büyük sayı 274'tür.",
+      "scene": "s08"
+    },
+    {
+      "question": "1050 sayısı en yakın yüzlüğe yuvarlanırsa sonuç ne olur?",
+      "options": ["1100", "1000", "1050", "1150"],
+      "answer": 0,
+      "explain": "Onlar basamağı 5 olduğu için yukarı yuvarlanır: 1050 sayısı 1100 olur.",
+      "scene": "s06"
+    }
+  ]
+}

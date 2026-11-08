@@ -1,0 +1,180 @@
+{
+  "id": "ing-cartoon-characters",
+  "title": "Çizgi Film Kahramanları: Neler Yapabilir?",
+  "course": "İngilizce",
+  "unit": "Cartoon Characters",
+  "kazanim": {
+    "code": "E4.3.L1, E4.3.L2, E4.3.S1, E4.3.S2",
+    "text": "Students will be able to get the main idea of a simple oral text about the abilities of the self and others. Students will be able to recognize possessions of others in a clear, short and slow oral text. Students will be able to talk about their own and others’ possessions. Students will be able to deliver a simple, brief speech about abilities with an initial preparation.",
+    "note": "MEB İngilizce Dersi Öğretim Programı (2018), 4. sınıf, 3. ünite: Cartoon Characters. İşlevler: yapabilme ve yapamama bildirme (I can swim. Can you play the piano? — Yes, I can. / No, I can’t.); sahiplik hakkında konuşma, basit sorular sorma (This is my/your/his/her guitar. Whose bike is this? — This is Ahmet’s bike.). Kelimeler: carry, catch, climb a tree, dive, do puzzles, drive, jump, fly, play the guitar/the piano, ride a horse, speak, take pictures."
+  },
+  "summary": "Neler yapabildiğini ve yapamadığını söylemeyi, Can you...? diye sormayı, my, your, his, her kelimelerini ve Whose...? sorusunu çizgi film kahramanlarıyla öğren.",
+  "match": {"course": "İngilizce", "booklet": "Ünite 03", "keywords": ["can", "whose", "his ", "her ", "my ", "your ", "these", "this is", "cartoon", "super hero", "superhero", "fly", "swim", "climb", "jump", "dive", "ride", "drive", "play the", "guitar", "piano", "take pictures", "photo", "puzzle", "'s "]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Süper Kedi", "visual": "ing-cartoon-characters-intro",
+      "sentences": [
+        "Merhaba! En sevdiğin çizgi film kahramanı kim? Onun neler yapabildiğini hiç düşündün mü?",
+        "Bu da bizim kahramanımız Süper Kedi. Süper Kedi uçabilir ve ağaca tırmanabilir, ama yüzemez.",
+        "Bugün neler yapabildiğimizi ve neler yapamadığımızı İngilizce anlatmayı öğreneceğiz.",
+        "Bir de eşyaların kime ait olduğunu söylemeyi ve sormayı öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Hareket eylemleri", "visual": "ing-cartoon-characters-moves",
+      "sentences": [
+        "Önce bazı eylemleri öğrenelim. Her birini dinle ve sen de tekrar et.",
+        "Fly, jump, swim, dive.",
+        "Run, climb a tree, carry, catch.",
+        "Bunların hepsi hareket eylemleri. Süper kahramanlar bunların çoğunu yapabilir!"
+      ],
+      "english": [1, 2]
+    },
+    {
+      "id": "s03", "title": "Oyun ve hobi eylemleri", "visual": "ing-cartoon-characters-hobbies",
+      "sentences": [
+        "Şimdi de oyun ve hobilerle ilgili eylemlere bakalım.",
+        "Play the guitar, play the piano, do puzzles.",
+        "Ride a horse, ride a bike, take pictures.",
+        "Drive a car, speak English."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s04", "title": "Yapabilirim, yapamam", "visual": "ing-cartoon-characters-can",
+      "sentences": [
+        "Yapabildiğimiz bir şeyi anlatırken şöyle deriz:",
+        "I can swim.",
+        "Yapamadığımız bir şeyi anlatırken ise şöyle deriz:",
+        "I can't fly.",
+        "Bu kalıp herkes için aynıdır. Kişi değişse de yapabilmek kelimesi ve eylem hiç değişmez:",
+        "She can ride a bike. He can't drive a car."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s05", "title": "Ama ile birleştirme", "visual": "ing-cartoon-characters-but",
+      "sentences": [
+        "Bir cümlede hem yapabildiğimizi hem de yapamadığımızı söyleyebiliriz. İki cümleyi ama anlamındaki bir bağlaçla birleştiririz:",
+        "I can ride a bike, but I can't ride a horse.",
+        "Süper Kedi'den bahsederken ise şöyle deriz. Hayvanlar için o anlamında başka bir kelime kullanılır:",
+        "Super Cat can fly, but it can't swim."
+      ],
+      "english": [1, 3]
+    },
+    {
+      "id": "s06", "title": "Yapabilir misin?", "visual": "ing-cartoon-characters-can-you",
+      "sentences": [
+        "Birine bir şeyi yapıp yapamadığını sormak için soruya yapabilmek kelimesiyle başlarız. Zeynep, Max'e soruyor:",
+        "Can you play the piano?",
+        "Yes, I can.",
+        "Şimdi de Max, Zeynep'e soruyor:",
+        "Can you ride a horse?",
+        "No, I can't."
+      ],
+      "english": [1, 2, 4, 5]
+    },
+    {
+      "id": "s07", "title": "Benim, senin, onun", "visual": "ing-cartoon-characters-mine",
+      "sentences": [
+        "Şimdi eşyaların kime ait olduğunu anlatalım. Bunun için benim, senin, onun gibi kelimeler kullanırız.",
+        "This is my guitar.",
+        "This is your ball.",
+        "This is his bike.",
+        "This is her kite.",
+        "Bir erkeğin eşyası için bir kelime, bir kızın eşyası için başka bir kelime kullanırız."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s08", "title": "Kimin?", "visual": "ing-cartoon-characters-whose",
+      "sentences": [
+        "Bir eşyanın kime ait olduğunu sormak için şöyle deriz:",
+        "Whose bike is this?",
+        "Cevap verirken kişinin adına bir kesme işareti ve bir harf ekleriz:",
+        "This is Ali's bike.",
+        "Birden fazla eşyadan bahsederken de şöyle deriz:",
+        "These are her books."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "ing-cartoon-characters-careful",
+      "sentences": [
+        "Dikkat! İki sık hatayı birlikte düzeltelim.",
+        "Birincisi: Bu kalıpta eylem hiç değişmez, sonuna ek almaz. Doğrusu şöyle:",
+        "He can swim.",
+        "İkincisi: Yapabilmek kelimesiyle sorulan soruya yine aynı kelimeyle cevap veririz:",
+        "Can you swim? Yes, I can."
+      ],
+      "english": [2, 4]
+    },
+    {
+      "id": "s10", "title": "Sıra sende", "visual": "ing-cartoon-characters-practice",
+      "sentences": [
+        "Şimdi sen de tekrar et. Önce neler yapabildiğini söyle:",
+        "I can take pictures.",
+        "Şimdi bir arkadaşına sor:",
+        "Can you speak English?",
+        "Son olarak gitarını göstererek söyle:",
+        "This is my guitar."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "ing-cartoon-characters-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Neler yapabildiğimizi ve neler yapamadığımızı söylemeyi öğrendik.",
+        "Birine bir şeyi yapıp yapamadığını sormayı ve kısa cevap vermeyi öğrendik.",
+        "Benim, senin, onun gibi sahiplik kelimelerini öğrendik.",
+        "Bir eşyanın kime ait olduğunu sormayı ve cevaplamayı öğrendik.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kuşlar 🐦 için hangisi doğrudur?",
+      "options": ["It can fly.", "It can drive a car.", "It can play the piano.", "It can take pictures."],
+      "answer": 0,
+      "explain": "Kuşlar uçabilir. Hayvanlardan bahsederken it kullanırız: It can fly.",
+      "scene": "s05"
+    },
+    {
+      "question": "I can ride a bike, - - - - I can't ride a horse. Boşluğa hangisi gelmelidir?",
+      "options": ["and", "or", "because", "but"],
+      "answer": 3,
+      "explain": "Yapabildiğimizi ve yapamadığımızı ama anlamındaki but ile birleştiririz.",
+      "scene": "s05"
+    },
+    {
+      "question": "— Can you speak English? Bu soruya hangi cevap verilir?",
+      "options": ["Yes, I do.", "Yes, I can.", "Yes, it is.", "Yes, I am."],
+      "answer": 1,
+      "explain": "Can ile sorulan soruya can ile cevap veririz: Yes, I can. ya da No, I can't.",
+      "scene": "s06"
+    },
+    {
+      "question": "This is my brother, Hugh. This is - - - - camera. Boşluğa hangisi gelmelidir?",
+      "options": ["her", "my", "his", "your"],
+      "answer": 2,
+      "explain": "Hugh bir erkek. Bir erkeğin eşyası için his kullanırız: This is his camera.",
+      "scene": "s07"
+    },
+    {
+      "question": "— - - - - ? — This is Ali's ball. Diyaloğu hangi soru tamamlar?",
+      "options": ["Who is this?", "What is your name?", "Can you play football?", "Whose ball is this?"],
+      "answer": 3,
+      "explain": "Bir eşyanın kime ait olduğunu Whose ile sorarız: Whose ball is this?",
+      "scene": "s08"
+    },
+    {
+      "question": "Hangi cümle doğrudur?",
+      "options": ["He can swims.", "He can swim.", "He cans swim.", "He can to swim."],
+      "answer": 1,
+      "explain": "Can kalıbında eylem hiç değişmez ve sonuna ek almaz: He can swim.",
+      "scene": "s09"
+    }
+  ]
+}

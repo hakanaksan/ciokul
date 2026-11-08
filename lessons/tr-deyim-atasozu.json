@@ -1,0 +1,159 @@
+{
+  "id": "tr-deyim-atasozu",
+  "title": "Deyimler ve Atasözleri",
+  "course": "Türkçe",
+  "unit": "Söz Varlığı",
+  "kazanim": {
+    "code": "T.4.3.11",
+    "text": "Deyim ve atasözlerinin metnin anlamına katkısını kavrar.",
+    "note": "MEB Türkçe Dersi Öğretim Programı (2018), 4. sınıf, Okuma / Söz Varlığı. Deyim ve atasözlerinin anlamı cümleden ve metinden hareketle bulunur; deyimlerin çoğunlukla mecaz anlam taşıdığı (T.4.3.10 ile ilişkili) ve deyim ile atasözü arasındaki fark üzerinde durulur."
+  },
+  "summary": "Deyim ve atasözü nedir, nasıl ayırt edilir? Sık kullanılan deyim ve atasözlerini ve bir metne uygun olanı bulmayı örneklerle öğren.",
+  "match": {"course": "Türkçe", "booklet": "Tema 01–02", "keywords": [" deyim", "deyiml", "deyimd", "deyimi", "atasöz", "kalıplaşmış"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Ağzı kulaklarına vardı", "visual": "tr-deyim-atasozu-intro",
+      "sentences": [
+        "Merhaba! Ayşe karnesini alınca ağzı kulaklarına vardı.",
+        "Sence Ayşe'nin ağzı gerçekten kulaklarına kadar uzadı mı? Tabii ki hayır!",
+        "Ağzı kulaklarına varmak, çok sevinmek demektir.",
+        "Bu söz bir deyimdir. Bugün deyimleri ve atasözlerini tanıyacağız."
+      ]
+    },
+    {
+      "id": "s02", "title": "Deyim nedir?", "visual": "tr-deyim-atasozu-deyim",
+      "sentences": [
+        "Deyimler, kalıplaşmış söz gruplarıdır.",
+        "Deyimler çoğu zaman, içindeki kelimelerin gerçek anlamından farklı bir anlam anlatır.",
+        "Kulak vermek dediğimizde kulağımızı birine hediye etmeyiz. Dikkatle dinlemeyi anlatırız.",
+        "Deyimlerin kelimeleri değiştirilemez. Kulak vermek yerine kulak bağışlamak diyemeyiz.",
+        "Deyimlerin çoğu, göz atmak ve kulak vermek gibi, mak ya da mek ile biter."
+      ]
+    },
+    {
+      "id": "s03", "title": "Vücudumuzla ilgili deyimler", "visual": "tr-deyim-atasozu-vucut",
+      "sentences": [
+        "Dilimizde vücudumuzla ilgili pek çok deyim vardır.",
+        "Göz atmak, bir şeye kısaca bakmak demektir. Gazeteye şöyle bir göz attım.",
+        "Dilinde tüy bitmek, aynı şeyi söyleye söyleye yorulmak demektir.",
+        "Burnunun dikine gitmek, kimseyi dinlemeden bildiğini yapmaktır.",
+        "Başı dara düşmek ise sıkıntılı bir duruma düşmek demektir."
+      ]
+    },
+    {
+      "id": "s04", "title": "Duyguları anlatan deyimler", "visual": "tr-deyim-atasozu-duygu",
+      "sentences": [
+        "Deyimler duygularımızı da çok güzel anlatır.",
+        "Çok sevinen biri için etekleri zil çalıyor deriz.",
+        "Çok öfkelenen biri için ateş püskürüyor deriz.",
+        "Heyecandan yerinde duramayan birinin içi içine sığmaz.",
+        "Yaz tatilini çok istekle bekliyorsak, tatili dört gözle bekliyoruz demektir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Deyimler anlatımı güçlendirir", "visual": "tr-deyim-atasozu-katki",
+      "sentences": [
+        "Peki, deyimler bir metne ne katar?",
+        "Ali bütün gece hiç uyumadı, cümlesini düşünelim.",
+        "Aynı şeyi bir deyimle söyleyelim. Ali bütün gece gözünü kırpmadı.",
+        "Deyimli cümle daha canlı ve etkileyicidir. Deyimler anlatımı güçlendirir ve süsler.",
+        "Okuduğumuz metinde bir deyim görünce, anlamını cümlenin bütününden tahmin edebiliriz."
+      ]
+    },
+    {
+      "id": "s06", "title": "Atasözü nedir?", "visual": "tr-deyim-atasozu-atasozu",
+      "sentences": [
+        "Şimdi de atasözlerini tanıyalım.",
+        "Atasözleri, atalarımızın uzun yıllar boyunca yaşayarak edindiği deneyimlerden doğmuş sözlerdir.",
+        "Kimin söylediği bilinmez. Halkın ortak malıdır.",
+        "Atasözleri bize öğüt verir. Genellikle bir yargı bildiren tam bir cümledir.",
+        "Damlaya damlaya göl olur. Bu atasözü, küçük birikimlerin zamanla büyüdüğünü anlatır."
+      ]
+    },
+    {
+      "id": "s07", "title": "Atasözlerini tanıyalım", "visual": "tr-deyim-atasozu-ornek",
+      "sentences": [
+        "Birkaç atasözünü ve anlamlarını öğrenelim.",
+        "Bir elin nesi var, iki elin sesi var. Yani birlikte çalışırsak işleri daha kolay başarırız.",
+        "İşleyen demir ışıldar. Çalışan insan, işlenen demir gibi parlar ve gelişir.",
+        "Sakla samanı, gelir zamanı. Gereksiz görünen bir şey, bir gün işimize yarayabilir.",
+        "Dost kara günde belli olur. Gerçek dost, zor günümüzde yanımızda olandır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Metne uygun atasözü", "visual": "tr-deyim-atasozu-metin",
+      "sentences": [
+        "Sorularda sık sık bir metne uygun atasözünü bulmamız istenir.",
+        "Şu metni okuyalım. Can, tembel arkadaşlarıyla gezmeye başlayınca o da derslerini aksatmaya başladı.",
+        "Bu metin, insanın arkadaşlarından etkilendiğini anlatıyor.",
+        "Buna en uygun atasözü, üzüm üzüme baka baka kararır, atasözüdür.",
+        "Önce metnin ana düşüncesini bul, sonra aynı düşünceyi anlatan atasözünü seç."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat: deyim mi, atasözü mü?", "visual": "tr-deyim-atasozu-dikkat",
+      "sentences": [
+        "Dikkat! Deyim ile atasözünü birbirine karıştırmayalım.",
+        "Deyim genellikle bir söz grubudur ve öğüt vermez. Etekleri zil çalmak bir deyimdir.",
+        "Atasözü ise öğüt veren tam bir cümledir. Akan su yosun tutmaz, bir atasözüdür.",
+        "Bir söz gerçek anlamıyla kullanılıyorsa deyim değildir. Dişini fırçaladı, cümlesinde deyim yoktur.",
+        "Ama zorluğa sabırla katlanmak anlamındaki dişini sıkmak bir deyimdir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "tr-deyim-atasozu-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Deyimler kalıplaşmış söz gruplarıdır. Kelimeleri değiştirilemez.",
+        "Deyimler çoğu zaman gerçek anlamından farklı bir anlam anlatır ve anlatımı güçlendirir.",
+        "Atasözleri atalarımızın deneyimlerinden doğmuş, öğüt veren tam cümlelerdir.",
+        "Bir metne uygun deyimi ya da atasözünü bulmak için önce metnin ana fikrini bulmalıyız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "\"Ayşe, karnesini alınca ağzı kulaklarına vardı.\" Bu cümledeki deyimin anlamı hangisidir?",
+      "options": ["Çok yorulmak", "Çok sevinmek", "Çok konuşmak", "Çok şaşırmak"],
+      "answer": 1,
+      "explain": "Ağzı kulaklarına varmak, çok sevinmek demektir. Ayşe karnesini görünce çok sevinmiştir.",
+      "scene": "s01"
+    },
+    {
+      "question": "Kimseyi dinlemeden bildiğini yapan biri için hangi deyim kullanılır?",
+      "options": ["Göz atmak", "Kulak vermek", "Burnunun dikine gitmek", "Dört gözle beklemek"],
+      "answer": 2,
+      "explain": "Burnunun dikine gitmek, kimsenin sözünü dinlemeden bildiği gibi davranmaktır.",
+      "scene": "s03"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi bir atasözüdür?",
+      "options": ["Etekleri zil çalmak", "Ateş püskürmek", "Dilinde tüy bitmek", "İşleyen demir ışıldar."],
+      "answer": 3,
+      "explain": "İşleyen demir ışıldar, öğüt veren tam bir cümledir. Diğerleri söz grubu olan deyimlerdir.",
+      "scene": "s09"
+    },
+    {
+      "question": "Ece ile Mert sınıf panosunu birlikte hazırlayınca iş çabucak bitti. Bu duruma en uygun atasözü hangisidir?",
+      "options": ["Bir elin nesi var, iki elin sesi var.", "Sakla samanı, gelir zamanı.", "Dost kara günde belli olur.", "Akan su yosun tutmaz."],
+      "answer": 0,
+      "explain": "Bu atasözü, birlikte çalışınca işlerin kolaylaştığını anlatır. Ece ile Mert de birlikte çalışmıştır.",
+      "scene": "s07"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde deyim kullanılmamıştır?",
+      "options": ["Yaz tatilini dört gözle bekliyorum.", "Ali bütün gece gözünü kırpmadı.", "Yemekten sonra dişini fırçaladı.", "Babam haberi duyunca ateş püskürdü."],
+      "answer": 2,
+      "explain": "Dişini fırçalamak gerçek anlamıyla kullanılmıştır, deyim değildir. Diğer cümlelerde deyim vardır.",
+      "scene": "s09"
+    },
+    {
+      "question": "Elif her gün kumbarasına biraz para attı. Bir yıl sonra biriktirdiği parayla kendine bir bisiklet aldı. Bu duruma en uygun atasözü hangisidir?",
+      "options": ["Üzüm üzüme baka baka kararır.", "Damlaya damlaya göl olur.", "Dost kara günde belli olur.", "Akan su yosun tutmaz."],
+      "answer": 1,
+      "explain": "Küçük birikimler zamanla büyür. Elif'in her gün attığı paralar da birikerek bisiklet almasını sağladı.",
+      "scene": "s06"
+    }
+  ]
+}

@@ -97,3 +97,5 @@
   .lesson-quiz h2{font-size:20px}
   .lesson-options button{font-size:16px}
 }
+
+.lesson-filter{margin:6px 0 12px;display:flex;flex-wrap:wrap;gap:8px}

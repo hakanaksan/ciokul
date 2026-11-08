@@ -1,0 +1,256 @@
+{
+ "scenes": {
+  "s01": {
+   "duration": 18.51,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 4.11
+    },
+    {
+     "start": 4.56,
+     "end": 9.38
+    },
+    {
+     "start": 9.83,
+     "end": 13.18
+    },
+    {
+     "start": 13.63,
+     "end": 18.06
+    }
+   ]
+  },
+  "s02": {
+   "duration": 26.07,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 2.78
+    },
+    {
+     "start": 3.23,
+     "end": 8.49
+    },
+    {
+     "start": 8.94,
+     "end": 14.42
+    },
+    {
+     "start": 14.87,
+     "end": 20.19
+    },
+    {
+     "start": 20.64,
+     "end": 25.62
+    }
+   ]
+  },
+  "s03": {
+   "duration": 22.84,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 3.0
+    },
+    {
+     "start": 3.45,
+     "end": 9.12
+    },
+    {
+     "start": 9.57,
+     "end": 13.82
+    },
+    {
+     "start": 14.27,
+     "end": 18.26
+    },
+    {
+     "start": 18.71,
+     "end": 22.39
+    }
+   ]
+  },
+  "s04": {
+   "duration": 19.35,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 2.59
+    },
+    {
+     "start": 3.04,
+     "end": 6.1
+    },
+    {
+     "start": 6.55,
+     "end": 9.47
+    },
+    {
+     "start": 9.92,
+     "end": 13.21
+    },
+    {
+     "start": 13.66,
+     "end": 18.9
+    }
+   ]
+  },
+  "s05": {
+   "duration": 23.19,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 2.45
+    },
+    {
+     "start": 2.9,
+     "end": 6.46
+    },
+    {
+     "start": 6.91,
+     "end": 11.26
+    },
+    {
+     "start": 11.71,
+     "end": 16.98
+    },
+    {
+     "start": 17.43,
+     "end": 22.74
+    }
+   ]
+  },
+  "s06": {
+   "duration": 24.62,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 2.14
+    },
+    {
+     "start": 2.59,
+     "end": 8.62
+    },
+    {
+     "start": 9.07,
+     "end": 12.81
+    },
+    {
+     "start": 13.26,
+     "end": 18.38
+    },
+    {
+     "start": 18.83,
+     "end": 24.17
+    }
+   ]
+  },
+  "s07": {
+   "duration": 28.53,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 2.76
+    },
+    {
+     "start": 3.21,
+     "end": 9.62
+    },
+    {
+     "start": 10.07,
+     "end": 15.85
+    },
+    {
+     "start": 16.3,
+     "end": 22.23
+    },
+    {
+     "start": 22.68,
+     "end": 28.08
+    }
+   ]
+  },
+  "s08": {
+   "duration": 26.83,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 3.8
+    },
+    {
+     "start": 4.25,
+     "end": 11.59
+    },
+    {
+     "start": 12.04,
+     "end": 15.73
+    },
+    {
+     "start": 16.18,
+     "end": 20.96
+    },
+    {
+     "start": 21.41,
+     "end": 26.38
+    }
+   ]
+  },
+  "s09": {
+   "duration": 28.08,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 3.77
+    },
+    {
+     "start": 4.22,
+     "end": 9.62
+    },
+    {
+     "start": 10.07,
+     "end": 16.19
+    },
+    {
+     "start": 16.64,
+     "end": 23.03
+    },
+    {
+     "start": 23.48,
+     "end": 27.63
+    }
+   ]
+  },
+  "s10": {
+   "duration": 28.24,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 2.23
+    },
+    {
+     "start": 2.68,
+     "end": 7.35
+    },
+    {
+     "start": 7.8,
+     "end": 13.09
+    },
+    {
+     "start": 13.54,
+     "end": 18.63
+    },
+    {
+     "start": 19.08,
+     "end": 24.29
+    },
+    {
+     "start": 24.74,
+     "end": 27.79
+    }
+   ]
+  }
+ },
+ "voice": "datakey-ses antalia-mini",
+ "duration": 246.26
+}

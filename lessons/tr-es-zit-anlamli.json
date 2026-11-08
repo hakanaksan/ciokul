@@ -1,0 +1,159 @@
+{
+  "id": "tr-es-zit-anlamli",
+  "title": "Eş Anlamlı ve Zıt Anlamlı Kelimeler",
+  "course": "Türkçe",
+  "unit": "Söz Varlığı",
+  "kazanim": {
+    "code": "T.4.3.7, T.4.3.8, T.4.3.9",
+    "text": "Kelimelerin zıt anlamlılarını bulur. Kelimelerin eş anlamlılarını bulur. Eş sesli kelimelerin anlamlarını ayırt eder.",
+    "note": "MEB Türkçe Dersi Öğretim Programı (2018), 4. sınıf, Okuma / Söz Varlığı. Eş ve zıt anlamlılar cümle içinde, bağlama göre bulunur; olumsuzluk ekiyle kurulan karşılıkların zıt anlam olmadığı ve eş sesli kelimelerin eş anlamlılarla karıştırılmaması üzerinde durulur."
+  },
+  "summary": "Eş anlamlı, zıt anlamlı ve eş sesli kelimeleri; cümlede yerine koyma yolunu ve sık yapılan hataları örneklerle öğren.",
+  "match": {"course": "Türkçe", "booklet": "Tema 01–02", "keywords": ["eş anlam", "zıt anlam", "zıt (karşıt)", "karşıt anlam", "anlamdaş", "anlam ilişki", "sesteş", "eş sesli"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Mektep ne demek?", "visual": "tr-es-zit-anlamli-intro",
+      "sentences": [
+        "Merhaba! Bu sabah dedem bana, mektebe geç kalma evladım, dedi.",
+        "Ben de hemen sordum. Dedeciğim, mektep ne demek?",
+        "Dedem gülümsedi ve mektebin okul demek olduğunu söyledi.",
+        "Demek ki aynı şeyi anlatan farklı kelimeler var. Bugün kelimelerin anlamdaşlarını ve karşıtlarını tanıyacağız."
+      ]
+    },
+    {
+      "id": "s02", "title": "Eş anlamlı kelimeler", "visual": "tr-es-zit-anlamli-es",
+      "sentences": [
+        "Yazılışları farklı, anlamları aynı ya da çok yakın olan kelimelere eş anlamlı kelimeler denir.",
+        "Okul ile mektep eş anlamlıdır.",
+        "Öğrenci ile talebe de eş anlamlıdır.",
+        "Kelime ile sözcük, cevap ile yanıt da aynı anlama gelir.",
+        "Eş anlamlı kelimelere anlamdaş kelimeler de denir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Daha fazla eş anlamlı", "visual": "tr-es-zit-anlamli-es2",
+      "sentences": [
+        "Bazı eş anlamlı kelimeleri büyüklerimizden sık sık duyarız.",
+        "Misafir ile konuk, vatan ile yurt aynı anlamdadır.",
+        "Hediye ile armağan, ihtiyar ile yaşlı da eş anlamlıdır.",
+        "Renklerde de eş anlamlılar vardır. Kırmızıya al, siyaha kara da deriz.",
+        "Bayrağımız al renklidir, cümlesindeki al kelimesi kırmızı demektir."
+      ]
+    },
+    {
+      "id": "s04", "title": "Yerine koyalım", "visual": "tr-es-zit-anlamli-swap",
+      "sentences": [
+        "Eş anlamlı kelimeyi bulmanın kolay bir yolu var.",
+        "Kelimenin yerine diğerini koyarız. Cümlenin anlamı değişmiyorsa iki kelime eş anlamlıdır.",
+        "Okul yolunda hızlı bir araç gördüm, cümlesine bakalım.",
+        "Okul yerine mektep, hızlı yerine süratli, araç yerine vasıta diyebiliriz.",
+        "Cümlenin anlamı hiç değişmedi. Demek ki bu kelimeler eş anlamlıdır."
+      ]
+    },
+    {
+      "id": "s05", "title": "Zıt anlamlı kelimeler", "visual": "tr-es-zit-anlamli-zit",
+      "sentences": [
+        "Şimdi de kelimelerin karşıtlarını tanıyalım.",
+        "Anlamca birbirinin karşıtı olan kelimelere zıt anlamlı kelimeler denir. Bunlara karşıt anlamlı da deriz.",
+        "Uzun ile kısa zıt anlamlıdır.",
+        "Sıcak ile soğuk, eski ile yeni de zıt anlamlıdır.",
+        "Erken ile geç, kolay ile zor da birbirinin zıddıdır."
+      ]
+    },
+    {
+      "id": "s06", "title": "Zıt anlamlılar cümlede", "visual": "tr-es-zit-anlamli-zit2",
+      "sentences": [
+        "Zıt anlamlı kelimeler aynı cümlede birlikte de kullanılabilir.",
+        "Elindeki kuru bez ile ıslak sıraları siliyordu.",
+        "Bu cümlede kuru ile ıslak zıt anlamlıdır.",
+        "Cimri ile cömert, ucuz ile pahalı, gerçek ile hayal de zıt anlamlı kelimelerdir.",
+        "Üretici ile tüketici, tekil ile çoğul da birbirinin karşıtıdır."
+      ]
+    },
+    {
+      "id": "s07", "title": "Dikkat: olumsuz zıt değildir", "visual": "tr-es-zit-anlamli-dikkat",
+      "sentences": [
+        "Dikkat! Zıt anlamlı kelime bulurken sık yapılan bir hata var.",
+        "Bir kelimeyi olumsuz yapmak, onun zıt anlamlısını bulmak değildir.",
+        "Gelmek kelimesinin zıt anlamlısı gelmemek değil, gitmektir.",
+        "Güzel kelimesinin zıt anlamlısı da güzel değil olmaz. Doğrusu çirkindir.",
+        "Bir de şunu unutma. Masa, kalem gibi bazı kelimelerin zıt anlamlısı yoktur."
+      ]
+    },
+    {
+      "id": "s08", "title": "Cümleye göre değişen zıtlar", "visual": "tr-es-zit-anlamli-baglam",
+      "sentences": [
+        "Bazen bir kelimenin, cümleye göre farklı zıt anlamlıları olur.",
+        "Açık kapı dersek, açık kelimesinin zıddı kapalıdır.",
+        "Açık mavi dersek, bu kez zıddı koyudur.",
+        "Kuru bezin zıddı ıslak bezdir. Kuru dalın zıddı ise yaş daldır.",
+        "Bu yüzden zıt anlamlıyı bulurken kelimenin cümledeki anlamına bakmalıyız."
+      ]
+    },
+    {
+      "id": "s09", "title": "Eş sesli kelimeler", "visual": "tr-es-zit-anlamli-sesli",
+      "sentences": [
+        "Son olarak, eş anlamlı kelimelerle sık karıştırılan bir konuya bakalım.",
+        "Yazılışları aynı, anlamları farklı olan kelimelere eş sesli kelimeler denir. Bunlara sesteş de denir.",
+        "Yüz kelimesi bir sayıdır. Yüz, aynı zamanda yüzümüzün adıdır. Denizde yüz derken de yüzmekten söz ederiz.",
+        "Yeni yaşımı yaş pastayla kutladım, cümlesinde iki farklı anlamda yaş kelimesi vardır.",
+        "Unutma! Eş anlamlıda yazılış farklı, anlam aynıdır. Eş seslide yazılış aynı, anlam farklıdır."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "tr-es-zit-anlamli-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Eş anlamlı kelimelerin yazılışları farklı, anlamları aynıdır. Okul ile mektep gibi.",
+        "Zıt anlamlı kelimelerin anlamları birbirinin karşıtıdır. Uzun ile kısa gibi.",
+        "Bir kelimeyi olumsuz yapmak zıt anlamlısını bulmak değildir. Gelmek kelimesinin zıddı gitmektir.",
+        "Eş sesli kelimelerin yazılışları aynı, anlamları farklıdır. Yüz kelimesi gibi.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Aşağıdakilerin hangisinde eş anlamlı kelimeler bir arada verilmiştir?",
+      "options": ["uzun - kısa", "misafir - konuk", "kuru - ıslak", "erken - geç"],
+      "answer": 1,
+      "explain": "Misafir ile konuk aynı anlama gelir. Diğer seçeneklerdeki kelimeler zıt anlamlıdır.",
+      "scene": "s03"
+    },
+    {
+      "question": "\"Kardeşim yarışta çok hızlı koştu.\" Bu cümledeki \"hızlı\" kelimesinin eş anlamlısı hangisidir?",
+      "options": ["yavaş", "büyük", "süratli", "yorgun"],
+      "answer": 2,
+      "explain": "Hızlı yerine süratli dersek cümlenin anlamı değişmez. Yavaş ise hızlının zıt anlamlısıdır.",
+      "scene": "s04"
+    },
+    {
+      "question": "Hangi seçenekteki kelimeler zıt anlamlıdır?",
+      "options": ["cevap - yanıt", "hediye - armağan", "cimri - cömert", "vatan - yurt"],
+      "answer": 2,
+      "explain": "Cimri ile cömert anlamca birbirinin karşıtıdır. Diğer çiftler eş anlamlıdır.",
+      "scene": "s06"
+    },
+    {
+      "question": "\"Gelmek\" kelimesinin zıt anlamlısı hangisidir?",
+      "options": ["gitmek", "gelmemek", "beklemek", "koşmak"],
+      "answer": 0,
+      "explain": "Gelmenin karşıtı gitmektir. Gelmemek, kelimenin olumsuzudur; zıt anlamlısı değildir.",
+      "scene": "s07"
+    },
+    {
+      "question": "\"Annem bana açık renk bir kazak aldı.\" Bu cümledeki \"açık\" kelimesinin zıt anlamlısı hangisidir?",
+      "options": ["kapalı", "koyu", "yeni", "kalın"],
+      "answer": 1,
+      "explain": "Renklerde açık kelimesinin zıddı koyudur. Kapalı, açık kapı gibi kullanımlarda zıt anlamlıdır.",
+      "scene": "s08"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde eş sesli (sesteş) kelimeler bir arada kullanılmıştır?",
+      "options": ["Öğrenciler bahçede toplandı.", "Kuşlar sıcak yerlere göç eder.", "Kitabımı çantama koydum.", "Çay kenarında oturup çay içtik."],
+      "answer": 3,
+      "explain": "İlk çay küçük akarsu, ikinci çay ise içtiğimiz içecektir. Yazılışları aynı, anlamları farklıdır.",
+      "scene": "s09"
+    }
+  ]
+}

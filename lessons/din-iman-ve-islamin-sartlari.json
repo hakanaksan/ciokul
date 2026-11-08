@@ -1,0 +1,169 @@
+{
+  "id": "din-iman-ve-islamin-sartlari",
+  "title": "İslam'ın İnanç Esasları ve Şartları",
+  "course": "Din Kültürü ve Ahlak Bilgisi",
+  "unit": "İslam'ı Tanıyalım",
+  "kazanim": {
+    "code": "4.2.1, 4.2.2, 4.2.4",
+    "text": "İslam'ın inanç esaslarını sıralar. İslam'ın şartlarını söyler. Âmentü duasını okur, anlamını söyler.",
+    "note": "MEB Din Kültürü ve Ahlak Bilgisi Dersi Öğretim Programı (2018, 4-8. sınıflar), 4. sınıf 2. ünite; 2026-2027 DKAB 4 çerçeve yıllık planı. İslam'ın altı inanç esası ve beş şartı öğrenci seviyesi dikkate alınarak ayrıntıya girilmeden açıklanır; Âmentü duası ile ilgili kısa açıklamalara yer verilir. Kur'an-ı Kerim'in iç düzeni (4.2.3: ayet, sure, cüz) bu derste yoktur."
+  },
+  "summary": "İmanın altı şartını, Âmentü duasını ve anlamını, İslam'ın beş şartını öğren; inanç esasları ile şartları karıştırmamayı örneklerle gör.",
+  "match": {"course": "Din Kültürü ve Ahlak Bilgisi", "booklet": "Ünite 02", "keywords": ["iman", "inanç esas", "imanın şart", "şartları", "beş şart", "âmentü", "amentü", "melek", "ahiret", "kader", "namaz", "oruç", "zekât", "hacca", "hac ", "kâbe", "kelime-i şehadet", "şahitlik", "peygamberler", "kitaplara", "nurdan", "sonsuz hayat", "elçi"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Sağlam bir bina", "visual": "din-iman-ve-islamin-sartlari-intro",
+      "sentences": [
+        "Merhaba! Sağlam bir binanın güçlü temelleri ve direkleri olur.",
+        "İslam dinini de böyle bir binaya benzetebiliriz.",
+        "Binanın temelinde, kalbimizle inandığımız altı inanç esası vardır.",
+        "Direklerinde ise İslam'ın beş şartı bulunur.",
+        "Peygamberimiz de İslam'ın beş esas üzerine kurulduğunu bildirmiştir."
+      ]
+    },
+    {
+      "id": "s02", "title": "İman ve inanç esasları", "visual": "din-iman-ve-islamin-sartlari-esaslar",
+      "sentences": [
+        "İman, inanmak ve doğrulamak demektir.",
+        "Bir Müslümanın inanıp kabul etmesi gereken esaslara İslam'ın inanç esasları ya da imanın şartları denir.",
+        "İnanç esasları altı tanedir: Allah'a, meleklere, kitaplara ve peygamberlere iman.",
+        "Ahiret gününe iman ve kader ile kazaya iman da inanç esaslarıdır."
+      ]
+    },
+    {
+      "id": "s03", "title": "Allah'a ve meleklere iman", "visual": "din-iman-ve-islamin-sartlari-allah-melek",
+      "sentences": [
+        "İnanç esaslarının temeli Allah'a imandır.",
+        "Allah'a iman, eşi ve benzeri olmayan, her şeyi yaratan tek Allah'a inanmaktır.",
+        "Meleklere iman, Allah'ın emriyle çeşitli görevleri yerine getiren meleklerin varlığına inanmaktır.",
+        "Melekler nurdan yaratılmıştır ve gözle görülmezler. İnsanların iyiliğini isterler.",
+        "Örneğin Cebrail, vahiy meleğidir. Allah'tan aldığı mesajları peygamberlere iletir."
+      ]
+    },
+    {
+      "id": "s04", "title": "Peygamberlere ve kitaplara iman", "visual": "din-iman-ve-islamin-sartlari-kitap-peygamber",
+      "sentences": [
+        "Allah, insanlara doğru yolu göstermek için peygamberler göndermiştir.",
+        "Peygamberler, Allah'ın insanlar arasından seçtiği elçilerdir. Onları insanlar seçmez.",
+        "Peygamberler dürüst ve güvenilir kişilerdir. İlk peygamber Hazreti Adem, son peygamber Hazreti Muhammed'dir.",
+        "Allah, bazı peygamberlere ilahi kitaplar göndermiştir: Tevrat, Zebur, İncil ve Kur'an-ı Kerim.",
+        "Kur'an-ı Kerim son ilahi kitaptır. Kitaplar iman, ibadet ve ahlakta yol gösterir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Ahirete ve kadere iman", "visual": "din-iman-ve-islamin-sartlari-ahiret-kader",
+      "sentences": [
+        "Ahirete iman, dünya hayatından sonra sonsuz bir hayatın başlayacağına inanmaktır.",
+        "Ahirette herkes, dünyada yaptığı iyi ve kötü davranışların karşılığını alır.",
+        "Bu inanç, bizi iyi ve güzel davranışlar yapmaya yönlendirir.",
+        "Kadere iman ise her şeyin Allah'ın bilgisi ve dilemesiyle, bir ölçüye göre gerçekleştiğine inanmaktır.",
+        "Güneşin doğup batması ve mevsimlerin sırayla gelmesi bu düzenin örnekleridir."
+      ]
+    },
+    {
+      "id": "s06", "title": "Âmentü duası", "visual": "din-iman-ve-islamin-sartlari-amentu",
+      "sentences": [
+        "İnanç esaslarını Amentü duasıyla dile getiririz.",
+        "Amentü, inandım demektir. Dua, Amentü billahi diye başlar.",
+        "Anlamı şöyledir: Allah'a, meleklerine, kitaplarına, peygamberlerine, ahiret gününe, kadere, hayrın ve şerrin Allah'tan olduğuna inandım.",
+        "Öldükten sonra diriliş haktır.",
+        "Duanın sonunda kelime-i şehadet vardır."
+      ]
+    },
+    {
+      "id": "s07", "title": "İslam'ın şartları", "visual": "din-iman-ve-islamin-sartlari-sartlar",
+      "sentences": [
+        "Şimdi binanın direklerine, yani İslam'ın beş şartına bakalım.",
+        "Bunlar; kelime-i şehadet, namaz, oruç, zekât ve hacdır.",
+        "İlk şart kelime-i şehadet getirmektir. Müslüman olmak isteyen kişi önce kelime-i şehadet getirir.",
+        "Anlamı: Allah'tan başka ilah olmadığına şahitlik ederim. Hazreti Muhammed'in O'nun kulu ve elçisi olduğuna da şahitlik ederim.",
+        "Kelime-i şehadet, Amentü duasının sonunda da yer alır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Namaz ve oruç", "visual": "din-iman-ve-islamin-sartlari-namaz-oruc",
+      "sentences": [
+        "İkinci şart namaz kılmaktır. Namaz, günde beş vakit kılınır.",
+        "Nisa suresinin yüz üçüncü ayetinde şöyle buyrulur: Namazı dosdoğru kılın, çünkü namaz müminler üzerine vakitleri belli bir farzdır.",
+        "Üçüncü şart oruç tutmaktır. Oruç, ramazan ayında tutulur.",
+        "Oruçlu kişi, sabahtan akşama kadar bir şey yemez ve içmez.",
+        "Oruç bize sabrı ve şükretmeyi öğretir. Aç olanların hâlini anlamamızı sağlar."
+      ]
+    },
+    {
+      "id": "s09", "title": "Zekât ve hac", "visual": "din-iman-ve-islamin-sartlari-zekat-hac",
+      "sentences": [
+        "Dördüncü şart zekât vermektir.",
+        "Dinen zengin sayılan Müslüman, her yıl malının belli bir bölümünü ihtiyaç sahiplerine verir.",
+        "Zekât yardımlaşmayı ve paylaşmayı artırır. İnsanı cimrilik ve bencillikten uzaklaştırır.",
+        "Beşinci şart hacca gitmektir. Hac, belli günlerde Mekke'deki Kâbe'nin ve kutsal yerlerin ziyaretidir.",
+        "Sağlığı ve maddi durumu uygun olan Müslüman, ömründe bir kez hacca gider. Hac, bütün insanların eşit ve kardeş olduğunu hatırlatır."
+      ]
+    },
+    {
+      "id": "s10", "title": "Dikkat: Karıştırmayalım", "visual": "din-iman-ve-islamin-sartlari-dikkat",
+      "sentences": [
+        "Dikkat! İnanç esasları ile İslam'ın şartlarını karıştırmayalım.",
+        "Allah'a, meleklere, kitaplara, peygamberlere, ahirete ve kadere iman, inanç esaslarıdır. Bunlara kalbimizle inanırız.",
+        "Kelime-i şehadet, namaz, oruç, zekât ve hac ise İslam'ın şartlarıdır.",
+        "Dua etmek güzel bir ibadettir ama bu iki listede de yer almaz.",
+        "Kolay hatırlamak için: İnanç esasları altı, İslam'ın şartları beştir."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "din-iman-ve-islamin-sartlari-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "İman, inanmak demektir. İslam'ın altı inanç esası vardır.",
+        "Amentü duası inanç esaslarını sıralar; Amentü, inandım demektir.",
+        "İslam'ın beş şartı: kelime-i şehadet, namaz, oruç, zekât ve hac.",
+        "İnanç esasları binanın temeli, İslam'ın şartları ise direkleri gibidir.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Hangisi İslam'ın inanç esaslarından biri değildir?",
+      "options": ["Meleklere iman", "Dua etmek", "Ahirete iman", "Allah'a iman"],
+      "answer": 1,
+      "explain": "İnanç esasları; Allah'a, meleklere, kitaplara, peygamberlere, ahirete ve kadere imandır. Dua etmek bunlardan biri değildir.",
+      "scene": "s10"
+    },
+    {
+      "question": "\"Allah'ın emriyle çeşitli görevleri yerine getiren, nurdan yaratılmış ve gözle görülmeyen varlıklara iman etmek\" hangi inanç esasıdır?",
+      "options": ["Kitaplara iman", "Kadere iman", "Peygamberlere iman", "Meleklere iman"],
+      "answer": 3,
+      "explain": "Melekler nurdan yaratılmıştır, gözle görülmez ve Allah'ın verdiği görevleri yerine getirir.",
+      "scene": "s03"
+    },
+    {
+      "question": "\"Âmentü\" ifadesinin anlamı hangisidir?",
+      "options": ["Bildim.", "İşittim.", "İnandım.", "Öğrendim."],
+      "answer": 2,
+      "explain": "Âmentü, inandım demektir. Bu duada İslam'ın inanç esasları sıralanır.",
+      "scene": "s06"
+    },
+    {
+      "question": "Müslüman olmak isteyen bir kişinin yerine getirmesi gereken ilk şart hangisidir?",
+      "options": ["Kelime-i şehadet getirmek", "Namaz kılmak", "Oruç tutmak", "Hacca gitmek"],
+      "answer": 0,
+      "explain": "İslam'ın ilk şartı kelime-i şehadet getirmektir: Allah'tan başka ilah olmadığına, Hazreti Muhammed'in O'nun kulu ve elçisi olduğuna şahitlik etmek.",
+      "scene": "s07"
+    },
+    {
+      "question": "Dinen zengin sayılan Müslümanın, her yıl malının belli bir bölümünü ihtiyaç sahiplerine vermesine ne denir?",
+      "options": ["Hac", "Oruç", "Namaz", "Zekât"],
+      "answer": 3,
+      "explain": "Bu ibadete zekât denir. Zekât yardımlaşmayı artırır, insanı cimrilik ve bencillikten uzaklaştırır.",
+      "scene": "s09"
+    },
+    {
+      "question": "Peygamberlerle ilgili hangisi yanlıştır?",
+      "options": ["Allah'ın mesajlarını insanlara iletirler.", "Dürüst ve güvenilir kişilerdir.", "Toplumları tarafından seçilirler.", "İlk peygamber Hazreti Âdem'dir."],
+      "answer": 2,
+      "explain": "Peygamberleri insanlar seçmez; onlar Allah'ın insanlar arasından seçtiği elçilerdir.",
+      "scene": "s04"
+    }
+  ]
+}

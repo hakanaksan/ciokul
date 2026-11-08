@@ -1,0 +1,157 @@
+{
+  "id": "sos-aile-tarihi",
+  "title": "Aile Tarihimi Araştırıyorum",
+  "course": "Sosyal Bilgiler",
+  "unit": "Kültür ve Miras",
+  "kazanim": {
+    "code": "SB.4.2.1",
+    "text": "Sözlü, yazılı, görsel kaynaklar ve nesnelerden yararlanarak aile tarihi çalışması yapar.",
+    "note": "MEB Sosyal Bilgiler Dersi Öğretim Programı (2018), 4. sınıf. Öğrenme alanında aile birliğine önem verme değeri ile kanıt kullanma, zaman ve kronolojiyi algılama becerileri öne çıkar. Sözlü tarih görüşmesinin aşamaları ile yazılı, görsel kaynaklar ve nesneler örneklerle ele alınır; aile olayları kronolojik sıraya konur."
+  },
+  "summary": "Aile ağacını, sözlü tarih görüşmesinin adımlarını, yazılı ve görsel kaynakları, eski nesneleri ve aile olaylarını kronolojik sıraya koymayı öğren.",
+  "match": {"course": "Sosyal Bilgiler", "booklet": "Ünite 02", "keywords": ["aile tarih", "sözlü tarih", "görüşme", "fotoğraf", "mektup", "karne", "geçmişe ait", "kronolojik", "röportaj", "nüfus cüzdanı", "kimlik belgesi"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Anneannemin sandığı", "visual": "sos-aile-tarihi-intro",
+      "sentences": [
+        "Merhaba! Ece, anneannesinin evinde eski bir sandık buldu.",
+        "Sandıktan siyah beyaz fotoğraflar, eski mektuplar ve bir cep saati çıktı.",
+        "Ece çok merak etti: Fotoğraftaki bu insanlar kim? Ailem eskiden nasıl yaşardı?",
+        "Ailemizin geçmişini araştırmaya aile tarihi çalışması denir. Haydi, Ece'ye yardım edelim!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Aile ağacı", "visual": "sos-aile-tarihi-tree",
+      "sentences": [
+        "Aile tarihini araştırmaya önce ailemizi tanıyarak başlarız.",
+        "En altta biz ve kardeşlerimiz varız.",
+        "Bir üst basamakta annemiz ve babamız bulunur.",
+        "En üstte ise büyüklerimiz vardır: anneannemiz, babaannemiz ve dedelerimiz.",
+        "Bu şemaya aile ağacı denir. Aile ağacı, ailemizi kuşaklar hâlinde gösterir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Aile tarihinde neler var?", "visual": "sos-aile-tarihi-topics",
+      "sentences": [
+        "Aile tarihinde, büyüklerimizin nerede doğduğunu ve nerelerde yaşadığını öğreniriz.",
+        "Hangi işlerde çalıştıklarını, nasıl evlendiklerini ve hangi okullara gittiklerini de öğreniriz.",
+        "Ailemizdeki doğumlar, göçler ve önemli olaylar da aile tarihinin bir parçasıdır.",
+        "Bu bilgileri öğrenmek için dört çeşit kaynaktan yararlanırız."
+      ]
+    },
+    {
+      "id": "s04", "title": "Sözlü kaynaklar", "visual": "sos-aile-tarihi-oral",
+      "sentences": [
+        "Birinci kaynağımız sözlü kaynaklardır.",
+        "Aile büyüklerimiz geçmişin canlı tanıklarıdır. Yaşadıklarını bize anlatabilirler.",
+        "Büyüklerimizle görüşerek onların anılarını dinlediğimiz çalışmaya sözlü tarih denir.",
+        "Aile tarihi hazırlanırken en çok sözlü tarih yönteminden yararlanılır.",
+        "Dedemizin anlattığı bir anı da, söylediği bir atasözü de sözlü kaynaktır. Çünkü onları okuyarak değil, dinleyerek öğreniriz."
+      ]
+    },
+    {
+      "id": "s05", "title": "Görüşme adım adım", "visual": "sos-aile-tarihi-steps",
+      "sentences": [
+        "Sözlü tarih çalışması bir görüşmeyle yapılır. Görüşmeyi adım adım planlarız.",
+        "Önce görüşme yapacağımız kişiyi belirleriz.",
+        "Sonra görüşmenin yerini ve zamanını belirleriz.",
+        "Ardından soruları ve araç gereçleri hazırlarız. Örneğin ses kaydı için bir telefon ya da kayıt cihazı.",
+        "Görüşmeyi yapar, anlatılanları dikkatle dinler ve kaydederiz.",
+        "En son kayıtları düzenleyip yazıya geçiririz."
+      ]
+    },
+    {
+      "id": "s06", "title": "Yazılı ve görsel kaynaklar", "visual": "sos-aile-tarihi-written",
+      "sentences": [
+        "İkinci kaynağımız yazılı kaynaklardır.",
+        "Eski mektuplar, karneler, diplomalar, nüfus cüzdanları ve anı defterleri yazılı kaynaklardır.",
+        "Üçüncü kaynağımız görsel kaynaklardır.",
+        "Eski fotoğraflar, resimler ve aile videoları görsel kaynaklara örnektir.",
+        "Babamızın kimlik kartında bile babaannemizin ve dedemizin adları yazar."
+      ]
+    },
+    {
+      "id": "s07", "title": "Eski nesneler", "visual": "sos-aile-tarihi-objects",
+      "sentences": [
+        "Dördüncü kaynağımız eski nesnelerdir.",
+        "Dedemizin cep saati, babaannemizin ördüğü örtü ve çeyiz sandığı birer nesnedir.",
+        "Eski bir madalya, oyuncak ya da bakır kap da bize geçmişi anlatır.",
+        "Bu nesneler, ailemizin eskiden nasıl yaşadığını gösterir."
+      ]
+    },
+    {
+      "id": "s08", "title": "Dikkat!", "visual": "sos-aile-tarihi-dikkat",
+      "sentences": [
+        "Dikkat! Aile tarihi çalışmasında sık yapılan hatalar vardır.",
+        "Sözlü tarih için küçük kardeşimizle ya da arkadaşımızla değil, aile büyüklerimizle görüşürüz.",
+        "Çünkü ailemizin geçmişini en iyi, o yılları yaşamış olan büyüklerimiz bilir.",
+        "Tablet, akıllı telefon ya da yeni alınmış eşyalar, geçmişe ait kaynaklar değildir.",
+        "Görüşmede aklımıza gelen soruları rastgele sormayız. Önceden hazırladığımız soruları sorarız."
+      ]
+    },
+    {
+      "id": "s09", "title": "Olayları sıraya koyalım", "visual": "sos-aile-tarihi-timeline",
+      "sentences": [
+        "Topladığımız bilgileri, olayların oluş tarihine göre sıraya koyarız. Buna kronoloji denir.",
+        "Örneğin önce anneannemiz ile dedemiz evlendi. Birkaç yıl sonra annemiz doğdu.",
+        "Yıllar sonra annemiz ile babamız evlendi.",
+        "En son da biz doğduk. En eski olay en başa, en yeni olay en sona yazılır."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "sos-aile-tarihi-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Aile tarihi çalışması, ailemizin geçmişini araştırmaktır.",
+        "Aile büyüklerimizle görüşerek sözlü tarih çalışması yaparız.",
+        "Mektup ve karne gibi yazılı kaynaklardan, fotoğraf gibi görsel kaynaklardan yararlanırız.",
+        "Eski nesneler de geçmişi anlatır. Bulduğumuz olayları kronolojik sıraya koyarız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Ayşe, aile tarihini öğrenmek için babaannesiyle görüşüp anılarını dinliyor. Ayşe hangi yöntemi kullanıyor?",
+      "options": ["Görsel kaynak", "Sözlü tarih", "Yazılı kaynak", "Nesne inceleme"],
+      "answer": 1,
+      "explain": "Büyüklerimizle görüşüp anılarını dinlemeye sözlü tarih denir. Aile tarihinde en çok bu yöntem kullanılır.",
+      "scene": "s04"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi aile tarihini öğrenmek için kullanılan yazılı kaynaklara örnektir?",
+      "options": ["Dedemin anlattığı anı", "Eski bir cep saati", "Babamın ilkokul karnesi", "Babaannemin ördüğü örtü"],
+      "answer": 2,
+      "explain": "Karne yazılı bir kaynaktır. Anlatılan anı sözlü kaynak, saat ve örtü ise nesnedir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Sözlü tarih çalışmasında ilk olarak ne yapılır?",
+      "options": ["Görüşme yapılacak kişi belirlenir.", "Görüşme yapılır.", "Kayıtlar yazıya geçirilir.", "Görüşmenin yeri ve zamanı belirlenir."],
+      "answer": 0,
+      "explain": "Önce görüşülecek kişi, sonra yer ve zaman belirlenir. Sorular hazırlanır, görüşme yapılır, en son kayıtlar yazıya geçirilir.",
+      "scene": "s05"
+    },
+    {
+      "question": "Egemen aile tarihi çalışmasında hangisini yaparsa hata yapmış olur?",
+      "options": ["Dedesinin anılarını dinlemek", "Küçük kardeşinden ailenin geçmişini anlatmasını istemek", "Eski aile fotoğraflarını incelemek", "Babaannesinin eski mektuplarını okumak"],
+      "answer": 1,
+      "explain": "Ailemizin geçmişini en iyi, o yılları yaşamış olan büyüklerimiz bilir. Küçük kardeşimiz bilemez.",
+      "scene": "s08"
+    },
+    {
+      "question": "Ali, babaannesinin sandığından geçmişe ait olmayan eşyayı çıkarmak istiyor. Hangisini çıkarmalıdır?",
+      "options": ["Fotoğraf albümü", "Eski mektuplar", "Tablet bilgisayar", "Pul koleksiyonu"],
+      "answer": 2,
+      "explain": "Tablet yeni bir eşyadır, geçmişe ait değildir. Fotoğraf, mektup ve pul koleksiyonu geçmişi anlatır.",
+      "scene": "s08"
+    },
+    {
+      "question": "Aşağıdaki olaylar kronolojik olarak sıralandığında hangisi ilk sırada yer alır?",
+      "options": ["Benim doğmam", "Annemle babamın evlenmesi", "Ablamın doğması", "Anneannemle dedemin evlenmesi"],
+      "answer": 3,
+      "explain": "Kronolojide en eski olay en başa yazılır. Anneanne ile dedenin evlenmesi, annemizin doğumundan bile öncedir.",
+      "scene": "s09"
+    }
+  ]
+}

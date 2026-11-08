@@ -6,6 +6,9 @@ Ses:       Varsayilan DataKey ses servisi (https://ses.app.datakey.tr, Antalia-2
            SES_TOKEN ortam degiskeninden ya da .env.datakey icindeki `SES_TOKEN=...` satirindan okunur;
            token yalnizca bu betikte kullanilir, uygulamaya ve depoya girmez.
            Yedek: tools/piper/piper/piper.exe + tools/piper/voices/tr_TR-dfki-medium.onnx
+Ingilizce: Sahnede "english": [1, 3] gibi verilen cumleler (0'dan sayilir) yerel Piper'in
+           Ingilizce sesiyle okunur: tools/piper/voices/en_US-ljspeech-medium.onnx (LJSpeech, kamu mali).
+           Turkce ses bu cumleleri Turkce gibi okurdu. Butun parcalar 24000 Hz'e cevrilip birlesir.
 Cikti:     lesson_audio/<ders>/<sahne>.wav (mono 16 bit WAV) ve lessons/<ders>.audio.json
            (sahne suresi ve her cumlenin baslangic/bitis saniyesi; altyazi ve sahne adimlari icin).
 Sesler depoya `upload_files.py --only lesson_audio/ --force` ile yuklenir.
@@ -19,18 +22,21 @@ import time
 import urllib.error
 import urllib.request
 import wave
+from array import array
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 PIPER = BASE / "tools" / "piper" / "piper" / "piper.exe"
 MODEL = BASE / "tools" / "piper" / "voices" / "tr_TR-dfki-medium.onnx"
+MODEL_EN = BASE / "tools" / "piper" / "voices" / "en_US-ljspeech-medium.onnx"
 LESSONS = BASE / "lessons"
 OUT = BASE / "lesson_audio"
 PAUSE = 0.45          # seconds between sentences
 LENGTH_SCALE = "1.12"  # Piper: a little slower than normal, for 9-10 year olds
 SES_URL = os.environ.get("SES_URL", "https://ses.app.datakey.tr").rstrip("/")
 SES_SPEED = 0.9        # DataKey: 0.7-1.3, service default 0.95
-SES_RATE = 24000
+SES_RATE = 24000      # every scene file is written at this rate
+EN_LENGTH_SCALE = "1.15"  # English examples a little slower, for beginners
 
 
 def ses_token():
@@ -44,8 +50,8 @@ def ses_token():
     return token
 
 
-def speak_piper(text, target):
-    proc = subprocess.run([str(PIPER), "-m", str(MODEL), "-f", str(target), "--length_scale", LENGTH_SCALE, "-q"],
+def speak_piper(text, target, model=MODEL, length_scale=LENGTH_SCALE):
+    proc = subprocess.run([str(PIPER), "-m", str(model), "-f", str(target), "--length_scale", length_scale, "-q"],
                           input=text, capture_output=True, text=True, encoding="utf-8")
     if proc.returncode != 0 or not target.is_file():
         sys.exit(f"Piper hatasi: {text[:60]}\n{proc.stderr[-1500:]}")
@@ -72,28 +78,52 @@ def speak_datakey(text, target, token):
     sys.exit(f"Ses servisine ulasilamadi: {text[:60]}")
 
 
+def resample(data, rate, target_rate):
+    """Linear resampling of 16-bit mono PCM; used to join Piper (22050 Hz) and DataKey (24000 Hz) parts."""
+    if rate == target_rate:
+        return data
+    samples = array("h", data)
+    count = int(len(samples) * target_rate / rate)
+    out = array("h", bytes(2 * count))
+    step = rate / target_rate
+    for i in range(count):
+        pos = i * step
+        j = int(pos)
+        frac = pos - j
+        a = samples[j]
+        b = samples[j + 1] if j + 1 < len(samples) else a
+        out[i] = int(a + (b - a) * frac)
+    return out.tobytes()
+
+
 def build_scene(scene, target, speak):
     """Speaks each sentence separately and joins them with pauses; returns sentence timings."""
-    frames, timings, params = [], [], None
+    english = set(scene.get("english", []))
+    chunks, timings, position = [], [], 0
     with tempfile.TemporaryDirectory() as directory:
         for index, sentence in enumerate(scene["sentences"]):
             part = Path(directory) / f"{index}.wav"
-            speak(sentence, part)
+            if index in english:
+                speak_piper(sentence, part, MODEL_EN, EN_LENGTH_SCALE)
+            else:
+                speak(sentence, part)
             with wave.open(str(part)) as source:
-                params = params or source.getparams()
-                rate = source.getframerate()
-                start = sum(len(f) for f in frames) / (rate * params.sampwidth * params.nchannels)
-                data = source.readframes(source.getnframes())
-            frames.append(data)
-            end = start + len(data) / (rate * params.sampwidth * params.nchannels)
-            timings.append({"start": round(start, 2), "end": round(end, 2)})
-            frames.append(b"\0" * int(rate * PAUSE) * params.sampwidth * params.nchannels)
+                assert source.getnchannels() == 1 and source.getsampwidth() == 2, f"beklenmeyen ses bicimi: {part}"
+                data = resample(source.readframes(source.getnframes()), source.getframerate(), SES_RATE)
+            start = position / (SES_RATE * 2)
+            chunks.append(data)
+            position += len(data)
+            timings.append({"start": round(start, 2), "end": round(position / (SES_RATE * 2), 2)})
+            silence = b"\0" * (int(SES_RATE * PAUSE) * 2)
+            chunks.append(silence)
+            position += len(silence)
     target.parent.mkdir(parents=True, exist_ok=True)
     with wave.open(str(target), "wb") as out:
-        out.setparams(params)
-        out.writeframes(b"".join(frames))
-    duration = sum(len(f) for f in frames) / (params.framerate * params.sampwidth * params.nchannels)
-    return {"duration": round(duration, 2), "sentences": timings}
+        out.setnchannels(1)
+        out.setsampwidth(2)
+        out.setframerate(SES_RATE)
+        out.writeframes(b"".join(chunks))
+    return {"duration": round(position / (SES_RATE * 2), 2), "sentences": timings}
 
 
 def main():
@@ -108,6 +138,9 @@ def main():
             sys.exit("SES_TOKEN yok: ortam degiskeni olarak ya da .env.datakey icine `SES_TOKEN=...` yazin "
                      "(ya da --piper ile yerel sesi kullanin).")
         speak, voice = (lambda text, target: speak_datakey(text, target, token)), "datakey-ses antalia-mini"
+    needs_english = any(scene.get("english") for path in LESSONS.glob("*.json") if not path.name.endswith(".audio.json")
+                        for scene in json.loads(path.read_text(encoding="utf-8"))["scenes"])
+    assert not needs_english or (PIPER.is_file() and MODEL_EN.is_file()), f"Ingilizce ses bulunamadi: {MODEL_EN}"
     names = [a for a in sys.argv[1:] if not a.startswith("--")]
     files = [LESSONS / f"{n}.json" for n in names] or sorted(
         p for p in LESSONS.glob("*.json") if not p.name.endswith(".audio.json"))

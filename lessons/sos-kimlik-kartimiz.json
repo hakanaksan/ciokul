@@ -1,0 +1,157 @@
+{
+  "id": "sos-kimlik-kartimiz",
+  "title": "Kimlik Kartımız",
+  "course": "Sosyal Bilgiler",
+  "unit": "Birey ve Toplum",
+  "kazanim": {
+    "code": "SB.4.1.1",
+    "text": "Resmî kimlik belgesini inceleyerek kişisel kimliğine ilişkin çıkarımlarda bulunur.",
+    "note": "MEB Sosyal Bilgiler Dersi Öğretim Programı (2018), 4. sınıf. Açıklama: Resmî kimlik belgesini inceleyerek bu belgenin içerdiği bilgiler açıklanır. Kimlik numarasının herkese özel olması, kartın çipi, kimlik kartının nereden alındığı ve nerede kullanıldığı ile kimlik belgelerinin geçmişi üzerinde durulur."
+  },
+  "summary": "Kimlik kartının ön ve arka yüzündeki bilgileri, herkese özel kimlik numarasını, akıllı kartın çipini, kimliği nereden alıp nerede kullandığımızı öğren.",
+  "match": {"course": "Sosyal Bilgiler", "booklet": "Ünite 01", "keywords": ["kimlik", "nüfus", "çip", "yonga", "akıllı kart", "ikiz", "benzersiz", "kafa k"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Bu kart ne işe yarar?", "visual": "sos-kimlik-kartimiz-intro",
+      "sentences": [
+        "Merhaba! Annenin ya da babanın cüzdanında küçük, fotoğraflı bir kart gördün mü?",
+        "Bu kart, Türkiye Cumhuriyeti kimlik kartıdır.",
+        "Kimlik kartı, bir kişinin kim olduğunu gösteren resmî bir belgedir.",
+        "Kimlik kartı yalnızca büyüklere verilmez. Bebekler ve çocuklar da kimlik kartı alabilir."
+      ]
+    },
+    {
+      "id": "s02", "title": "Kartın ön yüzü", "visual": "sos-kimlik-kartimiz-front",
+      "sentences": [
+        "Şimdi kimlik kartının ön yüzüne yakından bakalım.",
+        "İlk satırda kimlik numarası yazar.",
+        "Sonra soyadı, adı ve doğum tarihi gelir.",
+        "Cinsiyeti, uyruğu ve kartın seri numarası da ön yüzde yazar.",
+        "Kartın son geçerlilik tarihi, kişinin fotoğrafı ve imzası da ön yüzdedir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Arka yüz ve çip", "visual": "sos-kimlik-kartimiz-back",
+      "sentences": [
+        "Kartın arka yüzünde anne adı, baba adı ve kartı veren makam yazar.",
+        "Kimlik kartının içinde küçük bir elektronik çip vardır. Bu çipe yonga da denir.",
+        "Çipte fotoğrafımız, parmak izimiz ve nüfus kayıt bilgilerimiz saklanır.",
+        "Bu çip sayesinde kimlik kartımız akıllı kart özelliği kazanmıştır."
+      ]
+    },
+    {
+      "id": "s04", "title": "Kimlik numarası", "visual": "sos-kimlik-kartimiz-number",
+      "sentences": [
+        "Kimlik kartındaki en önemli bilgi kimlik numarasıdır. Bu numara 11 rakamdan oluşur.",
+        "Her vatandaşın kimlik numarası farklıdır. Aynı numara başka birine asla verilmez.",
+        "Kimlik numarası, bebek nüfusa kaydedilince verilir ve hayat boyu hiç değişmez.",
+        "Bu yüzden kimlik numaramızı tanımadığımız kişilerle paylaşmamalıyız."
+      ]
+    },
+    {
+      "id": "s05", "title": "İkizlerin kimlik kartları", "visual": "sos-kimlik-kartimiz-twins",
+      "sentences": [
+        "Buse ile Ezgi ikiz kardeştir. Aynı gün kimlik kartı aldılar. Kartlarını yan yana koyalım.",
+        "Soyadları, doğum tarihleri ve uyrukları aynıdır. Anne ve baba adları da aynıdır.",
+        "Ama kimlik numaraları birbirinden farklıdır.",
+        "Kartlarının seri numaraları da farklıdır. Çünkü her kartın kendine ait bir seri numarası vardır.",
+        "Parmak izimiz de böyledir. Parmak izi, ikizlerde bile birbirinden farklıdır."
+      ]
+    },
+    {
+      "id": "s06", "title": "Kimliği nereden alırız?", "visual": "sos-kimlik-kartimiz-office",
+      "sentences": [
+        "Kimlik kartını nüfus müdürlükleri verir. Kimlik kartı almak için nüfus müdürlüğüne başvururuz.",
+        "Bir bebek doğunca nüfusa kaydedilir. Bebekler için de kimlik kartı çıkarılabilir.",
+        "15 yaşından küçük çocukların kimlik kartında fotoğraf olması zorunlu değildir.",
+        "15 yaşını dolduran herkes fotoğraflı kimlik kartı almalıdır.",
+        "Kartın son geçerlilik tarihi geçince yeni bir kart almak gerekir."
+      ]
+    },
+    {
+      "id": "s07", "title": "Kimliği nerede kullanırız?", "visual": "sos-kimlik-kartimiz-use",
+      "sentences": [
+        "Kimlik kartımızı birçok resmî işte kullanırız.",
+        "Okula kayıt olurken kimlik bilgilerimiz istenir.",
+        "Hastanede muayene olurken de kimliğimizi gösteririz.",
+        "Pasaport almak için de kimlik kartı gerekir.",
+        "Ama parka ya da markete giderken kimlik göstermemiz gerekmez."
+      ]
+    },
+    {
+      "id": "s08", "title": "Kimlik belgesinin tarihi", "visual": "sos-kimlik-kartimiz-history",
+      "sentences": [
+        "Kimlik belgelerinin de bir geçmişi vardır.",
+        "Osmanlı Devleti zamanında halk, kimlik belgesine kafa kâğıdı, kafa koçanı ya da nüfus kâğıdı derdi.",
+        "Daha sonra nüfus cüzdanları kullanıldı. Erkeklerin cüzdanı mavi, kadınlarınki pembe renkliydi.",
+        "Bugün ise çipli, akıllı kimlik kartları kullanıyoruz.",
+        "Yeni kimlik kartlarında kadın ve erkek için renk farkı yoktur."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "sos-kimlik-kartimiz-dikkat",
+      "sentences": [
+        "Dikkat! Kimlik kartıyla ilgili bazı bilgiler sık karıştırılır.",
+        "Aynı ailedeki kişilerin soyadı aynı olabilir. Ama kimlik numaraları her zaman farklıdır.",
+        "Kimlik kartında okul adı, adres ya da meslek yazmaz.",
+        "Kart yenilenince seri numarası değişir. Kimlik numarası ise hiç değişmez.",
+        "Kimlik kartı yalnızca büyüklere verilmez. Çocukların da kimlik kartı olabilir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "sos-kimlik-kartimiz-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Kimlik kartı, kim olduğumuzu gösteren resmî bir belgedir.",
+        "Kimlik numarası 11 rakamlıdır. Herkese özeldir ve hiç değişmez.",
+        "Kartın çipinde fotoğrafımız, parmak izimiz ve nüfus bilgilerimiz saklanır.",
+        "Kimlik kartını nüfus müdürlüğü verir. Onu okul kaydında, hastanede ve resmî işlerde kullanırız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kimlik belgemizdeki hangi bilgi başka hiç kimsenin belgesindeki bilgiyle aynı olamaz?",
+      "options": ["Adı ve soyadı", "Doğum tarihi", "Kimlik numarası", "Uyruğu"],
+      "answer": 2,
+      "explain": "Kimlik numarası herkese özeldir. Aynı numara başka birine asla verilmez.",
+      "scene": "s04"
+    },
+    {
+      "question": "İkiz kardeşler Ali ile Veli'nin aynı gün alınan kimlik kartlarında hangisi farklıdır?",
+      "options": ["Doğum tarihleri", "Anne adları", "Soyadları", "Kartların seri numaraları"],
+      "answer": 3,
+      "explain": "Her kartın kendine ait bir seri numarası vardır. İkizlerin kimlik numaraları da farklıdır.",
+      "scene": "s05"
+    },
+    {
+      "question": "Kimlik kartındaki elektronik çipte aşağıdakilerden hangisi saklanır?",
+      "options": ["Parmak izi", "Okulun adı", "En sevdiğimiz renk", "Ev adresimiz"],
+      "answer": 0,
+      "explain": "Çipte fotoğrafımız, parmak izimiz ve nüfus kayıt bilgilerimiz saklanır.",
+      "scene": "s03"
+    },
+    {
+      "question": "Aşağıdakilerden hangisini yaparken resmî kimlik belgesi gerekmez?",
+      "options": ["Okula kayıt olurken", "Parkta oyun oynarken", "Pasaport alırken", "Hastanede muayene olurken"],
+      "answer": 1,
+      "explain": "Okul kaydı, hastane ve pasaport gibi resmî işlerde kimlik gerekir. Parka girerken gerekmez.",
+      "scene": "s07"
+    },
+    {
+      "question": "Yeni doğan kardeşine kimlik kartı çıkarmak isteyen bir aile nereye başvurmalıdır?",
+      "options": ["Belediyeye", "Okula", "Nüfus müdürlüğüne", "Hastaneye"],
+      "answer": 2,
+      "explain": "Kimlik kartlarını nüfus müdürlükleri verir. Bebekler için de kimlik kartı çıkarılabilir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Osmanlı Devleti zamanında halk, kimlik belgesine hangi adı verirdi?",
+      "options": ["Akıllı kart", "Kafa kâğıdı", "Pasaport", "Karne"],
+      "answer": 1,
+      "explain": "Osmanlı Devleti zamanında kimlik belgesine kafa kâğıdı, kafa koçanı ya da nüfus kâğıdı denirdi.",
+      "scene": "s08"
+    }
+  ]
+}

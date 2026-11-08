@@ -1,0 +1,168 @@
+{
+  "id": "tr-noktalama-isaretleri",
+  "title": "Noktalama İşaretleri",
+  "course": "Türkçe",
+  "unit": "Yazma",
+  "kazanim": {
+    "code": "T.4.4.10, T.4.3.1",
+    "text": "Büyük harfleri ve noktalama işaretlerini uygun yerlerde kullanır. Noktalama işaretlerine dikkat ederek sesli ve sessiz okur.",
+    "note": "MEB Türkçe Dersi Öğretim Programı (2018), 4. sınıf. Programın saydığı işaretlerden nokta, virgül, soru işareti, ünlem, tırnak işareti, kesme işareti, iki nokta, üç nokta, konuşma çizgisi ve eğik çizginin yaygın kullanılan işlevleri üzerinde durulur; büyük harflerin yazımı bu derste işlenmez."
+  },
+  "summary": "Nokta, virgül, soru ve ünlem işaretini; tırnak, kesme, iki nokta, üç nokta ve çizgileri nerede kullanacağını örneklerle öğren.",
+  "match": {"course": "Türkçe", "booklet": "Tema 01–02", "keywords": ["noktalama", "virgül", "soru işareti doğru", "ünlem", "tırnak", "kesme işareti", "iki nokta", "üç nokta", "nokta (.)", "konuşma çizgisi", "eğik çizgi", "yay ayraç"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Yazının trafik işaretleri", "visual": "tr-noktalama-isaretleri-intro",
+      "sentences": [
+        "Merhaba! Trafikte hiç işaret olmasaydı ne olurdu? Herkes birbirine karışırdı.",
+        "Yazıda da trafik işaretlerine benzeyen küçük işaretler vardır. Bunlara noktalama işaretleri denir.",
+        "Noktalama işaretleri nerede duracağımızı ve nasıl okuyacağımızı gösterir.",
+        "Küçücük bir virgül bile cümlenin anlamını değiştirebilir. Haydi bu işaretleri birlikte tanıyalım!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Nokta", "visual": "tr-noktalama-isaretleri-nokta",
+      "sentences": [
+        "İlk işaretimiz nokta.",
+        "Nokta, bitmiş cümlelerin sonuna konur. Ali okula gitti, cümlesi gibi.",
+        "Tarih yazarken gün, ay ve yılı ayırmak için de nokta kullanırız.",
+        "Saati yazarken saat ile dakikanın arasına da nokta koyarız.",
+        "Bazı kısaltmaların sonuna da nokta konur. Doktor kelimesinin kısaltması gibi.",
+        "Ama Türkiye Büyük Millet Meclisi gibi büyük harflerle yapılan kısaltmalara nokta konmaz."
+      ]
+    },
+    {
+      "id": "s03", "title": "Virgül", "visual": "tr-noktalama-isaretleri-virgul",
+      "sentences": [
+        "İkinci işaretimiz virgül. Virgül, okurken kısa bir duraklama yaptırır.",
+        "Sıralanan kelimelerin arasına virgül konur. Pazardan elma, armut, portakal ve muz aldık.",
+        "Dikkat et, ve kelimesinden önce virgül konmaz.",
+        "Seslenme sözlerinden sonra da virgül konur. Arkadaşlar, ders başlıyor.",
+        "Virgül anlamı da değiştirir. Genç, kıza hediye aldı, dersek hediyeyi genç biri almıştır.",
+        "Genç kıza hediye aldı, dersek bu kez hediye genç bir kıza alınmıştır."
+      ]
+    },
+    {
+      "id": "s04", "title": "Soru işareti", "visual": "tr-noktalama-isaretleri-soru",
+      "sentences": [
+        "Üçüncü işaretimiz soru işareti.",
+        "Soru işareti, soru soran cümlelerin sonuna konur. Benimle kim gelmek ister?",
+        "Mı, mi, mu, mü soru ekleri de cümleyi soru yapar. Ödevini bitirdin mi?",
+        "Ama dikkat! İçinde ne zaman, kim gibi soru kelimeleri olan her cümle soru cümlesi değildir.",
+        "Ne zaman geldiğini hatırlamıyorum, cümlesi bir soru sormaz. Bu yüzden sonuna nokta konur."
+      ]
+    },
+    {
+      "id": "s05", "title": "Ünlem işareti", "visual": "tr-noktalama-isaretleri-unlem",
+      "sentences": [
+        "Dördüncü işaretimiz ünlem işareti.",
+        "Sevinç, korku, şaşkınlık gibi duyguları anlatan cümlelerin sonuna ünlem konur.",
+        "Yaşasın, takımımız kazandı! Eyvah, süt taştı!",
+        "Seslenme ve uyarı sözlerinden sonra da ünlem kullanılır. Dikkat! Yerler ıslak."
+      ]
+    },
+    {
+      "id": "s06", "title": "Tırnak işareti", "visual": "tr-noktalama-isaretleri-tirnak",
+      "sentences": [
+        "Beşinci işaretimiz tırnak işareti.",
+        "Deniz, hasta olan arkadaşına geçmiş olsun, dedi.",
+        "Başkasının sözünü hiç değiştirmeden yazarken o sözü tırnak içine alırız.",
+        "Tırnak içindeki cümle büyük harfle başlar. Cümlenin noktası da tırnağın içinde kalır."
+      ]
+    },
+    {
+      "id": "s07", "title": "Kesme işareti", "visual": "tr-noktalama-isaretleri-kesme",
+      "sentences": [
+        "Altıncı işaretimiz kesme işareti.",
+        "Kesme işareti, özel isimlere gelen ekleri ayırır. Ankara'dan geldim.",
+        "Atatürk'ün, Denizli'de, Türkiye'nin kelimelerinde de ekler kesme işaretiyle ayrılmıştır.",
+        "Dikkat! Okul, ev gibi özel olmayan isimlere gelen ekler ayrılmaz. Okula gittim, evden çıktım."
+      ]
+    },
+    {
+      "id": "s08", "title": "İki nokta ve üç nokta", "visual": "tr-noktalama-isaretleri-iki-uc",
+      "sentences": [
+        "Şimdi iki işareti birlikte tanıyalım. İki nokta ve üç nokta.",
+        "İki nokta, kendisinden sonra örnek verilecek ya da açıklama yapılacak cümlelerin sonuna konur.",
+        "Örneğin, Denizli'de gezilecek yerler, diye yazıp iki nokta koyarız. Ardından Pamukkale ve Karahayıt diye sıralarız.",
+        "Üç nokta ise tamamlanmamış cümlelerin sonuna konur.",
+        "Keskin bir tren düdüğü... Cümle yarım kaldı, gerisini okuyan hayal eder."
+      ]
+    },
+    {
+      "id": "s09", "title": "Konuşma çizgisi ve eğik çizgi", "visual": "tr-noktalama-isaretleri-cizgi",
+      "sentences": [
+        "İki çizgi işaretimiz daha var. Konuşma çizgisi ve eğik çizgi.",
+        "Konuşma çizgisi, yazıda satır başında konuşmaları göstermek için kullanılır.",
+        "Halime kapıyı açınca öğretmenine, buyurun öğretmenim, dedi. Bu sözü yazarken satır başına bir çizgi koyarız.",
+        "Eğik çizgi, adres yazarken apartman numarası ile daire numarası arasında kullanılır.",
+        "Tarih yazarken gün, ay ve yılı ayırmak için de eğik çizgi kullanabiliriz."
+      ]
+    },
+    {
+      "id": "s10", "title": "Dikkat: sık yapılan hatalar", "visual": "tr-noktalama-isaretleri-dikkat",
+      "sentences": [
+        "Dikkat! Şimdi sık yapılan noktalama hatalarına bakalım.",
+        "Türkiye özel isim olduğu için ona gelen ek kesme işaretiyle ayrılır. Türkiye'nin başkenti, diye yazmalıyız.",
+        "Defterim nerede, cümlesi bir soru sorar. Sonuna nokta değil, soru işareti konur.",
+        "Doktor kelimesinin kısaltmasından sonra iki nokta değil, nokta konur.",
+        "Yazını bitirince sesli okuyarak kontrol et. Noktalama doğruysa okuması da kolay olur."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "tr-noktalama-isaretleri-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Nokta, bitmiş cümlelerin sonuna, tarihlere ve bazı kısaltmalara konur.",
+        "Virgül, sıralanan kelimelerin arasına ve seslenme sözlerinden sonra konur.",
+        "Soru işareti soru soran cümlelerin, ünlem ise duygu ve uyarı bildiren cümlelerin sonuna konur.",
+        "Aktarılan sözler tırnak içine alınır. Özel isimlere gelen ekler kesme işaretiyle ayrılır.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde soru işareti doğru kullanılmıştır?",
+      "options": ["Ne zaman geldiğini hatırlamıyorum?", "Benimle parka kim gelmek ister?", "Bu kitabı çok sevdim?", "Ödevimi akşam bitirdim?"],
+      "answer": 1,
+      "explain": "Benimle parka kim gelmek ister, cümlesi gerçekten soru sorar. Diğer cümleler soru sormadığı için nokta ile biter.",
+      "scene": "s04"
+    },
+    {
+      "question": "Pazardan elma( ) armut( ) portakal ve muz aldık( ) Bu cümlede yay ayraçla gösterilen yerlere sırasıyla hangi işaretler gelmelidir?",
+      "options": ["( . ) ( , ) ( ? )", "( : ) ( , ) ( . )", "( , ) ( , ) ( . )", "( , ) ( . ) ( ! )"],
+      "answer": 2,
+      "explain": "Sıralanan kelimelerin arasına virgül, bitmiş cümlenin sonuna nokta konur.",
+      "scene": "s03"
+    },
+    {
+      "question": "Eyvah, süt taştı( ) Bu cümlenin sonuna hangi noktalama işareti konmalıdır?",
+      "options": ["Soru işareti", "Virgül", "İki nokta", "Ünlem işareti"],
+      "answer": 3,
+      "explain": "Cümle korku ve şaşkınlık bildiriyor. Duygu bildiren cümlelerin sonuna ünlem konur.",
+      "scene": "s05"
+    },
+    {
+      "question": "Aşağıdakilerin hangisinde tırnak işareti doğru kullanılmıştır?",
+      "options": ["Deniz bana “Geçmiş olsun.” dedi.", "Deniz “bana geçmiş” olsun dedi.", "“Deniz bana” geçmiş olsun dedi.", "Deniz bana geçmiş “olsun dedi.”"],
+      "answer": 0,
+      "explain": "Tırnak içine yalnızca Deniz'in söylediği söz alınır. Söz büyük harfle başlar, noktası tırnağın içinde kalır.",
+      "scene": "s06"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde kesme işareti yanlış kullanılmıştır?",
+      "options": ["Ankara'dan yeni döndük.", "Atatürk'ün sözlerini okuduk.", "Okul'a erken gittim.", "Denizli'de tatil yaptık."],
+      "answer": 2,
+      "explain": "Okul özel isim değildir, bu yüzden ek ayrılmaz. Doğrusu okula olmalıdır.",
+      "scene": "s07"
+    },
+    {
+      "question": "Anlatımı tamamlanmamış, yarım kalmış cümlelerin sonuna hangi noktalama işareti konur?",
+      "options": ["İki nokta", "Üç nokta", "Eğik çizgi", "Kesme işareti"],
+      "answer": 1,
+      "explain": "Tamamlanmamış cümlelerin sonuna üç nokta konur. Keskin bir tren düdüğü... gibi.",
+      "scene": "s08"
+    }
+  ]
+}

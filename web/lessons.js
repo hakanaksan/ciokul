@@ -29,6 +29,19 @@ function lessonLinkMarkup(lesson, label = 'Bu konunun video dersini izle') {
 
 function bindLessonLinks(root = document) {
   root.querySelectorAll('[data-lesson-open]').forEach(button => { button.onclick = () => renderLesson(button.dataset.lessonOpen); });
+  // Course filter on the lesson list; the choice is kept for this tab.
+  const filters = root.querySelectorAll('[data-lesson-course]');
+  const show = course => {
+    filters.forEach(b => { const on = b.dataset.lessonCourse === course; b.classList.toggle('active', on); b.setAttribute('aria-pressed', String(on)); });
+    root.querySelectorAll('.lesson-card[data-course]').forEach(card => { card.hidden = course !== 'all' && card.dataset.course !== course; });
+    try { sessionStorage.setItem('cioLessonCourse', course); } catch (e) {}
+  };
+  filters.forEach(b => { b.onclick = () => show(b.dataset.lessonCourse); });
+  if (filters.length) {
+    let saved = 'all';
+    try { saved = sessionStorage.getItem('cioLessonCourse') || 'all'; } catch (e) {}
+    show([...filters].some(b => b.dataset.lessonCourse === saved) ? saved : 'all');
+  }
 }
 
 function lessonMinutes(seconds) {
@@ -44,9 +57,12 @@ function lessonStatus(lesson) {
 
 function lessonsHomeMarkup(list, isParent) {
   if (!list?.length) return '';
+  const courses = [...new Set(list.map(l => l.course))];
   return `<section class="planning-section" id="lessonsSection"><div class="section-title"><h2>🎬 Video Dersler</h2></div>
     <p class="small muted">${isParent ? 'MEB kazanımlarına göre hazırlanmış, seslendirmeli ve animasyonlu konu anlatımları. Sonunda kısa bir test vardır.' : 'Zorlandığın konuları seslendirmeli animasyonlarla öğren, sonunda kısa testi çöz!'}</p>
-    <div class="grid lesson-grid">${list.map(l => { const [status, klass] = lessonStatus(l); return `<article class="card lesson-card">
+    ${courses.length > 1 ? `<div class="quick-tags lesson-filter" role="group" aria-label="Derse göre göster">${[['all', `Tümü (${list.length})`], ...courses.map(c => [c, `${c} (${list.filter(l => l.course === c).length})`])].map(([value, label]) =>
+      `<button type="button" class="quick-tag-btn" data-lesson-course="${esc(value)}" aria-pressed="false">${esc(label)}</button>`).join('')}</div>` : ''}
+    <div class="grid lesson-grid">${list.map(l => { const [status, klass] = lessonStatus(l); return `<article class="card lesson-card" data-course="${esc(l.course)}">
       <div class="card-top"><span class="eyebrow">${esc(l.course)} · ${esc(l.kazanim.code)}</span><span class="${klass}">${esc(status)}</span></div>
       <h3>${esc(l.title)}</h3><p>${esc(l.summary)}</p>
       <p class="small muted">${l.scenes} bölüm · ${esc(lessonMinutes(l.duration))} · ${l.progress?.quiz_total ? 'mini test çözüldü' : 'sonunda mini test'}</p>
@@ -55,10 +71,24 @@ function lessonsHomeMarkup(list, isParent) {
 
 const lessonPlayer = { lesson: null, scene: 0, sentence: -1, started: false, quiz: null };
 
+// Lessons other than the first ones keep their scene drawings in web/scenes/<id>.js, which adds
+// to LESSON_SCENES. The file is loaded once, when the lesson is first opened; a lesson without
+// its own file uses the scenes in lesson_scenes.js.
+const lessonSceneFiles = {};
+function loadLessonScenes(id) {
+  lessonSceneFiles[id] ||= new Promise(resolve => {
+    const script = document.createElement('script');
+    script.src = `/scenes/${encodeURIComponent(id)}.js`;
+    script.onload = script.onerror = resolve;
+    document.head.append(script);
+  });
+  return lessonSceneFiles[id];
+}
+
 async function renderLesson(id) {
   setRoute(`#/ders/${id}`);
   try {
-    const lesson = await api(`/api/lessons/${encodeURIComponent(id)}`);
+    const [lesson] = await Promise.all([api(`/api/lessons/${encodeURIComponent(id)}`), loadLessonScenes(id)]);
     Object.assign(lessonPlayer, { lesson, scene: 0, sentence: -1, started: false, quiz: null });
     drawLessonPlayer();
   } catch (err) {

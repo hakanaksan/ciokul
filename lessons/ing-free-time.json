@@ -1,0 +1,178 @@
+{
+  "id": "ing-free-time",
+  "title": "Boş Zaman: Neleri Severiz?",
+  "course": "İngilizce",
+  "unit": "Free Time",
+  "kazanim": {
+    "code": "E4.4.L1, E4.4.S1, E4.4.S2, E4.4.S3",
+    "text": "Students will be able to understand the general information in an oral text about likes and dislikes. Students will be able to talk about their likes and dislikes. Students will be able to engage in simple conversations about likes and dislikes. Students will be able to ask for clarification in conversations.",
+    "note": "MEB İngilizce Dersi Öğretim Programı (2018), 4. sınıf, 4. ünite: Free Time. İşlevler: sevdiklerini ve sevmediklerini ifade etme (I like reading. I dislike playing chess.); basit sorular sorma (Do you like dancing? — Yes, I do. / No, I don’t.); açıklama isteme (Can you say that again, please? Pardon me? Say that again, please. Slowly, please.). Kelimeler: drawing, flying a kite, playing with marbles/chess/table tennis/football, reading comics, riding a bike, watching cartoons, swimming, learning English."
+  },
+  "summary": "Boş zaman etkinliklerini, I like / I love / I dislike / I don't like kalıplarını, Do you like...? sorusunu ve anlamadığında kibarca tekrar istemeyi öğren.",
+  "match": {"course": "İngilizce", "booklet": "Ünite 04", "keywords": ["like", "love", "do you", "don’t", "don't", "favourite", "favorite", "activit", "hobby", "free time", "pardon", "again", "slowly", "repeat", "playing", "riding", "reading", "swimming", "drawing", "flying", "watching", "chess", "marbles", "kite", "skipping", "skating", "dancing", "singing"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Boş zamanlarında", "visual": "ing-free-time-intro",
+      "sentences": [
+        "Merhaba! Okuldan sonra ya da hafta sonu, boş zamanlarında neler yapmayı seversin?",
+        "Kimi arkadaşlarımız kitap okumayı, kimi top oynamayı, kimi de resim yapmayı sever.",
+        "Bugün sevdiğimiz ve sevmediğimiz etkinlikleri İngilizce anlatmayı öğreneceğiz.",
+        "Bir de konuşurken anlamadığımız bir şeyi kibarca tekrar istemeyi öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Etkinlikler", "visual": "ing-free-time-activities",
+      "sentences": [
+        "Önce boş zaman etkinliklerini öğrenelim. Her birini dinle ve sen de tekrar et.",
+        "Swimming, drawing, reading comics.",
+        "Riding a bike, flying a kite, watching cartoons.",
+        "Bu kelimelerin hepsi aynı ekle bitiyor. Bu ek, eylemi bir etkinliğin adı yapar. Yüzmek eylemi, yüzme etkinliği olur."
+      ],
+      "english": [1, 2]
+    },
+    {
+      "id": "s03", "title": "Oyunlar", "visual": "ing-free-time-games",
+      "sentences": [
+        "Şimdi oyunlara bakalım. Bu etkinliklerin hepsi oynamak anlamındaki aynı kelimeyle başlar.",
+        "Playing chess, playing football, playing table tennis.",
+        "Playing with marbles, learning English."
+      ],
+      "english": [1, 2]
+    },
+    {
+      "id": "s04", "title": "Severim, sevmem", "visual": "ing-free-time-like",
+      "sentences": [
+        "Sevdiğimiz bir etkinliği anlatırken şöyle deriz:",
+        "I like swimming.",
+        "Bir şeyi çok çok seviyorsak şöyle deriz:",
+        "I love reading comics.",
+        "Sevmediğimiz bir etkinliği söylemenin iki yolu var. İkisi de aynı anlama gelir:",
+        "I dislike playing chess. I don't like playing chess."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s05", "title": "Severim ama...", "visual": "ing-free-time-but",
+      "sentences": [
+        "İki cümleyi ama anlamındaki bir bağlaçla birleştirebiliriz. Elif şöyle diyor:",
+        "I like drawing, but I don't like singing.",
+        "Kerem ise top oynamayı çok seviyor ama yüzmeyi hiç sevmiyor. Kerem şöyle diyor:",
+        "I love playing football, but I dislike swimming."
+      ],
+      "english": [1, 3]
+    },
+    {
+      "id": "s06", "title": "Sever misin?", "visual": "ing-free-time-do-you",
+      "sentences": [
+        "Birine bir etkinliği sevip sevmediğini sormak için şöyle sorarız. Mert, Lily'ye soruyor:",
+        "Do you like playing chess?",
+        "Yes, I do.",
+        "Şimdi de Lily, Mert'e soruyor:",
+        "Do you like watching cartoons?",
+        "No, I don't."
+      ],
+      "english": [1, 2, 4, 5]
+    },
+    {
+      "id": "s07", "title": "Anlamadım!", "visual": "ing-free-time-pardon",
+      "sentences": [
+        "Bazen karşımızdaki çok hızlı konuşur ya da onu iyi duyamayız. O zaman kibarca tekrar etmesini isteriz:",
+        "Pardon me?",
+        "Say that again, please.",
+        "Can you say that again, please?",
+        "Çok hızlı konuşuyorsa da yavaş konuşmasını rica ederiz:",
+        "Slowly, please."
+      ],
+      "english": [1, 2, 3, 5]
+    },
+    {
+      "id": "s08", "title": "Bir konuşma", "visual": "ing-free-time-dialogue",
+      "sentences": [
+        "Şimdi bu cümleleri bir konuşmada görelim. Lily soruyor ama Mert onu iyi duyamıyor.",
+        "Do you like riding a bike?",
+        "Pardon me?",
+        "Do you like riding a bike?",
+        "Yes, I do. I love it."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "ing-free-time-careful",
+      "sentences": [
+        "Dikkat! İki sık hatayı birlikte düzeltelim.",
+        "Birincisi: Sevdiğimiz etkinliği söylerken eylemin sonundaki eki unutmayalım:",
+        "I like swimming.",
+        "İkincisi: Sevip sevmediğimizi soran soruya, yapabilmek kelimesiyle cevap verilmez. Doğrusu şöyle:",
+        "Do you like swimming? Yes, I do."
+      ],
+      "english": [2, 4]
+    },
+    {
+      "id": "s10", "title": "Sıra sende", "visual": "ing-free-time-practice",
+      "sentences": [
+        "Şimdi sen de tekrar et. Önce bir arkadaşına sor:",
+        "What do you like doing?",
+        "Şimdi sevdiğin bir etkinliği söyle:",
+        "I like flying a kite.",
+        "Son olarak sevmediğin bir etkinliği söyle:",
+        "I don't like watching TV."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "ing-free-time-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Sevdiğimiz etkinlikleri anlatmayı öğrendik. Çok seviyorsak daha güçlü bir kelime kullanırız.",
+        "Sevmediğimiz etkinlikleri iki farklı şekilde söyleyebiliriz.",
+        "Birine bir etkinliği sevip sevmediğini sormayı ve kısa cevap vermeyi öğrendik.",
+        "Anlamadığımızda kibarca tekrar etmesini ya da yavaş konuşmasını isteyebiliriz.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "— Do you like playing chess? Bu soruya hangi cevap verilir?",
+      "options": ["Yes, I can.", "Yes, I am.", "Yes, I do.", "Yes, it is."],
+      "answer": 2,
+      "explain": "Do you like...? sorusuna Yes, I do. ya da No, I don't. diye cevap veririz.",
+      "scene": "s06"
+    },
+    {
+      "question": "I love - - - - a kite. Boşluğa hangisi gelmelidir?",
+      "options": ["riding", "flying", "reading", "playing"],
+      "answer": 1,
+      "explain": "Uçurtma uçurmak İngilizcede flying a kite olur.",
+      "scene": "s02"
+    },
+    {
+      "question": "Arkadaşın çok hızlı konuştu ve onu anlamadın. Hangisini söylersin?",
+      "options": ["Say that again, please.", "Here you are.", "Nice to meet you.", "I like drawing."],
+      "answer": 0,
+      "explain": "Anlamadığımızda Say that again, please. ya da Pardon me? diyerek tekrar etmesini isteriz.",
+      "scene": "s07"
+    },
+    {
+      "question": "Hangisi “Satranç oynamayı sevmem.” demektir?",
+      "options": ["I like playing chess.", "I love playing chess.", "I can play chess.", "I don't like playing chess."],
+      "answer": 3,
+      "explain": "Sevmediğimiz bir şey için I don't like ya da I dislike deriz.",
+      "scene": "s04"
+    },
+    {
+      "question": "Hangi cümle doğrudur?",
+      "options": ["I like swim.", "I like swimming.", "I likes swimming.", "I like to swimming."],
+      "answer": 1,
+      "explain": "Sevdiğimiz etkinliği söylerken eylemin sonuna -ing eki gelir: I like swimming.",
+      "scene": "s09"
+    },
+    {
+      "question": "Ayşe: “I like reading comics, but I don't like playing football.” Ayşe neyi sevmez?",
+      "options": ["Çizgi roman okumayı", "Resim yapmayı", "Futbol oynamayı", "Yüzmeyi"],
+      "answer": 2,
+      "explain": "but kelimesinden sonra sevmediği etkinliği söylüyor: playing football, yani futbol oynamak.",
+      "scene": "s05"
+    }
+  ]
+}

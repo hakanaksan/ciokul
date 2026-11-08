@@ -1,0 +1,162 @@
+{
+  "id": "mat-toplama-cikarma",
+  "title": "Toplama, Çıkarma ve Tahmin",
+  "course": "Matematik",
+  "unit": "Doğal Sayılarla Toplama ve Çıkarma İşlemi",
+  "kazanim": {
+    "code": "M.4.1.2.2, M.4.1.2.3, M.4.1.2.4, M.4.1.3.3, M.4.1.3.4",
+    "text": "İki doğal sayının toplamını tahmin eder ve tahminini işlem sonucu ile karşılaştırır. En çok dört basamaklı doğal sayıları 100’ün katlarıyla zihinden toplar. Doğal sayılarla toplama işlemini gerektiren problemleri çözer. Doğal sayılarla yapılan çıkarma işleminin sonucunu tahmin eder, tahminini işlem sonucuyla karşılaştırır. Doğal sayılarla toplama ve çıkarma işlemini gerektiren problemleri çözer.",
+    "note": "MEB Matematik Dersi Öğretim Programı (2018), 4. sınıf. Toplamları en çok dört basamaklı sayılarla çalışılır; problemlerde en çok dört işlem gerektiren problemlere yer verilir. Eldeli toplama ve onluk bozarak çıkarma (M.4.1.2.1, M.4.1.3.1) da tekrar edilir."
+  },
+  "summary": "Eldeli toplamayı, sıfırlı sayılardan onluk bozarak çıkarmayı, sonucu tahmin etmeyi, yüzün katlarını zihinden toplamayı ve problem çözme adımlarını öğren.",
+  "match": {"course": "Matematik", "booklet": "Ünite 02", "keywords": ["topla", "çıkar", "fark", "tahmin", "zihinden", "fazla", "eksik", "kalan", "kala", "toplam", "işlem", "yuvarla", "kaç", "mesafe", "ne kadar", "basamağ", "eşit", "yüksekli"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Kitap kampanyası", "visual": "mat-toplama-cikarma-intro",
+      "sentences": [
+        "Merhaba! Okulumuz, köy okullarına kitap göndermek için bir kampanya başlattı.",
+        "Birinci hafta iki bin dört yüz yetmiş beş kitap toplandı.",
+        "İkinci hafta bin altı yüz elli sekiz kitap daha geldi.",
+        "Hedefimiz beş bin kitap. Toplam kaç kitap topladık, hedefe kaç kaldı? Haydi bulalım!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Eldeli toplama", "visual": "mat-toplama-cikarma-toplama",
+      "sentences": [
+        "Toplarken sayıları basamaklarına göre alt alta yazarız. Birler birlerin, onlar onların altına gelir.",
+        "Birlerden başlarız: beş artı sekiz, on üç eder. Üçü yazar, biri onlara elde olarak aktarırız.",
+        "Onlarda yedi artı beş artı elde bir, on üç eder. Üçü yazar, biri yüzlere aktarırız.",
+        "Yüzlerde dört artı altı artı elde bir, on bir eder. Biri yazar, biri binlere aktarırız.",
+        "Binlerde iki artı bir artı elde bir, dört eder. Toplam dört bin yüz otuz üç kitap!"
+      ]
+    },
+    {
+      "id": "s03", "title": "Onluk bozarak çıkarma", "visual": "mat-toplama-cikarma-cikarma",
+      "sentences": [
+        "Hedefe kalanı bulmak için beş binden dört bin yüz otuz üçü çıkaralım.",
+        "Birlerde sıfırdan üç çıkmaz. Onlarda ve yüzlerde de sıfır var. Bu yüzden binlerden bir bin alırız.",
+        "Bir bin, on yüzlük eder. Bir yüzlüğü on onluğa, bir onluğu da on birliğe bozarız.",
+        "Artık binlerde dört, yüzlerde dokuz, onlarda dokuz, birlerde on var.",
+        "On eksi üç yedi, dokuz eksi üç altı, dokuz eksi bir sekiz, dört eksi dört sıfır. Hedefe sekiz yüz altmış yedi kitap kaldı!"
+      ]
+    },
+    {
+      "id": "s04", "title": "Dikkat ve sağlama", "visual": "mat-toplama-cikarma-dikkat",
+      "sentences": [
+        "Dikkat! Çıkarmada sık yapılan bir hata var.",
+        "Bazı öğrenciler sıfırdan üç çıkmayınca, üçten sıfırı çıkarıp üç yazar. Bu yanlıştır!",
+        "Üstteki rakam küçükse, her zaman bir büyük basamaktan bozarız.",
+        "Sonucu toplama ile kontrol edebiliriz. Bulduğumuz farkı çıkanla toplarız.",
+        "Sekiz yüz altmış yedi artı dört bin yüz otuz üç, beş bin eder. Sonuç eksilene eşit, işlemimiz doğru!"
+      ]
+    },
+    {
+      "id": "s05", "title": "Toplamayı tahmin etme", "visual": "mat-toplama-cikarma-tahmin-toplama",
+      "sentences": [
+        "Bazen kesin sonuca değil, yaklaşık bir sonuca ihtiyaç duyarız. Buna tahmin denir.",
+        "Üç bin altı yüz on sekiz artı beş bin sekiz yüz elli iki işleminin sonucunu tahmin edelim.",
+        "Önce sayıları en yakın yüzlüğe yuvarlarız: üç bin altı yüz ve beş bin dokuz yüz.",
+        "Yuvarlanmış sayıları toplarız. Tahminimiz dokuz bin beş yüz olur.",
+        "Gerçek sonuç dokuz bin dört yüz yetmiş. Aradaki fark yalnızca otuz; tahminimiz çok yakın!"
+      ]
+    },
+    {
+      "id": "s06", "title": "Çıkarmayı tahmin etme", "visual": "mat-toplama-cikarma-tahmin-cikarma",
+      "sentences": [
+        "Çıkarma işleminin sonucunu da aynı yolla tahmin ederiz.",
+        "Beş bin iki yüz on sekiz eksi iki bin dokuz yüz seksen bir işlemine bakalım.",
+        "En yakın yüzlüğe yuvarlayınca beş bin iki yüz ve üç bin buluruz.",
+        "Beş bin iki yüz eksi üç bin, iki bin iki yüz eder. Bu bizim tahminimiz.",
+        "Gerçek sonuç iki bin iki yüz otuz yedi. Tahminle arasındaki fark otuz yedi.",
+        "En yakın onluğa yuvarlarsak tahminimiz iki bin iki yüz kırk olur. Bu, gerçek sonuca daha da yakın!"
+      ]
+    },
+    {
+      "id": "s07", "title": "Zihinden toplama", "visual": "mat-toplama-cikarma-zihinden",
+      "sentences": [
+        "Yüzün katlarını zihinden toplamak çok kolaydır.",
+        "İki bin beş yüz yirmi üç artı iki yüz işleminde yalnızca yüzler basamağı değişir.",
+        "Beş yüz artı iki yüz, yedi yüz eder. Sonuç iki bin yedi yüz yirmi üç olur.",
+        "Üç bin altı yüz elli iki artı beş yüz işleminde, altı yüz artı beş yüz bin yüz eder.",
+        "Bu yüzden binler basamağı da bir artar. Sonuç dört bin yüz elli iki olur."
+      ]
+    },
+    {
+      "id": "s08", "title": "Problem çözelim", "visual": "mat-toplama-cikarma-problem",
+      "sentences": [
+        "Şimdi bir problem çözelim. Önce problemi dikkatlice okuyup anlarız.",
+        "Bir aile dokuz bin sekiz yüz metrelik bir yola çıkıyor. İki bin beş yüz altmış beş metre gidince üç bin yirmi beş metrelik bir tünele giriyor.",
+        "Tüneli geçtikten sonra yolun bitmesine kaç metre kalır?",
+        "Önce gidilen yolları toplarız: iki bin beş yüz altmış beş artı üç bin yirmi beş, beş bin beş yüz doksan eder.",
+        "Sonra bunu bütün yoldan çıkarırız: dokuz bin sekiz yüz eksi beş bin beş yüz doksan, dört bin iki yüz on eder.",
+        "Son olarak kontrol ederiz: beş bin beş yüz doksan artı dört bin iki yüz on, dokuz bin sekiz yüz eder. Cevabımız doğru!"
+      ]
+    },
+    {
+      "id": "s09", "title": "İpucu sözcükler", "visual": "mat-toplama-cikarma-ipucu",
+      "sentences": [
+        "Bazı sözcükler, problemde hangi işlemi yapacağımızı gösterir.",
+        "Toplam, hepsi ve birlikte gibi sözcükler genellikle toplama işlemini gösterir.",
+        "Kaç fazla, kaç eksik, fark ve kalan gibi sözcükler ise genellikle çıkarma işlemini gösterir.",
+        "Örneğin Ali bugün bin iki yüz elli altı adım, Ece ise iki bin dört yüz altmış üç adım attı.",
+        "Ece, Ali'den kaç adım fazla attı? Büyük sayıdan küçüğü çıkarırız: bin iki yüz yedi adım.",
+        "İkisi birlikte kaç adım attı? Bu kez toplarız: üç bin yedi yüz on dokuz adım."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "mat-toplama-cikarma-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Toplarken basamakları alt alta yazar, birlerden başlarız ve eldeyi unutmayız.",
+        "Çıkarmada üstteki rakam küçükse bir büyük basamaktan bozarız. Sonucu toplamayla kontrol ederiz.",
+        "Tahmin için sayıları en yakın onluğa ya da yüzlüğe yuvarlar, sonra işlemi yaparız.",
+        "Problemlerde önce anlar, sonra planlar, çözer ve kontrol ederiz.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "4782 + 2958 işleminin sonucu kaçtır?",
+      "options": ["6630", "6640", "7630", "7740"],
+      "answer": 3,
+      "explain": "Birlerden başlarız: 2 + 8 = 10, 0 yazılır, 1 elde olur. Eldeleri unutmadan toplarsak sonuç 7740 olur.",
+      "scene": "s02"
+    },
+    {
+      "question": "4800 − 2825 işleminin sonucu kaçtır?",
+      "options": ["2025", "1975", "1985", "2975"],
+      "answer": 1,
+      "explain": "Birlerde 0'dan 5 çıkmaz, yüzlerden bozarız. Sonuç 1975'tir. Sağlama: 1975 + 2825 = 4800.",
+      "scene": "s03"
+    },
+    {
+      "question": "4462 + 2862 işleminin sonucunu, sayıları en yakın yüzlüğe yuvarlayarak tahmin eden Ece hangi sonucu bulur?",
+      "options": ["7300", "7324", "7400", "7500"],
+      "answer": 2,
+      "explain": "4462 sayısı 4500'e, 2862 sayısı 2900'e yuvarlanır. 4500 + 2900 = 7400.",
+      "scene": "s05"
+    },
+    {
+      "question": "4762 + 300 işlemini zihinden yapan Deniz hangi sonucu bulur?",
+      "options": ["5062", "4792", "4962", "7762"],
+      "answer": 0,
+      "explain": "Yüzler basamağında 7 yüz + 3 yüz = 10 yüz, yani 1000 olur. Binler basamağı bir artar: 5062.",
+      "scene": "s07"
+    },
+    {
+      "question": "1560 m uzunluğundaki bir köprünün iki ucundan Ali ve Hakan birbirine doğru yürüyor. Ali 429 m, Hakan 946 m yürüdüğünde aralarında kaç metre kalır?",
+      "options": ["175", "195", "185", "1375"],
+      "answer": 2,
+      "explain": "Önce yürüdükleri yolları toplarız: 429 + 946 = 1375. Sonra 1560 − 1375 = 185 m kalır.",
+      "scene": "s08"
+    },
+    {
+      "question": "Bir kütüphanede 3725 roman ve 2218 hikâye kitabı var. Romanlar, hikâye kitaplarından kaç fazladır?",
+      "options": ["5943", "1517", "1493", "1507"],
+      "answer": 3,
+      "explain": "\"Kaç fazla\" sorusu çıkarma ile çözülür: 3725 − 2218 = 1507.",
+      "scene": "s09"
+    }
+  ]
+}

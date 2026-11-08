@@ -1,0 +1,174 @@
+{
+  "id": "din-dini-ifadeler",
+  "title": "Günlük Konuşmalarda Dinî İfadeler",
+  "course": "Din Kültürü ve Ahlak Bilgisi",
+  "unit": "Günlük Hayattaki Dinî İfadeler",
+  "kazanim": {
+    "code": "4.1.1, 4.1.2",
+    "text": "Dinî ifadeleri, günlük konuşmalarda doğru ve yerinde kullanır. Tekbir ve salavatı söyler.",
+    "note": "MEB Din Kültürü ve Ahlak Bilgisi Dersi Öğretim Programı (2018, 4-8. sınıflar), 4. sınıf 1. ünite; 2026-2027 DKAB 4 çerçeve yıllık planı. Allah, peygamber, eûzü besmele, besmele, selam, hamd ve şükür, tekbir, salavat, estağfirullah ve sübhanallah ifadeleri anlamlarıyla verilir; Allah'ın sıfatlarına girilmez. Bayram tekbiri ve salatüselam anlamlarıyla yer alır. Sevap, günah, helal, haram ifadeleri 'Dualar, Dinî Kavramlar ve Sübhaneke' dersindedir."
+  },
+  "summary": "Besmele, eûzü besmele, selam, elhamdülillah, tekbir, salavat, sübhanallah ve estağfirullah ifadelerinin anlamlarını ve nerede söylendiğini öğren.",
+  "match": {"course": "Din Kültürü ve Ahlak Bilgisi", "booklet": "Ünite 01", "keywords": ["besmele", "bismill", "eûzü", "selam", "tekbir", "ekber", "salavat", "salatüselam", "sallall", "hamd", "elhamdülillah", "şükr", "şükür", "sübhânallah", "sübhanallah", "estağfirullah", "dinî ifade", "dini ifade", "nimet", "elçi", "üstün olduğ", "bağışlanma", "tövbe", "kısaltılan"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Zeynep'in bir günü", "visual": "din-dini-ifadeler-intro",
+      "sentences": [
+        "Merhaba! Bugün Zeynep'in bir gününü birlikte dinleyelim.",
+        "Zeynep kahvaltıya başlarken Bismillah diyor.",
+        "Okulda öğretmenini görünce Selamün aleyküm diyor.",
+        "Akşam yemeğinden sonra da Elhamdülillah diyerek şükrediyor.",
+        "Bu sözlerin her biri bir dinî ifadedir. Haydi anlamlarını öğrenelim!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Din ve dinî ifadeler", "visual": "din-dini-ifadeler-din",
+      "sentences": [
+        "Din, Allah'ın insanlara iyiyi ve doğruyu göstermek için gönderdiği ilahi kurallardır.",
+        "Allah, evreni ve içindeki her şeyi yok iken yaratandır.",
+        "Peygamber ise Allah'ın mesajlarını insanlara ulaştıran, seçilmiş elçidir.",
+        "Kaynağını dinden alan ve günlük konuşmalarımızda kullandığımız sözlere dinî ifadeler denir.",
+        "Bu ifadeler dilimize ve kültürümüze yerleşmiştir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Besmele", "visual": "din-dini-ifadeler-besmele",
+      "sentences": [
+        "İlk ifademiz besmeledir: Bismillahirrahmanirrahim.",
+        "Anlamı: Rahman ve Rahim olan Allah'ın adıyla başlarım.",
+        "Rahman ve Rahim, Allah'ın isimleridir. Besmeleyi kısaca Bismillah diye de söyleriz.",
+        "Yemeğe, ders çalışmaya ya da bir işe başlarken besmele çekeriz.",
+        "Böylece Allah'ı anar, O'ndan yardım diler ve O'na sığınırız.",
+        "Peygamberimiz, besmeleyle başlanan yemeğin bereketli olacağını bildirmiştir."
+      ]
+    },
+    {
+      "id": "s04", "title": "Eûzü besmele", "visual": "din-dini-ifadeler-euzu",
+      "sentences": [
+        "Kur'an-ı Kerim okumaya başlarken besmeleden önce bir ifade daha söyleriz.",
+        "Bu ifade şudur: Euzü billahi mineşşeytanirracim.",
+        "Anlamı: Kovulmuş şeytanın kötülüğünden Allah'a sığınırım.",
+        "Nahl suresinin doksan sekizinci ayetinde şöyle buyrulur: Kur'an okuyacağın vakit, o kovulmuş şeytandan Allah'a sığın.",
+        "Bu ifade besmeleyle birlikte okununca eûzü besmele adını alır."
+      ]
+    },
+    {
+      "id": "s05", "title": "Selam", "visual": "din-dini-ifadeler-selam",
+      "sentences": [
+        "Biriyle karşılaştığımızda önce selam veririz.",
+        "Selam veren kişi Selamün aleyküm ya da Esselamü aleyküm der.",
+        "Bu söz, esenlik, barış ve güven sizin üzerinize olsun anlamına gelen bir duadır.",
+        "Selamı alan kişi de Aleyküm selam diye karşılık verir.",
+        "Günaydın, merhaba, hayırlı günler ve iyi akşamlar da selamlaşma ifadeleridir.",
+        "Selam sevgiyi ve dostluğu artırır. Peygamberimiz, eve girerken ev halkına selam vermeyi öğütlemiştir."
+      ]
+    },
+    {
+      "id": "s06", "title": "Hamd ve şükür", "visual": "din-dini-ifadeler-hamd",
+      "sentences": [
+        "Allah bize sayısız nimet vermiştir: yiyecekler, sağlık, ailemiz ve doğa.",
+        "Allah'ı övmeye hamd, verdiği nimetler için O'na teşekkür etmeye şükür denir.",
+        "Elhamdülillah, Hamd Allah içindir anlamına gelir.",
+        "Allah'a şükürler olsun ve hamdolsun da şükür ifadeleridir.",
+        "Bakara suresinin yüz elli ikinci ayetinde şöyle buyrulur: Yalnız beni anın ki ben de sizi anayım. Bana şükredin, sakın nankörlük etmeyin."
+      ]
+    },
+    {
+      "id": "s07", "title": "Tekbir", "visual": "din-dini-ifadeler-tekbir",
+      "sentences": [
+        "Allahu ekber, Allah en büyüktür demektir. Bu ifadeye tekbir denir.",
+        "Tekbir, Allah'ın yüceliğini dile getirir. Sevinçli anlarda da tekbir getiririz.",
+        "Günde beş vakit okunan ezan, tekbirle başlar.",
+        "Namaza da tekbir alarak başlarız.",
+        "Bayramlarda bayram tekbiri getiririz: Allahu ekber, Allahu ekber. La ilahe illallahu vallahu ekber. Allahu ekber ve lillahil hamd.",
+        "Anlamı: Allah en büyüktür. Allah'tan başka ilah yoktur. Allah en büyüktür ve hamd O'na mahsustur."
+      ]
+    },
+    {
+      "id": "s08", "title": "Salavat", "visual": "din-dini-ifadeler-salavat",
+      "sentences": [
+        "Peygamberimiz Hazreti Muhammed'in adı anıldığında ya da duyulduğunda ona dua ederiz.",
+        "Bunun için Sallallahu aleyhi ve sellem deriz.",
+        "Anlamı: Allah ona salat ve selam eylesin, yani rahmet ve esenlik versin.",
+        "Peygamberimize duyduğumuz sevgi ve saygıyı gösteren bu dualara salavat denir.",
+        "Yazılarda Peygamberimizin adından sonra bu ifadenin kısaltması yazılır.",
+        "Esselatü vesselamü aleyke ya Resulallah da bir salavattır. Anlamı: Salat ve selam senin üzerine olsun, ey Allah'ın elçisi."
+      ]
+    },
+    {
+      "id": "s09", "title": "Sübhanallah ve Estağfirullah", "visual": "din-dini-ifadeler-subhanallah",
+      "sentences": [
+        "Rengârenk bir gökkuşağı gördüğümüzde Sübhanallah deriz.",
+        "Sübhanallah, Allah her türlü eksiklik ve kusurdan uzaktır demektir.",
+        "Bir hata yaptığımızı fark ettiğimizde ise Estağfirullah deriz.",
+        "Estağfirullah, Allah'tan af ve bağışlanma dilerim anlamına gelir.",
+        "Hatamızdan pişman olup Allah'tan af dilemeye tövbe denir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Dikkat: Karıştırmayalım", "visual": "din-dini-ifadeler-dikkat",
+      "sentences": [
+        "Dikkat! Bu ifadelerin adlarını karıştırmayalım.",
+        "Bismillahirrahmanirrahim demeye besmele denir.",
+        "Allahu ekber demeye tekbir denir.",
+        "Sallallahu aleyhi ve sellem demek salavattır.",
+        "Elhamdülillah demek hamd, Selamün aleyküm demek ise selamdır."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "din-dini-ifadeler-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "İşlerimize besmeleyle başlarız. Kur'an okumadan önce eûzü besmele çekeriz.",
+        "Selam vererek birbirimize esenlik ve barış dileriz.",
+        "Elhamdülillah diyerek şükreder, Allahu ekber diyerek Allah'ın yüceliğini dile getiririz.",
+        "Peygamberimizin adını duyunca salavat getiririz.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Bir işe Allah'ın adını anarak başlamak için hangisini söyleriz?",
+      "options": ["Elhamdülillah", "Bismillahirrahmanirrahim", "Allahu ekber", "Estağfirullah"],
+      "answer": 1,
+      "explain": "Bismillahirrahmanirrahim, Rahman ve Rahim olan Allah'ın adıyla başlarım demektir. Buna besmele denir.",
+      "scene": "s03"
+    },
+    {
+      "question": "Ezanın başında duyduğumuz ve \"Allah en büyüktür\" anlamına gelen ifadenin adı nedir?",
+      "options": ["Selam", "Salavat", "Hamd", "Tekbir"],
+      "answer": 3,
+      "explain": "Allahu ekber, Allah en büyüktür demektir. Bu ifadeye tekbir denir; ezan da tekbirle başlar.",
+      "scene": "s07"
+    },
+    {
+      "question": "Peygamberimizin adı anıldığında ya da duyulduğunda söylenen dua ifadesi hangisidir?",
+      "options": ["Sallallahu aleyhi ve sellem", "Sübhanallah", "Selamün aleyküm", "Elhamdülillah"],
+      "answer": 0,
+      "explain": "Peygamberimizin adını duyunca Sallallahu aleyhi ve sellem deriz. Bu dualara salavat denir.",
+      "scene": "s08"
+    },
+    {
+      "question": "Ayşe yemekten sonra Allah'ın verdiği nimetler için ne demelidir?",
+      "options": ["Estağfirullah", "Selamün aleyküm", "Elhamdülillah", "Allahu ekber"],
+      "answer": 2,
+      "explain": "Elhamdülillah, hamd Allah içindir demektir. Nimetler için Allah'a şükrederken söylenir.",
+      "scene": "s06"
+    },
+    {
+      "question": "\"Allah'tan af ve bağışlanma dilerim.\" anlamına gelen dinî ifade hangisidir?",
+      "options": ["Sübhanallah", "Allahu ekber", "Bismillah", "Estağfirullah"],
+      "answer": 3,
+      "explain": "Estağfirullah, Allah'tan af ve bağışlanma dilerim demektir. Sübhanallah ise Allah her türlü eksiklikten uzaktır anlamına gelir.",
+      "scene": "s09"
+    },
+    {
+      "question": "Selamlaşma ile ilgili hangisi yanlıştır?",
+      "options": ["Selam aynı zamanda bir duadır.", "Selam vermek, barış ve esenlik dilemektir.", "Selamlaşmak, kişinin yalnızca kendini düşünmesidir.", "Selam verene \"Aleyküm selam\" diye karşılık verilir."],
+      "answer": 2,
+      "explain": "Selamlaşırken karşımızdakine esenlik, barış ve güven dileriz. Selam, sevgiyi ve dostluğu artırır.",
+      "scene": "s05"
+    }
+  ]
+}

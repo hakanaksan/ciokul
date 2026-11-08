@@ -1,0 +1,167 @@
+{
+  "id": "sos-milli-mucadele",
+  "title": "Millî Mücadele Kahramanları",
+  "course": "Sosyal Bilgiler",
+  "unit": "Kültür ve Miras",
+  "kazanim": {
+    "code": "SB.4.2.4",
+    "text": "Millî Mücadele kahramanlarının hayatlarından hareketle Millî Mücadele’nin önemini kavrar.",
+    "note": "MEB Sosyal Bilgiler Dersi Öğretim Programı (2018), 4. sınıf. Açıklama: Kazanım biyografi öğretimi bağlamında ele alınır. Öğrenme alanında vatanseverlik değeri ile zaman ve kronolojiyi algılama becerisi öne çıkar; Mondros sonrası işgaller, cepheler, kahramanlar ve Millî Mücadele'nin başlıca olayları çocuk düzeyinde anlatılır."
+  },
+  "summary": "Mondros'tan Cumhuriyet'e Millî Mücadele'yi; Hasan Tahsin, Sütçü İmam, Şahin Bey, Şerife Bacı gibi kahramanları ve cepheleri öğren.",
+  "match": {"course": "Sosyal Bilgiler", "booklet": "Ünite 02", "keywords": ["millî mücadele", "milli mücadele", "cephe", "kuvayımilliye", "kuva-yı", "mustafa kemal", "samsun", "kongre", "işgal", "mondros", "şahin bey", "sütçü imam", "hasan tahsin", "karabekir", "şerife bacı", "büyük millet meclisi", "tbmm", "vatansever"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Yurdumuz tehlikede", "visual": "sos-milli-mucadele-intro",
+      "sentences": [
+        "Merhaba! Bir düşün: Evine izinsiz biri girse ve burası artık benim dese ne hissederdin?",
+        "Bundan yüz yılı aşkın bir süre önce, yurdumuzun birçok yeri yabancı askerler tarafından işgal edildi.",
+        "Milletimiz yurdunu kurtarmak için birlik oldu ve büyük bir mücadele başlattı.",
+        "Bu mücadeleye Millî Mücadele ya da Kurtuluş Savaşı denir. Bugün onun kahramanlarını tanıyacağız."
+      ]
+    },
+    {
+      "id": "s02", "title": "Mondros ve işgaller", "visual": "sos-milli-mucadele-mondros",
+      "sentences": [
+        "Osmanlı Devleti, Birinci Dünya Savaşı'ndan yenik ayrıldı.",
+        "30 Ekim 1918'de Mondros Ateşkes Antlaşması imzalandı.",
+        "Bu antlaşmadan sonra yurdumuzun birçok yeri işgal edildi.",
+        "Batıda İzmir'i Yunanlılar işgal etti. Güneyde Maraş, Antep ve Urfa da Fransızların işgaline uğradı.",
+        "Halk, işgallere karşı bölge bölge Kuvayımilliye denilen silahlı birlikler kurdu."
+      ]
+    },
+    {
+      "id": "s03", "title": "İlk kurşun", "visual": "sos-milli-mucadele-izmir",
+      "sentences": [
+        "15 Mayıs 1919'da Yunan askerleri İzmir'e çıktı.",
+        "Gazeteci Hasan Tahsin işgale karşı çıktı ve düşman askerlerine ilk kurşunu attı.",
+        "Hasan Tahsin orada şehit oldu ve Millî Mücadele'nin sembol isimlerinden biri oldu.",
+        "Batı Anadolu'da Yörük Ali Efe gibi efeler de Kuvayımilliye birlikleriyle düşmana karşı savaştı."
+      ]
+    },
+    {
+      "id": "s04", "title": "Samsun'dan Ankara'ya", "visual": "sos-milli-mucadele-samsun",
+      "sentences": [
+        "19 Mayıs 1919'da Mustafa Kemal, Bandırma Vapuru ile Samsun'a çıktı ve Millî Mücadele'yi başlattı.",
+        "Havza ve Amasya'da genelgeler yayımlayarak halkı işgallere karşı uyandırdı.",
+        "Erzurum Kongresi'nde vatanın bölünmez bir bütün olduğu vurgulandı.",
+        "Sivas Kongresi'nde ise bütün millî cemiyetler tek çatı altında birleştirildi.",
+        "23 Nisan 1920'de Ankara'da Türkiye Büyük Millet Meclisi açıldı."
+      ]
+    },
+    {
+      "id": "s05", "title": "Üç cephe", "visual": "sos-milli-mucadele-fronts",
+      "sentences": [
+        "Millî Mücadele'de düşmana karşı üç cephede savaşıldı.",
+        "Doğu Cephesi'nde Ermeni kuvvetlerine karşı savaşıldı. Bu cephenin komutanı Kâzım Karabekir'di.",
+        "Güney Cephesi'nde Fransızlara karşı daha çok halkın kurduğu Kuvayımilliye birlikleri savaştı.",
+        "Batı Cephesi'nde ise Yunanlılara karşı savaşıldı. Bu cephede düzenli ordu kuruldu.",
+        "Batı Cephesi komutanı İsmet İnönü, düzenli ordunun ilk zaferini kazandı."
+      ]
+    },
+    {
+      "id": "s06", "title": "Güney Cephesi kahramanları", "visual": "sos-milli-mucadele-south",
+      "sentences": [
+        "Şimdi Güney Cephesi'nin kahramanlarını tanıyalım.",
+        "Maraş'ta Sütçü İmam, halka yapılan saldırıya karşı ilk kurşunu atarak direnişi başlattı.",
+        "Antep'te Şahin Bey, Fransız askerlerine karşı kahramanca savaştı ve şehit oldu.",
+        "Urfa'nın savunmasında Ali Saip Bey, Osmaniye'de ise Tayyar Rahmiye Hanım düşmana karşı mücadele etti.",
+        "Bu kahramanlıklar sebebiyle Maraş'a Kahraman, Antep'e Gazi, Urfa'ya Şanlı unvanı verildi."
+      ]
+    },
+    {
+      "id": "s07", "title": "Kadın kahramanlar", "visual": "sos-milli-mucadele-women",
+      "sentences": [
+        "Millî Mücadele'de yalnızca askerler değil, kadınlar, çocuklar ve yaşlılar da fedakârlık gösterdi.",
+        "Silah ve cephane, İnebolu'dan Kastamonu üzerinden Ankara'ya taşınıyordu. Bu yola İstiklal Yolu denir.",
+        "Şerife Bacı, kış günü kağnısıyla cephane taşırken kar altında donarak şehit oldu.",
+        "Gördesli Makbule, eşi Halil Efe ile birlikte Batı Anadolu'da düşmana karşı savaştı.",
+        "Kadınlarımız cepheye cephane taşıdı, yaralılara baktı ve askerler için giysi dikti."
+      ]
+    },
+    {
+      "id": "s08", "title": "Zafer ve Cumhuriyet", "visual": "sos-milli-mucadele-victory",
+      "sentences": [
+        "Düzenli ordumuz 1921'de Sakarya Meydan Muharebesi'nde büyük bir zafer kazandı.",
+        "Bu zaferden sonra Meclis, Mustafa Kemal'e Gazi unvanını ve mareşallik rütbesini verdi.",
+        "30 Ağustos 1922'de Başkomutanlık Meydan Muharebesi kazanıldı. Ardından Mustafa Kemal, “Ordular! İlk hedefiniz Akdeniz'dir. İleri!” emrini verdi.",
+        "9 Eylül 1922'de İzmir düşman işgalinden kurtarıldı.",
+        "Mudanya Ateşkes Antlaşması ile savaş sona erdi. 29 Ekim 1923'te ise Cumhuriyet ilan edildi."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "sos-milli-mucadele-dikkat",
+      "sentences": [
+        "Dikkat! Bazı bilgiler sık karıştırılır.",
+        "Batı Cephesi'nde Yunanlılarla, Güney Cephesi'nde Fransızlarla savaşıldı.",
+        "Şerife Bacı İstiklal Yolu'nda cephane taşıdı. Tayyar Rahmiye Hanım ise Osmaniye'de Fransızlara karşı savaştı.",
+        "Hasan Tahsin İzmir'de, Sütçü İmam Maraş'ta, Şahin Bey Antep'te mücadele etti.",
+        "Kâzım Karabekir Doğu Cephesi'nde, İsmet İnönü ise Batı Cephesi'nde komutandı."
+      ]
+    },
+    {
+      "id": "s10", "title": "Neden önemli?", "visual": "sos-milli-mucadele-why",
+      "sentences": [
+        "Peki Millî Mücadele neden bu kadar önemlidir?",
+        "Millî Mücadele sayesinde yurdumuz işgalden kurtuldu ve bağımsızlığımızı kazandık.",
+        "Bu başarı, milletimizin birlik ve beraberliği sayesinde kazanıldı.",
+        "Bugün özgürce okula gidip bayramlarımızı kutlayabiliyorsak, bunu kahramanlarımıza borçluyuz."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "sos-milli-mucadele-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Mondros Ateşkes Antlaşması'ndan sonra yurdumuz işgal edildi ve Millî Mücadele başladı.",
+        "Mustafa Kemal 19 Mayıs 1919'da Samsun'a çıktı. 23 Nisan 1920'de Meclis açıldı.",
+        "Doğu, Güney ve Batı cephelerinde bütün millet kahramanca savaştı.",
+        "Hasan Tahsin, Sütçü İmam, Şahin Bey ve Şerife Bacı gibi kahramanlarımızı hiç unutmayacağız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "İzmir'in işgaline karşı çıkıp Yunan askerlerine ilk kurşunu atan gazeteci kahramanımız kimdir?",
+      "options": ["Şahin Bey", "Sütçü İmam", "Kâzım Karabekir", "Hasan Tahsin"],
+      "answer": 3,
+      "explain": "Gazeteci Hasan Tahsin, 15 Mayıs 1919'da İzmir'i işgal eden düşmana ilk kurşunu attı ve şehit oldu.",
+      "scene": "s03"
+    },
+    {
+      "question": "Mustafa Kemal, 19 Mayıs 1919'da hangi şehre çıkarak Millî Mücadele'yi başlattı?",
+      "options": ["Ankara", "Samsun", "Sivas", "Erzurum"],
+      "answer": 1,
+      "explain": "Mustafa Kemal, Bandırma Vapuru ile Samsun'a çıktı. Ankara'da ise 23 Nisan 1920'de Meclis açıldı.",
+      "scene": "s04"
+    },
+    {
+      "question": "Güney Cephesi'nde hangi düşmana karşı savaşılmıştır?",
+      "options": ["Fransızlar", "Yunanlılar", "İspanyollar", "Ruslar"],
+      "answer": 0,
+      "explain": "Güney Cephesi'nde Maraş, Antep ve Urfa'yı işgal eden Fransızlara karşı savaşıldı. Batı Cephesi'nde ise Yunanlılarla savaşıldı.",
+      "scene": "s05"
+    },
+    {
+      "question": "Şerife Bacı ile ilgili hangisi doğrudur?",
+      "options": ["Doğu Cephesi'nin komutanıdır.", "İzmir'de ilk kurşunu atmıştır.", "Kağnısıyla cephane taşırken donarak şehit olmuştur.", "Antep'i savunurken şehit olmuştur."],
+      "answer": 2,
+      "explain": "Şerife Bacı, İstiklal Yolu'nda İnebolu'dan Kastamonu'ya cephane taşırken kar altında donarak şehit oldu.",
+      "scene": "s07"
+    },
+    {
+      "question": "Aşağıdaki olaylardan hangisi en önce gerçekleşmiştir?",
+      "options": ["Türkiye Büyük Millet Meclisi'nin açılması", "Cumhuriyet'in ilan edilmesi", "İzmir'in kurtuluşu", "Mustafa Kemal'in Samsun'a çıkması"],
+      "answer": 3,
+      "explain": "Önce 19 Mayıs 1919'da Samsun'a çıkıldı. Meclis 1920'de açıldı, İzmir 1922'de kurtuldu, Cumhuriyet 1923'te ilan edildi.",
+      "scene": "s04"
+    },
+    {
+      "question": "Maraş'a “Kahraman”, Antep'e “Gazi”, Urfa'ya “Şanlı” unvanlarının verilmesinin sebebi nedir?",
+      "options": ["Bu şehirlerin çok büyük olması", "Halkın düşman işgaline karşı kahramanca direnmesi", "Bu şehirlerde kongre yapılması", "Bu şehirlerin denize kıyısı olması"],
+      "answer": 1,
+      "explain": "Bu şehirlerin halkı, Güney Cephesi'nde Fransız işgaline karşı kahramanca direndi.",
+      "scene": "s06"
+    }
+  ]
+}

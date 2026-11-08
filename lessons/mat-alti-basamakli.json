@@ -1,0 +1,156 @@
+{
+  "id": "mat-alti-basamakli",
+  "title": "Altı Basamaklı Sayılar ve Bölükler",
+  "course": "Matematik",
+  "unit": "Doğal Sayılar",
+  "kazanim": {
+    "code": "M.4.1.1.1, M.4.1.1.3, M.4.1.1.5",
+    "text": "4, 5 ve 6 basamaklı doğal sayıları okur ve yazar. 4, 5 ve 6 basamaklı doğal sayıların bölüklerini ve basamaklarını, basamaklarındaki rakamların basamak değerlerini belirler ve çözümler. En çok altı basamaklı doğal sayıları büyük/küçük sembolü kullanarak sıralar.",
+    "note": "MEB Matematik Dersi Öğretim Programı (2018), 4. sınıf. En çok altı basamaklı doğal sayılarla çalışılır; \"bölük\" kavramı bu konuda tanıtılır."
+  },
+  "summary": "Altı basamaklı sayıları bölüklerine ayırmayı, okumayı ve yazmayı; sayı değeri ile basamak değerini, çözümlemeyi ve sayıları karşılaştırmayı öğren.",
+  "match": {"course": "Matematik", "booklet": "Ünite 01", "keywords": ["okunuş", "okunur", "okuyor", "yazılış", "bölük", "bölüğ", "basamak değer", "sayı değer", "abaküs", "taban blok", "yüz binler", "on binler", "altı basamaklı", "beş basamaklı", "sırala", "büyükten küçüğe", "küçükten büyüğe", "basamaklı en", "en büyük doğal", "en küçük doğal", "rakamları birbirinden farklı", "rakamları farklı", "en büyük ve en küçük", "karşılaştır", "çözümle"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Büyük sayılar", "visual": "mat-alti-basamakli-intro",
+      "sentences": [
+        "Merhaba! Haberlerde ve tablolarda çok büyük sayılarla karşılaşırız.",
+        "Örneğin bir ilçenin nüfusu yedi yüz sekiz bin doksan üç olabilir.",
+        "Peki bu kadar büyük bir sayıyı nasıl okuruz? Her rakamın değeri ne kadar?",
+        "Bugün altı basamaklı sayıları okumayı, yazmayı ve basamaklarını tanımayı öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Basamaklar", "visual": "mat-alti-basamakli-basamaklar",
+      "sentences": [
+        "Bir sayıdaki her rakam bir basamakta durur.",
+        "Sağdan başlayarak önce birler, onlar ve yüzler basamakları gelir.",
+        "Onların solunda binler, on binler ve yüz binler basamakları vardır.",
+        "Altı basamaklı bir sayının en büyük basamağı yüz binler basamağıdır."
+      ]
+    },
+    {
+      "id": "s03", "title": "Bölükler", "visual": "mat-alti-basamakli-bolukler",
+      "sentences": [
+        "Basamaklar sağdan sola doğru üçerli gruplara ayrılır. Bu gruplara bölük denir.",
+        "Birler, onlar ve yüzler basamakları birler bölüğünü oluşturur.",
+        "Binler, on binler ve yüz binler basamakları da binler bölüğünü oluşturur.",
+        "Sayıyı yazarken bölükler arasında bir boşluk bırakırız. Böylece sayı kolay okunur."
+      ]
+    },
+    {
+      "id": "s04", "title": "Sayıları okuyalım", "visual": "mat-alti-basamakli-okuma",
+      "sentences": [
+        "Büyük bir sayıyı okurken önce soldaki binler bölüğünü okuruz ve sonuna bin deriz.",
+        "Bu sayının binler bölüğünde üç yüz seksen altı var. Bunu üç yüz seksen altı bin diye okuruz.",
+        "Sonra birler bölüğünü okuruz: beş yüz on iki.",
+        "Hepsini birleştirince sayımız üç yüz seksen altı bin beş yüz on iki olur."
+      ]
+    },
+    {
+      "id": "s05", "title": "Dikkat: Sıfırlı sayılar", "visual": "mat-alti-basamakli-sifir",
+      "sentences": [
+        "Dikkat! Bazı basamaklarda sıfır olabilir. Sıfır olan basamakları okumayız.",
+        "Haberdeki sayıya dönelim. Binler bölüğünde yedi yüz sekiz, birler bölüğünde doksan üç var: yedi yüz sekiz bin doksan üç.",
+        "Sayıyı yazarken de dikkatli olmalıyız. Binden büyük sayılarda birler bölüğü her zaman üç basamaklıdır.",
+        "Otuz iki bin üç sayısını yazalım: binler bölüğüne otuz iki, birler bölüğüne sıfır sıfır üç yazarız.",
+        "Üçü yüzler basamağına yazarsak sayı otuz iki bin üç yüz olur. Bu yanlış olur!"
+      ]
+    },
+    {
+      "id": "s06", "title": "Sayı değeri ve basamak değeri", "visual": "mat-alti-basamakli-deger",
+      "sentences": [
+        "Her rakamın bir sayı değeri, bir de basamak değeri vardır.",
+        "Sayı değeri rakamın kendisidir. Bu sayıdaki sekizin sayı değeri sekizdir.",
+        "Basamak değeri ise rakamın bulunduğu basamağa göre aldığı değerdir.",
+        "Sekiz, on binler basamağında olduğu için basamak değeri seksen bindir.",
+        "Yüzler basamağındaki beşin sayı değeri beş, basamak değeri ise beş yüzdür."
+      ]
+    },
+    {
+      "id": "s07", "title": "Çözümleme", "visual": "mat-alti-basamakli-cozumleme",
+      "sentences": [
+        "Bir sayıyı basamak değerlerinin toplamı olarak yazmaya çözümleme denir.",
+        "Üç yüz seksen altı bin beş yüz on iki sayısını çözümleyelim.",
+        "Binler bölüğünden üç yüz bin, seksen bin ve altı bin gelir.",
+        "Birler bölüğünden beş yüz, on ve iki gelir.",
+        "Hepsini toplarsak yine üç yüz seksen altı bin beş yüz on iki sayısını buluruz."
+      ]
+    },
+    {
+      "id": "s08", "title": "Abaküs", "visual": "mat-alti-basamakli-abakus",
+      "sentences": [
+        "Sayıları abaküsle de gösterebiliriz. Abaküsün her çubuğu bir basamaktır.",
+        "Bir çubuktaki boncuk sayısı, o basamaktaki rakamı gösterir.",
+        "Bu abaküste yüz binler çubuğunda beş, on binler çubuğunda üç boncuk var.",
+        "Binler çubuğunda hiç boncuk yok. Boş çubuk sıfır demektir.",
+        "Yüzlerde altı, onlarda yedi, birlerde dört boncuk var. Sayımız beş yüz otuz bin altı yüz yetmiş dört."
+      ]
+    },
+    {
+      "id": "s09", "title": "Hangisi büyük?", "visual": "mat-alti-basamakli-karsilastir",
+      "sentences": [
+        "İki sayıdan hangisinin büyük olduğunu bulmanın kolay bir yolu var.",
+        "Önce basamak sayılarına bakarız. Basamak sayısı fazla olan sayı daha büyüktür.",
+        "Basamak sayıları eşitse en soldaki basamaktan başlayarak rakamları karşılaştırırız.",
+        "İlk farklı rakam hangi sayıda büyükse o sayı daha büyüktür. Burada iki, birden büyüktür.",
+        "Büyüktür ve küçüktür sembollerinin açık ağzı her zaman büyük sayıya bakar."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "mat-alti-basamakli-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Basamaklar sağdan sola üçerli gruplanır. Bu gruplara bölük denir.",
+        "Büyük sayıları okurken önce binler bölüğünü okuyup bin deriz, sonra birler bölüğünü okuruz.",
+        "Sıfır olan basamaklar okunmaz, ama sayıyı yazarken sıfırları unutmamalıyız.",
+        "Bir rakamın basamak değeri, bulunduğu basamağa göre değişir.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "708 093 doğal sayısının okunuşu hangisidir?",
+      "options": ["Yedi yüz seksen bin doksan üç", "Yedi yüz sekiz bin doksan üç", "Yedi yüz sekiz bin dokuz yüz üç", "Yetmiş bin sekiz yüz doksan üç"],
+      "answer": 1,
+      "explain": "Binler bölüğü 708, birler bölüğü 093'tür. Sıfırlar okunmaz: yedi yüz sekiz bin doksan üç.",
+      "scene": "s05"
+    },
+    {
+      "question": "Okunuşu \"otuz iki bin üç\" olan doğal sayı hangisidir?",
+      "options": ["32 300", "320 003", "32 030", "32 003"],
+      "answer": 3,
+      "explain": "Binler bölüğüne 32, birler bölüğüne 003 yazılır: 32 003.",
+      "scene": "s05"
+    },
+    {
+      "question": "278 367 doğal sayısının binler bölüğündeki sayı hangisidir?",
+      "options": ["278", "367", "783", "27"],
+      "answer": 0,
+      "explain": "Sayı sağdan üçerli ayrılır. Birler bölüğü 367, binler bölüğü 278'dir.",
+      "scene": "s03"
+    },
+    {
+      "question": "462 915 doğal sayısında 6 rakamının basamak değeri kaçtır?",
+      "options": ["6", "600", "60 000", "6000"],
+      "answer": 2,
+      "explain": "6 rakamı on binler basamağındadır. Sayı değeri 6, basamak değeri 60 000'dir.",
+      "scene": "s06"
+    },
+    {
+      "question": "300 000 + 40 000 + 5000 + 70 + 1 şeklinde çözümlenen doğal sayı hangisidir?",
+      "options": ["345 710", "345 071", "340 571", "345 701"],
+      "answer": 1,
+      "explain": "Yüzler basamağının değeri verilmediği için oraya 0 yazılır: 345 071.",
+      "scene": "s07"
+    },
+    {
+      "question": "Aşağıdaki karşılaştırmalardan hangisi doğrudur?",
+      "options": ["362 861 < 361 836", "98 765 > 102 340", "530 674 < 503 674", "316 126 < 330 280"],
+      "answer": 3,
+      "explain": "İki sayı da altı basamaklıdır. Soldan karşılaştırınca on binler basamağında 1, 3'ten küçüktür. Bu yüzden 316 126 < 330 280'dir.",
+      "scene": "s09"
+    }
+  ]
+}

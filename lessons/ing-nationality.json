@@ -1,0 +1,185 @@
+{
+  "id": "ing-nationality",
+  "title": "Nerelisin? Ülkeler ve Milliyetler",
+  "course": "İngilizce",
+  "unit": "Nationality",
+  "kazanim": {
+    "code": "E4.2.L1, E4.2.L2, E4.2.S1, E4.2.S2",
+    "text": "Students will be able to recognize information about other people. Students will be able to identify different people’s nationalities. Students will be able to talk about nations and nationalities. Students will be able to talk about locations of cities.",
+    "note": "MEB İngilizce Dersi Öğretim Programı (2018), 4. sınıf, 2. ünite: Nationality. İşlevler: ülkeleri ve milliyetleri tanımlama (Where are you from? / Are you British? / Is s/he Russian?); şehirlerin yerini anlatma, basit sorular sorma (Where is Samsun? — It’s in the north.). Kelimeler: America/American, Britain/British, Germany/German, Iran/Iranian, Iraq/Iraqi, Japan/Japanese, Pakistan/Pakistani, Russia/Russian, Turkey/Turkish, north/south/east/west."
+  },
+  "summary": "Ülke ve milliyet adlarını, nereli olduğunu sorup cevaplamayı ve şehirlerin yerini kuzey, güney, doğu, batı ile anlatmayı İngilizce öğren.",
+  "match": {"course": "İngilizce", "booklet": "Ünite 02", "keywords": ["where", "from", "nationality", "country", "countries", "turk", "brit", "americ", "the usa", "german", "russia", "japan", "pakistan", "raq", "ran", "france", "french", "spain", "spanish", "taly", "talian", "china", "chinese", "north", "south", "east", "west", "flag", "live", "city"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Dünyadan arkadaşlar", "visual": "ing-nationality-intro",
+      "sentences": [
+        "Merhaba! Bugün dünyanın dört bir yanından yeni arkadaşlarla tanışacağız.",
+        "Bu arkadaşlar farklı ülkelerde yaşıyor, farklı dillerde konuşuyor ve her birinin ülkesinin farklı bir bayrağı var.",
+        "Yeni biriyle tanışınca ilk merak ettiğimiz şey genellikle şudur:",
+        "Where are you from?",
+        "Bu soru, nerelisin anlamına gelir. Haydi, bu soruyu sormayı ve cevaplamayı öğrenelim!"
+      ],
+      "english": [3]
+    },
+    {
+      "id": "s02", "title": "Ülkeler", "visual": "ing-nationality-countries",
+      "sentences": [
+        "Önce bazı ülkelerin İngilizce adlarını öğrenelim. Dinle ve tekrar et.",
+        "Turkey, Britain, America.",
+        "Germany, Russia, Japan.",
+        "Pakistan, Iran, Iraq.",
+        "İngilizcede ülke adlarını her zaman büyük harfle başlatarak yazarız. Örneğin Türkiye'nin İngilizce adı büyük T harfiyle başlar."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s03", "title": "Milliyetler", "visual": "ing-nationality-nationalities",
+      "sentences": [
+        "Bir ülkeden olan insanlara verilen ada milliyet denir. Şimdi her ülkenin milliyetini dinle.",
+        "Turkey, Turkish.",
+        "Britain, British. America, American.",
+        "Germany, German. Russia, Russian. Japan, Japanese.",
+        "Pakistan, Pakistani. Iran, Iranian. Iraq, Iraqi."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s04", "title": "Nerelisin?", "visual": "ing-nationality-where",
+      "sentences": [
+        "Şimdi iki çocuk tanışıyor: Elif ve Tom. Elif, Tom'a nereli olduğunu soruyor:",
+        "Where are you from?",
+        "I am from Britain.",
+        "Tom da aynı soruyu Elif'e soruyor. Elif şöyle cevap veriyor:",
+        "I am from Turkey."
+      ],
+      "english": [1, 2, 4]
+    },
+    {
+      "id": "s05", "title": "Milliyetin ne?", "visual": "ing-nationality-what",
+      "sentences": [
+        "Milliyeti sormak için de şu soruyu kullanırız:",
+        "What nationality are you?",
+        "Tom, Britanya'dan geldiği için şöyle cevap veriyor:",
+        "I am British.",
+        "Elif de kendi milliyetini söylüyor:",
+        "I am Turkish."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s06", "title": "O nereli?", "visual": "ing-nationality-heshe",
+      "sentences": [
+        "Bir başkasından bahsederken soru biraz değişir. Kız için bir kelime, erkek için başka bir kelime kullanırız. İkisinin de Türkçesi odur.",
+        "Where is she from?",
+        "She is from Pakistan.",
+        "Is he Russian?",
+        "No, he isn't. He is German."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s07", "title": "Evet mi, hayır mı?", "visual": "ing-nationality-yesno",
+      "sentences": [
+        "Bazen tahmin ederek soru sorarız. Bu sorulara evet ya da hayır diye cevap veririz.",
+        "Are you British?",
+        "No, I am not.",
+        "Is she from Japan?",
+        "I think so.",
+        "Bu cevap, sanırım öyle demektir. Emin olmadığımızda bu cevabı veririz."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s08", "title": "Şehirler nerede?", "visual": "ing-nationality-directions",
+      "sentences": [
+        "Şimdi de şehirlerin yerini anlatmayı öğrenelim. Haritada yukarısı kuzey, aşağısı güney, sağ taraf doğu, sol taraf batıdır.",
+        "North, south, east, west.",
+        "Where is Samsun?",
+        "It is in the north.",
+        "Where is Antalya?",
+        "It is in the south."
+      ],
+      "english": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "ing-nationality-careful",
+      "sentences": [
+        "Dikkat! Çok sık yapılan bir hatayı birlikte düzeltelim.",
+        "Ülkemizin adını söylerken şöyle deriz:",
+        "I am from Turkey.",
+        "Milliyetimizi söylerken ise araya bağlantı kelimesi koymayız:",
+        "I am Turkish.",
+        "Bir de ülke ve milliyet adlarını hep büyük harfle başlatmayı unutma!"
+      ],
+      "english": [2, 4]
+    },
+    {
+      "id": "s10", "title": "Sıra sende", "visual": "ing-nationality-practice",
+      "sentences": [
+        "Şimdi sen de tekrar et. Önce soruyu sor:",
+        "Where are you from?",
+        "Şimdi cevap ver:",
+        "I am from Turkey. I am Turkish.",
+        "Son olarak bir şehrin yerini söyle:",
+        "Izmir is in the west."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "ing-nationality-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Birinin nereli olduğunu sormayı ve ülkemizi söylemeyi öğrendik.",
+        "Milliyetleri öğrendik. Ülke ve milliyet adları büyük harfle başlar.",
+        "Evet ya da hayır diye cevaplanan soruları sormayı ve cevaplamayı öğrendik.",
+        "Yönleri kullanarak şehirlerin yerini anlatmayı öğrendik.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Tabloya bak: Name: Yuki · Country: Japan. Yuki için hangisi doğrudur?",
+      "options": ["She is Japan.", "She is Chinese.", "She is Japanese.", "She is from Japanese."],
+      "answer": 2,
+      "explain": "Japonya'dan olan biri Japanese olur. Milliyetten önce from kullanılmaz.",
+      "scene": "s03"
+    },
+    {
+      "question": "Diyaloğu tamamla: — - - - - ? — I am from Germany.",
+      "options": ["What is your name?", "Where are you from?", "How old are you?", "Where is Germany?"],
+      "answer": 1,
+      "explain": "Where are you from? sorusu nereli olduğumuzu sorar. Cevabı I am from ... ile başlar.",
+      "scene": "s04"
+    },
+    {
+      "question": "— What nationality are you? Bu sorunun cevabı hangisidir?",
+      "options": ["It is in the north.", "I am Britain.", "Yes, I am.", "I am British."],
+      "answer": 3,
+      "explain": "Milliyet sorusuna milliyetimizle cevap veririz: I am British.",
+      "scene": "s05"
+    },
+    {
+      "question": "— Where is Samsun? Haritaya göre doğru cevap hangisidir?",
+      "options": ["It is in the south.", "It is in the north.", "It is in the east.", "It is in the west."],
+      "answer": 1,
+      "explain": "Samsun, Türkiye'nin kuzeyinde, Karadeniz kıyısındadır. Kuzey İngilizcede north demektir.",
+      "scene": "s08"
+    },
+    {
+      "question": "Hangi cümle doğru yazılmıştır?",
+      "options": ["I am from Turkish.", "I am turkish.", "I am from Turkey.", "I am from turkey."],
+      "answer": 2,
+      "explain": "Ülke adından önce from gelir: I am from Turkey. Ülke ve milliyet adları büyük harfle başlar.",
+      "scene": "s09"
+    },
+    {
+      "question": "— Is she from Japan? Emin değilsen hangi cevabı verirsin?",
+      "options": ["I think so.", "No, she is.", "Yes, I am.", "I am Japanese."],
+      "answer": 0,
+      "explain": "I think so, sanırım öyle demektir. Emin olmadığımızda bu cevabı veririz.",
+      "scene": "s07"
+    }
+  ]
+}

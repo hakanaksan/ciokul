@@ -1,0 +1,171 @@
+{
+  "id": "din-dualar-ve-kavramlar",
+  "title": "Dualar, Dinî Kavramlar ve Sübhaneke",
+  "course": "Din Kültürü ve Ahlak Bilgisi",
+  "unit": "Günlük Hayattaki Dinî İfadeler",
+  "kazanim": {
+    "code": "4.1.3, 4.1.4, 4.1.1",
+    "text": "Dilek ve dualarda kullanılan dinî ifadelere örnekler verir. Sübhaneke duasını okur, anlamını söyler. Dinî ifadeleri, günlük konuşmalarda doğru ve yerinde kullanır.",
+    "note": "MEB Din Kültürü ve Ahlak Bilgisi Dersi Öğretim Programı (2018, 4-8. sınıflar), 4. sınıf 1. ünite; 2026-2027 DKAB 4 çerçeve yıllık planı. 'Allah razı olsun, Allah'a emanet ol, Allah şifa versin, inşallah, maşallah' gibi dilek ve dualar; 4.1.1'den yalnızca sevap, günah, helal, haram ifadelerinin günlük dildeki kullanımı; Sübhaneke duası ile ilgili kısa açıklamalar ve nerelerde okunduğu öğrenci seviyesinde verilir."
+  },
+  "summary": "Dua etmeyi, günlük hayatta kullandığımız dilek ve dua ifadelerini, helal-haram ve sevap-günah kavramlarını, Sübhaneke duasını ve anlamını öğren.",
+  "match": {"course": "Din Kültürü ve Ahlak Bilgisi", "booklet": "Ünite 01", "keywords": ["dua", "dilek", "razı olsun", "emanet", "şifa", "zihin açıklığı", "bağışlasın", "kabul etsin", "rahatlık versin", "inşallah", "maşallah", "helal", "haram", "sevap", "günah", "mükâfat", "sübhaneke", "sübhâneke", "salih amel", "alışveriş", "yasakla", "izin verdiği", "âmentü", "ilk okunan", "dualardan", "tüm eksikliklerden"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Teşekkür ve dua", "visual": "din-dualar-ve-kavramlar-intro",
+      "sentences": [
+        "Merhaba! Yaşlı komşusunun poşetlerini taşımasına yardım eden Can'ı düşünelim.",
+        "Komşusu ona gülümseyerek Allah razı olsun evladım diyor.",
+        "Komşusu, Can'a hem teşekkür etti hem de onun için dua etti.",
+        "Bugün dilek ve dualarımızı, bazı dinî kavramları ve Sübhaneke duasını öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Dua nedir?", "visual": "din-dualar-ve-kavramlar-dua",
+      "sentences": [
+        "Dua, insanın tüm samimiyetiyle Rabb'ine yönelmesidir.",
+        "Dua ederken isteklerimizi Allah'a iletir, O'ndan yardım ister ve O'na güveniriz.",
+        "Hem kendimiz hem de başkaları için dua edebiliriz.",
+        "Dua her zaman ve her yerde, kendi dilimizle yapılabilir.",
+        "Duanın sonunda amin deriz. Amin, Allah'ım kabul eyle demektir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Dilek ve dualar", "visual": "din-dualar-ve-kavramlar-dilekler",
+      "sentences": [
+        "Günlük hayatta birbirimize dua ederek iyi dileklerde bulunuruz.",
+        "Hasta birine Allah şifa versin deriz.",
+        "Yolculuğa çıkan birine Allah'a emanet ol deriz.",
+        "Sınava girecek birine Allah zihin açıklığı versin, alışveriş yaptığımız kişiye Allah bereket versin deriz.",
+        "Bebeği olan bir aileye Allah bağışlasın, bize iyilik yapan birine Allah razı olsun deriz.",
+        "Uyumaya giden birine Allah rahatlık versin, namaz kılan birine Allah kabul etsin deriz."
+      ]
+    },
+    {
+      "id": "s04", "title": "İnşallah ve maşallah", "visual": "din-dualar-ve-kavramlar-insallah",
+      "sentences": [
+        "İleride yapmayı planladığımız işler için inşallah deriz.",
+        "İnşallah, Allah izin verirse, Allah dilerse demektir. Örneğin: İnşallah yarın parka gideriz.",
+        "Güzel bir şey gördüğümüzde ya da beğendiğimizde ise maşallah deriz.",
+        "Maşallah, Allah'ın dilediği olur anlamına gelir. Örneğin yeni doğan bir bebeği görünce maşallah deriz.",
+        "Bu sözler hem Allah'ı hatırlatır hem de insanlara duyduğumuz sevgiyi gösterir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Dikkat: Doğru yerde kullanalım", "visual": "din-dualar-ve-kavramlar-dikkat",
+      "sentences": [
+        "Dikkat! Dilek ve dua ifadelerini doğru yerde kullanmalıyız.",
+        "Yemeğe başlarken Allah korusun denmez; yemeğe besmeleyle, yani Bismillah diyerek başlanır.",
+        "Yemek yiyen birine kolay gelsin değil, afiyet olsun deriz.",
+        "Yolculuğa çıkan birine Allah şifa versin değil, Allah'a emanet ol deriz.",
+        "Yerinde söylenen güzel bir söz, karşımızdakini mutlu eder."
+      ]
+    },
+    {
+      "id": "s06", "title": "Helal ve haram", "visual": "din-dualar-ve-kavramlar-helal",
+      "sentences": [
+        "Günlük konuşmalarda helal ve haram kelimelerini de sık duyarız.",
+        "Helal, Allah'ın izin verdiği ve serbest bıraktığı iş ve davranışlardır.",
+        "Spor yapmak, çalışarak para kazanmak ve temiz yiyecekler yemek helaldir.",
+        "Haram ise Allah'ın yapılmasını kesin olarak yasakladığı söz ve davranışlardır.",
+        "Hırsızlık yapmak ve başkasının hakkını yemek haramdır.",
+        "Birine hakkını helal et dediğimizde, üzerimizde hakkı varsa bağışlamasını isteriz."
+      ]
+    },
+    {
+      "id": "s07", "title": "Sevap ve günah", "visual": "din-dualar-ve-kavramlar-sevap",
+      "sentences": [
+        "Sevap, güzel davranışlarımızın karşılığında Allah'ın verdiği ödüldür.",
+        "Hayvanlara merhamet etmek, ağaç dikmek ve birbirimize yardım etmek sevaptır.",
+        "Günah ise Allah'ın emir ve yasaklarına uymamanın karşılığıdır.",
+        "Kişiye ve topluma faydalı olan güzel işlere salih amel denir.",
+        "Dikkat! Haram, yasaklanan davranıştır. Günah ise bu yasağa uymamanın karşılığıdır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Sübhaneke duası", "visual": "din-dualar-ve-kavramlar-subhaneke",
+      "sentences": [
+        "Şimdi bir dua tanıyalım: Sübhaneke duası.",
+        "Sübhaneke, Peygamberimizin öğrettiği ve çocuklara öğretilen ilk dualardandır.",
+        "Bu duada Allah'ın yüceliği dile getirilir ve O övülür.",
+        "Namaza başlarken tekbirden hemen sonra ilk okunan duadır.",
+        "Beş vakit namazın yanında bayram, teravih ve cenaze namazlarında da okunur.",
+        "Dikkat! Sübhaneke bir duadır, Kur'an-ı Kerim'in bir suresi değildir."
+      ]
+    },
+    {
+      "id": "s09", "title": "Sübhaneke'nin anlamı 1", "visual": "din-dualar-ve-kavramlar-anlam1",
+      "sentences": [
+        "Şimdi duayı okuyalım ve anlamını öğrenelim.",
+        "Sübhaneke Allahümme: Allah'ım! Sen tüm eksikliklerden uzaksın.",
+        "Ve bihamdik: Seni daima överim.",
+        "Ve tebarekesmük: Senin adın kutludur."
+      ]
+    },
+    {
+      "id": "s10", "title": "Sübhaneke'nin anlamı 2", "visual": "din-dualar-ve-kavramlar-anlam2",
+      "sentences": [
+        "Duanın devamı şöyledir.",
+        "Ve teala ceddük: Senin şanın her şeyden üstündür.",
+        "Ve celle senaük: Senin övgün yücedir.",
+        "Ve la ilahe gayruk: Senden başka ilah yoktur.",
+        "Duayı ezberleyip anlamını bilerek okumak, onu daha iyi anlamamızı sağlar."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "din-dualar-ve-kavramlar-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Dua, samimiyetle Allah'a yönelmek ve O'ndan yardım istemektir.",
+        "Allah razı olsun, Allah şifa versin, inşallah ve maşallah gibi ifadeleri yerinde kullanırız.",
+        "Helal, Allah'ın izin verdiği; haram, yasakladığı davranışlardır. Güzel davranışların karşılığı sevaptır.",
+        "Sübhaneke duası namaza başlarken okunur ve Allah'ı över.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Yolculuğa çıkan bir arkadaşımıza hangi dua ifadesini söyleriz?",
+      "options": ["Allah şifa versin.", "Allah bağışlasın.", "Allah'a emanet ol.", "Allah kabul etsin."],
+      "answer": 2,
+      "explain": "Yolculuğa çıkan birine Allah'a emanet ol deriz. Allah şifa versin ise hasta birine söylenir.",
+      "scene": "s03"
+    },
+    {
+      "question": "Hangisinde dinî ifade yanlış yerde kullanılmıştır?",
+      "options": ["Mert, yeni doğan bebeği görünce \"Maşallah\" dedi.", "Ela, yardım eden komşusuna \"Allah razı olsun\" dedi.", "Ali, yarınki gezisi için \"İnşallah\" dedi.", "Can, yemeğe başlarken \"Allah korusun\" dedi."],
+      "answer": 3,
+      "explain": "Yemeğe besmeleyle, yani Bismillah diyerek başlanır. Diğer ifadeler doğru yerde kullanılmıştır.",
+      "scene": "s05"
+    },
+    {
+      "question": "\"Allah izin verirse\" anlamına gelen ve ileride yapacağımız işler için söylediğimiz ifade hangisidir?",
+      "options": ["Maşallah", "İnşallah", "Estağfirullah", "Elhamdülillah"],
+      "answer": 1,
+      "explain": "İnşallah, Allah izin verirse, Allah dilerse demektir. Planladığımız işler için söyleriz.",
+      "scene": "s04"
+    },
+    {
+      "question": "Allah'ın izin verdiği ve serbest bıraktığı iş ve davranışlara ne denir?",
+      "options": ["Haram", "Günah", "Sevap", "Helal"],
+      "answer": 3,
+      "explain": "Allah'ın izin verdiği ve serbest bıraktığı davranışlara helal, kesin olarak yasakladıklarına haram denir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Sokak hayvanlarına su veren Irmak'ın bu güzel davranışının karşılığında Allah'ın vereceği ödüle ne denir?",
+      "options": ["Sevap", "Haram", "Helal", "Günah"],
+      "answer": 0,
+      "explain": "Güzel davranışlarımızın karşılığında Allah'ın verdiği ödüle sevap denir. Hayvanlara merhamet etmek sevaptır.",
+      "scene": "s07"
+    },
+    {
+      "question": "Sübhaneke duasındaki \"Allah'ım! Sen tüm eksikliklerden uzaksın.\" anlamı hangi bölüme aittir?",
+      "options": ["Ve bihamdik", "Sübhaneke Allahümme", "Ve la ilahe gayruk", "Ve celle senaük"],
+      "answer": 1,
+      "explain": "Sübhaneke Allahümme, Allah'ım! Sen tüm eksikliklerden uzaksın demektir. Ve la ilahe gayruk ise Senden başka ilah yoktur demektir.",
+      "scene": "s09"
+    }
+  ]
+}
