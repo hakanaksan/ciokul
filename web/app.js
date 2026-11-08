@@ -344,8 +344,8 @@ function writtenStatusText(w){
 function writtenPanelMarkup(q,w,done){
   if(done)return `<div class="written-answer done">${w.paper?'<span class="pill amber">📄 Kâğıtta çözüldü</span>':''}${w.text?`<div class="written-text"><strong>Yazdığın cevap</strong><p>${esc(w.text)}</p></div>`:''}${!w.paper&&!w.text&&!w.strokes.length?'<p class="small muted">Bu soruya cevap verilmedi.</p>':''}</div>`;
   return `<div class="written-answer">
-    <p class="written-hint"><strong>✏️ Cevabını görselin üzerine yaz.</strong> Boşlukları doldur, eşleştir, daire içine al ya da boya. Parmağınla, kalemle ya da fareyle yazabilirsin; yazdıkların kendiliğinden kaydedilir.</p>
-    <div class="written-actions"><button type="button" class="btn secondary" id="drawFocus" aria-pressed="false">⛶ Büyük ekranda yaz</button><button type="button" class="btn secondary" id="writtenTypeToggle" aria-expanded="${w.text?'true':'false'}">⌨️ Yazarak cevapla</button><button type="button" class="btn secondary ${w.paper?'active':''}" id="writtenPaper" aria-pressed="${w.paper}">📄 Kâğıtta çözdüm</button></div>
+    <p class="written-hint"><strong>✏️ Cevabını görselin üzerine yaz.</strong> <strong>⌨️ Yaz</strong> seçiliyken görselde yazacağın yere tıkla ve klavyeyle yaz; Enter ile bitir, yazına tıklayıp düzeltebilirsin. Eşleştirmek, daire içine almak ya da boyamak için kalemi seç. Yazdıkların kendiliğinden kaydedilir.</p>
+    <div class="written-actions"><button type="button" class="btn secondary" id="drawFocus" aria-pressed="false">⛶ Büyük ekranda yaz</button><button type="button" class="btn secondary" id="writtenTypeToggle" aria-expanded="${w.text?'true':'false'}">📝 Ayrı kutuya yaz</button><button type="button" class="btn secondary ${w.paper?'active':''}" id="writtenPaper" aria-pressed="${w.paper}">📄 Kâğıtta çözdüm</button></div>
     <div class="field" id="writtenTypeField" ${w.text?'':'hidden'}><label for="writtenAnswer">Yazılı cevabın</label><textarea id="writtenAnswer" maxlength="4000" rows="4" placeholder="Cevabını buraya yaz">${esc(w.text)}</textarea></div>
     <p class="written-status" id="writtenStatus" aria-live="polite">${writtenStatusText(w)}</p></div>`;
 }
@@ -376,7 +376,7 @@ async function drawStudentFull(){
   const dockOptions=q.image_path&&q.kind!=='written'?letterOptionsMarkup(q,done,'answer'):'';
   // The pen is ready on written questions; it goes back to off when moving to a multiple-choice one.
   const writtenOnImage=q.kind==='written'&&!!q.image_path;
-  if(writtenOnImage&&!done){scratchpadState.active=true;scratchpadState.autoActive=true}
+  if(writtenOnImage&&!done){scratchpadState.active=true;scratchpadState.autoActive=true;if(!scratchpadState.toolChosen)scratchpadState.tool=matchMedia('(pointer: fine)').matches?'text':'pen'}
   else if(scratchpadState.autoActive){scratchpadState.active=false;scratchpadState.autoActive=false}
   shell(`${workHeader({backId:'back',backText:'Çalışmalarıma dön',eyebrow:done?'Teslim edildi':'Çalışma sürüyor',title:a.title,status:done?(feedbackReady?'Veli kontrolü tamamlandı':'Veli kontrolü bekleniyor'):'',printId:'printCurrentTest'})}${studyCalmMarkup()}
     <div class="split question-layout"><aside class="card question-nav"><div class="question-progress"><strong>${answered}/${qs.length} soru yanıtlandı</strong><div class="progress"><span style="width:${answered/qs.length*100}%"></span></div></div>${numberNavMarkup(qs,i,'data-index',x=>x.response)}${done?'':submitButtonMarkup('submit',answered,qs.length)}</aside>

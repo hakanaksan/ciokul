@@ -18,8 +18,27 @@ const SCRATCH_TOOLS = {
   blue: { name: 'Mavi Kalem', color: '#2563eb', size: 2.5, alpha: 1, isEraser: false },
   green: { name: 'Yeşil Kalem', color: '#16a34a', size: 2.5, alpha: 1, isEraser: false },
   highlighter: { name: 'Vurgulayıcı', color: '#facc15', size: 16, alpha: 0.45, isEraser: false },
-  eraser: { name: 'Silgi', color: '#000000', size: 20, alpha: 1, isEraser: true }
+  eraser: { name: 'Silgi', color: '#000000', size: 20, alpha: 1, isEraser: true },
+  // Typed on the image: click where the answer goes and type with the keyboard.
+  text: { name: 'Klavyeyle Yaz', color: '#1d4ed8', size: 0, alpha: 1, isEraser: false, isText: true }
 };
+
+// Typed text grows with the image, so it stays in the same place on every screen size.
+function scratchTextFontPx(cssWidth) {
+  return Math.max(13, cssWidth * 0.03);
+}
+function scratchTextFont(px) {
+  return `600 ${px}px "Segoe UI", Arial, sans-serif`;
+}
+let scratchMeasureCtx = null;
+// Box of a text item in CSS pixels of an image cssWidth x cssHeight (to click on it and edit).
+function scratchTextBox(item, cssWidth, cssHeight) {
+  scratchMeasureCtx = scratchMeasureCtx || document.createElement('canvas').getContext('2d');
+  const px = scratchTextFontPx(cssWidth);
+  scratchMeasureCtx.font = scratchTextFont(px);
+  const x = item.points[0].x * cssWidth, y = item.points[0].y * cssHeight;
+  return { x, y: y - px * 0.7, w: scratchMeasureCtx.measureText(item.text).width, h: px * 1.4 };
+}
 
 function scratchpadToolbarMarkup() {
   const active = scratchpadState.active;
@@ -34,6 +53,9 @@ function scratchpadToolbarMarkup() {
         </button>
         ${active ? `
           <div class="scratch-tools" role="toolbar" aria-label="Çizim araçları">
+            <button type="button" data-scratch-tool="text" class="scratch-tool-btn ${current === 'text' ? 'active' : ''}" title="Görselde yazacağın yere tıkla, klavyeyle yaz">
+              ⌨️ Yaz
+            </button>
             <button type="button" data-scratch-tool="pen" class="scratch-tool-btn ${current === 'pen' ? 'active' : ''}" title="Kurşun Kalem">
               <span class="tool-dot" style="background:#1e293b"></span> Kalem
             </button>
@@ -67,17 +89,20 @@ function scratchpadToolbarMarkup() {
 
 // Drawings saved as answers use a compact form: [{t: tool, p: [x1, y1, x2, y2, …]}] with
 // coordinates relative to the image (0–1). The colours and sizes come from SCRATCH_TOOLS.
+// Typed text is {t: 'text', p: [x, y], s: 'the words'}.
 function scratchToCompact(strokes) {
-  return strokes.filter(s => s.points?.length).map(s => ({
-    t: s.tool, p: s.points.flatMap(pt => [Math.round(pt.x * 10000) / 10000, Math.round(pt.y * 10000) / 10000])
+  return strokes.filter(s => s.points?.length && (s.tool !== 'text' || s.text)).map(s => ({
+    t: s.tool, p: s.points.flatMap(pt => [Math.round(pt.x * 10000) / 10000, Math.round(pt.y * 10000) / 10000]),
+    ...(s.tool === 'text' ? { s: s.text } : {})
   }));
 }
 function scratchFromCompact(compact) {
   return (compact || []).filter(s => SCRATCH_TOOLS[s.t] && Array.isArray(s.p)).map(s => {
     const tool = SCRATCH_TOOLS[s.t], points = [];
     for (let i = 0; i + 1 < s.p.length; i += 2) points.push({ x: s.p[i], y: s.p[i + 1] });
-    return { tool: s.t, color: tool.color, size: tool.size, alpha: tool.alpha, isEraser: tool.isEraser, points };
-  });
+    return { tool: s.t, color: tool.color, size: tool.size, alpha: tool.alpha, isEraser: tool.isEraser, points,
+      ...(s.t === 'text' ? { text: String(s.s || '') } : {}) };
+  }).filter(s => s.tool !== 'text' || (s.text && s.points.length));
 }
 
 // options.strokes: compact strokes to start with (instead of this tab's karalama);
@@ -129,7 +154,8 @@ function initScratchpad(containerSelector, storageKey, options = {}) {
     canvas.style.left = '0';
     canvas.style.touchAction = 'none';
     canvas.style.pointerEvents = scratchpadState.active ? 'auto' : 'none';
-    canvas.style.cursor = scratchpadState.tool === 'eraser' ? 'cell' : 'crosshair';
+    canvas.style.cursor = scratchCursor();
+    scratchpadState.textEditor?.place();
     redrawScratchpad();
   };
 
@@ -143,6 +169,7 @@ function initScratchpad(containerSelector, storageKey, options = {}) {
   scratchpadState._onResize = setupDimensions;
   window.addEventListener('resize', setupDimensions);
 
+  closeScratchTextEditor(false);
   // Pointer event listeners
   canvas.onpointerdown = handlePointerDown;
   canvas.onpointermove = handlePointerMove;
@@ -150,6 +177,73 @@ function initScratchpad(containerSelector, storageKey, options = {}) {
   canvas.onpointercancel = handlePointerUp;
 
   bindScratchToolbar();
+}
+
+function scratchCursor() {
+  return scratchpadState.tool === 'eraser' ? 'cell' : scratchpadState.tool === 'text' ? 'text' : 'crosshair';
+}
+
+// Opens a text box on the image at the item's anchor. Enter or clicking elsewhere keeps the text,
+// Escape cancels; an emptied box removes the text.
+function openScratchTextEditor(item, isNew) {
+  closeScratchTextEditor(true);
+  const { container, canvas } = scratchpadState;
+  if (!container || !canvas) return;
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.className = 'scratch-text-input';
+  input.maxLength = 200;
+  input.value = item.text || '';
+  input.autocomplete = 'off';
+  input.spellcheck = false;
+  input.setAttribute('aria-label', 'Görsele yazılacak cevap');
+  input.style.color = item.color;
+  // Placed again whenever the image changes size (focus mode, rotating a tablet, its keyboard).
+  const place = () => {
+    const rect = canvas.getBoundingClientRect(), px = scratchTextFontPx(rect.width);
+    const left = Math.min(item.points[0].x * rect.width, Math.max(0, rect.width - px * 5));
+    Object.assign(input.style, {
+      left: left + 'px', top: (item.points[0].y * rect.height - px * 0.8) + 'px', font: scratchTextFont(px),
+      height: (px * 1.6) + 'px',
+      width: Math.max(px * 4, Math.min(rect.width - left, (input.value.length + 2) * px * 0.62)) + 'px'
+    });
+  };
+  place();
+  container.appendChild(input);
+  scratchpadState.textEditor = { input, item, isNew, before: item.text || '', place };
+  item.editing = true;
+  redrawScratchpad();
+  input.addEventListener('input', place);
+  input.addEventListener('keydown', e => {
+    e.stopPropagation();
+    if (e.key === 'Enter') { e.preventDefault(); closeScratchTextEditor(true); }
+    else if (e.key === 'Escape') { e.preventDefault(); closeScratchTextEditor(false); }
+  });
+  input.addEventListener('blur', () => closeScratchTextEditor(true));
+  // Focus after the click that opened the box has finished, so the box keeps the focus.
+  setTimeout(() => input.focus(), 0);
+}
+
+function closeScratchTextEditor(keep) {
+  const editor = scratchpadState.textEditor;
+  if (!editor) return;
+  scratchpadState.textEditor = null;
+  const { input, item, isNew, before } = editor;
+  const text = keep ? input.value.trim() : before;
+  delete item.editing;
+  input.remove();
+  const strokes = scratchpadState.strokes, index = strokes.indexOf(item);
+  if (text) {
+    item.text = text;
+    if (index < 0) strokes.push(item);
+  } else if (index >= 0) {
+    strokes.splice(index, 1);
+  }
+  redrawScratchpad();
+  if ((isNew && text) || (!isNew && text !== before)) {
+    saveScratchpad();
+    updateScratchToolbarView();
+  }
 }
 
 function bindScratchToolbar() {
@@ -165,9 +259,9 @@ function bindScratchToolbar() {
   document.querySelectorAll('[data-scratch-tool]').forEach(btn => {
     btn.onclick = () => {
       scratchpadState.tool = btn.dataset.scratchTool;
-      if (scratchpadState.canvas) {
-        scratchpadState.canvas.style.cursor = scratchpadState.tool === 'eraser' ? 'cell' : 'crosshair';
-      }
+      scratchpadState.toolChosen = true;
+      if (scratchpadState.tool !== 'text') closeScratchTextEditor(true);
+      if (scratchpadState.canvas) scratchpadState.canvas.style.cursor = scratchCursor();
       updateScratchToolbarView();
     };
   });
@@ -214,6 +308,19 @@ function handlePointerDown(e) {
   const normY = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
 
   const toolConfig = SCRATCH_TOOLS[scratchpadState.tool] || SCRATCH_TOOLS.pen;
+  if (toolConfig.isText) {
+    // Click on a typed text to change it, anywhere else to start a new one.
+    canvas.releasePointerCapture?.(e.pointerId);
+    const px = e.clientX - rect.left, py = e.clientY - rect.top;
+    const hit = scratchpadState.strokes.slice().reverse().find(s => {
+      if (s.tool !== 'text' || s.editing) return false;
+      const box = scratchTextBox(s, rect.width, rect.height);
+      return px >= box.x - 4 && px <= box.x + box.w + 4 && py >= box.y && py <= box.y + box.h;
+    });
+    openScratchTextEditor(hit || { tool: 'text', color: toolConfig.color, size: 0, alpha: 1, isEraser: false,
+      text: '', points: [{ x: normX, y: normY }] }, !hit);
+    return;
+  }
   scratchpadState.currentStroke = {
     tool: scratchpadState.tool,
     color: toolConfig.color,
@@ -304,6 +411,21 @@ function paintScratchStrokes(canvas, strokes) {
 
   for (const stroke of strokes) {
     if (!stroke.points || stroke.points.length < 1) continue;
+    if (stroke.tool === 'text') {
+      if (stroke.editing || !stroke.text) continue;
+      const px = scratchTextFontPx(w / dpr) * dpr, x = stroke.points[0].x * w, y = stroke.points[0].y * h;
+      ctx.save();
+      ctx.font = scratchTextFont(px);
+      ctx.textBaseline = 'middle';
+      ctx.lineJoin = 'round';
+      ctx.lineWidth = 4 * dpr;
+      ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+      ctx.strokeText(stroke.text, x, y);
+      ctx.fillStyle = stroke.color || SCRATCH_TOOLS.text.color;
+      ctx.fillText(stroke.text, x, y);
+      ctx.restore();
+      continue;
+    }
 
     ctx.save();
     if (stroke.isEraser) {

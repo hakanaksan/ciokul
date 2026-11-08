@@ -389,11 +389,20 @@ def written_answer(data):
         raise ValueError("Çizim geçersiz ya da çok uzun.")
     clean, points = [], 0
     for stroke in strokes:
-        if not isinstance(stroke, dict) or stroke.get("t") not in DRAWING_TOOLS or not isinstance(stroke.get("p"), list):
+        if (not isinstance(stroke, dict) or stroke.get("t") not in DRAWING_TOOLS | {"text"}
+                or not isinstance(stroke.get("p"), list)):
             raise ValueError("Çizim geçersiz.")
         values = stroke["p"]
         if not values or len(values) % 2 or not all(isinstance(v, (int, float)) and not isinstance(v, bool) and 0 <= v <= 1 for v in values):
             raise ValueError("Çizim geçersiz.")
+        if stroke["t"] == "text":
+            # Text typed on the image: one anchor point (the middle of the line's left edge).
+            words = stroke.get("s")
+            if len(values) != 2 or not isinstance(words, str) or not words.strip() or len(words) > 200:
+                raise ValueError("Görsele yazılan yazı geçersiz ya da çok uzun.")
+            clean.append({"t": "text", "p": [round(v, 4) for v in values], "s": words.strip()})
+            points += 1
+            continue
         points += len(values) // 2
         clean.append({"t": stroke["t"], "p": [round(v, 4) for v in values]})
     if points > 25_000:
