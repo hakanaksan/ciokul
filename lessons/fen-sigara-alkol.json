@@ -1,0 +1,167 @@
+{
+  "id": "fen-sigara-alkol",
+  "title": "Sigara ve Alkolün Zararları",
+  "course": "Fen Bilimleri",
+  "unit": "Besinlerimiz",
+  "kazanim": {
+    "code": "F.4.2.1.5, F.4.2.1.6",
+    "text": "Alkol ve sigara kullanımının insan sağlığına olan olumsuz etkilerinin farkına varır. Yakın çevresinde sigara kullanımını azaltmaya yönelik sorumluluk üstlenir.",
+    "note": "MEB Fen Bilimleri Dersi Öğretim Programı (2018), 4. sınıf. Öğrencinin yakın çevresindeki kişilere sigaranın sağlığa zararlı olduğu konusunda uyarılarda bulunması beklenir."
+  },
+  "summary": "Sigara ve alkolün vücudumuza etkilerini, pasif içiciliği, ülkemizde alınan önlemleri ve yakınlarımızı nasıl kibarca uyarabileceğimizi öğren.",
+  "match": {"course": "Fen Bilimleri", "booklet": "Ünite 02", "keywords": ["sigara", "alkol", "nikotin", "yeşilay", "pasif", "dumansız", "bağımlı", "akciğer", "karaciğer", "kanser", "tütün"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Parktaki duman", "visual": "fen-sigara-alkol-intro",
+      "sentences": [
+        "Merhaba! Ali parkta bir bankta oturmuş, kitabını okuyordu.",
+        "Yanına oturan bir kişi sigara yaktı. Duman Ali'nin yüzüne geldi ve Ali öksürmeye başladı.",
+        "Sence Ali ne yapmalı? Dersin sonunda birlikte karar vereceğiz.",
+        "Önce sigara ve alkolün sağlığımıza neler yaptığını öğrenelim."
+      ]
+    },
+    {
+      "id": "s02", "title": "Sigaranın içinde ne var?", "visual": "fen-sigara-alkol-inside",
+      "sentences": [
+        "Sigara, tütün bitkisinin kurutulmuş yapraklarından yapılır.",
+        "Sigara yakıldığında çıkan dumanda binlerce kimyasal madde bulunur. Bunların birçoğu vücudumuz için zararlıdır.",
+        "Bu maddelerden biri olan nikotin bağımlılık yapar.",
+        "Bağımlılık, bir şeyi bırakmak istediği hâlde bırakmakta zorlanmak demektir.",
+        "Dumandaki katran ise akciğerlere yapışarak onlara zarar verir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Akciğerler zarar görür", "visual": "fen-sigara-alkol-lungs",
+      "sentences": [
+        "Sigaranın en çok zarar verdiği organ akciğerlerdir.",
+        "Sigara içen kişiler sık öksürür, çabuk yorulur ve nefes almakta zorlanır.",
+        "Zamanla uzun süren akciğer hastalıkları ortaya çıkabilir. Ekranda kısa adını gördüğün hastalık bunlardan biridir.",
+        "Sigara; ağız, gırtlak ve akciğer kanseri gibi ağır hastalıkların riskini de artırır."
+      ]
+    },
+    {
+      "id": "s04", "title": "Vücudun diğer bölümleri", "visual": "fen-sigara-alkol-body",
+      "sentences": [
+        "Sigara yalnızca akciğerlere zarar vermez.",
+        "Kan dolaşımını olumsuz etkiler ve kalp krizi riskini artırır.",
+        "Dişleri sarartır ve diş eti hastalıklarına yol açar.",
+        "Koku alma ve tat alma duyularını da zayıflatır."
+      ]
+    },
+    {
+      "id": "s05", "title": "Pasif içicilik", "visual": "fen-sigara-alkol-passive",
+      "sentences": [
+        "Sigara yalnızca onu içen kişiye zarar vermez.",
+        "Sigara içilen bir ortamda bulunan herkes dumanı soluyarak zarar görür.",
+        "Sigara içmediği hâlde sigara dumanından zarar gören kişiye pasif içici denir.",
+        "Çocuklar sigara dumanından daha çok etkilenir. Bu yüzden sigara içilen ortamlardan uzak durmalıyız."
+      ]
+    },
+    {
+      "id": "s06", "title": "Alkolün zararları", "visual": "fen-sigara-alkol-alcohol",
+      "sentences": [
+        "Alkollü içkiler de sağlığımıza zarar verir.",
+        "Alkolün en çok zarar verdiği organ karaciğerdir.",
+        "Alkol midenin iç yüzeyini tahriş eder. Mide yaralarına ve sindirim sistemi hastalıklarına yol açabilir.",
+        "Alkol beyne ve sinirlere de zarar verir. Alkol alan kişinin görme, konuşma ve algılama yetenekleri yavaşlar.",
+        "Bu yüzden alkollü araç kullanmak trafik kazalarına neden olabilir."
+      ]
+    },
+    {
+      "id": "s07", "title": "Bağımlılık ve aile bütçesi", "visual": "fen-sigara-alkol-budget",
+      "sentences": [
+        "Sigara ve alkol bağımlılık yapar. Başlayan kişi bırakmakta zorlanabilir.",
+        "Bu yüzden en doğrusu hiç başlamamaktır.",
+        "Sigara ve alkole harcanan para aile bütçesine de zarar verir.",
+        "Bu para sağlıklı besinlere, kitaplara ya da bir aile gezisine harcanabilirdi."
+      ]
+    },
+    {
+      "id": "s08", "title": "Dikkat, karıştırma!", "visual": "fen-sigara-alkol-dikkat",
+      "sentences": [
+        "Dikkat! Şu bilgiler sık karıştırılır.",
+        "Sigara en çok akciğerlere, alkol ise en çok karaciğere zarar verir.",
+        "Az sayıda içilen sigara da zararlıdır. Zararsız sigara yoktur.",
+        "Sigara yalnızca içen kişiye değil, yanındakilere de zarar verir.",
+        "Sigara ve alkolün zararları bazen yıllar sonra fark edilir. Bugün hasta olmamak, zarar görmediğimiz anlamına gelmez."
+      ]
+    },
+    {
+      "id": "s09", "title": "Ülkemizde alınan önlemler", "visual": "fen-sigara-alkol-rules",
+      "sentences": [
+        "Ülkemizde sigara kullanımını azaltmak için önlemler alınmıştır.",
+        "Kapalı alanlarda ve toplu taşıma araçlarında sigara içmek yasaktır. Bu uygulamaya dumansız hava sahası denir.",
+        "On sekiz yaşından küçüklere sigara ve alkol satılmaz.",
+        "Sigara paketlerinde zararlarını anlatan uyarılar bulunur. Televizyonlarda da bu konuda kamu spotları yayınlanır.",
+        "Yeşilay, bağımlılıklarla mücadele eden ve toplumu bilinçlendiren bir kuruluştur. Okullarda Yeşilay kulüpleri de vardır.",
+        "Yeşilay'ı, afetlerde yardım eden Kızılay ile karıştırmayalım."
+      ]
+    },
+    {
+      "id": "s10", "title": "Ben ne yapabilirim?", "visual": "fen-sigara-alkol-me",
+      "sentences": [
+        "Peki biz neler yapabiliriz?",
+        "Sigara ve alkolden uzak durur, sigara içilen ortamlardan uzaklaşırız.",
+        "Sigara içen yakınlarımızı sevgiyle ve kibarca uyarır, bırakmaları için onlara destek oluruz.",
+        "Okulumuzda sigaranın zararlarını anlatan afişler hazırlayabiliriz.",
+        "Sigarayı bırakmak isteyenler, Alo yüz yetmiş bir sigara bırakma danışma hattından yardım alabilir.",
+        "Peki Ali ne yaptı? Ali kibarca başka bir banka geçti ve temiz havayı seçti."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "fen-sigara-alkol-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Sigaradaki nikotin bağımlılık yapar. Sigara en çok akciğerlere zarar verir.",
+        "Sigara dumanı içmeyenlere de zarar verir. Bu kişilere pasif içici denir.",
+        "Alkol en çok karaciğere zarar verir ve trafik kazalarına yol açabilir.",
+        "Sigara ve alkolden uzak durur, yakınlarımızı kibarca uyarırız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Sigara içen bir kişinin hangi organı diğerlerine göre daha fazla zarar görür?",
+      "options": ["Karaciğer", "Mide", "Akciğer", "Böbrek"],
+      "answer": 2,
+      "explain": "Sigaranın en çok zarar verdiği organ akciğerlerdir. Alkol ise en çok karaciğere zarar verir.",
+      "scene": "s03"
+    },
+    {
+      "question": "Sigarada bulunan ve bağımlılık yapan madde hangisidir?",
+      "options": ["Nikotin", "Kalsiyum", "Vitamin", "Protein"],
+      "answer": 0,
+      "explain": "Sigaradaki nikotin bağımlılık yapar. Bu yüzden sigarayı bırakmak zordur.",
+      "scene": "s02"
+    },
+    {
+      "question": "Sigara içmediği hâlde sigara dumanından zarar gören kişilere ne denir?",
+      "options": ["Bağımlı", "Pasif içici", "Gönüllü", "Sporcu"],
+      "answer": 1,
+      "explain": "Sigara içmediği hâlde dumanı soluyarak zarar gören kişiye pasif içici denir.",
+      "scene": "s05"
+    },
+    {
+      "question": "Alkol kullanımı ile ilgili verilen bilgilerden hangisi yanlıştır?",
+      "options": ["Karaciğere zarar verir.", "Görme ve konuşmayı yavaşlatır.", "Trafik kazalarına neden olabilir.", "Dikkati ve algılamayı güçlendirir."],
+      "answer": 3,
+      "explain": "Alkol beyne ve sinirlere zarar verir; görme, konuşma ve algılama yeteneklerini yavaşlatır.",
+      "scene": "s06"
+    },
+    {
+      "question": "Seyhan, sigara kullanan yakınlarının bu alışkanlığı bırakmalarına destek olmak istiyor. Hangi kuruluştan yardım alabilir?",
+      "options": ["Kızılay", "AFAD", "Yeşilay", "TEMA"],
+      "answer": 2,
+      "explain": "Yeşilay, bağımlılıklarla mücadele eden ve toplumu bilinçlendiren bir kuruluştur.",
+      "scene": "s09"
+    },
+    {
+      "question": "Aşağıdaki düşüncelerden hangisi yanlıştır?",
+      "options": ["Sigara içilen ortamlardan uzak durmalıyız.", "Az sayıda içilen sigaranın zararı yoktur.", "Sigara içen yakınlarımızı kibarca uyarmalıyız.", "Sigara yanımızdakilere de zarar verir."],
+      "answer": 1,
+      "explain": "Zararsız sigara yoktur. Az sayıda içilen sigara da sağlığa zarar verir.",
+      "scene": "s08"
+    }
+  ]
+}

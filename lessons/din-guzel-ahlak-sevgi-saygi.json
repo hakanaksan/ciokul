@@ -1,0 +1,158 @@
+{
+  "id": "din-guzel-ahlak-sevgi-saygi",
+  "title": "Din Güzel Ahlaktır: Sevgi ve Saygı",
+  "course": "Din Kültürü ve Ahlak Bilgisi",
+  "unit": "Güzel Ahlak",
+  "kazanim": {
+    "code": "4.3.1, 4.3.2",
+    "text": "Bireyin güzel ahlaklı olmasında dinin rolünü fark eder. İnsani ilişkilerin gelişmesinde sevgi ve saygının önemini ve gerekliliğini savunur.",
+    "note": "MEB Din Kültürü ve Ahlak Bilgisi Dersi Öğretim Programı (2018, 4-8. sınıflar), 4. sınıf 3. ünite \"Güzel Ahlak\", konular \"Din Güzel Ahlaktır\" ve \"İnsani İlişkilerin Temeli: Sevgi ve Saygı\"; 2026-2027 DKAB 4 çerçeve yıllık planı 17-22. haftalar. Anne baba, kardeşler, akraba, komşu, arkadaş ve öğretmenlerle ilişkiler ayet ve hadislerle açıklanır; güzel ahlaklı olmanın birey ve toplum hayatındaki önemine vurgu yapılır. Ayet ve hadisler fasikülde geçen meal ve ifadelerle verilmiştir."
+  },
+  "summary": "Ahlakın ne olduğunu, dinimizin güzel ahlaka verdiği önemi, ibadetlerin davranışlarımızı nasıl güzelleştirdiğini öğren; anne baba, akraba, komşu, arkadaş ve öğretmenlerle ilişkilerde sevgi ve saygıyı ayet ve hadislerle gör.",
+  "match": {"course": "Din Kültürü ve Ahlak Bilgisi", "booklet": "Ünite 03", "keywords": ["ahlak", "huy", "davranış", "sevgi", "saygı", "merhamet", "komşu", "arkadaş", "anne", "baba", "akraba", "kardeş", "öğretmen", "dürüst", "güven", "yardım", "alay", "dedikodu", "kibir", "alçak gönüllü", "rıza", "hoşnutluğ", "samimi", "paylaş", "adalet", "sözünde", "tatlı dil", "atasöz", "hata", "ihtiyaç", "hayvan", "iyilik"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Elif'in güzel günü", "visual": "din-guzel-ahlak-sevgi-saygi-intro",
+      "sentences": [
+        "Merhaba! Bu sabah Elif, okul yolunda yaşlı komşusuna selam verdi.",
+        "Düşen bir arkadaşının kalkmasına yardım etti.",
+        "Arkadaşının kalemini izin alarak kullandı ve verdiği sözü tuttu.",
+        "Elif'in bu davranışları güzel ahlakın örnekleridir.",
+        "Bugün dinimizin güzel ahlaka verdiği önemi, sevgi ve saygıyı öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Ahlak nedir?", "visual": "din-guzel-ahlak-sevgi-saygi-ahlak",
+      "sentences": [
+        "Ahlak, insanın huyları ve davranışları demektir.",
+        "İyi huy ve davranışlara sahip kişiye güzel ahlaklı denir. Güzel ahlaklı kişi dürüst, güvenilir, merhametli ve adaletlidir.",
+        "Yalan söylemek, alay etmek, dedikodu yapmak ve kibirlenmek ise kötü davranışlardır.",
+        "Dinimiz güzel davranışları öğütler, kötü davranışlardan uzak durmamızı ister."
+      ]
+    },
+    {
+      "id": "s03", "title": "Din ve güzel ahlak", "visual": "din-guzel-ahlak-sevgi-saygi-din",
+      "sentences": [
+        "İslam dininin temel konuları inanç, ibadet ve ahlaktır.",
+        "Peygamberimiz şöyle buyurmuştur: Ben güzel ahlakı tamamlamak için gönderildim.",
+        "Bir başka hadiste: Müminlerin iman yönünden en üstünü, ahlakı en güzel olandır.",
+        "Bir hadiste de: Müslüman, elinden ve dilinden diğer Müslümanların emin olduğu kişidir.",
+        "Yani güzel ahlaklı insan, sözüyle ve davranışıyla güven verir."
+      ]
+    },
+    {
+      "id": "s04", "title": "İbadetler ve niyet", "visual": "din-guzel-ahlak-sevgi-saygi-ibadet",
+      "sentences": [
+        "İbadetler de davranışlarımızı güzelleştirir.",
+        "Oruç bize sabrı ve kendimizi kontrol etmeyi öğretir.",
+        "Namaz temizliği, düzenli olmayı ve vakti iyi kullanmayı öğretir.",
+        "Müslüman, iyilikleri insanlar görsün diye değil, Allah'ın rızasını, yani hoşnutluğunu kazanmak için yapar."
+      ]
+    },
+    {
+      "id": "s05", "title": "Sevgi ve saygı", "visual": "din-guzel-ahlak-sevgi-saygi-sevgi",
+      "sentences": [
+        "Sevgi ve saygı, insanlar arasındaki ilişkilerin temelidir.",
+        "Saygı, başkalarına karşı dikkatli, özenli ve ölçülü davranmak, onları rahatsız etmekten çekinmektir.",
+        "Sevgi ve saygının olduğu yerde huzur, yardımlaşma ve kardeşlik artar.",
+        "Sevgi ve saygı olmadığında ise kıskançlık, öfke ve bencillik yayılır.",
+        "Peygamberimiz şöyle buyurmuştur: Küçüğümüze merhamet etmeyen, büyüğümüze saygı göstermeyen bizden değildir."
+      ]
+    },
+    {
+      "id": "s06", "title": "Anne baba ve kardeşler", "visual": "din-guzel-ahlak-sevgi-saygi-aile",
+      "sentences": [
+        "Sevgi ve saygıyı önce ailemizde gösteririz.",
+        "İsra suresinin yirmi üçüncü ayetinde anne babaya iyi davranmamız emredilir.",
+        "Aynı ayette onlara of bile dememiz, onları azarlamamamız ve güzel söz söylememiz istenir.",
+        "Sonraki ayette de anne babamız için dua etmemiz öğütlenir.",
+        "Anne babamıza yardım eder, kardeşlerimizle iyi geçiniriz."
+      ]
+    },
+    {
+      "id": "s07", "title": "Akrabalar ve komşular", "visual": "din-guzel-ahlak-sevgi-saygi-komsu",
+      "sentences": [
+        "Akrabalarımızı ziyaret eder, onlarla iyi ilişkiler kurarız. Buna sıla-i rahim denir.",
+        "Nisa suresinin birinci ayetinde, akrabalık bağlarını koparmaktan sakınmamız istenir.",
+        "Komşularımız da bize en yakın insanlardandır.",
+        "Peygamberimiz şöyle buyurmuştur: Allah'a ve ahiret gününe iman eden kişi komşusunu rahatsız etmesin.",
+        "Komşularımızla paylaşır, zor zamanlarında yanlarında oluruz. Gürültü yaparak onları rahatsız etmeyiz."
+      ]
+    },
+    {
+      "id": "s08", "title": "Arkadaşlar ve öğretmenler", "visual": "din-guzel-ahlak-sevgi-saygi-arkadas",
+      "sentences": [
+        "Arkadaşlarımıza da sevgi ve saygıyla davranırız.",
+        "Peygamberimiz şöyle buyurmuştur: Allah katında arkadaşların en hayırlısı, arkadaşına karşı hayırlı davranandır.",
+        "İyi arkadaş seçmek de önemlidir. Atalarımız, kişi arkadaşından bellidir, der.",
+        "Öğretmenlerimizi dinler, onlara saygı gösteririz.",
+        "Tatlı dil yılanı deliğinden çıkarır. Güzel söz, insanları birbirine yaklaştırır."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat: Saygı nasıl olur?", "visual": "din-guzel-ahlak-sevgi-saygi-dikkat",
+      "sentences": [
+        "Dikkat! Bazı durumları birlikte düşünelim.",
+        "Saygı, herkesle aynı fikirde olmak demek değildir. Farklı düşünenleri de dinler, onları kırmayız.",
+        "İnsanlarla alay etmek, kusurlarını araştırmak ve kötü lakap takmak saygıya uymaz.",
+        "Hata yaparsak hatamızda ısrar etmeyiz. Özür diler, hatamızı düzeltiriz.",
+        "Kendimiz için istediğimiz iyiliği başkaları için de isteriz."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "din-guzel-ahlak-sevgi-saygi-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Ahlak, huy ve davranışlardır. Dinimiz güzel ahlaklı olmamızı ister.",
+        "İbadetler davranışlarımızı güzelleştirir. İyilikleri Allah'ın rızası için yaparız.",
+        "Sevgi ve saygı, insan ilişkilerinin temelidir.",
+        "Anne babamıza, akrabalarımıza, komşularımıza, arkadaşlarımıza ve öğretmenlerimize sevgi ve saygı gösteririz.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Peygamberimiz \"Müslüman, elinden ve dilinden diğer Müslümanların emin olduğu kişidir.\" buyurmuştur. Bu hadiste hangi ahlaki özellik vurgulanır?",
+      "options": ["Nezaket", "Fedakârlık", "Güvenilirlik", "Cömertlik"],
+      "answer": 2,
+      "explain": "Elinden ve dilinden emin olunan kişi, kimseye zarar vermeyen ve güven veren kişidir. Hadiste güvenilirlik vurgulanır.",
+      "scene": "s03"
+    },
+    {
+      "question": "Kur'an-ı Kerim'de, kendilerine \"Of!\" bile denmemesi gerektiği bildirilen kişiler kimlerdir?",
+      "options": ["Anne ve baba", "Arkadaşlar", "Komşular", "Öğretmenler"],
+      "answer": 0,
+      "explain": "İsra suresinin yirmi üçüncü ayetinde anne babaya \"Of!\" bile denmemesi, onlara güzel söz söylenmesi istenir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Akrabaları ziyaret etmek ve onlarla iyi ilişkiler kurmak anlamına gelen ifade hangisidir?",
+      "options": ["Elhamdülillah", "Sübhanallah", "Estağfirullah", "Sıla-i rahim"],
+      "answer": 3,
+      "explain": "Akrabaları ziyaret etmeye ve onlarla iyi ilişkiler kurmaya sıla-i rahim denir.",
+      "scene": "s07"
+    },
+    {
+      "question": "Müslümanları güzel davranışlarda bulunmaya yönelten asıl amaç hangisidir?",
+      "options": ["İnsanların gözüne girmek", "Allah'ın rızasını kazanmak", "Toplumda ünlü olmak", "Ödül kazanmak"],
+      "answer": 1,
+      "explain": "Müslüman, iyilikleri insanlar görsün diye değil, Allah'ın rızasını yani hoşnutluğunu kazanmak için yapar.",
+      "scene": "s04"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi saygılı bir insanın davranışı olamaz?",
+      "options": ["Farklı düşünen arkadaşını dinlemek", "Büyüklerine güzel söz söylemek", "Arkadaşlarıyla alay etmek", "Komşusunu gürültüyle rahatsız etmemek"],
+      "answer": 2,
+      "explain": "İnsanlarla alay etmek, kusurlarını araştırmak ve kötü lakap takmak saygıya uymaz.",
+      "scene": "s09"
+    },
+    {
+      "question": "\"Küçüğümüze merhamet etmeyen, büyüğümüze saygı göstermeyen bizden değildir.\" Bu hadise göre hangisi doğrudur?",
+      "options": ["Küçüklere merhametli, büyüklere saygılı olmalıyız.", "Yalnızca büyüklere saygı göstermeliyiz.", "Merhamet yalnızca hayvanlara gösterilir.", "Küçükler büyüklerle konuşmamalıdır."],
+      "answer": 0,
+      "explain": "Peygamberimiz hem küçüklere merhamet etmeyi hem de büyüklere saygı göstermeyi öğütlemiştir.",
+      "scene": "s05"
+    }
+  ]
+}

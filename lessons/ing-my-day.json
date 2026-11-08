@@ -1,0 +1,184 @@
+{
+  "id": "ing-my-day",
+  "title": "Günüm: Günlük İşler ve Saatler",
+  "course": "İngilizce",
+  "unit": "My Day",
+  "kazanim": {
+    "code": "E4.5.L1, E4.5.L2, E4.5.S1, E4.5.S2",
+    "text": "Students will be able to understand the general and specific information in a short, oral text about daily routines. Students will be able to recognize the time in a short oral text. Students will be able to talk about their daily routines. Students will be able to talk about the time.",
+    "note": "MEB İngilizce Dersi Öğretim Programı (2018), 4. sınıf, 5. ünite: My Day. İşlevler: günlük işleri anlatma (I wake up in the morning. I meet my friends at school. I do my homework. I go to bed at night.); basit sorular sorma (What do you do at noon? — I have lunch at school.); saati ve günleri söyleme (What time is it? — It’s 7 o’clock.; haftanın günleri; at noon/night, in the morning/afternoon). Kelimeler: do homework, get dressed, go shopping/to the playground/to bed/to school, have a shower/breakfast/lunch/dinner, meet friends, wake up, wash. Program tam saatleri örnekler; buçuklu saatler (half past) fasikül sorularında da geçtiği için ek olarak verildi."
+  },
+  "summary": "Günlük işlerini İngilizce anlatmayı, saati sorup söylemeyi, haftanın günlerini ve at, in, on kelimelerinin nerede kullanıldığını öğren.",
+  "match": {"course": "İngilizce", "booklet": "Ünite 05", "keywords": ["o’clock", "o'clock", "half past", "quarter", "what time", "time", "wake up", "get up", "get dressed", "breakfast", "lunch", "dinner", "shower", "homework", "brush", "wash", "go to school", "go to bed", "meet", "morning", "afternoon", "evening", "noon", "night", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "week", "day", "routine", "a.m.", "p.m."]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Bir günüm", "visual": "ing-my-day-intro",
+      "sentences": [
+        "Merhaba! Her sabah uyanırız, kahvaltı yaparız ve okula gideriz.",
+        "Her gün hemen hemen aynı sırayla yaptığımız bu işlere günlük işler denir.",
+        "Bugün günlük işlerimizi İngilizce anlatmayı öğreneceğiz.",
+        "Bir de saati sormayı, saati söylemeyi ve haftanın günlerini öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Sabah", "visual": "ing-my-day-morning",
+      "sentences": [
+        "Önce sabah neler yaptığımızı anlatalım. Dinle ve sen de tekrar et.",
+        "I wake up. I get up.",
+        "I wash my face. I brush my teeth.",
+        "I get dressed. I have breakfast.",
+        "I go to school.",
+        "Bu cümlelerin hepsi ben anlamındaki kelimeyle başlar. Bu kelime İngilizcede her zaman büyük harfle yazılır."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s03", "title": "Okuldan sonra", "visual": "ing-my-day-later",
+      "sentences": [
+        "Öğle yemeğinden sonra, okuldan sonra ve akşam neler yaparız? Dinle ve tekrar et.",
+        "I have lunch at school. I meet my friends.",
+        "I go to the playground. I do my homework.",
+        "I watch TV. I have dinner.",
+        "I have a shower. I go to bed."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s04", "title": "Günün bölümleri", "visual": "ing-my-day-parts",
+      "sentences": [
+        "Bir işi günün hangi bölümünde yaptığımızı da söyleyebiliriz. Önce sabahı, öğleden sonrayı ve akşamı dinle.",
+        "In the morning. In the afternoon. In the evening.",
+        "Öğle vakti ve gece için ise başka küçük bir kelime kullanırız:",
+        "At noon. At night.",
+        "Şimdi bunları cümlede kullanalım:",
+        "I have breakfast in the morning. I go to bed at night."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s05", "title": "Saat kaç?", "visual": "ing-my-day-oclock",
+      "sentences": [
+        "Saati sormak için şöyle deriz:",
+        "What time is it?",
+        "Saatin kısa kolu saati, uzun kolu dakikayı gösterir. Uzun kol en üstteki on ikiyi gösteriyorsa saat tamdır.",
+        "It is seven o'clock.",
+        "Burada kısa kol yediyi gösteriyordu. Şimdi iki kol da on ikiyi gösteriyor. Saat kaç?",
+        "It is twelve o'clock."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s06", "title": "Buçuk", "visual": "ing-my-day-half",
+      "sentences": [
+        "Uzun kol en alttaki altıyı gösteriyorsa saat buçuktur. Kısa kol da iki sayının arasına gelir.",
+        "It is half past seven.",
+        "Bu cümle, saat yediyi yarım saat geçiyor demektir. Yani saat yedi buçuk.",
+        "Şimdi sen de tekrar et.",
+        "It is half past eight."
+      ],
+      "english": [1, 4]
+    },
+    {
+      "id": "s07", "title": "Ne zaman?", "visual": "ing-my-day-what-time",
+      "sentences": [
+        "Birine bir işi saat kaçta yaptığını sormak için şöyle sorarız. Lily, Mert'e soruyor:",
+        "What time do you get up?",
+        "I get up at seven o'clock.",
+        "Şimdi Lily, Mert'in öğleden sonra ne yaptığını merak ediyor:",
+        "What do you do in the afternoon?",
+        "I go to the playground."
+      ],
+      "english": [1, 2, 4, 5]
+    },
+    {
+      "id": "s08", "title": "Haftanın günleri", "visual": "ing-my-day-days",
+      "sentences": [
+        "Şimdi haftanın günlerini öğrenelim. Dinle ve sen de tekrar et.",
+        "Monday, Tuesday, Wednesday.",
+        "Thursday, Friday.",
+        "Saturday, Sunday.",
+        "Gün adları da her zaman büyük harfle başlar. Haftanın ilk günü pazartesi, son günü pazardır."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "ing-my-day-careful",
+      "sentences": [
+        "Dikkat! Saatten, öğle vaktinden ve geceden önce hep aynı küçük kelime gelir:",
+        "I get up at seven o'clock. I go to bed at night.",
+        "Sabah, öğleden sonra ve akşamdan önce başka bir kelime gelir:",
+        "I watch TV in the evening.",
+        "Haftanın günlerinden önce ise üçüncü bir kelime gelir:",
+        "I go shopping with my mom on Saturdays."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s10", "title": "Sıra sende", "visual": "ing-my-day-practice",
+      "sentences": [
+        "Şimdi sen de tekrar et. Önce bir arkadaşına sor:",
+        "What time do you go to school?",
+        "Şimdi kendi sabahını anlat:",
+        "I wake up at seven o'clock.",
+        "Son olarak akşam ne yaptığını söyle:",
+        "I do my homework in the evening."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "ing-my-day-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Sabahtan geceye kadar günlük işlerimizi anlatmayı öğrendik.",
+        "Saati sormayı, tam ve buçuklu saatleri söylemeyi öğrendik.",
+        "Haftanın yedi gününü sırasıyla öğrendik.",
+        "Saatten, günün bölümlerinden ve günlerden önce gelen küçük kelimeleri birbirinden ayırdık.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Mary: - - - - do you go to school? — Susan: I go to school at eight o'clock. Boşluğa hangisi gelir?",
+      "options": ["Where", "What time", "Who", "How"],
+      "answer": 1,
+      "explain": "Cevapta bir saat var. Saati sormak için What time...? deriz.",
+      "scene": "s07"
+    },
+    {
+      "question": "Saat tam üçü gösteriyor (3.00). Hangisi doğrudur?",
+      "options": ["It is three o'clock.", "It is half past three.", "It is thirteen o'clock.", "It is two o'clock."],
+      "answer": 0,
+      "explain": "Tam saatlerde saatin adından sonra o'clock deriz: It is three o'clock.",
+      "scene": "s05"
+    },
+    {
+      "question": "“It is half past seven.” Saat kaçtır?",
+      "options": ["7.00", "6.30", "7.30", "8.30"],
+      "answer": 2,
+      "explain": "half past seven, yediyi yarım saat geçiyor demektir: saat yedi buçuk, yani 7.30.",
+      "scene": "s06"
+    },
+    {
+      "question": "I have dinner - - - - the evening. Boşluğa hangisi gelir?",
+      "options": ["at", "on", "to", "in"],
+      "answer": 3,
+      "explain": "Sabah, öğleden sonra ve akşamdan önce in gelir: in the evening.",
+      "scene": "s09"
+    },
+    {
+      "question": "Monday - - - - Wednesday. Boşluğa hangi gün gelir?",
+      "options": ["Thursday", "Tuesday", "Friday", "Sunday"],
+      "answer": 1,
+      "explain": "Pazartesiden sonra salı gelir: Monday, Tuesday, Wednesday.",
+      "scene": "s08"
+    },
+    {
+      "question": "Hangisi sabah yapılan bir iş değildir?",
+      "options": ["I go to bed.", "I wake up.", "I have breakfast.", "I get dressed."],
+      "answer": 0,
+      "explain": "I go to bed. “Yatarım.” demektir; bunu gece yaparız.",
+      "scene": "s03"
+    }
+  ]
+}

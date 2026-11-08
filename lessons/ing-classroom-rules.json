@@ -1,0 +1,184 @@
+{
+  "id": "ing-classroom-rules",
+  "title": "Sınıfta İngilizce: Kurallar, Rica ve İzin",
+  "course": "İngilizce",
+  "unit": "Classroom Rules",
+  "kazanim": {
+    "code": "E4.1.L1, E4.1.L2, E4.1.L3, E4.1.L4, E4.1.S1, E4.1.S2, E4.1.S3, E4.1.S4",
+    "text": "Students will be able to understand short and clear utterances about requests. Students will be able to understand short and clear utterances about permission. Students will be able to recognize simple classroom instructions. Students will be able to recognize numbers from one to fifty. Students will be able to interact with their classmates through asking for and giving permission in short utterances. Students will be able to make requests by using simple utterances. Students will be able to give and respond to simple instructions verbally. Students will be able to count up to fifty.",
+    "note": "MEB İngilizce Dersi Öğretim Programı (2018), 4. sınıf, 1. ünite: Classroom Rules. İşlevler: izin isteme (Can/May I come in/go out? — Yes, you can. / Sure. / Of course. / Sorry, not right now.); basit ricada bulunma (Give me the book, please. — Here you are. / Say that again, please.); birine ne yapacağını söyleme (Be quiet, please. Look at / Clean the board, please. Open the window, please. Please come in.); sayıları adlandırma (1–50). Kelimeler: eraser, pencil case, pencil sharpener, ruler, take, turn on/off."
+  },
+  "summary": "Sınıf eşyalarını, öğretmenin yönergelerini, lütfen diyerek bir şey istemeyi, May I...? ile izin almayı ve elliye kadar saymayı İngilizce öğren.",
+  "match": {"course": "İngilizce", "booklet": "Ünite 01", "keywords": ["please", "may i", "can i", "here you are", "sure", "of course", "sorry", "not right now", "again", "pardon", "thank", "welcome", "come in", "board", "window", "door", "light", "hand", "quiet", "sit down", "stand up", "line", "your place", "ruler", "eraser", "pencil", "sharpener", "scissors", "notebook", "book", "classroom", "how many", "twenty", "thirty", "forty", "fifty", "teen", "number"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Sınıfımızda", "visual": "ing-classroom-rules-intro",
+      "sentences": [
+        "Merhaba! Sınıfta öğretmenimiz bize sık sık neler yapacağımızı söyler.",
+        "Biz de bazen arkadaşımızdan bir şey isteriz ya da öğretmenimizden izin alırız.",
+        "Bugün sınıfta en çok kullanılan İngilizce cümleleri öğreneceğiz. Böylece derste senden ne istendiğini hemen anlayacaksın.",
+        "Bir de elliye kadar saymayı tekrar edeceğiz. Haydi başlayalım!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Sınıf eşyaları", "visual": "ing-classroom-rules-objects",
+      "sentences": [
+        "Önce sınıf eşyalarının İngilizce adlarını öğrenelim. Dinle ve sen de tekrar et.",
+        "Book, notebook, pencil.",
+        "Eraser, ruler, pencil sharpener.",
+        "Pencil case, schoolbag, scissors.",
+        "Kalemtıraş ve kalem kutusu ikişer kelimeden oluşur. İkisinde de ilk kelime kalem demektir."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s03", "title": "Öğretmen ne diyor?", "visual": "ing-classroom-rules-instructions",
+      "sentences": [
+        "Öğretmenimiz derste bize ne yapacağımızı kısa cümlelerle söyler. Dinle ve sen de tekrar et.",
+        "Stand up, please.",
+        "Sit down, please.",
+        "Open your book. Close your book.",
+        "Raise your hand.",
+        "Be quiet, please."
+      ],
+      "english": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": "s04", "title": "Tahta, pencere, ışık", "visual": "ing-classroom-rules-more",
+      "sentences": [
+        "Sınıfta duyacağın başka yönergeler de var. Bunlar tahtayla, pencereyle ve ışıklarla ilgili. Dinle ve tekrar et.",
+        "Look at the board, please.",
+        "Clean the board, please.",
+        "Open the window, please.",
+        "Turn on the lights. Turn off the lights.",
+        "Go back to your place, please."
+      ],
+      "english": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": "s05", "title": "Lütfen verir misin?", "visual": "ing-classroom-rules-request",
+      "sentences": [
+        "Birinden bir şey isterken cümlenin sonuna lütfen kelimesini ekleriz. Mert, Lily'den cetvelini istiyor:",
+        "Give me the ruler, please.",
+        "Sure. Here you are.",
+        "Lily cetveli veriyor. Mert teşekkür ediyor, Lily de rica ederim diyor:",
+        "Thank you.",
+        "You're welcome."
+      ],
+      "english": [1, 2, 4, 5]
+    },
+    {
+      "id": "s06", "title": "İzin istemek", "visual": "ing-classroom-rules-permission",
+      "sentences": [
+        "Bir şey yapmak için izin isterken soruyu böyle sorarız. Derse geç kalan Kerem kapıyı çalıyor:",
+        "May I come in?",
+        "Yes, you can. Please come in.",
+        "Aynı soruyu başka bir kelimeyle de sorabiliriz. Kerem şimdi dışarı çıkmak istiyor ama öğretmen o sırada ders anlatıyor.",
+        "Can I go out?",
+        "Sorry, not right now."
+      ],
+      "english": [1, 2, 4, 5]
+    },
+    {
+      "id": "s07", "title": "Bir konuşma", "visual": "ing-classroom-rules-dialogue",
+      "sentences": [
+        "Şimdi Mert ve Lily'nin konuşmasını dinleyelim. Lily, Mert'in silgisini kullanmak istiyor ama Mert onu iyi duyamıyor.",
+        "May I take your eraser?",
+        "Say that again, please.",
+        "May I take your eraser?",
+        "Of course. Here you are."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s08", "title": "Elliye kadar", "visual": "ing-classroom-rules-tens",
+      "sentences": [
+        "Şimdi sayılara geçelim. Birden ona kadar saymayı zaten biliyorsun. Bu kez onar onar sayalım. Dinle ve tekrar et.",
+        "Ten, twenty, thirty, forty, fifty.",
+        "Yirmi bir demek için önce onluğu, sonra birliği söyleriz. Yazarken ikisinin arasına kısa bir çizgi koyarız.",
+        "Twenty-one, thirty-five, forty-two.",
+        "Şimdi tahtadaki toplamaya bakalım. On beş ile yirmiyi toplarsak otuz beş eder.",
+        "Fifteen plus twenty is thirty-five."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "ing-classroom-rules-careful",
+      "sentences": [
+        "Dikkat! Bazı sayılar birbirine çok benzer. Sonlarına iyi kulak ver.",
+        "Thirteen, thirty.",
+        "Fourteen, forty.",
+        "Fifteen, fifty.",
+        "Bir de yazılışa dikkat! Dört sayısının İngilizcesinde u harfi vardır ama kırk sayısını yazarken bu u harfini yazmayız."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s10", "title": "Sıra sende", "visual": "ing-classroom-rules-practice",
+      "sentences": [
+        "Şimdi sen de tekrar et. Derse geç kaldın. Kapıyı çal ve sor:",
+        "May I come in?",
+        "Şimdi arkadaşından silgisini iste:",
+        "Give me the eraser, please.",
+        "Arkadaşın silgisini sana verdi. Ona teşekkür et:",
+        "Thank you."
+      ],
+      "english": [1, 3, 5]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "ing-classroom-rules-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Öğretmenimizin yönergelerini anladık: ayağa kalk, otur, parmak kaldır, sessiz ol.",
+        "Bir şey isterken cümlenin sonuna lütfen ekledik. Bir şey verirken de buyur dedik.",
+        "İzin isterken soruyu iki farklı kelimeyle başlatabileceğimizi öğrendik.",
+        "Onar onar elliye kadar saydık ve birbirine benzeyen sayıların sonlarına dikkat ettik.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Sınıf çok gürültülü. Öğretmen ne der?",
+      "options": ["Be quiet, please.", "Stand up, please.", "Open the window, please.", "Come in, please."],
+      "answer": 0,
+      "explain": "Be quiet, please. “Sessiz ol, lütfen.” demektir.",
+      "scene": "s03"
+    },
+    {
+      "question": "Kate: Give me the eraser, please. — Joe: - - - - . Joe silgiyi veriyor. Boşluğa hangisi gelir?",
+      "options": ["Sorry, not right now.", "Here you are.", "May I come in?", "Be quiet."],
+      "answer": 1,
+      "explain": "Bir şeyi verirken Here you are. (Buyur.) deriz.",
+      "scene": "s05"
+    },
+    {
+      "question": "Derse geç kalan öğrenci kapıyı çalınca ne sorar?",
+      "options": ["May I go out?", "May I open the window?", "May I clean the board?", "May I come in?"],
+      "answer": 3,
+      "explain": "May I come in? “Girebilir miyim?” demektir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Hangi sayı “forty-two” diye okunur?",
+      "options": ["24", "40", "42", "52"],
+      "answer": 2,
+      "explain": "forty kırk, two iki demektir: forty-two kırk iki, yani 42 olur.",
+      "scene": "s08"
+    },
+    {
+      "question": "10, 20, 30, 40, ? Soru işaretinin yerine hangisi gelir?",
+      "options": ["fourteen", "fifty", "fifteen", "forty"],
+      "answer": 1,
+      "explain": "Onar onar sayarız: ten, twenty, thirty, forty, fifty. 50 fifty olur.",
+      "scene": "s08"
+    },
+    {
+      "question": "Hangisi “on üç” demektir?",
+      "options": ["thirty", "three", "thirteen", "thirty-three"],
+      "answer": 2,
+      "explain": "On üç thirteen, otuz ise thirty olur. Sonlarına dikkat!",
+      "scene": "s09"
+    }
+  ]
+}

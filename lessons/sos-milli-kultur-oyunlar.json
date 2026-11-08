@@ -1,0 +1,161 @@
+{
+  "id": "sos-milli-kultur-oyunlar",
+  "title": "Millî Kültürümüz ve Çocuk Oyunları",
+  "course": "Sosyal Bilgiler",
+  "unit": "Kültür ve Miras",
+  "kazanim": {
+    "code": "SB.4.2.2, SB.4.2.3",
+    "text": "Ailesi ve çevresindeki millî kültürü yansıtan ögeleri araştırarak örnekler verir. Geleneksel çocuk oyunlarını değişim ve süreklilik açısından günümüzdeki oyunlarla karşılaştırır.",
+    "note": "MEB Sosyal Bilgiler Dersi Öğretim Programı (2018), 4. sınıf. Açıklama: Yakın çevresinde yer alan bir müze, cami, türbe, köprü, medrese, kervansaray gibi tarihî bir mekân gezisi ya da sözlü tarih veya yerel tarih çalışmaları yapılır (SB.4.2.2). Öğrenme alanında kültürel mirasa duyarlılık değeri ile değişim ve sürekliliği algılama becerisi öne çıkar. Dil, tarih, gelenek ve görenekler, bayramlar, el sanatları, tarihî yapılar ve etnografya müzeleri ile geleneksel çocuk oyunlarının geçmişi ve bugünü örneklerle anlatılır."
+  },
+  "summary": "Dil, gelenek, bayram ve el sanatları gibi millî kültür ögelerini tanı; saklambaç, dalye, aşık ve topaç gibi geleneksel oyunları bugünün oyunlarıyla karşılaştır.",
+  "match": {"course": "Sosyal Bilgiler", "booklet": "Ünite 02", "keywords": ["kültür", "geleneksel", "oyun", "etnografya", "müze", "topaç", "dalye", "aşık oyun", "çelik çomak", "seksek", "körebe", "el sanat", "türkü", "çeyiz", "kına", "düğün"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Bayram sabahı", "visual": "sos-milli-kultur-oyunlar-intro",
+      "sentences": [
+        "Merhaba! Bir bayram sabahını hatırla: Erkenden kalkar, bayramlıklarını giyersin.",
+        "Önce anne ve babanın, sonra da aile büyüklerinin elini öpersin.",
+        "Akrabalarını ve komşularını ziyaret edersin. Sana tatlı ve şeker ikram edilir.",
+        "Bu güzel geleneklerin hepsi millî kültürümüzün bir parçasıdır. Bugün kültürümüzü ve çocuk oyunlarımızı tanıyacağız."
+      ]
+    },
+    {
+      "id": "s02", "title": "Kültür nedir?", "visual": "sos-milli-kultur-oyunlar-kultur",
+      "sentences": [
+        "Bir milletin tarih boyunca oluşturduğu maddi ve manevi değerlerin tümüne kültür denir.",
+        "Dil, tarih ve kültür birliği olan insan topluluğuna ise millet denir.",
+        "Dilimiz, tarihimiz, inançlarımız, gelenek ve göreneklerimiz millî kültürümüzün ögeleridir.",
+        "Bayramlarımız, el sanatlarımız, yemeklerimiz, türkülerimiz ve oyunlarımız da bu ögelerdendir.",
+        "Kültürümüz büyüklerimizden bize, bizden de sonraki nesillere aktarılır."
+      ]
+    },
+    {
+      "id": "s03", "title": "Gelenekler ve bayramlar", "visual": "sos-milli-kultur-oyunlar-gelenek",
+      "sentences": [
+        "Toplumda uzun zamandır sürdürülen alışkanlıklara gelenek ve görenek denir.",
+        "Büyüklerin elini öpmek, misafire ikram etmek ve hasta ziyaretine gitmek bunlara örnektir.",
+        "Düğünler, kına geceleri ve asker uğurlamaları da geleneklerimizin parçasıdır.",
+        "Ramazan Bayramı ve Kurban Bayramı dinî bayramlarımızdır.",
+        "Millî bayramlarımız ise 23 Nisan, 19 Mayıs, 30 Ağustos ve 29 Ekim'de kutlanır.",
+        "Örneğin 30 Ağustos Zafer Bayramı, 29 Ekim ise Cumhuriyet Bayramıdır. Millî bayramlar bize tarihimizi hatırlatır."
+      ]
+    },
+    {
+      "id": "s04", "title": "El sanatları ve eserler", "visual": "sos-milli-kultur-oyunlar-sanat",
+      "sentences": [
+        "Atalarımızdan kalan el sanatları da kültürümüzü yansıtır.",
+        "Halı, kilim, çini, ebru, bakır işleri ve oya bunlardan bazılarıdır.",
+        "Türkülerimiz, masallarımız, Dede Korkut Hikâyeleri ve Nasreddin Hoca fıkraları da kültürümüzün eserleridir.",
+        "Mantı, baklava ve Türk kahvesi gibi yemek ve içeceklerimiz de kültürümüzün parçasıdır.",
+        "Çeyiz sandıklarındaki oyalı yazmalar da birer kültür ögesidir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Çevremizdeki kültür", "visual": "sos-milli-kultur-oyunlar-yapilar",
+      "sentences": [
+        "Millî kültürümüzü yalnızca evimizde değil, çevremizde de görebiliriz.",
+        "Cami, türbe, köprü, medrese, kervansaray ve çeşme gibi tarihî yapılar atalarımızdan kalan mirasımızdır.",
+        "Etnografya müzelerinde ise halkımızın geçmişte kullandığı giysiler, halılar, el yazması kitaplar ve bakır kaplar sergilenir.",
+        "Örneğin bakır bir bilezik, müzenin madeni eserler bölümünde yer alır.",
+        "Bu yerleri gezerek ve büyüklerimizle konuşarak kültürümüzü araştırabiliriz."
+      ]
+    },
+    {
+      "id": "s06", "title": "Geleneksel çocuk oyunları", "visual": "sos-milli-kultur-oyunlar-oyunlar",
+      "sentences": [
+        "Kültürümüzün en eğlenceli ögelerinden biri de geleneksel çocuk oyunlarıdır.",
+        "Saklambaçta ebe yüzünü duvara dönüp sayar, diğerleri saklanır. Bu oyunun eski adı karagunidir.",
+        "Dalye; iki takımla, bir top ve üst üste dizilmiş yassı kiremit parçalarıyla oynanır.",
+        "Aşık oyunu, koyun ya da keçinin bacağındaki küçük bir kemikle oynanır.",
+        "Çelik çomak, topaç, seksek, ip atlama, körebe ve mendil kapmaca da geleneksel oyunlarımızdandır."
+      ]
+    },
+    {
+      "id": "s07", "title": "Geçmişte ve bugün", "visual": "sos-milli-kultur-oyunlar-degisim",
+      "sentences": [
+        "Geçmişte çocuklar çoğunlukla sokakta, bahçede ya da boş bir arsada, kalabalık gruplar hâlinde oynardı.",
+        "Oyuncaklarını taş, sopa, ip, kemik ve kiremit gibi basit malzemelerden kendileri yapardı.",
+        "Günümüzde ise çocuklar daha çok evde ve çoğu zaman tek başına oynuyor.",
+        "Bilgisayar ve tablet oyunları yaygınlaştı. Oyuncaklar çoğunlukla plastikten yapılıyor ve satın alınıyor.",
+        "Yani zamanla oyunların oynandığı yer, oynayan kişi sayısı ve oyuncakların malzemesi değişti."
+      ]
+    },
+    {
+      "id": "s08", "title": "Değişen ve süren", "visual": "sos-milli-kultur-oyunlar-topac",
+      "sentences": [
+        "Topaç oyununa bakalım. Geçmişte topaç ahşaptan yapılır, pamuk iple çevrilirdi.",
+        "Günümüzde topaçlar çoğunlukla plastikten yapılıyor ve bir kurma aracıyla çevriliyor.",
+        "Ama oyunun kuralı değişmedi: Kimin topacı daha uzun süre dönerse o kazanır.",
+        "Saklambaç, seksek ve ip atlama gibi oyunlar da bugün hâlâ oynanıyor. Buna süreklilik denir.",
+        "Bu oyunlar bize paylaşmayı, kurallara uymayı ve birlikte hareket etmeyi öğretir.",
+        "Bu oyunları oynayarak ve okul şenliklerinde tanıtarak kültürümüze sahip çıkarız."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "sos-milli-kultur-oyunlar-dikkat",
+      "sentences": [
+        "Dikkat! Bazı bilgiler sık karıştırılır.",
+        "Bilgisayar oyunları, sudoku ve yapboz geleneksel çocuk oyunlarımızdan değildir.",
+        "Ramazan ve Kurban bayramları millî değil, dinî bayramlardır.",
+        "Kültür ögeleri zamanla değişebilir. Ama büyüklere saygı gibi özleri yaşamaya devam eder.",
+        "Etnografya müzelerinde halkımızın geçmişteki yaşayışını gösteren eşyalar sergilenir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "sos-milli-kultur-oyunlar-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Dil, tarih, inanç, gelenek ve görenekler millî kültürümüzün ögeleridir.",
+        "Bayramlar, el sanatları, türküler ve tarihî yapılar kültürümüzü yansıtır.",
+        "Saklambaç, dalye, aşık ve topaç geleneksel çocuk oyunlarımızdandır.",
+        "Oyunların yeri ve malzemesi değişti, ama birçoğu hâlâ oynanıyor.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Aşağıdakilerden hangisi geleneksel çocuk oyunlarımızdan biridir?",
+      "options": ["Bilgisayar oyunu", "Sudoku", "Çelik çomak", "Yapboz"],
+      "answer": 2,
+      "explain": "Çelik çomak, iki sopayla oynanan geleneksel bir çocuk oyunudur. Diğerleri geleneksel oyunlarımızdan değildir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi millî bayramlarımızdan biri değildir?",
+      "options": ["Kurban Bayramı", "Cumhuriyet Bayramı", "Zafer Bayramı", "Ulusal Egemenlik ve Çocuk Bayramı"],
+      "answer": 0,
+      "explain": "Kurban Bayramı dinî bir bayramdır. Cumhuriyet, Zafer ve Ulusal Egemenlik ve Çocuk Bayramı millî bayramlarımızdır.",
+      "scene": "s03"
+    },
+    {
+      "question": "Etnografya müzesine bağışlanan eski bir bakır bilezik, müzenin hangi bölümünde sergilenir?",
+      "options": ["Dokuma eserler", "Yazma eserler", "Ahşap eserler", "Madeni eserler"],
+      "answer": 3,
+      "explain": "Bakır bir madendir. Bu yüzden bakır bilezik madeni eserler bölümünde sergilenir.",
+      "scene": "s05"
+    },
+    {
+      "question": "Topaç oyununda geçmişten günümüze hangisi değişmemiştir?",
+      "options": ["Topacın yapıldığı malzeme", "Topacın çevrilme şekli", "Oyunun kuralı", "Topacın görünüşü"],
+      "answer": 2,
+      "explain": "Topacın malzemesi ve çevrilme şekli değişti. Ama kimin topacı uzun dönerse onun kazanması kuralı aynı kaldı.",
+      "scene": "s08"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi geçmişte oynanan çocuk oyunlarının bir özelliğidir?",
+      "options": ["Çoğunlukla ekran karşısında oynanması", "Genellikle sokakta ve kalabalık gruplarla oynanması", "Oyuncakların plastikten yapılması", "Çoğunlukla tek başına oynanması"],
+      "answer": 1,
+      "explain": "Geçmişte çocuklar sokakta, bahçede ve kalabalık gruplar hâlinde oynardı. Diğerleri günümüz oyunlarının özellikleridir.",
+      "scene": "s07"
+    },
+    {
+      "question": "Dalye oyunu ile ilgili hangisi doğrudur?",
+      "options": ["Bir top ve yassı kiremit parçalarıyla oynanır.", "Tek başına oynanır.", "Bilgisayarda oynanır.", "Koyun kemiğiyle oynanır."],
+      "answer": 0,
+      "explain": "Dalye iki takımla, bir top ve üst üste dizilmiş kiremit parçalarıyla oynanır. Kemikle oynanan oyun aşık oyunudur.",
+      "scene": "s06"
+    }
+  ]
+}

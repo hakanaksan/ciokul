@@ -1,0 +1,169 @@
+{
+  "id": "sos-ozelliklerimiz",
+  "title": "İlgi, Yetenek ve Farklılıklarımız",
+  "course": "Sosyal Bilgiler",
+  "unit": "Birey ve Toplum",
+  "kazanim": {
+    "code": "SB.4.1.3, SB.4.1.4, SB.4.1.5",
+    "text": "Bireysel ilgi, ihtiyaç ve yeteneklerini tanır. Kendisini farklı özelliklere sahip diğer bireylerin yerine koyar. Diğer bireylerin farklı özelliklerini saygı ile karşılar.",
+    "note": "MEB Sosyal Bilgiler Dersi Öğretim Programı (2018), 4. sınıf. Açıklamalar: İlgi ve istekleri doğrultusunda okulunda veya yakın çevresindeki eğitsel sosyal etkinliklere katılması için teşvik edilir (SB.4.1.3). Farklı yeteneklere, beğenilere ve kişilik özelliklerine sahip bireylerin yanı sıra dezavantajlı (engelli, yoksul, devlet bakımına muhtaç veya kronik sağlık sorunları yaşayan) bireylerin durumlarına da değinilir (SB.4.1.4). Öğrenme alanında saygı ve sorumluluk değerleri ile empati kurma becerisi öne çıkar. Fiziksel ve kişisel özellikler, ilgi-ihtiyaç-yetenek ayrımı, empati ve hoşgörü çocuk düzeyinde örneklerle anlatılır."
+  },
+  "summary": "Fiziksel ve kişisel özelliklerini, ilgi, ihtiyaç ve yetenek arasındaki farkı öğren; empati ve hoşgörüyle farklılıklara saygı göstermeyi keşfet.",
+  "match": {"course": "Sosyal Bilgiler", "booklet": "Ünite 01", "keywords": ["ihtiyaç", "yetenek", "empati", "hoşgörü", "ilgi duy", " ilgi alan", "farklılık", "farklı özellik", "kişisel özellik", "saygı", "engelli", "kulüp", "beş parmağın", "sanat dalı"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Hepimiz farklıyız", "visual": "sos-ozelliklerimiz-intro",
+      "sentences": [
+        "Merhaba! Sınıfına bir bak: Kimi arkadaşın resim yapmayı sever, kimi top oynamayı.",
+        "Kimi çok konuşkandır, kimi ise sessiz ve sakindir.",
+        "Kimimiz uzun boyluyuz, kimimiz kısa. Kimimizin saçı sarı, kimimizin siyah.",
+        "Dünyada hiç kimse bir başkasıyla tıpatıp aynı değildir. Bugün bu farklılıkları tanıyacağız."
+      ]
+    },
+    {
+      "id": "s02", "title": "Fiziksel ve kişisel özellikler", "visual": "sos-ozelliklerimiz-traits",
+      "sentences": [
+        "Özelliklerimizi iki gruba ayırabiliriz.",
+        "Boy, kilo, saç rengi, göz rengi ve ten rengi fiziksel özelliklerimizdir. Bunlar dış görünüşümüzle ilgilidir.",
+        "Dürüstlük, cömertlik, meraklılık, neşeli ya da utangaç olmak ise kişisel özelliklerimizdir.",
+        "Kişisel özelliklerimiz davranışlarımızda ve karakterimizde görünür.",
+        "Ailemizde bile herkesin özellikleri birbirinden farklıdır."
+      ]
+    },
+    {
+      "id": "s03", "title": "İlgi nedir?", "visual": "sos-ozelliklerimiz-ilgi",
+      "sentences": [
+        "Şimdi üç önemli kavramı tanıyalım: ilgi, ihtiyaç ve yetenek.",
+        "Bir konuya ya da etkinliğe yakınlık duymaya, ondan hoşlanmaya ilgi denir.",
+        "Bahçede çiçek yetiştirmekten hoşlanmak, uzayı araştırmayı sevmek ya da belgesel izlemek ilgiye örnektir.",
+        "İlgi alanlarımız insandan insana değişir. Yaşımız büyüdükçe ilgilerimiz de değişebilir.",
+        "İlgi duyduğumuz alanlarda kendimizi geliştirebilir, hatta o konuda uzmanlaşabiliriz."
+      ]
+    },
+    {
+      "id": "s04", "title": "İhtiyaç nedir?", "visual": "sos-ozelliklerimiz-ihtiyac",
+      "sentences": [
+        "Yaşamımızı sürdürmek için gerekli olan şeylere ihtiyaç denir.",
+        "Su içmek, beslenmek, uyumak, giyinmek ve barınmak temel ihtiyaçlarımızdır.",
+        "Sevilmek, güvende olmak ve eğitim almak da ihtiyaçlarımız arasındadır.",
+        "Örneğin koştuktan sonra susayıp su içmek bir ihtiyaçtır.",
+        "Resim yapmak, müzik dinlemek ya da bisiklete binmek ise ihtiyaç değil, ilgidir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Yetenek nedir?", "visual": "sos-ozelliklerimiz-yetenek",
+      "sentences": [
+        "Bir işi anlama ya da yapabilme becerisine yetenek denir.",
+        "Yetenek çoğunlukla doğuştan gelir. Çalışarak ve emek vererek geliştirilir.",
+        "Sesi güzel olan Kerem koroda şarkı söylüyor. Yaptığı resimle ödül kazanan Serkan da yeteneğini kullanıyor.",
+        "Oyun hamuruna güzel şekiller veren biri seramikte, ilk kez duyduğu besteyi çalabilen biri müzikte yeteneklidir.",
+        "Herkesin henüz keşfetmediği yetenekleri olabilir."
+      ]
+    },
+    {
+      "id": "s06", "title": "Dikkat: İlgi mi, yetenek mi?", "visual": "sos-ozelliklerimiz-dikkat",
+      "sentences": [
+        "Dikkat! İlgi, ihtiyaç ve yetenek sık karıştırılır. Haydi ipuçlarına bakalım.",
+        "Seviyorum, hoşlanıyorum, merak ediyorum gibi sözler genellikle ilgiyi anlatır.",
+        "Yapabiliyorum, başardım, ödül kazandım gibi sözler ise yeteneği gösterir.",
+        "Yaşamak için gerekli olan su, besin ve uyku gibi şeyler ise ihtiyaçtır.",
+        "Bir şeyi sevmek, onu çok iyi yapabilmek demek değildir."
+      ]
+    },
+    {
+      "id": "s07", "title": "Kendimizi geliştirelim", "visual": "sos-ozelliklerimiz-gelisim",
+      "sentences": [
+        "İlgi ve yeteneklerimizi tanırsak kendimizi daha iyi geliştirebiliriz.",
+        "Okul kulüplerine katılabiliriz. Yardım etmeyi seven biri Sosyal Yardımlaşma ve Dayanışma Kulübüne katılabilir.",
+        "Resim, müzik, yüzme ya da satranç gibi kurslara gidebiliriz.",
+        "Ailemizin ve öğretmenlerimizin desteği de yeteneklerimizi geliştirmemize yardım eder.",
+        "İlgi ve yeteneklerimize uygun işler yaptığımızda daha mutlu ve başarılı oluruz."
+      ]
+    },
+    {
+      "id": "s08", "title": "Empati", "visual": "sos-ozelliklerimiz-empati",
+      "sentences": [
+        "Bir gün Nasreddin Hoca damdan düşmüş. Komşuları başına toplanıp ne yapacaklarını tartışmaya başlamış.",
+        "Hoca belini tutarak şöyle demiş: Bırakın tartışmayı, bana daha önce damdan düşmüş birini bulun!",
+        "Hoca'ya göre onun acısını en iyi, aynı şeyi yaşamış biri anlardı.",
+        "Kendimizi başkasının yerine koyarak onun duygu ve düşüncelerini anlamaya empati denir.",
+        "Taşınan bir arkadaşının neler hissettiğini anlamak ya da üzgün bir arkadaşına moral vermek empatiye örnektir."
+      ]
+    },
+    {
+      "id": "s09", "title": "Farklılıklara saygı", "visual": "sos-ozelliklerimiz-saygi",
+      "sentences": [
+        "Atalarımız, beş parmağın beşi bir olmaz demiştir. Yani hiçbir insan bir başkasıyla aynı değildir.",
+        "Farklılıklar doğaldır ve bir zenginliktir.",
+        "Farklı düşüncelere, inançlara ve davranışlara anlayışla yaklaşmaya hoşgörü denir.",
+        "Farklı bir takımı tutan arkadaşımıza saygı duyarız. Konuşan arkadaşımızın sözünü kesmeden dinleriz.",
+        "Farklı özellikteki hiç kimseyi dışlamayız. Herkesi olduğu gibi kabul ederiz."
+      ]
+    },
+    {
+      "id": "s10", "title": "Engeller aşılabilir", "visual": "sos-ozelliklerimiz-engel",
+      "sentences": [
+        "Bazı insanlar bedensel engelli olabilir, bir hastalıkla yaşayabilir ya da maddi zorluk çekebilir.",
+        "Kendimizi onların yerine koyarsak nelere ihtiyaç duyduklarını daha iyi anlarız.",
+        "Kolları olmadan dünyaya gelen millî yüzücümüz Sümeyye Boyacı, çalışarak Avrupa şampiyonu oldu.",
+        "Kol ya da bacak kaybı olan sporculardan oluşan Ampute Futbol Millî Takımımız da 2017 yılında Avrupa şampiyonu oldu.",
+        "Bu örnekler, azimle çalışan herkesin başarabileceğini gösterir."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "sos-ozelliklerimiz-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Her insanın özellikleri farklıdır. Herkes benzersizdir.",
+        "İlgi hoşlandığımız şeydir, ihtiyaç yaşamak için gerekendir, yetenek ise yapabilme becerisidir.",
+        "Empati kurarak kendimizi başkalarının yerine koyarız.",
+        "Farklılıklara hoşgörü ve saygıyla yaklaşırız.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Aşağıdaki cümlelerden hangisi kişinin ilgi alanını anlatmaktadır?",
+      "options": ["Hafta sonu yağmur yağınca evde kaldım.", "Bahçede çiçek yetiştirmekten hoşlanırım.", "Okula giderken yaya geçidini kullanırım.", "Susadığım için su içtim."],
+      "answer": 1,
+      "explain": "Bir etkinlikten hoşlanmak ilgiyi anlatır. Susayınca su içmek ise bir ihtiyaçtır.",
+      "scene": "s03"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi temel ihtiyaçlarımızdan biridir?",
+      "options": ["Resim yapmak", "Bisiklete binmek", "Uyumak", "Müzik dinlemek"],
+      "answer": 2,
+      "explain": "Uyumak yaşamak için gereklidir. Resim yapmak, bisiklete binmek ve müzik dinlemek ise ilgi alanlarımıza girer.",
+      "scene": "s04"
+    },
+    {
+      "question": "İlk kez duyduğu bir besteyi piyanoda çalabilen Duygu hangi kavrama örnek olur?",
+      "options": ["Yetenek", "İhtiyaç", "Empati", "Hoşgörü"],
+      "answer": 0,
+      "explain": "Bir işi yapabilme becerisi yetenektir. Duygu'nun müzik yeteneği vardır.",
+      "scene": "s05"
+    },
+    {
+      "question": "Nasreddin Hoca'nın “Bana daha önce damdan düşmüş birini bulun!” sözü hangi kavramı anlatır?",
+      "options": ["Saygı", "Cömertlik", "Hoşgörü", "Empati"],
+      "answer": 3,
+      "explain": "Hoca, acısını en iyi aynı şeyi yaşamış birinin anlayacağını söyler. Kendini başkasının yerine koymak empatidir.",
+      "scene": "s08"
+    },
+    {
+      "question": "Aşağıdaki atasözlerinden hangisi insanların birbirinden farklı olduğunu anlatır?",
+      "options": ["Bir elin nesi var, iki elin sesi var.", "Ayağını yorganına göre uzat.", "Beş parmağın beşi bir olmaz.", "Damlaya damlaya göl olur."],
+      "answer": 2,
+      "explain": "Beş parmak bile birbirinin aynı değildir. Bu atasözü her insanın farklı olduğunu anlatır.",
+      "scene": "s09"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi kişisel özelliklerimizden biridir?",
+      "options": ["Göz rengi", "Dürüstlük", "Boy", "Saç rengi"],
+      "answer": 1,
+      "explain": "Dürüstlük davranışlarımızda görülen kişisel bir özelliktir. Göz rengi, boy ve saç rengi fiziksel özelliklerdir.",
+      "scene": "s02"
+    }
+  ]
+}

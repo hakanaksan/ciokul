@@ -1,0 +1,157 @@
+{
+  "id": "tr-konu-ana-fikir",
+  "title": "Metnin Konusu ve Ana Fikri",
+  "course": "Türkçe",
+  "unit": "Okuma",
+  "kazanim": {
+    "code": "T.4.3.14, T.4.3.16, T.4.3.17",
+    "text": "Görsellerden ve başlıktan hareketle okuyacağı metnin konusunu tahmin eder. Okuduğu metnin konusunu belirler. Metnin ana fikri/ana duygusunu belirler.",
+    "note": "MEB Türkçe Dersi Öğretim Programı (2018), 4. sınıf, Okuma / Anlama. Konu ile ana fikir arasındaki fark, şiirde ana duygu ve başlık ile görselden konu tahmini kısa metinler üzerinde işlenir; ayrıntıyı ya da çok genel bir ifadeyi konu sanma yanlışı üzerinde durulur."
+  },
+  "summary": "Bir metnin neyi anlattığını (konu) ve bize ne öğrettiğini (ana fikir) bulmayı, şiirde ana duyguyu ve başlıktan konu tahmin etmeyi örneklerle öğren.",
+  "match": {"course": "Türkçe", "booklet": "Tema 01–02", "keywords": ["konusu ", "konusunu", "konusuna", "ana fikir", "ana fikr", "ana duygus", "ana düşünce"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Bir cümleyle anlat", "visual": "tr-konu-ana-fikir-intro",
+      "sentences": [
+        "Merhaba! Dün izlediğin bir çizgi filmi arkadaşına tek cümleyle anlatabilir misin?",
+        "Bu film neyi anlatıyordu, diye sorarsak cevabımız filmin konusudur.",
+        "Bu film bize ne öğretti, diye sorarsak cevabımız filmin ana fikridir.",
+        "Okuduğumuz metinlerde de konu ve ana fikir vardır. Haydi onları bulmayı öğrenelim!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Konu nedir?", "visual": "tr-konu-ana-fikir-konu",
+      "sentences": [
+        "Bir metinde üzerinde durulan, anlatılan olaya ya da düşünceye konu denir.",
+        "Konuyu bulmak için kendimize şu soruyu sorarız: Bu metin neyi anlatıyor?",
+        "Konu genellikle kısa bir söz grubuyla söylenir. Kitap sevgisi, arkadaşlık, okulun ilk günü gibi.",
+        "Metnin başlığı ve sık tekrarlanan kelimeler de konuyu bulmamıza yardım eder."
+      ]
+    },
+    {
+      "id": "s03", "title": "Bir metnin konusunu bulalım", "visual": "tr-konu-ana-fikir-metin",
+      "sentences": [
+        "Şimdi kısa bir metin okuyalım.",
+        "Mert ile dedesi bahçeye küçük bir fidan dikti. Mert her gün fidanı suladı, ona özenle baktı.",
+        "Yıllar geçti, fidan kocaman bir ağaç oldu. Şimdi Mert, ağacın gölgesinde kitap okuyor.",
+        "Metin neyi anlatıyor? Fidan, suladı, ağaç kelimeleri hep aynı şeyi gösteriyor.",
+        "Bu metnin konusu, dikilen bir fidanın bakımla ağaca dönüşmesidir."
+      ]
+    },
+    {
+      "id": "s04", "title": "Ana fikir nedir?", "visual": "tr-konu-ana-fikir-anafikir",
+      "sentences": [
+        "Ana fikir, yazarın metinle okuyucuya vermek istediği asıl mesajdır.",
+        "Ana fikri bulmak için şu soruyu sorarız: Yazar bu metinle bana ne öğretmek istiyor?",
+        "Ana fikir, konu gibi kısa bir söz grubu değildir. Genellikle tam bir cümleyle söylenir.",
+        "Metnin nasıl bittiğine dikkat et. Metnin sonu bize çoğu zaman güçlü bir ipucu verir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Mert'in metninin ana fikri", "visual": "tr-konu-ana-fikir-mert",
+      "sentences": [
+        "Mert'in metnine geri dönelim.",
+        "Mert fidanı bir gün değil, her gün suladı. Yani sabırla emek verdi.",
+        "Sonunda fidan büyüdü, Mert de onun gölgesinde dinlendi. Emeğinin karşılığını aldı.",
+        "O hâlde bu metnin ana fikri şudur: Sabırla emek verirsek güzel sonuçlar alırız.",
+        "Gördün mü? Konu, metnin neyi anlattığını söyler. Ana fikir ise bize verdiği dersi söyler."
+      ]
+    },
+    {
+      "id": "s06", "title": "Bir masalla deneyelim", "visual": "tr-konu-ana-fikir-masal",
+      "sentences": [
+        "Şimdi çok bilinen bir masalı hatırlayalım: Karınca ile Ağustos Böceği.",
+        "Yaz boyunca karınca çalışıp kış için yiyecek topladı. Ağustos böceği ise hep şarkı söyledi.",
+        "Kış gelince ağustos böceği aç kaldı. Karıncanın ise yiyeceği boldu.",
+        "Bu masalın konusu, karıncanın çalışkanlığı ile ağustos böceğinin tembelliğidir.",
+        "Ana fikri ise şudur: Geleceğimizi düşünerek bugünden çalışmalıyız."
+      ]
+    },
+    {
+      "id": "s07", "title": "Şiirde ana duygu", "visual": "tr-konu-ana-fikir-duygu",
+      "sentences": [
+        "Şiirlerde ana fikir yerine çoğu zaman ana duygu aranır.",
+        "Ana duygu, şiirin bize en çok hissettirdiği duygudur. Şu kısa şiiri dinleyelim.",
+        "Annem, tatlı sesli annem. Her sabah öper beni. Sarılınca boynuna, unuturum her derdimi.",
+        "Şair, annesine duyduğu sevgiyi anlatıyor. Bu şiirin ana duygusu anne sevgisidir.",
+        "Vatan sevgisi, doğa sevgisi, özlem ve hüzün de şiirlerde sık rastlanan ana duygulardır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Başlık ve görselden tahmin", "visual": "tr-konu-ana-fikir-tahmin",
+      "sentences": [
+        "Bir metni okumadan önce de konusu hakkında tahmin yürütebiliriz.",
+        "Önce başlığa bakalım: Denizimizi Koruyalım.",
+        "Görselde denizde yüzen plastik şişeler ve üzgün bir balık var.",
+        "O hâlde bu metnin konusu büyük olasılıkla denizlerin kirlenmesidir.",
+        "Metni okurken de tahminimizin doğru olup olmadığını kontrol ederiz."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat: konu seçerken", "visual": "tr-konu-ana-fikir-dikkat",
+      "sentences": [
+        "Dikkat! Konu sorularında sık yapılan yanlışlar var. Mert'in metnini düşünelim.",
+        "Birinci yanlış, küçük bir ayrıntıyı konu sanmak. Mert'in kitap okuması, metnin yalnızca bir ayrıntısıdır.",
+        "İkinci yanlış, çok genel bir cevap seçmek. Doğa cevabı çok geniştir. Metin bütün doğayı anlatmıyor.",
+        "Doğru cevap metnin tamamını kapsar: Dikilen fidanın bakımla ağaç olması.",
+        "Üçüncü yanlış, konu ile ana fikri karıştırmak. Konu neyi anlattığını, ana fikir ne öğrettiğini söyler."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "tr-konu-ana-fikir-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Konu, metnin neyi anlattığıdır. Kısa bir söz grubuyla söylenir.",
+        "Ana fikir, yazarın vermek istediği mesajdır. Genellikle bir cümleyle söylenir.",
+        "Şiirlerde ana duygu aranır. Ana duygu, şiirin bize en çok hissettirdiği duygudur.",
+        "Başlık ve görseller konuyu tahmin etmemize yardım eder. Ayrıntıya takılma, metnin bütününe bak.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Elif sabah heyecanla uyandı. Bugün yeni okulundaki ilk günüydü. Sınıfa girince yeni arkadaşlarıyla tanıştı. Öğretmeni onu güler yüzle karşıladı. Bu metnin konusu aşağıdakilerden hangisidir?",
+      "options": ["Elif’in sabah uyanması", "Elif’in yeni okulundaki ilk günü", "Öğretmenlerin güler yüzü", "Okulların önemi"],
+      "answer": 1,
+      "explain": "Metnin tamamı Elif’in yeni okulundaki ilk gününü anlatıyor. Sabah uyanması bir ayrıntı, okulların önemi ise çok genel bir cevaptır.",
+      "scene": "s09"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi ana fikir için doğru bir açıklamadır?",
+      "options": ["Metinde geçen kişilerin adlarıdır.", "Metnin yazıldığı yer ve zamandır.", "Metindeki en uzun cümledir.", "Yazarın okuyucuya vermek istediği asıl mesajdır."],
+      "answer": 3,
+      "explain": "Ana fikir, yazarın metinle okuyucuya vermek istediği asıl mesajdır. Yazar bize ne öğretmek istiyor, sorusunun cevabıdır.",
+      "scene": "s04"
+    },
+    {
+      "question": "Karınca ile Ağustos Böceği masalının ana fikri aşağıdakilerden hangisidir?",
+      "options": ["Geleceğimizi düşünerek bugünden çalışmalıyız.", "Ağustos böcekleri güzel şarkı söyler.", "Karıncalar kışın yuvalarında kalır.", "Yaz mevsimi çok sıcak geçer."],
+      "answer": 0,
+      "explain": "Masal, çalışan karıncanın kışın aç kalmadığını anlatarak bize geleceği düşünüp çalışmamız gerektiğini öğretir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Yağmurdan sonra çıktım bahçeye, / Gökkuşağı gülümsedi bana. / Kuşlar şarkı söyledi dallarda, / Ne güzelsin ey doğa! Bu şiirin ana duygusu aşağıdakilerden hangisidir?",
+      "options": ["Özlem", "Anne sevgisi", "Doğa sevgisi", "Korku"],
+      "answer": 2,
+      "explain": "Şair gökkuşağını, kuşları anlatıyor ve doğaya hayranlığını söylüyor. Şiirin ana duygusu doğa sevgisidir.",
+      "scene": "s07"
+    },
+    {
+      "question": "Başlığı “Kitaplarla Dolu Bir Yaz” olan bir metnin görselinde, ağacın altında kitap okuyan bir çocuk var. Bu metnin konusu ne olabilir?",
+      "options": ["Yaz tatilinde denize girmek", "Ağaç dikmenin faydaları", "Okulda yapılan sınavlar", "Yaz tatilinde kitap okumak"],
+      "answer": 3,
+      "explain": "Başlıktaki kitap ve yaz kelimeleri ile kitap okuyan çocuk görseli, konunun yaz tatilinde kitap okumak olduğunu gösterir.",
+      "scene": "s08"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi bir ana fikir cümlesidir?",
+      "options": ["Okuma alışkanlığı", "Kitap okumak bilgimizi ve hayal gücümüzü geliştirir.", "Kütüphanedeki kitaplar", "Okulun ilk günü"],
+      "answer": 1,
+      "explain": "Ana fikir genellikle bir mesaj veren tam bir cümledir. Diğer seçenekler kısa söz gruplarıdır; konu olabilirler.",
+      "scene": "s05"
+    }
+  ]
+}

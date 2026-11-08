@@ -1,0 +1,170 @@
+{
+  "id": "mat-carpma",
+  "title": "Çok Basamaklı Çarpma",
+  "course": "Matematik",
+  "unit": "Doğal Sayılarla Çarpma İşlemi",
+  "kazanim": {
+    "code": "M.4.1.4.1, M.4.1.4.2, M.4.1.4.5, M.4.1.4.6",
+    "text": "Üç basamaklı doğal sayılarla iki basamaklı doğal sayıları çarpar. Üç doğal sayı ile yapılan çarpma işleminde sayıların birbirleriyle çarpılma sırasının değişmesinin, sonucu değiştirmediğini gösterir. En çok iki basamaklı bir doğal sayı ile bir basamaklı bir doğal sayının çarpımını tahmin eder ve tahminini işlem sonucu ile karşılaştırır. Doğal sayılarla çarpma işlemini gerektiren problemleri çözer.",
+    "note": "MEB Matematik Dersi Öğretim Programı (2018), 4. sınıf. Üç basamaklı sayılar en çok iki basamaklı sayılarla çarpılır; işlemlerde parantez işareti bulunan örneklere de yer verilir; tahminde en çok iki basamaklı bir sayı bir basamaklı bir sayıyla çarpılır; problemlerde en çok üç işlem gerekir."
+  },
+  "summary": "Üç basamaklı bir sayıyı iki basamaklı bir sayıyla eldeli çarpmayı, onlarla çarparken sıfırı unutmamayı, çarpımı tahmin etmeyi, üç sayıyı farklı sırayla çarpmayı ve çarpma problemlerini öğren.",
+  "match": {"course": "Matematik", "booklet": "Ünite 03", "keywords": ["çarp", "x", "×", "katı", "tahmin", "sınıf", "bilet", "masa", "parke", "sayfadır", "toplam", "tanesi", "bir sırada", "sandalye", "bidon", "öğrenci sayısı", "kuruş", "x ("]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Defter siparişi", "visual": "mat-carpma-intro",
+      "sentences": [
+        "Merhaba! Bir kırtasiye, yeni dönem için defter siparişi verdi.",
+        "Kırtasiyeye yirmi dört koli geldi. Her kolide yüz otuz altı defter var.",
+        "Yüz otuz altıyı yirmi dört kez alt alta toplamak çok uzun sürer.",
+        "Bunun yerine çarpma yaparız: yüz otuz altı çarpı yirmi dört. Haydi birlikte bulalım!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Çarpanları ayıralım", "visual": "mat-carpma-plan",
+      "sentences": [
+        "Çarptığımız sayılara çarpan, sonuca da çarpım denir.",
+        "Yirmi dört, iki onluk ve dört birlikten oluşur. Yani yirmi artı dört eder.",
+        "Bu yüzden önce yüz otuz altıyı dörtle çarparız.",
+        "Sonra yüz otuz altıyı yirmiyle çarparız.",
+        "En sonda bu iki sonucu toplarız. İşte çok basamaklı çarpmanın sırrı budur!"
+      ]
+    },
+    {
+      "id": "s03", "title": "Birlerle çarpma", "visual": "mat-carpma-birler",
+      "sentences": [
+        "Sayıları basamaklarına göre alt alta yazarız. Önce alttaki sayının birler basamağındaki dörtle çarparız.",
+        "Dört çarpı altı, yirmi dört eder. Dördü birler basamağına yazar, ikiyi elde olarak onlara aktarırız.",
+        "Dört çarpı üç, on iki eder. Elde ikiyi ekleyince on dört olur. Dördü yazar, biri yüzlere aktarırız.",
+        "Dört çarpı bir, dört eder. Elde biri ekleyince beş olur.",
+        "İlk sonucumuz beş yüz kırk dört. Bu, yüz otuz altı çarpı dördün sonucudur."
+      ]
+    },
+    {
+      "id": "s04", "title": "Onlarla çarpma", "visual": "mat-carpma-onlar",
+      "sentences": [
+        "Şimdi sıra onlar basamağındaki ikide. Bu iki aslında iki onluk, yani yirmi.",
+        "Onlarla çarptığımız için birler basamağına önce bir sıfır yazarız. Bu sıfırı unutmamak çok önemli!",
+        "İki çarpı altı, on iki eder. İkiyi onlar basamağına yazar, biri elde olarak yüzlere aktarırız.",
+        "İki çarpı üç, altı eder. Elde biri ekleyince yedi olur. İki çarpı bir de iki eder.",
+        "İkinci sonucumuz iki bin yedi yüz yirmi. Bu, yüz otuz altı çarpı yirminin sonucudur."
+      ]
+    },
+    {
+      "id": "s05", "title": "Sonuçları toplama", "visual": "mat-carpma-toplama",
+      "sentences": [
+        "Son adımda iki sonucu alt alta toplarız.",
+        "Birlerde dört artı sıfır, dört eder. Onlarda dört artı iki, altı eder.",
+        "Yüzlerde beş artı yedi, on iki eder. İkiyi yazar, biri binlere aktarırız.",
+        "Binlerde iki artı elde bir, üç eder.",
+        "Yüz otuz altı çarpı yirmi dört, üç bin iki yüz altmış dört eder. Kırtasiyeye üç bin iki yüz altmış dört defter gelmiş!"
+      ]
+    },
+    {
+      "id": "s06", "title": "Dikkat!", "visual": "mat-carpma-dikkat",
+      "sentences": [
+        "Dikkat! Çok basamaklı çarpmada iki hata sık yapılır.",
+        "Birinci hata, onlarla çarparken sıfırı unutmak ve ikinci sonucu bir basamak sola kaydırmamaktır.",
+        "O zaman beş yüz kırk dört ile iki yüz yetmiş iki toplanır ve sekiz yüz on altı gibi yanlış bir sonuç çıkar.",
+        "İkinci hata, eldeyi eklemeyi unutmaktır. Her çarpmadan sonra eldeyi mutlaka ekleriz.",
+        "Sonucu kontrol etmek için şöyle düşün: yüz çarpı yirmi dört bile iki bin dört yüz eder. Sonuç bundan büyük olmalı!"
+      ]
+    },
+    {
+      "id": "s07", "title": "Çarpımı tahmin etme", "visual": "mat-carpma-tahmin",
+      "sentences": [
+        "Bazen çarpımın yaklaşık değerini bilmek yeterlidir. Buna tahmin denir.",
+        "Otuz sekiz çarpı yedi işleminin sonucunu tahmin edelim.",
+        "Otuz sekizi en yakın onluğa yuvarlarız ve kırk buluruz.",
+        "Kırk çarpı yedi, iki yüz seksen eder. Bu bizim tahminimiz.",
+        "Gerçek sonuç iki yüz altmış altı. Tahminimiz gerçek sonuçtan on dört fazla, yani oldukça yakın!"
+      ]
+    },
+    {
+      "id": "s08", "title": "Üç sayıyla çarpma", "visual": "mat-carpma-uc-sayi",
+      "sentences": [
+        "Üç sayıyı çarparken sayıları istediğimiz sırayla çarpabiliriz. Sonuç değişmez.",
+        "Yirmi beş çarpı yedi çarpı dört işlemine bakalım.",
+        "Önce yirmi beşi yediyle çarparsak yüz yetmiş beş buluruz. Yüz yetmiş beş çarpı dört, yedi yüz eder.",
+        "Önce yirmi beşi dörtle çarparsak yüz buluruz. Yüz çarpı yedi de yedi yüz eder. Bu yol çok daha kolay!",
+        "Parantez içindeki işlem her zaman önce yapılır. Parantezin yeri ya da sayıların sırası değişse de çarpım aynı kalır."
+      ]
+    },
+    {
+      "id": "s09", "title": "Problem çözelim", "visual": "mat-carpma-problem",
+      "sentences": [
+        "Şimdi bir problem çözelim. Bir sinema salonunda on sekiz sıra var. Her sırada yirmi dört koltuk bulunuyor.",
+        "Bir filmi üç yüz doksan beş kişi izledi. Kaç koltuk boş kaldı?",
+        "Önce plan yaparız: salondaki bütün koltukları bulup izleyici sayısını çıkaracağız.",
+        "On sekiz çarpı yirmi dört, dört yüz otuz iki eder. Salonda dört yüz otuz iki koltuk var.",
+        "Dört yüz otuz iki eksi üç yüz doksan beş, otuz yedi eder. Otuz yedi koltuk boş kalmış.",
+        "Kontrol edelim: üç yüz doksan beş artı otuz yedi, dört yüz otuz iki eder. Cevabımız doğru!"
+      ]
+    },
+    {
+      "id": "s10", "title": "İpucu sözcükler", "visual": "mat-carpma-ipucu",
+      "sentences": [
+        "Bazı sözcükler bize çarpma yapmamız gerektiğini söyler.",
+        "Her birinde, tanesi ve her gün gibi sözcükler çoğu zaman çarpmayı gösterir.",
+        "Bir sayının katı demek, o sayıyla çarpmak demektir. Kırk sekizin üç katı, yüz kırk dört eder.",
+        "Örneğin tanesi otuz dört lira olan kalemlerden on iki tane alan biri kaç lira öder?",
+        "Otuz dört çarpı on iki, dört yüz sekiz eder. Dört yüz sekiz lira öder."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "mat-carpma-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Önce birler basamağıyla çarparız ve eldeyi her zaman ekleriz.",
+        "Onlarla çarparken birler basamağına sıfır yazar, sonra iki sonucu toplarız.",
+        "Tahmin için sayıyı en yakın onluğa yuvarlar, sonra çarparız.",
+        "Üç sayıyı çarparken sıra değişse de çarpım değişmez.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "247 × 36 işleminin sonucu kaçtır?",
+      "options": ["2223", "8892", "8792", "9892"],
+      "answer": 1,
+      "explain": "247 × 6 = 1482 ve 247 × 30 = 7410 bulunur. 1482 + 7410 = 8892.",
+      "scene": "s04"
+    },
+    {
+      "question": "315 × 23 işlemi alt alta yapılırken ikinci satıra, yani 315 × 20 işleminin sonucu olarak hangi sayı yazılır?",
+      "options": ["630", "945", "6300", "7245"],
+      "answer": 2,
+      "explain": "Onlarla çarparken birler basamağına önce 0 yazılır: 315 × 20 = 6300.",
+      "scene": "s04"
+    },
+    {
+      "question": "57 × 6 işleminin sonucunu, 57'yi en yakın onluğa yuvarlayarak tahmin eden Ali hangi sonucu bulur?",
+      "options": ["300", "342", "350", "360"],
+      "answer": 3,
+      "explain": "57 sayısı 60'a yuvarlanır. 60 × 6 = 360. Gerçek sonuç ise 342'dir.",
+      "scene": "s07"
+    },
+    {
+      "question": "(25 × 9) × 4 işleminin sonucu kaçtır?",
+      "options": ["900", "225", "1000", "800"],
+      "answer": 0,
+      "explain": "Sıra değişse de çarpım değişmez. Önce 25 × 4 = 100 bulunur, sonra 100 × 9 = 900.",
+      "scene": "s08"
+    },
+    {
+      "question": "Bir okulda 16 sınıf var ve her sınıfta 28 öğrenci bulunuyor. Öğrencilerden 125'i geziye gittiyse okulda kaç öğrenci kalmıştır?",
+      "options": ["333", "448", "323", "573"],
+      "answer": 2,
+      "explain": "Önce 16 × 28 = 448 öğrenci bulunur. Sonra 448 − 125 = 323 öğrenci kalır.",
+      "scene": "s09"
+    },
+    {
+      "question": "Tanesi 45 lira olan kitaplardan 13 tane alan Selin kaç lira öder?",
+      "options": ["485", "595", "575", "585"],
+      "answer": 3,
+      "explain": "\"Tanesi\" sözcüğü çarpmayı gösterir: 45 × 13 = 585 lira.",
+      "scene": "s10"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "id": "ing-fun-with-science",
+  "title": "Bilimle Eğlence: Yönergeler ve Yerler",
+  "course": "İngilizce",
+  "unit": "Fun with Science",
+  "kazanim": {
+    "code": "E4.6.L1, E4.6.L2, E4.6.S1, E4.6.S2, E4.6.S3",
+    "text": "Students will be able to understand and follow simple instructions. Students will be able to recognize phrases/descriptions about locations. Students will be able to give short and basic instructions. Students will be able to talk about locations of objects. Students will be able to ask and answer simple clarification questions.",
+    "note": "MEB İngilizce Dersi Öğretim Programı (2018), 4. sınıf, 6. ünite: Fun with Science. İşlevler: basit yönergeler verme ve yönergelere uyma (Plant it. Water it. Cut the paper. Don’t cut it now! Fold it. Mix black and white, and you get gray.); basit sorular sorma (What is “science” in Turkish? What is in the cup?); yer bildirme (Where is the brush? — It’s in front of the bottle. / Behind the box. / Near that glass.). Kelimeler: box, brush, cover, cup, cut, experiment, fold, freeze, melt, mix, plant, science, scientist, shake, water. Fasikül sorularında sık geçtiği için in, on, under yer kelimeleri de verildi."
+  },
+  "summary": "Deney yaparken verilen yönergeleri, renk karıştırmayı, bir kelimenin anlamını sormayı ve eşyaların yerini in, on, under, behind, in front of, near ile anlatmayı öğren.",
+  "match": {"course": "İngilizce", "booklet": "Ünite 06", "keywords": ["where", "under", "behind", "in front of", "near", " on the", " in the", "box", "table", "experiment", "science", "scientist", "fold", "cut", "mix", "shake", "pour", "water", "plant", "don’t", "don't", "paint", "colour", "color", "orange", "green", "purple", "pink", "gray", "grey", "brush", "bottle", "cup", "glass", "scissors", "paper", "in turkish", "in english"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Küçük bilim insanı", "visual": "ing-fun-with-science-intro",
+      "sentences": [
+        "Merhaba! Bugün küçük bir bilim insanı olacağız ve sınıfta deney yapacağız.",
+        "Deney yaparken yönergeleri dikkatle dinleriz: kes, katla, karıştır.",
+        "Malzemeleri de bulmamız gerekir. Fırça nerede? Şişe nerede?",
+        "Haydi, deney yaparken kullanılan yönergeleri ve eşyaların yerini İngilizce anlatmayı öğrenelim!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Bilim kelimeleri", "visual": "ing-fun-with-science-words",
+      "sentences": [
+        "Önce bilimle ilgili kelimeleri öğrenelim. Dinle ve sen de tekrar et.",
+        "Science, scientist, experiment.",
+        "Box, cup, bottle, brush.",
+        "Paper, scissors, paints.",
+        "Bilim kelimesinin sonuna bir ek gelince bilim insanı olur. Bu ek, o işi yapan kişiyi anlatır."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s03", "title": "Yönergeler", "visual": "ing-fun-with-science-instructions",
+      "sentences": [
+        "Deneyde öğretmenimiz bize ne yapacağımızı söyler. Dinle ve tekrar et.",
+        "Cut the paper.",
+        "Fold the paper.",
+        "Mix the paints.",
+        "Shake the bottle.",
+        "Bu cümleler eylemle başlar. Birine bir şey yapmasını söylerken eylemi cümlenin en başına koyarız: kes, katla, karıştır, salla."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s04", "title": "Tohum ekelim", "visual": "ing-fun-with-science-plant",
+      "sentences": [
+        "Şimdi bir saksıya tohum ekelim. Önce tohumu toprağa ekeriz, sonra onu sularız.",
+        "Plant the seed.",
+        "Water it.",
+        "Birine bir şeyi yapmamasını söylerken eylemin önüne olumsuzluk kelimesini koyarız. Şimdi sen de tekrar et.",
+        "Don't cut it now!"
+      ],
+      "english": [1, 2, 4]
+    },
+    {
+      "id": "s05", "title": "Renkleri karıştır", "visual": "ing-fun-with-science-colours",
+      "sentences": [
+        "Boyaları karıştırınca yeni renkler elde ederiz. Resim dersinde bunu sen de deneyebilirsin. Dinle ve tekrar et.",
+        "Mix red and yellow, and you get orange.",
+        "Mix blue and yellow, and you get green.",
+        "Mix red and blue, and you get purple.",
+        "Mix black and white, and you get gray."
+      ],
+      "english": [1, 2, 3, 4]
+    },
+    {
+      "id": "s06", "title": "Bu ne demek?", "visual": "ing-fun-with-science-what-is",
+      "sentences": [
+        "Bir kelimenin anlamını bilmiyorsan sorabilirsin. Mert, Lily'ye soruyor:",
+        "What is “experiment” in Turkish?",
+        "Lily Türkçe cevap veriyor: Deney.",
+        "Şimdi Lily, fincanın içinde ne olduğunu merak ediyor:",
+        "What is in the cup?",
+        "It is water."
+      ],
+      "english": [1, 4, 5]
+    },
+    {
+      "id": "s07", "title": "İçinde, üstünde, altında", "visual": "ing-fun-with-science-in-on-under",
+      "sentences": [
+        "Bir şeyin nerede olduğunu anlatmak için yer bildiren küçük kelimeler kullanırız. Topumuza bakalım. Dinle ve tekrar et.",
+        "The ball is in the box.",
+        "The ball is on the box.",
+        "The ball is under the table."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s08", "title": "Arkasında, önünde, yanında", "visual": "ing-fun-with-science-behind",
+      "sentences": [
+        "Şimdi üç yer kelimesi daha öğrenelim. Topa ve kutuya dikkatle bak. Dinle ve tekrar et.",
+        "The ball is behind the box.",
+        "The ball is in front of the box.",
+        "The ball is near the box."
+      ],
+      "english": [1, 2, 3]
+    },
+    {
+      "id": "s09", "title": "Fırça nerede?", "visual": "ing-fun-with-science-where",
+      "sentences": [
+        "Lily deney için fırçasını arıyor ama bir türlü bulamıyor. Mert'e soruyor:",
+        "Where is the brush?",
+        "It is in front of the bottle.",
+        "Şimdi sen de tekrar et. Önce soruyu sor, sonra cevap ver.",
+        "Where is the cup?",
+        "It is on the table."
+      ],
+      "english": [1, 2, 4, 5]
+    },
+    {
+      "id": "s10", "title": "Dikkat!", "visual": "ing-fun-with-science-careful",
+      "sentences": [
+        "Dikkat! İki sık hatayı birlikte düzeltelim. Birincisi: Kedi kutunun üstünde oturuyorsa, içinde demeyiz.",
+        "The cat is on the box.",
+        "İkincisi: Bir şey kutunun arkasındaysa onun sadece bir kısmını görürüz. Önündeyse kutunun bir kısmını kapatır.",
+        "The cat is behind the box."
+      ],
+      "english": [1, 3]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "ing-fun-with-science-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Deneyde verilen yönergeleri öğrendik: kes, katla, karıştır, salla, ek ve sula.",
+        "Bir şeyi yapmamasını söylerken eylemin önüne olumsuzluk kelimesini koyduk.",
+        "Renkleri karıştırınca hangi rengi elde ettiğimizi söyledik.",
+        "Nerede sorusunu sorup altı yer kelimesiyle cevap verdik.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kedi masanın altında. Hangisi doğrudur?",
+      "options": ["The cat is on the table.", "The cat is under the table.", "The cat is in the table.", "The cat is behind the table."],
+      "answer": 1,
+      "explain": "under “altında” demektir: The cat is under the table.",
+      "scene": "s07"
+    },
+    {
+      "question": "Sue: - - - - ? — Ali: It's in front of the car. Boşluğa hangisi gelir?",
+      "options": ["What is the cat", "How is the cat", "When is the cat", "Where is the cat"],
+      "answer": 3,
+      "explain": "Cevap bir yer söylüyor. Yeri sormak için Where is...? deriz.",
+      "scene": "s09"
+    },
+    {
+      "question": "Mix yellow and blue, and you get - - - - . Boşluğa hangisi gelir?",
+      "options": ["red", "orange", "green", "brown"],
+      "answer": 2,
+      "explain": "Sarı ile maviyi karıştırınca yeşil (green) elde ederiz.",
+      "scene": "s05"
+    },
+    {
+      "question": "Hangisi “Kâğıdı katla.” demektir?",
+      "options": ["Fold the paper.", "Cut the paper.", "Mix the paper.", "Water the paper."],
+      "answer": 0,
+      "explain": "fold “katlamak” demektir: Fold the paper.",
+      "scene": "s03"
+    },
+    {
+      "question": "What is “experiment” in Turkish?",
+      "options": ["bilim", "bilim insanı", "şişe", "deney"],
+      "answer": 3,
+      "explain": "experiment “deney” demektir. Bilim science, bilim insanı scientist olur.",
+      "scene": "s06"
+    },
+    {
+      "question": "Öğretmen, kâğıdı şimdi kesmemenizi istiyor. Ne der?",
+      "options": ["Cut it now!", "Fold it now!", "Don't cut it now!", "Shake it now!"],
+      "answer": 2,
+      "explain": "Yapma demek için eylemin önüne Don't koyarız: Don't cut it now!",
+      "scene": "s04"
+    }
+  ]
+}

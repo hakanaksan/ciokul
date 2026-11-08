@@ -1,0 +1,158 @@
+{
+  "id": "din-kuranin-ic-duzeni",
+  "title": "Kur'an-ı Kerim'in İç Düzeni",
+  "course": "Din Kültürü ve Ahlak Bilgisi",
+  "unit": "İslam'ı Tanıyalım",
+  "kazanim": {
+    "code": "4.2.3",
+    "text": "Kur'an-ı Kerim'in iç düzeni ile ilgili kavramları tanımlar.",
+    "note": "MEB Din Kültürü ve Ahlak Bilgisi Dersi Öğretim Programı (2018, 4-8. sınıflar), 4. sınıf 2. ünite \"İslam'ı Tanıyalım\", konu \"Kur'an-ı Kerim\"; 2026-2027 DKAB 4 çerçeve yıllık planı 14-15. haftalar. Kazanım \"Kur'an-ı Kerim, ayet, sure, cüz\" kavramları ile sınırlandırılır. Fasikülde sorulan ayet durağı, ilk/son/en uzun/en kısa sure ve hatim ayrımı da kısaca verilir."
+  },
+  "summary": "Kur'an-ı Kerim'in nasıl indirildiğini, ayet, ayet durağı, sure ve cüz kavramlarını, ilk, son, en uzun ve en kısa sureleri öğren; sure ile cüzü ve hatimi karıştırmamayı gör.",
+  "match": {"course": "Din Kültürü ve Ahlak Bilgisi", "booklet": "Ünite 02", "keywords": ["kur’an", "kur'an", "ayet", "sure", "cüz", "durak", "hatim", "besmele", "iç düzen", "kadir gece", "kevser", "nas suresi", "bakara", "114", "yirmi sayfa", "20 sayfa", "parça parça", "tek seferde", "610"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Bir kitabın düzeni", "visual": "din-kuranin-ic-duzeni-intro",
+      "sentences": [
+        "Merhaba! Elindeki bir hikâye kitabını düşün.",
+        "Kitabın cümleleri, bölümleri ve sayfaları vardır. Bu düzen okumayı kolaylaştırır.",
+        "Kur'an-ı Kerim'in de kendine özgü bir iç düzeni vardır.",
+        "Bugün bu düzenin kavramlarını öğreneceğiz: ayet, sure ve cüz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Kur'an-ı Kerim", "visual": "din-kuranin-ic-duzeni-kuran",
+      "sentences": [
+        "Kur'an-ı Kerim, Allah'ın Peygamberimiz Hazreti Muhammed'e gönderdiği son ilahi kitaptır.",
+        "Kur'an-ı Kerim, altı yüz on yılında, ramazan ayındaki Kadir Gecesi'nde indirilmeye başlandı.",
+        "Tek seferde değil, yaklaşık yirmi üç yılda parça parça indirildi.",
+        "Arapça olarak indirilen Kur'an-ı Kerim, bütün insanlara doğru yolu gösterir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Ayet ve ayet durağı", "visual": "din-kuranin-ic-duzeni-ayet",
+      "sentences": [
+        "Kur'an-ı Kerim'in her bir cümlesine ayet denir.",
+        "Ayet kelimesi, işaret ve delil anlamına gelir.",
+        "Ayetlerin sonunda küçük, yuvarlak bir işaret vardır. Buna ayet durağı denir.",
+        "Ayet durağının içinde, o ayetin numarası yazılıdır.",
+        "Kur'an-ı Kerim'de altı binden fazla ayet vardır."
+      ]
+    },
+    {
+      "id": "s04", "title": "Sure", "visual": "din-kuranin-ic-duzeni-sure",
+      "sentences": [
+        "Ayetlerden oluşan her bir bölüme sure denir.",
+        "Kur'an-ı Kerim'de yüz on dört sure vardır.",
+        "Sureler besmele ile birbirinden ayrılır. Yalnızca Tevbe suresinin başında besmele yoktur.",
+        "Surelerin uzunlukları farklıdır. Her surenin kendine özel bir adı vardır.",
+        "Sureler adını içindeki bir konudan, olaydan ya da canlıdan alır. Bakara inek, Nahl bal arısı demektir."
+      ]
+    },
+    {
+      "id": "s05", "title": "İlk, son, en uzun, en kısa", "visual": "din-kuranin-ic-duzeni-onemli",
+      "sentences": [
+        "Şimdi bazı önemli sureleri tanıyalım.",
+        "Kur'an-ı Kerim'in ilk suresi Fatiha suresidir.",
+        "Son suresi ise Nas suresidir.",
+        "En uzun sure, iki yüz seksen altı ayetten oluşan Bakara suresidir.",
+        "En kısa sure, üç ayetten oluşan Kevser suresidir."
+      ]
+    },
+    {
+      "id": "s06", "title": "Cüz", "visual": "din-kuranin-ic-duzeni-cuz",
+      "sentences": [
+        "Kur'an-ı Kerim'in yirmi sayfadan oluşan her bir bölümüne cüz denir.",
+        "Kur'an-ı Kerim'de toplam otuz cüz vardır.",
+        "Cüzler ayet sayısına göre değil, sayfa sayısına göre ayrılmıştır.",
+        "Bu düzen okumayı kolaylaştırır. Her gün bir cüz okuyan kişi, otuz günde Kur'an-ı Kerim'i bitirir.",
+        "Fatiha suresi birinci cüzde, Nas suresi ise otuzuncu cüzde yer alır."
+      ]
+    },
+    {
+      "id": "s07", "title": "Bir sayfayı inceleyelim", "visual": "din-kuranin-ic-duzeni-sayfa",
+      "sentences": [
+        "Şimdi Kur'an-ı Kerim'in bir sayfasına birlikte bakalım.",
+        "Pek çok Kur'an-ı Kerim'de sayfanın üstünde, o sayfanın hangi cüzde olduğu yazar.",
+        "Yeni bir sure başlarken önce surenin adı, sonra besmele gelir.",
+        "Her ayet, numaralı bir ayet durağıyla biter.",
+        "Bu örnekte otuzuncu cüzdeki Kevser suresi var. Üç ayet durağını sayabilirsin."
+      ]
+    },
+    {
+      "id": "s08", "title": "Bilgi kartları", "visual": "din-kuranin-ic-duzeni-kartlar",
+      "sentences": [
+        "Hasan, iç düzen kavramları için bilgi kartları hazırladı. Haydi birlikte çözelim.",
+        "Birinci kart: Kur'an-ı Kerim'in her bir cümlesi. Bu kartın cevabı ayettir.",
+        "İkinci kart: Kur'an-ı Kerim'in yüz on dört bölümünden her biri. Bu kartın cevabı suredir.",
+        "Üçüncü kart: Kur'an-ı Kerim'in yirmi sayfadan oluşan her bir bölümü. Bu kartın cevabı cüzdür.",
+        "Kartların doğru sırası şöyle oldu: ayet, sure, cüz. Aferin Hasan!"
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat: Karıştırmayalım", "visual": "din-kuranin-ic-duzeni-dikkat",
+      "sentences": [
+        "Dikkat! Bu kavramları karıştırmayalım.",
+        "Kur'an-ı Kerim'de yüz on dört ayet değil, yüz on dört sure vardır.",
+        "Cüz sayısı yirmi değil, otuzdur. Yirmi, bir cüzdeki sayfa sayısıdır.",
+        "Hatim, Kur'an-ı Kerim'i baştan sona okumaktır. Hatim, iç düzen kavramlarından biri değildir.",
+        "Sure ile cüz de aynı şey değildir. Bakara suresi üç cüze yayılır, son cüzde ise birçok kısa sure vardır."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "din-kuranin-ic-duzeni-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Ayet, Kur'an-ı Kerim'in her bir cümlesidir ve ayet durağıyla biter.",
+        "Sure, ayetlerden oluşan bölümdür. Sureler besmeleyle ayrılır ve yüz on dört tanedir.",
+        "Cüz, yirmi sayfalık bölümdür. Kur'an-ı Kerim'de otuz cüz vardır.",
+        "İlk sure Fatiha, son sure Nas, en uzun sure Bakara, en kısa sure Kevser'dir.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kur'an-ı Kerim'in her bir cümlesine ne ad verilir?",
+      "options": ["Sure", "Cüz", "Ayet", "Hatim"],
+      "answer": 2,
+      "explain": "Kur'an-ı Kerim'in her bir cümlesine ayet denir. Ayet, işaret ve delil anlamına gelir.",
+      "scene": "s03"
+    },
+    {
+      "question": "Ayetlerin sonunda yer alan ve içinde ayet numarasının bulunduğu küçük yuvarlak işarete ne ad verilir?",
+      "options": ["Ayet durağı", "Cüz", "Besmele", "Sure"],
+      "answer": 0,
+      "explain": "Bu işarete ayet durağı denir. Ayetleri birbirinden ayırır ve içinde ayetin numarası yazar.",
+      "scene": "s03"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi Kur'an-ı Kerim'in iç düzeniyle ilgili kavramlardan biri değildir?",
+      "options": ["Ayet", "Sure", "Cüz", "Hatim"],
+      "answer": 3,
+      "explain": "Ayet, sure ve cüz iç düzen kavramlarıdır. Hatim ise Kur'an-ı Kerim'i baştan sona okumaktır.",
+      "scene": "s09"
+    },
+    {
+      "question": "Kur'an-ı Kerim'in en kısa suresi hangisidir?",
+      "options": ["Bakara suresi", "Kevser suresi", "Fatiha suresi", "Nas suresi"],
+      "answer": 1,
+      "explain": "En kısa sure, üç ayetten oluşan Kevser suresidir. En uzun sure ise Bakara suresidir.",
+      "scene": "s05"
+    },
+    {
+      "question": "● Yirmi sayfadan oluşur. ● Kur'an-ı Kerim'de toplam otuz tane vardır. ● Okumayı ve takip etmeyi kolaylaştırır. Bu özellikler hangi kavrama aittir?",
+      "options": ["Cüz", "Sure", "Ayet", "Ayet durağı"],
+      "answer": 0,
+      "explain": "Kur'an-ı Kerim'in yirmi sayfalık her bir bölümüne cüz denir; toplam otuz cüz vardır.",
+      "scene": "s06"
+    },
+    {
+      "question": "I. Fatiha suresiyle başlar, Nas suresiyle biter. II. Son ilahi kitaptır. III. Tek seferde indirilmiştir. Kur'an-ı Kerim ile ilgili bu bilgilerden hangileri doğrudur?",
+      "options": ["Yalnız I", "I ve II", "II ve III", "I, II ve III"],
+      "answer": 1,
+      "explain": "Kur'an-ı Kerim son ilahi kitaptır, Fatiha ile başlar ve Nas ile biter. Tek seferde değil, yaklaşık yirmi üç yılda parça parça indirilmiştir.",
+      "scene": "s02"
+    }
+  ]
+}

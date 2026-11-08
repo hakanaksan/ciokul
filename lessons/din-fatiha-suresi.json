@@ -1,0 +1,158 @@
+{
+  "id": "din-fatiha-suresi",
+  "title": "Bir Sure Tanıyorum: Fatiha Suresi",
+  "course": "Din Kültürü ve Ahlak Bilgisi",
+  "unit": "Güzel Ahlak",
+  "kazanim": {
+    "code": "4.3.3",
+    "text": "Fâtiha suresini okur, anlamını söyler.",
+    "note": "MEB Din Kültürü ve Ahlak Bilgisi Dersi Öğretim Programı (2018, 4-8. sınıflar), 4. sınıf 3. ünite \"Güzel Ahlak\", konu \"Bir Sure Tanıyorum: Fâtiha Suresi ve Anlamı\"; 2026-2027 DKAB 4 çerçeve yıllık planı 23. hafta. Fâtiha suresi ile ilgili kısa açıklamalara yer verilir; surede tavsiye edilen davranışlar belirlenir ve surenin nerelerde okunduğuna değinilir. Okunuş ve anlam, fasikülde verilen okunuş ve meal ile aynıdır; okunuş ekranda gösterilir, anlatımda yalnızca başlangıcı ve anahtar kelimeleri okunur. Sureyi doğru telaffuzla bir büyükle birlikte okumak önerilir."
+  },
+  "summary": "Fatiha suresinin adının anlamını, kaç ayet olduğunu, okunuşunu ve ayet ayet anlamını öğren; surenin öğütlediği davranışları ve nerelerde okunduğunu gör.",
+  "match": {"course": "Din Kültürü ve Ahlak Bilgisi", "booklet": "Ünite 03", "keywords": ["fatiha", "fâtiha", "rekât", "âlemîn", "yevmiddîn", "müstakîm", "nestaîn", "rahman", "doğru yola ilet", "hesap gününün", "yalnızca sana", "kulluk", "açıklığa", "okunuş", "cüzünde"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Kur'an'ın açılışı", "visual": "din-fatiha-suresi-intro",
+      "sentences": [
+        "Merhaba! Bir kitabı açınca önce ilk sayfasını okuruz.",
+        "Kur'an-ı Kerim de bir sureyle açılır: Fatiha suresi.",
+        "Müslümanlar bu sureyi her gün, namazlarının her rekâtında okur.",
+        "Bugün Fatiha suresinin okunuşunu, anlamını ve bize neler öğütlediğini öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "Fatiha suresini tanıyalım", "visual": "din-fatiha-suresi-tanitim",
+      "sentences": [
+        "Fatiha, açan ve başlangıç demektir.",
+        "Fatiha, Kur'an-ı Kerim'in ilk suresidir. Bu yüzden birinci cüzde yer alır.",
+        "Fatiha suresi Mekke'de indirilmiştir.",
+        "Yedi ayetten oluşur.",
+        "İçinde Allah'a övgü, şükür ve dua ifadeleri vardır."
+      ]
+    },
+    {
+      "id": "s03", "title": "Okunuşu", "visual": "din-fatiha-suresi-okunus",
+      "sentences": [
+        "Fatiha suresinin okunuşu ekranda yedi satır hâlinde görünüyor.",
+        "Sure, Bismillahirrahmanirrahim ile başlar.",
+        "İkinci ayet, Elhamdü lillahi rabbil alemin diye okunur.",
+        "Diğer ayetleri de satır satır takip edebilirsin.",
+        "Sureyi bir büyüğünle birlikte, doğru telaffuzla okumaya çalış. Şimdi anlamını öğrenelim."
+      ]
+    },
+    {
+      "id": "s04", "title": "Anlamı: 1, 2 ve 3. ayetler", "visual": "din-fatiha-suresi-anlam1",
+      "sentences": [
+        "Birinci ayetin anlamı: Rahman ve Rahim olan Allah'ın adıyla.",
+        "Rahman ve Rahim, Allah'ın çok merhametli ve çok esirgeyici olduğunu anlatır.",
+        "İkinci ayetin anlamı: Hamd, yani övme ve övülme, âlemlerin Rabb'i olan Allah'adır.",
+        "Âlemler, Allah'ın yarattığı bütün varlıklar demektir.",
+        "Üçüncü ayetin anlamı: O, Rahman ve Rahim'dir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Anlamı: 4 ve 5. ayetler", "visual": "din-fatiha-suresi-anlam2",
+      "sentences": [
+        "Dördüncü ayetin anlamı: Hesap gününün sahibidir.",
+        "Hesap günü, herkesin dünyada yaptıklarının karşılığını alacağı gündür.",
+        "Beşinci ayetin anlamı: Rabb'imiz! Yalnızca sana kulluk eder ve yalnızca senden yardım dileriz.",
+        "Bu ayet, ibadetin yalnızca Allah için yapılacağını hatırlatır."
+      ]
+    },
+    {
+      "id": "s06", "title": "Anlamı: 6 ve 7. ayetler", "visual": "din-fatiha-suresi-anlam3",
+      "sentences": [
+        "Altıncı ayetin anlamı: Bizleri doğru yola ilet.",
+        "Yedinci ayetin anlamı: Kendilerine nimet verdiklerinin yoluna; gazaba uğramışların ve sapmışların yoluna değil.",
+        "Bu ayetlerle, doğru yolda olabilmek için Allah'a dua ederiz.",
+        "Doğru yol; iyiliğin, dürüstlüğün ve güzel ahlakın yoludur.",
+        "Biz de doğru yolda yürüyen iyi insanları kendimize örnek alırız."
+      ]
+    },
+    {
+      "id": "s07", "title": "Fatiha bize ne öğütler?", "visual": "din-fatiha-suresi-mesajlar",
+      "sentences": [
+        "Fatiha suresi bize hangi güzel davranışları öğütler? Bakalım.",
+        "Allah'a hamd etmeyi ve verdiği nimetler için şükretmeyi öğütler.",
+        "Yalnızca Allah'a ibadet etmeyi ve gerçek yardımı O'ndan istemeyi öğütler.",
+        "Yaptıklarımızdan sorumlu olduğumuzu bilerek davranmayı hatırlatır.",
+        "Doğru yolda olmak için dua etmeyi ve iyi insanları örnek almayı öğütler."
+      ]
+    },
+    {
+      "id": "s08", "title": "Nerelerde okunur?", "visual": "din-fatiha-suresi-nerede",
+      "sentences": [
+        "Peki Fatiha suresini nerelerde okuruz?",
+        "Fatiha suresi, namazların her rekâtında okunur.",
+        "Dualarımızın sonunda da Fatiha suresi okunur.",
+        "Vefat etmiş yakınlarımızı anarken de Fatiha suresini okuruz.",
+        "Fatiha suresini okurken anlamını da düşünürsek, okuduğumuzu daha iyi anlarız."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat: Doğrusu ne?", "visual": "din-fatiha-suresi-dikkat",
+      "sentences": [
+        "Dikkat! Fatiha suresiyle ilgili sık yapılan yanlışlara bakalım.",
+        "Fatiha suresi on değil, yedi ayettir. Sadece ilk rekâtta değil, her rekâtta okunur.",
+        "Son cüzde değil, birinci cüzde yer alır. Adı kapatmak değil, açmak anlamındadır.",
+        "Okunuştaki üç anahtar kelimeyi karıştırma: alemin, yevmiddin ve müstakim.",
+        "Alemin âlemler, yevmiddin hesap günü, müstakim ise doğru demektir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "din-fatiha-suresi-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Fatiha, açan demektir. Kur'an-ı Kerim'in ilk suresidir ve birinci cüzdedir.",
+        "Fatiha suresi Mekke'de indirilmiştir ve yedi ayettir.",
+        "Allah'a hamd etmeyi, yalnızca O'na ibadet etmeyi ve doğru yol için dua etmeyi öğütler.",
+        "Namazların her rekâtında, duaların sonunda ve vefat edenleri anarken okunur.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "● Adı \"açan, başlangıç\" anlamına gelir. ● Kur'an-ı Kerim'in ilk suresidir. ● Namazların her rekâtında okunur. Bu bilgiler hangisine aittir?",
+      "options": ["Kevser suresi", "Fatiha suresi", "Sübhaneke duası", "Âmentü duası"],
+      "answer": 1,
+      "explain": "Bu bilgiler Fatiha suresine aittir. Kur'an-ı Kerim, Fatiha suresiyle açılır.",
+      "scene": "s02"
+    },
+    {
+      "question": "Fatiha suresi kaç ayetten oluşur?",
+      "options": ["Üç", "Beş", "On", "Yedi"],
+      "answer": 3,
+      "explain": "Fatiha suresi yedi ayettir ve Mekke'de indirilmiştir.",
+      "scene": "s02"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi Fatiha suresinin anlamında yer almaz?",
+      "options": ["Bizleri doğru yola ilet.", "O, Rahman ve Rahim'dir.", "Hayrın ve şerrin Allah'tan olduğuna inandım.", "Hamd, âlemlerin Rabb'i olan Allah'adır."],
+      "answer": 2,
+      "explain": "\"Hayrın ve şerrin Allah'tan olduğuna inandım\" ifadesi Âmentü duasının anlamındadır, Fatiha suresinde yer almaz.",
+      "scene": "s04"
+    },
+    {
+      "question": "\"İyyâke na’büdü ve iyyâke nestaîn\" ayetinin anlamı hangisidir?",
+      "options": ["Rabb'imiz! Yalnızca sana kulluk eder ve yalnızca senden yardım dileriz.", "Hesap gününün sahibidir.", "Bizleri doğru yola ilet.", "Rahman ve Rahim olan Allah'ın adıyla."],
+      "answer": 0,
+      "explain": "Beşinci ayet, ibadetin yalnızca Allah için yapılacağını ve gerçek yardımın O'ndan isteneceğini bildirir.",
+      "scene": "s05"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi Fatiha suresinden çıkarılabilecek mesajlardan biri değildir?",
+      "options": ["İbadeti yalnızca Allah için yapmak", "Allah'a hamd ve şükretmek", "Doğru yolda olmak için dua etmek", "Her işe Fatiha suresiyle başlamak"],
+      "answer": 3,
+      "explain": "Surede hamd, yalnızca Allah'a ibadet ve doğru yol için dua öğütlenir. Her işe Fatiha suresiyle başlamak surede geçmez.",
+      "scene": "s07"
+    },
+    {
+      "question": "\"Elhamdü lillâhi rabbi’l- ----, mâliki ----, ihdinas-sırâtal ----\" Boşluklara sırasıyla hangileri gelmelidir?",
+      "options": ["yevmiddîn - âlemîn - müstakîm", "müstakîm - yevmiddîn - âlemîn", "âlemîn - yevmiddîn - müstakîm", "âlemîn - müstakîm - yevmiddîn"],
+      "answer": 2,
+      "explain": "Rabbi'l-âlemîn âlemlerin Rabb'i, mâliki yevmiddîn hesap gününün sahibi, sırâtal müstakîm ise doğru yol demektir.",
+      "scene": "s09"
+    }
+  ]
+}

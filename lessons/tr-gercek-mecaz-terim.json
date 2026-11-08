@@ -1,0 +1,158 @@
+{
+  "id": "tr-gercek-mecaz-terim",
+  "title": "Gerçek, Mecaz ve Terim Anlam",
+  "course": "Türkçe",
+  "unit": "Söz Varlığı",
+  "kazanim": {
+    "code": "T.4.3.10, T.4.4.19",
+    "text": "Okuduğu metindeki gerçek, mecaz ve terim anlamlı sözcükleri belirler. Yazılarında kelimeleri gerçek, mecaz ve terim anlamları ile kullanır.",
+    "note": "MEB Türkçe Dersi Öğretim Programı (2018), 4. sınıf, Okuma / Söz Varlığı ve Yazma. Kelimenin anlamı cümle içinde, bağlama göre belirlenir; aynı kelimenin farklı cümlelerde gerçek, mecaz ya da terim anlamlı olabileceği ve deyimlerdeki kelimelerin çoğunlukla mecaz anlam taşıdığı üzerinde durulur."
+  },
+  "summary": "Bir kelimenin gerçek, mecaz ve terim anlamını cümle içinde ayırt etmeyi; aynı kelimenin cümleye göre nasıl anlam değiştirdiğini örneklerle öğren.",
+  "match": {"course": "Türkçe", "booklet": "Tema 03–04", "keywords": ["gerçek anlam", "mecaz", "terim anlam", "belirli bir kavramı"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Kalbim kırıldı mı?", "visual": "tr-gercek-mecaz-terim-intro",
+      "sentences": [
+        "Merhaba! Arkadaşın sana, kalbimi kırdın, derse kalbi gerçekten cam gibi kırılır mı?",
+        "Tabii ki hayır! Arkadaşın burada çok üzüldüğünü anlatıyor.",
+        "Ama bardak kırıldı, dediğimizde bardak gerçekten parçalanmıştır.",
+        "Aynı kelime farklı cümlelerde farklı anlamlar kazanabilir. Haydi gerçek, mecaz ve terim anlamı tanıyalım!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Gerçek anlam", "visual": "tr-gercek-mecaz-terim-gercek",
+      "sentences": [
+        "Bir kelimenin herkesçe bilinen, akla ilk gelen anlamına gerçek anlam denir.",
+        "Bardak yere düşüp kırıldı. Burada kırılmak, gerçekten parçalanmak demektir.",
+        "Çantam kitaplarla dolu, çok ağır. Ağır kelimesi burada gerçek anlamdadır. Çantayı kaldırmak zordur.",
+        "Bu çay çok sıcak, dikkat et! Sıcak kelimesi, çayın gerçekten sıcak olduğunu anlatıyor.",
+        "Gerçek anlamı bulmak kolaydır. Kelimeyi duyunca aklımıza ilk gelen anlamdır."
+      ]
+    },
+    {
+      "id": "s03", "title": "Mecaz anlam", "visual": "tr-gercek-mecaz-terim-mecaz",
+      "sentences": [
+        "Bir kelimenin gerçek anlamından uzaklaşarak kazandığı yeni anlama mecaz anlam denir.",
+        "Sözlerinle kalbimi kırdın. Burada kırmak, üzmek anlamında kullanılmış.",
+        "Bu haber bana çok ağır geldi. Haber tartıya konmaz. Ağır burada, çok üzücü demektir.",
+        "Teyzem bizi sıcak bir gülümsemeyle karşıladı. Sıcak burada, içten ve sevecen demektir.",
+        "Mecaz anlam, anlatımı daha etkili ve renkli yapar."
+      ]
+    },
+    {
+      "id": "s04", "title": "Bir kelime, iki anlam", "visual": "tr-gercek-mecaz-terim-iki",
+      "sentences": [
+        "Şimdi aynı kelimeyi iki farklı cümlede görelim.",
+        "Bu kek çok tatlı, cümlesinde tatlı, şekerli demektir. Bu gerçek anlamdır.",
+        "Ne tatlı bir kedi yavrusu, cümlesinde ise tatlı, sevimli demektir. Bu mecaz anlamdır.",
+        "Kışın soğuk su içme, cümlesinde soğuk gerçek anlamdadır. Bize soğuk davrandı, cümlesinde ise mecaz anlamdadır.",
+        "İnce bir dal kırıldı, gerçek anlamdır. Çok ince düşünceli bir arkadaşım var, mecaz anlamdır."
+      ]
+    },
+    {
+      "id": "s05", "title": "Terim anlam", "visual": "tr-gercek-mecaz-terim-terim",
+      "sentences": [
+        "Bazı kelimeler bir bilim, sanat, spor ya da meslek dalında özel bir anlam taşır. Buna terim anlam denir.",
+        "Üçgenin üç açısı vardır. Açı, matematiğin bir terimidir.",
+        "Müzik öğretmenimiz notaları tahtaya yazdı. Nota, müziğin bir terimidir.",
+        "Hakem, faul yapan oyuncuya sarı kart gösterdi. Faul, sporun bir terimidir.",
+        "Mars bir gezegendir. Gezegen, fen bilimlerinin bir terimidir."
+      ]
+    },
+    {
+      "id": "s06", "title": "Gerçek mi, terim mi?", "visual": "tr-gercek-mecaz-terim-kale",
+      "sentences": [
+        "Bir kelime bir cümlede terim, başka bir cümlede gerçek anlamlı olabilir.",
+        "Tatilde tarihî bir kaleyi gezdik. Burada kale, eskiden korunmak için yapılan sağlam yapıdır. Bu gerçek anlamdır.",
+        "Topu kaleye attı, gol oldu! Burada kale, futbolda golün atıldığı yerdir. Bu terim anlamdır.",
+        "Sabah yüzümü yıkadım, cümlesinde yüz gerçek anlamdadır.",
+        "Küpün altı yüzü vardır, cümlesinde ise yüz bir matematik terimidir."
+      ]
+    },
+    {
+      "id": "s07", "title": "Nasıl ayırt ederiz?", "visual": "tr-gercek-mecaz-terim-nasil",
+      "sentences": [
+        "Bir kelimenin anlamını bulmak için ona cümlenin içinde bakarız ve kendimize sorular sorarız.",
+        "Kelime, akla ilk gelen anlamında mı kullanılmış? Öyleyse gerçek anlamlıdır.",
+        "Kelime yeni bir anlam kazanmış, bir duygu ya da benzetme mi anlatıyor? Öyleyse mecaz anlamlıdır.",
+        "Kelime bir bilim, sanat, spor ya da meslek dalına ait özel bir anlam mı taşıyor? Öyleyse terim anlamlıdır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Haydi deneyelim", "visual": "tr-gercek-mecaz-terim-deneme",
+      "sentences": [
+        "Şimdi birlikte deneyelim. Renkli kelimeler hangi anlamda kullanılmış?",
+        "Annem bize sıcak bir çorba yaptı. Çorba gerçekten sıcak. Bu gerçek anlamdır.",
+        "Ali, arkadaşlarına karşı çok sıcak davranır. Ali'nin sıcaklığı termometreyle ölçülmez. Bu mecaz anlamdır.",
+        "Mıknatısın iki kutbu vardır. Kutup burada fen bilimlerinin bir terimidir. Bu terim anlamdır.",
+        "Dedem bu işte çok pişmiş. Pişmek burada deneyim kazanmak demektir. Bu da mecaz anlamdır."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat: sık yapılan yanlışlar", "visual": "tr-gercek-mecaz-terim-dikkat",
+      "sentences": [
+        "Dikkat! Bu konuda sık yapılan yanlışlara bakalım.",
+        "Kelimeye tek başına bakarak karar verme. Aynı kelime cümleye göre gerçek, mecaz ya da terim anlamlı olabilir.",
+        "Deyimlerdeki kelimeler çoğunlukla mecaz anlamlıdır. Kulak vermek dinlemek, göz atmak ise kısaca bakmak demektir.",
+        "Terim anlamlı kelimeler genellikle bir dersin ya da bir mesleğin konusu içinde geçer. Açı, nota, gezegen gibi.",
+        "Mecaz anlam bir yanlışlık değildir. Yazılarımızı daha etkili ve güzel yapar."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "tr-gercek-mecaz-terim-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Gerçek anlam, bir kelimenin akla ilk gelen, herkesçe bilinen anlamıdır.",
+        "Mecaz anlam, kelimenin gerçek anlamından uzaklaşarak kazandığı yeni anlamdır.",
+        "Terim anlam, bir bilim, sanat, spor ya da meslek dalına ait özel anlamdır.",
+        "Kelimenin anlamına karar vermek için ona her zaman cümlenin içinde bak.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "“Ağır” kelimesi aşağıdaki cümlelerin hangisinde mecaz anlamda kullanılmıştır?",
+      "options": ["Bu dolap çok ağır, kaldıramadım.", "Ağır bavulları arabaya taşıdık.", "Arkadaşının ağır sözleri onu çok üzdü.", "Kamyon ağır yüklerle doluydu."],
+      "answer": 2,
+      "explain": "Sözler tartıya konmaz. Ağır sözler, kırıcı ve üzücü sözler demektir. Bu mecaz anlamdır.",
+      "scene": "s03"
+    },
+    {
+      "question": "“Sıcak” kelimesi aşağıdaki cümlelerin hangisinde gerçek anlamda kullanılmıştır?",
+      "options": ["Sıcak sütümü içip uyudum.", "Komşularımız bizi sıcak karşıladı.", "Öğretmenimizin sıcak bir sesi var.", "Bu sınıfta sıcak bir arkadaşlık var."],
+      "answer": 0,
+      "explain": "Sütün sıcak olması, kelimenin akla ilk gelen anlamıdır. Diğer cümlelerde sıcak, içten ve sevecen anlamında kullanılmıştır.",
+      "scene": "s02"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde terim anlamlı bir kelime vardır?",
+      "options": ["Bahçede çiçekleri suladık.", "Dikdörtgenin dört kenarı vardır.", "Annem bize kek yaptı.", "Kardeşim parkta oynadı."],
+      "answer": 1,
+      "explain": "Kenar, bu cümlede matematiğe ait özel bir anlam taşır. Bu yüzden terim anlamlıdır.",
+      "scene": "s05"
+    },
+    {
+      "question": "“İnce” kelimesi aşağıdaki cümlelerin hangisinde mecaz anlamda kullanılmıştır?",
+      "options": ["İnce bir kazak giydim.", "Bu kitap çok ince.", "İnce dallar rüzgârda sallandı.", "Arkadaşım çok ince düşünceli biridir."],
+      "answer": 3,
+      "explain": "İnce düşünceli, nazik ve başkalarını düşünen demektir. İnce kelimesi burada gerçek anlamından uzaklaşmıştır.",
+      "scene": "s04"
+    },
+    {
+      "question": "1. Topu kaleye attı, gol oldu. 2. Tarihî kaleyi gezdik. Bu cümlelerdeki “kale” kelimeleri sırasıyla hangi anlamda kullanılmıştır?",
+      "options": ["Gerçek - Terim", "Terim - Gerçek", "Mecaz - Gerçek", "Terim - Mecaz"],
+      "answer": 1,
+      "explain": "Futbol sahasındaki kale sporun bir terimidir. Tarihî kale ise kelimenin gerçek anlamıdır.",
+      "scene": "s06"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisi yalnızca gerçek anlamlı kelimelerden oluşmuştur?",
+      "options": ["Dedem bu işte çok pişmiş.", "Öğretmenimizin anlattıklarına kulak verdik.", "Kardeşim kitabını masaya koydu.", "Sözlerinle kalbimi kırdın."],
+      "answer": 2,
+      "explain": "Kardeşim kitabını masaya koydu, cümlesindeki bütün kelimeler akla ilk gelen anlamlarıyla kullanılmıştır. Diğerlerinde mecaz anlamlı kelimeler vardır.",
+      "scene": "s09"
+    }
+  ]
+}

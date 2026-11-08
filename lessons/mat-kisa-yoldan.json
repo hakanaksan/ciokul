@@ -1,0 +1,157 @@
+{
+  "id": "mat-kisa-yoldan",
+  "title": "Kısa Yoldan Çarpma ve Bölme",
+  "course": "Matematik",
+  "unit": "Doğal Sayılarla Çarpma ve Bölme İşlemi",
+  "kazanim": {
+    "code": "M.4.1.4.3, M.4.1.4.4, M.4.1.5.3",
+    "text": "En çok üç basamaklı doğal sayıları 10, 100 ve 1000’in en çok dokuz katı olan doğal sayılarla; en çok iki basamaklı doğal sayıları 5, 25 ve 50 ile kısa yoldan çarpar. En çok üç basamaklı doğal sayıları 10, 100 ve 1000 ile zihinden çarpar. Son üç basamağı sıfır olan en çok beş basamaklı doğal sayıları 10, 100 ve 1000’e zihinden böler.",
+    "note": "MEB Matematik Dersi Öğretim Programı (2018), 4. sınıf. 10, 100 ve 1000 ile ve bunların en çok dokuz katı ile çarpılan sayılar en çok üç basamaklıdır; 5, 25 ve 50 ile kısa yoldan çarpılan sayılar en çok iki basamaklıdır; 10, 100 ve 1000'e bölünen sayılar en çok beş basamaklıdır ve son üç basamağı sıfırdır."
+  },
+  "summary": "10, 100 ve 1000 ile ve bunların katlarıyla zihinden çarpmayı, 5, 25 ve 50 ile kısa yoldan çarpmayı, 10, 100 ve 1000'e kısa yoldan bölmeyi ve eksik sayıyı bulmayı öğren.",
+  "match": {"course": "Matematik", "booklet": "Ünite 03", "keywords": ["x 10", "x 100", "x 1000", "÷ 10", "zihinden", "zihnin", "kısa yol", "000", "100 ile çarp", "1000", "10 ile", "÷1000", "x20", "000 ÷", "x 5", "x 25"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Yumurta kutuları", "visual": "mat-kisa-yoldan-intro",
+      "sentences": [
+        "Merhaba! Bir çiftlikte yumurtalar onlu kutulara konuyor.",
+        "Bugün otuz yedi kutu doldu. Kutularda kaç yumurta var?",
+        "Kâğıt kalem almadan hemen söyleyebiliriz: otuz yedi çarpı on, üç yüz yetmiş eder!",
+        "Bugün on, yüz ve binle çarpmanın ve bölmenin kısa yollarını öğreneceğiz."
+      ]
+    },
+    {
+      "id": "s02", "title": "10, 100 ve 1000 ile çarpma", "visual": "mat-kisa-yoldan-sifir",
+      "sentences": [
+        "Bir sayıyı on ile çarparken sayının sağına bir sıfır yazarız. Yirmi üç çarpı on, iki yüz otuz eder.",
+        "Yüz ile çarparken sağına iki sıfır yazarız. Kırk beş çarpı yüz, dört bin beş yüz eder.",
+        "Bin ile çarparken sağına üç sıfır yazarız. Yüz yirmi sekiz çarpı bin, yüz yirmi sekiz bin eder.",
+        "Aslında her rakam sola kayar ve basamak değeri büyür. Boşalan basamaklara sıfır gelir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Katlarıyla çarpma", "visual": "mat-kisa-yoldan-katlar",
+      "sentences": [
+        "Peki yirmi dört çarpı üç yüz işlemini nasıl yaparız?",
+        "Üç yüz, üç çarpı yüz demektir. Önce sıfırları bir kenara ayırır, yirmi dördü üçle çarparız: yetmiş iki.",
+        "Sonra ayırdığımız iki sıfırı sonucun sağına ekleriz. Sonuç yedi bin iki yüz olur.",
+        "Yüz yirmi beş çarpı otuz işleminde de önce yüz yirmi beşi üçle çarparız: üç yüz yetmiş beş.",
+        "Ayırdığımız bir sıfırı ekleyince üç bin yedi yüz elli buluruz."
+      ]
+    },
+    {
+      "id": "s04", "title": "5 ile kısa yoldan çarpma", "visual": "mat-kisa-yoldan-bes",
+      "sentences": [
+        "Beş ile çarpmanın da bir kısa yolu var. Beş, onun yarısıdır.",
+        "Bu yüzden sayıyı önce on ile çarpar, sonra çıkan sonucu ikiye böleriz.",
+        "Otuz altı çarpı beş işlemine bakalım. Otuz altı çarpı on, üç yüz altmış eder.",
+        "Üç yüz altmışın yarısı yüz seksendir. Yani otuz altı çarpı beş, yüz seksen eder."
+      ]
+    },
+    {
+      "id": "s05", "title": "25 ve 50 ile kısa yoldan çarpma", "visual": "mat-kisa-yoldan-yirmibes",
+      "sentences": [
+        "Elli, yüzün yarısıdır. Elli ile çarparken önce yüz ile çarpar, sonra ikiye böleriz.",
+        "Altmış dört çarpı elli: altmış dört çarpı yüz, altı bin dört yüz eder. Bunun yarısı üç bin iki yüzdür.",
+        "Yirmi beş, yüzün dörtte biridir. Yirmi beş ile çarparken önce yüz ile çarpar, sonra dörde böleriz.",
+        "Kırk sekiz çarpı yirmi beş: kırk sekiz çarpı yüz, dört bin sekiz yüz eder. Dörde bölünce bin iki yüz olur.",
+        "Dörde bölmek zor gelirse iki kez ikiye bölebilirsin. Dört bin sekiz yüzün yarısı iki bin dört yüz, onun yarısı da bin iki yüz."
+      ]
+    },
+    {
+      "id": "s06", "title": "10, 100 ve 1000'e bölme", "visual": "mat-kisa-yoldan-bolme",
+      "sentences": [
+        "Bölmede ise tersini yaparız: sayının sonundaki sıfırları sileriz.",
+        "Kırk altı bin bölü on için sondan bir sıfır sileriz ve dört bin altı yüz buluruz.",
+        "Kırk altı bin bölü yüz için sondan iki sıfır sileriz ve dört yüz altmış buluruz.",
+        "Kırk altı bin bölü bin için sondan üç sıfır sileriz ve kırk altı buluruz.",
+        "Kontrol etmek kolay: kırk altı çarpı bin, yine kırk altı bin eder."
+      ]
+    },
+    {
+      "id": "s07", "title": "Dikkat!", "visual": "mat-kisa-yoldan-dikkat",
+      "sentences": [
+        "Dikkat! Kısa yolda sık yapılan hatalara bakalım.",
+        "Dört yüz beş çarpı yüz, kırk bin beş yüz eder. Sayının içindeki sıfır yerinde kalır, iki sıfırı en sona ekleriz.",
+        "Elli çarpı kırk işleminde sıfırları ayırırız. Önce beş çarpı dört, yirmi eder. Sonra iki sıfır ekleriz.",
+        "Yirminin kendi sıfırı da sonuçta kalır. Sonuç iki yüz değil, iki bindir.",
+        "Bölerken de yalnızca bölendeki sıfır kadar sıfır sileriz. Altmış bin bölü yüz, altı yüz eder; altı değil!"
+      ]
+    },
+    {
+      "id": "s08", "title": "Eksik sayıyı bulma", "visual": "mat-kisa-yoldan-eksik",
+      "sentences": [
+        "Kısa yolları tersinden de kullanabiliriz. Otuz çarpı kaç, yüz elli eder?",
+        "Sıfırları ayıralım: üç çarpı kaç, on beş eder? Cevap beş.",
+        "Otuz çarpı beş, yüz elli eder. Kutuya beş yazarız.",
+        "Yetmiş sekiz bin kaça bölünürse yedi yüz seksen olur?",
+        "Sondan iki sıfır silinmiş. Demek ki yetmiş sekiz bin, yüze bölünmüş."
+      ]
+    },
+    {
+      "id": "s09", "title": "Problem çözelim", "visual": "mat-kisa-yoldan-problem",
+      "sentences": [
+        "Şimdi kısa yolları problemlerde kullanalım.",
+        "Bir fabrika otuz sekiz bin kilogram elmayı, bin kilogram taşıyan kamyonlarla taşıyacak. Kaç kamyon gerekir?",
+        "Otuz sekiz bin bölü bin, otuz sekiz eder. Otuz sekiz kamyon gerekir.",
+        "Bir kutuda yirmi beş kalem var. Otuz iki kutuda kaç kalem vardır?",
+        "Otuz iki çarpı yüz, üç bin iki yüz eder. Bunu dörde bölersek sekiz yüz buluruz. Tam sekiz yüz kalem!"
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "mat-kisa-yoldan-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "On, yüz ve binle çarparken sayının sağına bir, iki ya da üç sıfır ekleriz.",
+        "Katlarıyla çarparken önce sıfırları ayırıp çarpar, sonra sıfırları sonuca ekleriz.",
+        "Beş ve elli ile çarparken on ya da yüzle çarpıp ikiye böleriz. Yirmi beş ile çarparken yüzle çarpıp dörde böleriz.",
+        "On, yüz ve bine bölerken sondan bir, iki ya da üç sıfır sileriz.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "306 × 100 işleminin sonucu kaçtır?",
+      "options": ["3600", "30 600", "36 000", "3060"],
+      "answer": 1,
+      "explain": "100 ile çarparken sayının sağına iki sıfır yazılır. Sayının içindeki 0 yerinde kalır: 30 600.",
+      "scene": "s07"
+    },
+    {
+      "question": "42 × 200 işleminin sonucu kaçtır?",
+      "options": ["840", "4200", "8400", "84 000"],
+      "answer": 2,
+      "explain": "Önce 42 × 2 = 84 bulunur, sonra iki sıfır eklenir: 8400.",
+      "scene": "s03"
+    },
+    {
+      "question": "18 × 5 işlemini kısa yoldan yapan Ece hangi sonucu bulur?",
+      "options": ["90", "180", "9", "900"],
+      "answer": 0,
+      "explain": "18 × 10 = 180 bulunur. 180'in yarısı 90'dır.",
+      "scene": "s04"
+    },
+    {
+      "question": "36 × 25 işleminin sonucu kaçtır?",
+      "options": ["360", "720", "1800", "900"],
+      "answer": 3,
+      "explain": "36 × 100 = 3600 bulunur. 3600 ÷ 4 = 900.",
+      "scene": "s05"
+    },
+    {
+      "question": "75 000 ÷ 100 işleminin sonucu kaçtır?",
+      "options": ["75", "750", "7500", "7050"],
+      "answer": 1,
+      "explain": "100'e bölerken sondan iki sıfır silinir: 750.",
+      "scene": "s06"
+    },
+    {
+      "question": "40 × ▢ = 2000 eşitliğinde ▢ yerine hangi sayı gelmelidir?",
+      "options": ["5", "500", "50", "20"],
+      "answer": 2,
+      "explain": "Sıfırları ayırırsak 4 × 5 = 20 olur. Sonra iki sıfır eklenir: 40 × 50 = 2000.",
+      "scene": "s08"
+    }
+  ]
+}

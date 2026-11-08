@@ -1,0 +1,170 @@
+{
+  "id": "mat-bolme",
+  "title": "Bölme İşlemi ve Problemleri",
+  "course": "Matematik",
+  "unit": "Doğal Sayılarla Bölme İşlemi",
+  "kazanim": {
+    "code": "M.4.1.5.1, M.4.1.5.2, M.4.1.5.4, M.4.1.5.5, M.4.1.5.6, M.4.1.5.7",
+    "text": "Üç basamaklı doğal sayıları en çok iki basamaklı doğal sayılara böler. En çok dört basamaklı bir sayıyı bir basamaklı bir sayıya böler. Bir bölme işleminin sonucunu tahmin eder ve tahminini işlem sonucu ile karşılaştırır. Çarpma ve bölme arasındaki ilişkiyi fark eder. Doğal sayılarla en az bir bölme işlemi gerektiren problemleri çözer. Aralarında eşitlik durumu olan iki matematiksel ifadeden birinde verilmeyen değeri belirler ve eşitliğin sağlandığını açıklar.",
+    "note": "MEB Matematik Dersi Öğretim Programı (2018), 4. sınıf. Bölünen ile bölüm arasındaki basamak sayısı ilişkisi fark ettirilir ve bölümün basamak sayısı işlem yapmadan belirlenerek işlemin doğruluğu kontrol edilir; problem çözerken en çok üç işlem gerektiren problemler üzerinde çalışılır."
+  },
+  "summary": "Bölmenin terimlerini, bölümün basamak sayısını önceden bulmayı, üç basamaklı sayıları iki basamaklı sayılara ve dört basamaklı sayıları bir basamaklı sayılara bölmeyi, bölümdeki sıfırı, çarpma ile kontrolü, tahmini ve kalanlı problemleri öğren.",
+  "match": {"course": "Matematik", "booklet": "Ünite 03", "keywords": ["böl", "÷", "kalan", "eşit", "taksit", "parça", "kutu", "paket", "kaç tane", "dağıt", "otobüs", "kasa", "çuval", "her biri", "koli", "kaç gün", "kaç kat", "sefer", "teneke", "salça", "boncuk", "gram", "sembol", "adet fiyat", "tuttuğu", "aklından", "aylık", "verilmeyen", "bölünen"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Müze gezisi", "visual": "mat-bolme-intro",
+      "sentences": [
+        "Merhaba! Okulumuzun altı yüz doksan öğrencisi müzeye gidecek.",
+        "Her otobüse otuz iki öğrenci binebiliyor.",
+        "Kaç otobüs gerekir? Bu soruyu bölme işlemiyle çözeriz.",
+        "Önce bölmenin adımlarını öğrenelim, sonra bu soruya geri döneceğiz!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Bölmenin terimleri", "visual": "mat-bolme-terimler",
+      "sentences": [
+        "Bölme, bir çokluğu eşit gruplara ayırmaktır. Kırk yedi bölü beş işlemine bakalım.",
+        "Paylaştırdığımız kırk yediye bölünen, kaça böldüğümüzü gösteren beşe de bölen denir.",
+        "Beş, kırk yedinin içinde dokuz kez vardır. Bu sonuca bölüm denir.",
+        "Beş çarpı dokuz, kırk beş eder. Kırk yediden kırk beşi çıkarınca iki artar. Buna kalan denir.",
+        "Kalan her zaman bölenden küçük olmalıdır. Burada iki, beşten küçüktür."
+      ]
+    },
+    {
+      "id": "s03", "title": "Bölüm kaç basamaklı?", "visual": "mat-bolme-basamak",
+      "sentences": [
+        "Üç basamaklı bir sayıyı iki basamaklı bir sayıya bölmeden önce, bölümün kaç basamaklı olacağını bulabiliriz.",
+        "Bölünenin soldan ilk iki basamağına bakarız. Yedi yüz elli altı bölü otuz altı işleminde bu sayı yetmiş beştir.",
+        "Yetmiş beş, otuz altıdan büyüktür. İlk iki basamak bölenden büyük ya da ona eşitse bölüm iki basamaklı olur.",
+        "İki yüz altmış sekiz bölü otuz dört işleminde ise ilk iki basamak yirmi altıdır.",
+        "Yirmi altı, otuz dörtten küçüktür. Bu yüzden bölüm bir basamaklı olur."
+      ]
+    },
+    {
+      "id": "s04", "title": "İki basamaklı sayıya bölme", "visual": "mat-bolme-uzun",
+      "sentences": [
+        "Şimdi yedi yüz elli altıyı otuz altıya bölelim. Bölmeye her zaman en büyük basamaktan başlarız.",
+        "Yetmiş beşin içinde kaç tane otuz altı var? Otuz altı çarpı iki, yetmiş iki eder. Bölüme iki yazarız.",
+        "Yetmiş beşten yetmiş ikiyi çıkarırız, üç kalır.",
+        "Altıyı yanına indiririz ve otuz altı olur. Otuz altının içinde bir tane otuz altı var. Bölüme bir yazarız.",
+        "Otuz altıdan otuz altıyı çıkarınca sıfır kalır. Yani yedi yüz elli altı bölü otuz altı, yirmi bir eder."
+      ]
+    },
+    {
+      "id": "s05", "title": "Bir basamaklı sayıya bölme", "visual": "mat-bolme-tek",
+      "sentences": [
+        "Dört basamaklı bir sayıyı bir basamaklı bir sayıya da aynı adımlarla böleriz. Bin üç yüz elli altıyı altıya bölelim.",
+        "Bir, altıdan küçüktür. Bu yüzden on üçe bakarız. Altı çarpı iki, on iki eder. Bölüme iki yazarız, bir kalır.",
+        "Beşi indiririz, on beş olur. Altı çarpı iki, on iki eder. Bölüme yine iki yazarız, üç kalır.",
+        "Altıyı indiririz, otuz altı olur. Altı çarpı altı, otuz altı eder. Bölüme altı yazarız, sıfır kalır.",
+        "Bin üç yüz elli altı bölü altı, iki yüz yirmi altı eder."
+      ]
+    },
+    {
+      "id": "s06", "title": "Dikkat!", "visual": "mat-bolme-dikkat",
+      "sentences": [
+        "Dikkat! Bölmede iki hata sık yapılır.",
+        "İki bin sekiz yüz yirmi dört bölü dört işleminde önce yirmi sekize bakarız. Yirmi sekiz bölü dört, yedi eder ve sıfır kalır.",
+        "Sonra ikiyi indiririz. İki, dörtten küçüktür; bu yüzden bölüme sıfır yazarız. Bu sıfırı unutmamalıyız!",
+        "Ardından dördü de indiririz: yirmi dört bölü dört, altı eder. Doğru sonuç yedi yüz altı; yetmiş altı değil!",
+        "İkinci hata, kalanı bölenden büyük bırakmaktır. Kalan bölenden büyük ya da ona eşitse, bölen bir kez daha sığıyor demektir."
+      ]
+    },
+    {
+      "id": "s07", "title": "Çarpma ile kontrol", "visual": "mat-bolme-saglama",
+      "sentences": [
+        "Çarpma ve bölme birbirinin tersidir. Bu yüzden bölmeyi çarpma ile kontrol ederiz.",
+        "Kalansız bölmede bölen ile bölümü çarparız. Otuz altı çarpı yirmi bir, yedi yüz elli altı eder.",
+        "Sonuç bölünene eşit çıktı. İşlemimiz doğru!",
+        "Kalanlı bölmede çarpımın üzerine kalanı ekleriz. Beş çarpı dokuz artı iki, kırk yedi eder.",
+        "Kural şudur: bölen çarpı bölüm, artı kalan, bölüneni verir."
+      ]
+    },
+    {
+      "id": "s08", "title": "Eksik sayıyı bulma", "visual": "mat-bolme-eksik",
+      "sentences": [
+        "Çarpma ile bölme arasındaki ilişki, eksik sayıları bulmamıza da yardım eder.",
+        "Bir sayıyı yediyle çarptığımızda bin dört yüz yetmiş buluyoruz. Bu sayı kaçtır?",
+        "Çarpmanın tersini yaparız: bin dört yüz yetmiş bölü yedi, iki yüz on eder.",
+        "Eşitliklerde de aynı yolu izleriz. Kutu çarpı sekiz, yirmi dokuz eksi beşe eşit olsun.",
+        "Sağ taraf yirmi dört eder. Sekiz kaçla çarpılırsa yirmi dört eder? Üç! Kutuya üç yazarız."
+      ]
+    },
+    {
+      "id": "s09", "title": "Bölümü tahmin etme", "visual": "mat-bolme-tahmin",
+      "sentences": [
+        "Bölme işleminin sonucunu da tahmin edebiliriz.",
+        "Beş yüz doksan altı bölü yirmi bir işlemine bakalım. Bölüneni ve böleni en yakın onluğa yuvarlarız.",
+        "Beş yüz doksan altı, altı yüze; yirmi bir de yirmiye yuvarlanır.",
+        "Altı yüz bölü yirmi, otuz eder. Çünkü yirmi çarpı otuz, altı yüzdür. Bu bizim tahminimiz.",
+        "Gerçek sonuçta bölüm yirmi sekiz, kalan sekiz. Tahminimiz gerçek bölümden yalnızca iki fazla!"
+      ]
+    },
+    {
+      "id": "s10", "title": "Problem çözelim", "visual": "mat-bolme-problem",
+      "sentences": [
+        "Şimdi müze sorusuna dönelim: altı yüz doksan öğrenci ve otuz iki kişilik otobüsler.",
+        "Altı yüz doksan bölü otuz iki işlemini yaparız. Bölüm yirmi bir, kalan on sekiz çıkar.",
+        "Yirmi bir otobüs tamamen dolar ama on sekiz öğrenci açıkta kalır.",
+        "Onlar da müzeye gideceği için bir otobüs daha gerekir. Cevap yirmi iki otobüs!",
+        "Kontrol edelim: otuz iki çarpı yirmi bir, altı yüz yetmiş iki eder. Üzerine on sekiz eklersek altı yüz doksan olur.",
+        "Eşit paylaştırma, her birine kaç düştüğü ya da kaç grup oluştuğu sorulursa bölme yaparız."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "mat-bolme-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Bölmeye en büyük basamaktan başlarız. Kalan her zaman bölenden küçüktür.",
+        "İndirdiğimiz sayı bölenden küçükse bölüme sıfır yazmayı unutmayız.",
+        "Bölen çarpı bölüm, artı kalan, bölüneni verir. Böylece işlemimizi kontrol ederiz.",
+        "Problemlerde kalanı da düşünürüz. Bazen bir otobüs daha gerekir!",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Bir bölme işleminde bölen 15, bölüm 24 ve kalan 7'dir. Bölünen sayı kaçtır?",
+      "options": ["360", "367", "353", "374"],
+      "answer": 1,
+      "explain": "Bölünen = bölen × bölüm + kalan. 15 × 24 = 360, 360 + 7 = 367.",
+      "scene": "s07"
+    },
+    {
+      "question": "Aşağıdaki bölme işlemlerinden hangisinde bölüm iki basamaklıdır?",
+      "options": ["245 ÷ 38", "196 ÷ 27", "483 ÷ 21", "512 ÷ 64"],
+      "answer": 2,
+      "explain": "483 ÷ 21 işleminde ilk iki basamak 48'dir ve 21'den büyüktür. Bu yüzden bölüm iki basamaklıdır.",
+      "scene": "s03"
+    },
+    {
+      "question": "3624 ÷ 6 işleminin sonucu kaçtır?",
+      "options": ["604", "64", "640", "614"],
+      "answer": 0,
+      "explain": "36 ÷ 6 = 6. Sonra 2, 6'dan küçük olduğu için bölüme 0 yazılır. 24 ÷ 6 = 4. Sonuç 604'tür.",
+      "scene": "s06"
+    },
+    {
+      "question": "864 ÷ 32 işleminin sonucu kaçtır?",
+      "options": ["26", "28", "207", "27"],
+      "answer": 3,
+      "explain": "86'nın içinde 2 tane 32 var, 22 kalır. 224'ün içinde 7 tane 32 var. Sonuç 27; kontrol: 32 × 27 = 864.",
+      "scene": "s04"
+    },
+    {
+      "question": "▢ × 6 = 50 − 8 eşitliğinde ▢ yerine hangi sayı gelmelidir?",
+      "options": ["7", "6", "8", "9"],
+      "answer": 0,
+      "explain": "Sağ taraf 50 − 8 = 42 eder. 42 ÷ 6 = 7, yani 7 × 6 = 42.",
+      "scene": "s08"
+    },
+    {
+      "question": "Bir okuldaki 460 öğrenci, 35 kişilik servislerle evlerine gidecek. Bütün öğrenciler için en az kaç servis gerekir?",
+      "options": ["13", "14", "15", "12"],
+      "answer": 1,
+      "explain": "460 ÷ 35 işleminde bölüm 13, kalan 5'tir. Kalan 5 öğrenci için bir servis daha gerekir: 14 servis.",
+      "scene": "s10"
+    }
+  ]
+}

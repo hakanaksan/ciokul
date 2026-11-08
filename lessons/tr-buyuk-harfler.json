@@ -1,0 +1,158 @@
+{
+  "id": "tr-buyuk-harfler",
+  "title": "Büyük Harflerin Kullanımı",
+  "course": "Türkçe",
+  "unit": "Yazma",
+  "kazanim": {
+    "code": "T.4.4.10",
+    "text": "Büyük harfleri ve noktalama işaretlerini uygun yerlerde kullanır.",
+    "note": "MEB Türkçe Dersi Öğretim Programı (2018), 4. sınıf, Yazma. Bu derste kazanımın büyük harfler bölümü işlenir: cümle başı, tırnak içindeki ve iki noktadan sonra gelen cümle, kişi, hayvan, yer, millet, dil, kurum adları ve belirli tarihler. Programın açıklamasındaki kitap, dergi, gezegen ve yıldız adları ile iki noktadan sonra büyük harf kullanımı ayrıca vurgulanır. Noktalama işaretleri ayrı derste anlatılır."
+  },
+  "summary": "Cümle başında, özel isimlerde, gezegen, kitap ve dergi adlarında, belirli tarihlerde büyük harf kullanmayı ve sık yapılan yanlışları örneklerle öğren.",
+  "match": {"course": "Türkçe", "booklet": "Tema 01–02", "keywords": ["büyük harflerin kullanım", "büyük harflerin yazım", "büyük harfle başla", "gezegen", "yazım yanlış", "yazımı doğru"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Pamuk mu, pamuk mu?", "visual": "tr-buyuk-harfler-intro",
+      "sentences": [
+        "Merhaba! Şu iki cümleye bak. Pamuk bahçede uyuyor. Tarlada pamuk topladık.",
+        "İlk cümledeki Pamuk, sevimli kedimizin adı. Bu yüzden büyük harfle başlıyor.",
+        "İkinci cümledeki pamuk ise tarlada yetişen bir bitki. O küçük harfle yazılıyor.",
+        "Gördün mü? Büyük harf, okuyana önemli bir ipucu verir. Haydi büyük harfleri nerede kullanacağımızı öğrenelim!"
+      ]
+    },
+    {
+      "id": "s02", "title": "Cümlenin ilk harfi", "visual": "tr-buyuk-harfler-cumle",
+      "sentences": [
+        "İlk kural çok kolay. Her cümle büyük harfle başlar.",
+        "Bugün hava çok güzel. Bu cümlenin ilk harfi büyük yazılır.",
+        "Noktadan sonra yeni bir cümle başlar. Ders bitti. Zil çaldı. Burada zil kelimesi büyük harfle başlar.",
+        "Tırnak içindeki cümle de büyük harfle başlar. Annem, erken yat, dedi.",
+        "İki noktadan sonra bir cümle gelirse o da büyük harfle başlar. Öğretmen şöyle dedi: Yarın müzeye gideceğiz."
+      ]
+    },
+    {
+      "id": "s03", "title": "Kişi ve hayvan adları", "visual": "tr-buyuk-harfler-kisi",
+      "sentences": [
+        "Kişilerin adları ve soyadları büyük harfle başlar.",
+        "Zeynep Kaya. Hem adı hem de soyadı büyük harfle yazılır.",
+        "Evcil hayvanlarımıza verdiğimiz adlar da özel isimdir. Köpeğimiz Karabaş, kedimiz Boncuk gibi.",
+        "Karabaş bütün gece havladı, cümlesinde Karabaş büyük harfle başlar.",
+        "Kişi adıyla birlikte kullanılan unvan ve saygı sözleri de büyük harfle başlar. Doktor Selin Hanım, Murat Bey gibi."
+      ]
+    },
+    {
+      "id": "s04", "title": "Yer adları", "visual": "tr-buyuk-harfler-yer",
+      "sentences": [
+        "Yer adları da büyük harfle başlar.",
+        "Ülke, şehir ve ilçe adları. Türkiye, Ankara, Urla.",
+        "Mahalle, cadde ve sokak adlarının her kelimesi büyük harfle başlar. Çiçek Mahallesi, Atatürk Caddesi, Lale Sokağı.",
+        "Dağ, göl ve nehir adları da büyük harfle yazılır. Ağrı Dağı, Van Gölü, Kızılırmak.",
+        "Bölge adları da öyle. İzmir, Ege Bölgesi'ndedir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Gezegenler, kitaplar, dergiler", "visual": "tr-buyuk-harfler-gezegen",
+      "sentences": [
+        "Şimdi gökyüzüne ve kitaplığımıza bakalım.",
+        "Gezegen ve yıldız adları büyük harfle başlar. Merkür, Venüs, Dünya, Mars, Jüpiter.",
+        "Ay, Dünya'nın uydusudur. Güneş bir yıldızdır. Bu cümlelerde Ay, Dünya ve Güneş büyük harfle yazılır.",
+        "Kitap, dergi ve gazete adlarının her kelimesi büyük harfle başlar.",
+        "Dede Korkut Hikâyeleri kitabını okudum. Her ay Bilim Çocuk dergisini okurum."
+      ]
+    },
+    {
+      "id": "s06", "title": "Millet, dil ve kurum adları", "visual": "tr-buyuk-harfler-millet",
+      "sentences": [
+        "Millet ve dil adları da büyük harfle başlar.",
+        "Türk milleti Türkçe konuşur. Kardeşim İngilizce öğreniyor.",
+        "Kurum ve kuruluşların adları da büyük harfle başlar. Türkiye Büyük Millet Meclisi, Kızılay gibi.",
+        "Okul adlarının her kelimesi büyük harfle yazılır. Cumhuriyet İlkokulu gibi."
+      ]
+    },
+    {
+      "id": "s07", "title": "Tarihlerde gün ve ay adları", "visual": "tr-buyuk-harfler-tarih",
+      "sentences": [
+        "Takvime bakalım. Ay ve gün adları ne zaman büyük harfle yazılır?",
+        "Belirli bir tarih bildiren ay adı büyük harfle başlar. Yirmi dokuz Ekim bin dokuz yüz yirmi üç gibi.",
+        "Tarihte gün adı da varsa o da büyük harfle başlar. Yirmi üç Nisan bin dokuz yüz yirmi Cuma.",
+        "Ama belirli bir tarih bildirmiyorsa küçük harfle yazılır. Her pazartesi kütüphaneye gideriz.",
+        "Bu yıl tatile ağustos ayında gideceğiz, cümlesinde de ağustos küçük harfle yazılır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Dikkat: sık yapılan yanlışlar", "visual": "tr-buyuk-harfler-dikkat",
+      "sentences": [
+        "Dikkat! Şimdi en sık yapılan yanlışlara bakalım.",
+        "Akrabalık adları küçük harfle yazılır. Ali dayı, Ayşe teyze, Hasan amca.",
+        "Dünya kadar işim var, cümlesinde dünya bir gezegen değildir. Çok anlamındadır ve küçük harfle yazılır.",
+        "Bu ay çok kitap okudum, cümlesindeki ay da gökteki Ay değil, takvimdeki aydır. Küçük harfle yazılır.",
+        "Virgülden sonra büyük harf gelmez. Elma, armut ve muz aldım."
+      ]
+    },
+    {
+      "id": "s09", "title": "Yanlışları düzeltelim", "visual": "tr-buyuk-harfler-duzelt",
+      "sentences": [
+        "Şimdi bir dedektif gibi yanlışları bulup düzeltelim.",
+        "Selin dün Ankara'ya gitti. Selin hem cümlenin ilk kelimesi hem de bir kişi adı. Büyük harfle başlamalı.",
+        "Ankara bir şehir adı. O da büyük harfle başlar. Ona gelen eki de kesme işaretiyle ayırırız.",
+        "Ablam Fransızca öğreniyor. Fransızca bir dil adı olduğu için büyük harfle yazılmalı.",
+        "Kızılırmak, Karadeniz'e dökülür. Nehrin ve denizin adı da büyük harfle başlamalı."
+      ]
+    },
+    {
+      "id": "s10", "title": "Özet", "visual": "tr-buyuk-harfler-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Her cümle büyük harfle başlar. Tırnak içindeki ve iki noktadan sonra gelen cümle de.",
+        "Kişi, hayvan ve yer adları büyük harfle başlar.",
+        "Gezegen, kitap, dergi, millet, dil ve kurum adları da büyük harfle yazılır.",
+        "Akrabalık adları ile gezegen anlamında kullanılmayan dünya, ay ve güneş küçük harfle yazılır.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde büyük harflerin kullanımıyla ilgili bir yanlışlık yapılmıştır?",
+      "options": ["Bugün bize Ali dayı gelecek.", "Ay, Dünya’nın uydusudur.", "Bahçede köpeğimiz karabaş uyuyor.", "Okulda dünya kadar işim var."],
+      "answer": 2,
+      "explain": "Karabaş köpeğin adıdır, yani özel isimdir. Büyük harfle başlamalıdır: Karabaş.",
+      "scene": "s03"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde büyük harfler doğru kullanılmıştır?",
+      "options": ["Jüpiter, en büyük gezegendir.", "Merkür ve venüs gezegenlerini inceledik.", "Dünya, güneşin etrafında döner.", "Dede korkut hikâyeleri kitabını okudum."],
+      "answer": 0,
+      "explain": "Gezegen ve yıldız adları ile kitap adlarının her kelimesi büyük harfle başlar. Yalnızca ilk cümlede yanlış yoktur.",
+      "scene": "s05"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde ay adının yazımı yanlıştır?",
+      "options": ["Okullar her yıl eylül ayında açılır.", "Bu yıl tatile ağustos ayında gideceğiz.", "Kardeşim 15 Mayıs 2018’de doğdu.", "Türkiye Büyük Millet Meclisi 23 nisan 1920’de açıldı."],
+      "answer": 3,
+      "explain": "23 Nisan 1920 belirli bir tarihtir. Belirli bir tarih bildiren ay adı büyük harfle başlar.",
+      "scene": "s07"
+    },
+    {
+      "question": "Hangi seçenekteki yer adları doğru yazılmıştır?",
+      "options": ["Van gölü - Ağrı dağı", "Van Gölü - Ağrı Dağı", "van Gölü - ağrı Dağı", "Van gölü - Ağrı Dağı"],
+      "answer": 1,
+      "explain": "Dağ ve göl adlarının her kelimesi büyük harfle başlar: Van Gölü, Ağrı Dağı.",
+      "scene": "s04"
+    },
+    {
+      "question": "Aşağıdaki cümlelerin hangisinde yazım yanlışı vardır?",
+      "options": ["Babam “Kapıyı kapat.” dedi.", "Kardeşim “haydi oyun oynayalım.” dedi.", "Öğretmen şöyle dedi: Yarın müzeye gideceğiz.", "Bugün hava çok güzel."],
+      "answer": 1,
+      "explain": "Tırnak içindeki cümle büyük harfle başlar. “Haydi oyun oynayalım.” yazılmalıdır.",
+      "scene": "s02"
+    },
+    {
+      "question": "Aşağıdakilerin hangisinde büyük harf gereksiz yere kullanılmıştır?",
+      "options": ["Kızılay", "Cumhuriyet İlkokulu", "Elma, Armut ve muz aldım.", "Kardeşim İngilizce öğreniyor."],
+      "answer": 2,
+      "explain": "Virgülden sonra büyük harf gelmez. Armut özel isim olmadığı için küçük harfle yazılmalıdır.",
+      "scene": "s08"
+    }
+  ]
+}

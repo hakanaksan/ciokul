@@ -1,0 +1,171 @@
+{
+  "id": "sos-yon-ve-kroki",
+  "title": "Yön Bulma ve Kroki",
+  "course": "Sosyal Bilgiler",
+  "unit": "İnsanlar, Yerler ve Çevreler",
+  "kazanim": {
+    "code": "SB.4.3.1, SB.4.3.2",
+    "text": "Çevresindeki herhangi bir yerin konumu ile ilgili çıkarımlarda bulunur. Günlük yaşamında kullandığı mekânların krokisini çizer.",
+    "note": "MEB Sosyal Bilgiler Dersi Öğretim Programı (2018), 4. sınıf. Açıklamalar: Yönler ile doğal ve beşerî unsurlara yakınlık, uzaklık açısından konum analizi yapılır. Doğal ve teknolojik yön bulma yöntemlerine ve araçlarına değinilir (SB.4.3.1). Sığınak, acil toplanma yeri, acil çıkış ve diğer güvenli alanlar kroki üzerinde gösterilir (SB.4.3.2). Öğrenme alanında mekânı algılama, harita kullanma ve konum analizi becerileri öne çıkar. Ana ve ara yönler, Güneş, Kutup Yıldızı ve doğadaki ipuçlarıyla yön bulma, pusula ve navigasyon ile krokinin özellikleri, çizimi ve okunması anlatılır."
+  },
+  "summary": "Ana ve ara yönleri, Güneş, Kutup Yıldızı ve pusulayla yön bulmayı öğren; kuş bakışı kroki çizip güvenli alanları göstermeyi keşfet.",
+  "match": {"course": "Sosyal Bilgiler", "booklet": "Ünite 03", "keywords": ["kroki", "yön", "kuzey", "güney", "pusula", "kutup yıldızı", "yosun", "karınca", "konum", "kuş bakışı", "güneşin doğ"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Evin nerede?", "visual": "sos-yon-ve-kroki-intro",
+      "sentences": [
+        "Merhaba! Yeni bir arkadaşın evine gelmek istiyor. Evinin yerini ona nasıl tarif edersin?",
+        "Evimiz okulun yanında, parkın karşısında diyebilirsin.",
+        "Bir yerin bulunduğu yere konum denir. Konumu anlatırken çevremizdeki yerlerden yararlanırız.",
+        "Okul, park ve cami gibi insanların yaptığı yerler beşerî unsurlardır. Dere, tepe ve orman ise doğal unsurlardır.",
+        "Bir yerin bu unsurlara yakın ya da uzak olması, konumunu anlatmamıza yardım eder."
+      ]
+    },
+    {
+      "id": "s02", "title": "Ana yönler", "visual": "sos-yon-ve-kroki-ana",
+      "sentences": [
+        "Konumu doğru anlatmak için yönleri bilmeliyiz.",
+        "Dört ana yön vardır: kuzey, güney, doğu ve batı.",
+        "Kuzeyin tam karşısı güneydir. Doğunun tam karşısı da batıdır.",
+        "Haritalarda kuzey genellikle yukarıda, güney aşağıdadır. Doğu sağda, batı ise soldadır.",
+        "Yönleri bilmek kaybolmamamızı, yolumuzu bulmamızı ve bulunduğumuz yeri tarif etmemizi sağlar."
+      ]
+    },
+    {
+      "id": "s03", "title": "Ara yönler", "visual": "sos-yon-ve-kroki-ara",
+      "sentences": [
+        "İki ana yönün tam ortasında kalan yönlere ara yön denir.",
+        "Kuzey ile doğunun arası kuzeydoğu, kuzey ile batının arası kuzeybatıdır.",
+        "Güney ile doğunun arası güneydoğu, güney ile batının arası da güneybatıdır.",
+        "Ara yönlerin adı her zaman kuzey ya da güney ile başlar. Doğukuzey diye bir yön yoktur.",
+        "Örneğin Hatay'dan Kars'a kuş uçuşu gidersek kuzeydoğu yönünde ilerleriz."
+      ]
+    },
+    {
+      "id": "s04", "title": "Güneşle yön bulma", "visual": "sos-yon-ve-kroki-gunes",
+      "sentences": [
+        "Güneş her sabah doğu yönünden doğar, akşam da batı yönünden batar.",
+        "Sabah sağ kolumuzu güneşin doğduğu yöne uzatalım. Sağ kolumuz doğuyu gösterir.",
+        "Bu durumda sol kolumuz batıyı, yüzümüz kuzeyi, sırtımız da güneyi gösterir.",
+        "Ülkemizde güneş önce doğudaki şehirlerde doğar ve önce oralarda batar.",
+        "Bu yüzden Kars'ta güneş batmışken, Edirne'de güneş henüz batmamış olabilir."
+      ]
+    },
+    {
+      "id": "s05", "title": "Kutup Yıldızı ve doğadaki ipuçları", "visual": "sos-yon-ve-kroki-yildiz",
+      "sentences": [
+        "Geceleri Kutup Yıldızı'ndan yararlanırız. Bu yıldız kuzeyi gösterir. Diğer adı Demirkazık'tır.",
+        "Yüzümüzü Kutup Yıldızı'na dönersek önümüz kuzey, sağımız doğu, solumuz batı, arkamız da güneydir.",
+        "Ağaç gövdelerinde ve kayalarda yosunlar genellikle güneş az alan kuzey tarafta bulunur.",
+        "Karınca yuvalarının ağzı ise genellikle güneye bakar.",
+        "Ağaçların güneye bakan tarafındaki dallar da genellikle daha gür olur."
+      ]
+    },
+    {
+      "id": "s06", "title": "Pusula ve teknoloji", "visual": "sos-yon-ve-kroki-pusula",
+      "sentences": [
+        "Yönümüzü bulmak için teknolojik araçlardan da yararlanırız.",
+        "Pusulanın mıknatıslı ibresi her zaman kuzeyi gösterir.",
+        "Pusula insanlar tarafından yapıldığı için beşerî bir araçtır. Güneş, Kutup Yıldızı ve yosunlar ise doğal ipuçlarıdır.",
+        "Günümüzde akıllı telefonlardaki harita ve navigasyon uygulamaları da yolumuzu bulmamıza yardım eder.",
+        "Yeni taşınan bir aile, okulun yerini bu uygulamalarla kolayca bulabilir."
+      ]
+    },
+    {
+      "id": "s07", "title": "Kroki nedir?", "visual": "sos-yon-ve-kroki-kroki",
+      "sentences": [
+        "Bir yeri kuş bakışı, basit ve kabataslak olarak gösteren çizime kroki denir.",
+        "Kuş bakışı, bir yere tam yukarıdan, gökyüzünden bakıyormuş gibi görmektir.",
+        "Krokide ölçü kullanılmaz. Uzaklıklar ölçülmeden, göz kararıyla çizilir.",
+        "Bu yüzden krokide gerçek uzunlukların ne kadar küçültüldüğü belli değildir. Haritalar ise ölçeklidir.",
+        "Krokide önemli yerlerin adları yazılır ve yönü göstermek için bir kuzey oku çizilir."
+      ]
+    },
+    {
+      "id": "s08", "title": "Kroki çizelim", "visual": "sos-yon-ve-kroki-ciz",
+      "sentences": [
+        "Haydi, okulumuzun krokisini birlikte çizelim.",
+        "Önce kâğıdın köşesine kuzeyi gösteren bir ok çizeriz.",
+        "Sonra yolları ve binaları basit şekillerle çizeriz.",
+        "Önemli yerlerin adlarını yazarız: okul, bahçe, kantin ve spor salonu gibi.",
+        "Acil çıkışı, acil toplanma alanını ve sığınak gibi güvenli yerleri de krokide gösteririz.",
+        "Böylece deprem ya da yangın gibi tehlikeli durumlarda nereye gideceğimizi biliriz."
+      ]
+    },
+    {
+      "id": "s09", "title": "Krokiyi okuyalım", "visual": "sos-yon-ve-kroki-oku",
+      "sentences": [
+        "Şimdi bir mahalle krokisini okuyalım. Önce kuzey okunu buluruz.",
+        "Ayşe'nin evinin doğusunda eczane, batısında market vardır.",
+        "Okul evin kuzeyinde, park ise evin güneyindedir.",
+        "Cami, okulun doğusunda ve eczanenin kuzeyindedir. Yani evin kuzeydoğusunda kalır.",
+        "Ayşe parka gitmek için güneye, markete gitmek için batıya yürür."
+      ]
+    },
+    {
+      "id": "s10", "title": "Dikkat!", "visual": "sos-yon-ve-kroki-dikkat",
+      "sentences": [
+        "Dikkat! Bazı bilgiler sık karıştırılır.",
+        "Ara yönlerin adı kuzey ya da güney ile başlar: kuzeydoğu ve güneybatı gibi.",
+        "Krokide ölçek yoktur. Ölçek haritalarda bulunur.",
+        "Yosunlar genellikle kuzey tarafta bulunur. Karınca yuvalarının ağzı ise genellikle güneye bakar.",
+        "Sabah sağ kolumuzu güneşe uzattığımızda yüzümüz güneye değil, kuzeye bakar."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "sos-yon-ve-kroki-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Dört ana yön kuzey, güney, doğu ve batıdır. Bunların arasında dört ara yön vardır.",
+        "Güneş, Kutup Yıldızı, yosunlar ve pusula yönümüzü bulmamıza yardım eder.",
+        "Kroki, bir yerin kuş bakışı ve ölçüsüz, basit bir çizimidir.",
+        "Krokide kuzey okunu, önemli yerleri ve acil toplanma alanını gösteririz.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Sabah sağ kolunu güneşin doğduğu yöne uzatan Mesut'un yüzü hangi yönü gösterir?",
+      "options": ["Güney", "Kuzey", "Doğu", "Batı"],
+      "answer": 1,
+      "explain": "Sağ kol doğuyu gösterirse sol kol batıyı, yüz kuzeyi, sırt da güneyi gösterir.",
+      "scene": "s04"
+    },
+    {
+      "question": "Kuzey ile batı arasında kalan ara yön hangisidir?",
+      "options": ["Kuzeydoğu", "Güneybatı", "Kuzeybatı", "Güneydoğu"],
+      "answer": 2,
+      "explain": "Kuzey ile batının arası kuzeybatıdır. Ara yönlerin adı kuzey ya da güney ile başlar.",
+      "scene": "s03"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi krokinin özelliklerinden değildir?",
+      "options": ["Kuş bakışı çizilir.", "Basit ve anlaşılır çizilir.", "Önemli yerlerin adları yazılır.", "Gerçek uzunluğun ne kadar küçültüldüğü yazılır."],
+      "answer": 3,
+      "explain": "Kroki göz kararıyla, ölçüsüz çizilir. Gerçek uzunluğun ne kadar küçültüldüğü yani ölçek haritalarda bulunur.",
+      "scene": "s07"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi yön bulmada kullanılan, insan yapımı yani beşerî bir araçtır?",
+      "options": ["Pusula", "Kutup Yıldızı", "Yosun", "Karınca yuvası"],
+      "answer": 0,
+      "explain": "Pusulayı insanlar yapmıştır. Kutup Yıldızı, yosunlar ve karınca yuvaları ise doğal ipuçlarıdır.",
+      "scene": "s06"
+    },
+    {
+      "question": "Okulun krokisinde deprem gibi tehlikeli durumlar için mutlaka hangisi gösterilmelidir?",
+      "options": ["Kantindeki yiyecekler", "Acil toplanma alanı", "Sınıflardaki sıra sayısı", "Öğretmenlerin adları"],
+      "answer": 1,
+      "explain": "Acil toplanma alanı, acil çıkış ve sığınak gibi güvenli yerler krokide gösterilir. Böylece nereye gideceğimizi biliriz.",
+      "scene": "s08"
+    },
+    {
+      "question": "Geceleyin yüzünü Kutup Yıldızı'na dönen Reyyan'ın sağ kolu hangi yönü gösterir?",
+      "options": ["Batı", "Güney", "Kuzey", "Doğu"],
+      "answer": 3,
+      "explain": "Kutup Yıldızı kuzeyi gösterir. Yüzümüz kuzeye dönükken sağ kolumuz doğuyu, sol kolumuz batıyı gösterir.",
+      "scene": "s05"
+    }
+  ]
+}

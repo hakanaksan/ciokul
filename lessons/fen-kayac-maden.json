@@ -1,0 +1,165 @@
+{
+  "id": "fen-kayac-maden",
+  "title": "Kayaçlar ve Madenler",
+  "course": "Fen Bilimleri",
+  "unit": "Yer Kabuğu ve Dünya'mızın Hareketleri",
+  "kazanim": {
+    "code": "F.4.1.1.1, F.4.1.1.2",
+    "text": "Yer kabuğunun kara tabakasının kayaçlardan oluştuğunu belirtir. Kayaçlarla madenleri ilişkilendirir ve kayaçların ham madde olarak önemini tartışır.",
+    "note": "MEB Fen Bilimleri Dersi Öğretim Programı (2018), 4. sınıf. Kayaçların sınıflandırılmasına girilmez. Türkiye'deki önemli kayaçlara ve madenlere değinilir; altın, bor, mermer, linyit, bakır, taş kömürü, gümüş gibi örnekler verilir."
+  },
+  "summary": "Yer kabuğunu, kayaçları ve onları oluşturan mineralleri tanı; bor, mermer, bakır gibi madenlerin ve kayaçların hangi eşyalara ham madde olduğunu öğren.",
+  "match": {"course": "Fen Bilimleri", "booklet": "Ünite 01", "keywords": ["maden", "mineralden", "mineraldir", "minerali", "minerallerle", "minerallerin", "minerallerden", "minerallerdir", "birbirinden farklı", "kaya ve taş", "kayaçlardan", "parçalanmasına", "ham maddesi", "bakır", "gümüş", "kömürü", "linyit", "bor madeni", "demir", "krom", "kuvars", "tungsten", "grafit", "nikel", "renk", "rengi"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Evdeki gizli taşlar", "visual": "fen-kayac-maden-intro",
+      "sentences": [
+        "Merhaba! Bugün evimizdeki eşyaların gizli bir sırrını keşfedeceğiz.",
+        "Pencere camı, kalemin ucu, tencere ve elektrik kablosu nereden geldi dersin?",
+        "İnanması zor ama hepsinin ham maddesi yerin altındaki kayaçlardan geldi.",
+        "Haydi önce üzerinde yaşadığımız yer kabuğunu tanıyalım."
+      ]
+    },
+    {
+      "id": "s02", "title": "Yer kabuğu", "visual": "fen-kayac-maden-crust",
+      "sentences": [
+        "Dünya'mızın en dıştaki katmanına yer kabuğu denir.",
+        "Biz yer kabuğunun üzerinde yaşarız. Karalar da okyanusların tabanı da yer kabuğunun bir parçasıdır.",
+        "Yer kabuğunun kara tabakası kayaçlardan oluşur.",
+        "Dağlar, tepeler ve toprağın altındaki sert katman hep kayaçtır.",
+        "Yer kabuğu her yerde aynı kalınlıkta değildir. Karalarda daha kalın, okyanusların tabanında daha incedir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Kayaç nedir?", "visual": "fen-kayac-maden-rock",
+      "sentences": [
+        "Peki kayaç nedir? Bir kayaya yakından bakalım.",
+        "Bir ya da birden fazla mineralden oluşan kaya ve taş parçalarına kayaç denir.",
+        "Kayaçların yapısını oluşturan bu küçük parçalara mineral denir.",
+        "Mineraller, bir duvarı oluşturan tuğlalar gibidir. Kayaçlar minerallerin bir araya gelmesiyle oluşur."
+      ]
+    },
+    {
+      "id": "s04", "title": "Kayaçlar neden farklı?", "visual": "fen-kayac-maden-minerals",
+      "sentences": [
+        "Topladığın taşlara dikkatle baktın mı? Renkleri, sertlikleri ve parlaklıkları birbirinden farklıdır.",
+        "Bunun nedeni, yapılarındaki minerallerin farklı olmasıdır.",
+        "Örneğin granit adlı kayaçta gri, pembe ve siyah renkli farklı mineraller görebiliriz.",
+        "Kısacası kayaçların rengini, sertliğini ve parlaklığını içlerindeki mineraller belirler."
+      ]
+    },
+    {
+      "id": "s05", "title": "Kayaçlar parçalanır", "visual": "fen-kayac-maden-breaking",
+      "sentences": [
+        "Kayaçlar çok uzun zamanda küçük parçalara ayrılır.",
+        "Rüzgâr, yağmur ve akarsular kayaçları yavaş yavaş aşındırır.",
+        "Gece ile gündüz arasındaki sıcaklık farkı da kayaçların çatlamasına neden olur.",
+        "Böylece büyük kayalardan taşlar, çakıllar ve kum taneleri oluşur. Taşların büyüklüklerinin ve şekillerinin farklı olması bundandır."
+      ]
+    },
+    {
+      "id": "s06", "title": "Madenler", "visual": "fen-kayac-maden-ore",
+      "sentences": [
+        "Bazı kayaçlar ve mineraller insanlar için çok değerlidir.",
+        "Ekonomik değeri olan kayaç ve minerallere maden denir.",
+        "Madenler, maden ocaklarından çıkarılır.",
+        "Çıkarılan madenler fabrikalarda işlenerek eşyalara dönüşür. Bir eşyanın yapıldığı işlenmemiş maddeye ham madde denir.",
+        "Madenler çok uzun sürede oluşur ve tükenebilir. Bu yüzden onları tutumlu kullanmalı, geri dönüşüme önem vermeliyiz."
+      ]
+    },
+    {
+      "id": "s07", "title": "Bor ve mermer", "visual": "fen-kayac-maden-bor",
+      "sentences": [
+        "Ülkemiz maden bakımından zengin bir ülkedir.",
+        "Dünyadaki bor madeninin en büyük bölümü Türkiye'dedir.",
+        "Bor; ısıya dayanıklı cam, deterjan ve seramik yapımında, uzay ve havacılık teknolojisinde kullanılır.",
+        "Mermer ise binalarda, heykel ve süs eşyası yapımında kullanılan güzel bir kayaçtır. Ülkemizde çok mermer çıkarılır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Ülkemizin madenleri", "visual": "fen-kayac-maden-metals",
+      "sentences": [
+        "Ülkemizdeki diğer önemli madenlere de bakalım.",
+        "Bakır elektriği iyi iletir. Elektrik kablolarında ve mutfak eşyalarında kullanılır.",
+        "Demir; binaların, köprülerin, tren raylarının ve otomobillerin yapımında kullanılır.",
+        "Altın ve gümüş değerli madenlerdir. Takı yapımında ve elektronik aletlerde kullanılır.",
+        "Taş kömürü ve linyit ise yakıt olarak kullanılan madenlerdir. Isınmada ve elektrik üretiminde kullanılır."
+      ]
+    },
+    {
+      "id": "s09", "title": "Kayaçlar ham maddedir", "visual": "fen-kayac-maden-raw",
+      "sentences": [
+        "Kayaçlar da birçok eşyanın ham maddesidir.",
+        "Pencere camı ve cam bardaklar, kumun eritilmesiyle yapılır.",
+        "Porselen tabaklar ve tuğlalar kilden, çimento ise kireç taşından üretilir.",
+        "Kurşun kalemin ucundaki grafit ve eski ampullerdeki ince tungsten tel de yer kabuğundan gelir.",
+        "Ama tahta kaşık ağaçtan yapılır. Onun ham maddesi kayaç değildir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Dikkat, karıştırma!", "visual": "fen-kayac-maden-dikkat",
+      "sentences": [
+        "Dikkat! Bu konuda dört kavram sık karıştırılır.",
+        "Mineral, kayaçların yapısını oluşturan maddedir.",
+        "Kayaç, minerallerden oluşan kaya ve taş parçasıdır.",
+        "Maden, ekonomik değeri olan kayaç ya da mineraldir. Yani her kayaç bir maden değildir.",
+        "Fosil ise kayaçların içinde korunmuş, taşlaşmış canlı kalıntısıdır."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "fen-kayac-maden-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Yer kabuğunun kara tabakası kayaçlardan oluşur.",
+        "Kayaçlar minerallerden oluşur. Kayaçların birbirinden farklı olmasını mineraller sağlar.",
+        "Ekonomik değeri olan kayaç ve minerallere maden denir.",
+        "Bor, mermer, bakır, demir ve kömür gibi madenler ile kayaçlar, birçok eşyanın ham maddesidir.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Bir ya da birden fazla mineralden oluşan kaya ve taş parçalarına ne ad verilir?",
+      "options": ["Fosil", "Maden", "Kayaç", "Toprak"],
+      "answer": 2,
+      "explain": "Bir ya da birden fazla mineralden oluşan kaya ve taş parçalarına kayaç denir.",
+      "scene": "s03"
+    },
+    {
+      "question": "Elif'in piknikte topladığı taşların renklerinin farklı olmasının temel nedeni nedir?",
+      "options": ["Yapılarındaki minerallerin farklı olması", "Güneşte farklı süre kalmaları", "Yağmurda ıslanmaları", "Farklı büyüklükte olmaları"],
+      "answer": 0,
+      "explain": "Kayaçların rengini, sertliğini ve parlaklığını yapılarındaki mineraller belirler.",
+      "scene": "s04"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi kayaçların parçalanmasına neden olan etkenlerden değildir?",
+      "options": ["Rüzgâr", "Fosilleşme", "Akarsular", "Sıcaklık farkı"],
+      "answer": 1,
+      "explain": "Rüzgâr, akarsular, yağmur ve sıcaklık farkı kayaçları parçalar. Fosilleşme ise canlı kalıntılarının taşlaşmasıdır.",
+      "scene": "s05"
+    },
+    {
+      "question": "Yer kabuğundaki kayaçlardan maden olanların en temel özelliği nedir?",
+      "options": ["Sert olmaları", "Renkli olmaları", "Çok küçük olmaları", "Ekonomik değerlerinin olması"],
+      "answer": 3,
+      "explain": "Ekonomik değeri olan kayaç ve minerallere maden denir. Her kayaç maden değildir.",
+      "scene": "s06"
+    },
+    {
+      "question": "Dünyada en çok Türkiye'de bulunan ve ısıya dayanıklı cam yapımında kullanılan maden hangisidir?",
+      "options": ["Altın", "Bakır", "Bor", "Gümüş"],
+      "answer": 2,
+      "explain": "Dünyadaki bor madeninin en büyük bölümü ülkemizdedir. Bor; cam, deterjan ve seramik yapımında kullanılır.",
+      "scene": "s07"
+    },
+    {
+      "question": "Aşağıdaki eşyalardan hangisinin ham maddesi kayaç değildir?",
+      "options": ["Tahta kaşık", "Cam bardak", "Porselen tabak", "Bakır tencere"],
+      "answer": 0,
+      "explain": "Tahta kaşık ağaçtan yapılır. Cam kumdan, porselen kilden, bakır tencere ise bakır madeninden yapılır.",
+      "scene": "s09"
+    }
+  ]
+}

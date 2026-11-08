@@ -1,0 +1,165 @@
+{
+  "id": "fen-miknatis",
+  "title": "Mıknatısı Tanıyalım",
+  "course": "Fen Bilimleri",
+  "unit": "Kuvvetin Etkileri",
+  "kazanim": {
+    "code": "F.4.3.2.1, F.4.3.2.2, F.4.3.2.3, F.4.3.2.4",
+    "text": "Mıknatısı tanır ve kutupları olduğunu keşfeder. Mıknatısın etki ettiği maddeleri deney yaparak keşfeder. Mıknatısların günlük yaşamdaki kullanım alanlarına örnekler verir. Mıknatısların yeni kullanım alanları konusunda fikirlerini açıklar.",
+    "note": "MEB Fen Bilimleri Dersi Öğretim Programı (2018), 4. sınıf. Mıknatısın uyguladığı kuvvetin, temas gerektiren kuvvetlerden farklı olarak temas gerektirmediği vurgulanır."
+  },
+  "summary": "Mıknatısın kutuplarını, itme ve çekmeyi, hangi maddeleri çektiğini, dokunmadan etki etmesini ve günlük hayatta nerelerde kullanıldığını deneylerle öğren.",
+  "match": {"course": "Fen Bilimleri", "booklet": "Ünite 03", "keywords": ["mıknatıs", "kutup", "kutb", "manyetik", "manyetit", "pusula", "maglev", "temas gerektirmeyen", "kobalt"]},
+  "scenes": [
+    {
+      "id": "s01", "title": "Dökülen iğneler", "visual": "fen-miknatis-intro",
+      "sentences": [
+        "Merhaba! Terzi Ayşe Hanım'ın toplu iğneleri yere döküldü.",
+        "Tek tek toplamak çok uzun sürecekti. Ayşe Hanım bir mıknatıs aldı ve iğnelerin üzerinde gezdirdi.",
+        "İğneler bir anda mıknatısa yapıştı!",
+        "Mıknatıs iğneleri nasıl çekti? Haydi mıknatısları yakından tanıyalım."
+      ]
+    },
+    {
+      "id": "s02", "title": "Mıknatıs nedir?", "visual": "fen-miknatis-what",
+      "sentences": [
+        "Demir, nikel ve kobalt gibi maddeleri ve bunları içeren cisimleri çeken maddelere mıknatıs denir.",
+        "Doğada bulunan mıknatıs taşına manyetit denir.",
+        "İnsanlar mıknatısları farklı şekillerde de üretir.",
+        "Çubuk, at nalı, halka ve disk şeklinde mıknatıslar vardır.",
+        "Mıknatısın uyguladığı kuvvete manyetik kuvvet denir."
+      ]
+    },
+    {
+      "id": "s03", "title": "Mıknatısın kutupları", "visual": "fen-miknatis-poles",
+      "sentences": [
+        "Her mıknatısın iki kutbu vardır: kuzey kutbu ve güney kutbu.",
+        "Bu kutuplar, ekranda gördüğün gibi iki harfle gösterilir.",
+        "Mıknatısın çekme etkisi en çok kutuplarında, yani uçlarındadır.",
+        "Bir mıknatısı ataşlara yaklaştıralım. Ataşlar en çok uçlarda toplanır, ortada ise çok az ataş tutunur."
+      ]
+    },
+    {
+      "id": "s04", "title": "İtme ve çekme", "visual": "fen-miknatis-pushpull",
+      "sentences": [
+        "İki mıknatısı birbirine yaklaştırınca ne olur?",
+        "Mıknatısların zıt kutupları, yani kuzey ve güney kutupları birbirini çeker.",
+        "Aynı kutupları ise birbirini iter. İki kuzey kutbu da iki güney kutbu da birbirinden uzaklaşır.",
+        "Kısaca hatırlayalım: Zıt kutuplar çeker, aynı kutuplar iter."
+      ]
+    },
+    {
+      "id": "s05", "title": "Mıknatısı bölelim", "visual": "fen-miknatis-split",
+      "sentences": [
+        "Bir çubuk mıknatısı ortasından ikiye bölersek ne olur?",
+        "Her parça yine kuzey ve güney kutbu olan küçük bir mıknatıs olur.",
+        "Parçaları ne kadar küçültürsek küçültelim, her parçanın yine iki kutbu olur. Tek kutuplu mıknatıs olmaz.",
+        "Yani mıknatıs bölündüğünde mıknatıslık özelliğini kaybetmez."
+      ]
+    },
+    {
+      "id": "s06", "title": "Hangi maddeleri çeker?", "visual": "fen-miknatis-test",
+      "sentences": [
+        "Haydi bir deney yapalım. Masadaki eşyalara tek tek mıknatıs yaklaştıralım.",
+        "Demir çivi, ataş, toplu iğne ve nikel tel mıknatısa çekildi.",
+        "Kurşun kalem, silgi, plastik bardak, cam bilye ve kâğıt ise çekilmedi.",
+        "Dikkat! Her metal mıknatısa çekilmez. Altın, gümüş, bakır ve alüminyum mıknatısa çekilmez.",
+        "Mıknatıs; demir, nikel, kobalt ve bunları içeren maddeleri çeker."
+      ]
+    },
+    {
+      "id": "s07", "title": "Dokunmadan çeker", "visual": "fen-miknatis-nocontact",
+      "sentences": [
+        "Bir kapıyı açmak ya da topa vurmak için cisme dokunmamız gerekir. Bunlar temas gerektiren kuvvetlerdir.",
+        "Mıknatıs ise çivileri dokunmadan, uzaktan çekebilir.",
+        "Bu yüzden mıknatısın uyguladığı kuvvet, temas gerektirmeyen bir kuvvettir.",
+        "Mıknatıs kâğıt, cam ve su gibi maddelerin arkasından da etki eder. Mıknatıslı akvaryum sileceği bu sayede çalışır."
+      ]
+    },
+    {
+      "id": "s08", "title": "Mıknatıs nerelerde kullanılır?", "visual": "fen-miknatis-uses",
+      "sentences": [
+        "Mıknatıslar günlük hayatımızın birçok yerinde kullanılır.",
+        "Buzdolabı kapağının ve bazı çanta kapaklarının kapalı durmasını mıknatıslar sağlar.",
+        "Pusulanın iğnesi küçük bir mıknatıstır. Pusula, mıknatısların en eski kullanım alanlarından biridir.",
+        "Hoparlörlerde ve kulaklıklarda da mıknatıs bulunur.",
+        "Hurdalıklarda mıknatıslı vinçler demir atıkları ayırır. Hastanelerdeki emar cihazlarında da çok güçlü mıknatıslar vardır."
+      ]
+    },
+    {
+      "id": "s09", "title": "Dikkat!", "visual": "fen-miknatis-dikkat",
+      "sentences": [
+        "Dikkat! Mıknatıslarla ilgili sık yapılan hatalara bakalım.",
+        "Zıt kutuplar birbirini itmez, çeker. Birbirini iten, aynı kutuplardır.",
+        "Mıknatıs bütün metalleri çekmez. Örneğin altını, gümüşü ve bakırı çekmez.",
+        "Mıknatısın en güçlü yeri ortası değildir. Çekim gücü en çok kutuplardadır.",
+        "Ayrıca mıknatısları telefon, bilgisayar, televizyon ve banka kartlarından uzak tutmalıyız. Mıknatıs bu eşyalara zarar verebilir."
+      ]
+    },
+    {
+      "id": "s10", "title": "Yeni fikirler", "visual": "fen-miknatis-future",
+      "sentences": [
+        "Bilim insanları mıknatısların yeni kullanım alanlarını araştırıyor.",
+        "Maglev trenleri, mıknatısların itme ve çekme kuvvetiyle raylara değmeden, havada süzülerek ilerler.",
+        "Bu trenler raylara sürtünmediği için çok hızlı ve daha sessiz gider.",
+        "Sen de mıknatısla ilgili bir buluş düşünebilirsin. Örneğin dağılmayan mıknatıslı bir kalem kutusu ya da çivi tutan bir çekiç!",
+        "Fikrini çizerek ailene ve arkadaşlarına anlatabilirsin."
+      ]
+    },
+    {
+      "id": "s11", "title": "Özet", "visual": "fen-miknatis-summary",
+      "sentences": [
+        "Haydi öğrendiklerimizi özetleyelim.",
+        "Mıknatısın kuzey ve güney olmak üzere iki kutbu vardır. Çekim gücü en çok kutuplardadır.",
+        "Zıt kutuplar birbirini çeker, aynı kutuplar birbirini iter.",
+        "Mıknatıs demir, nikel ve kobaltı çeker. Uyguladığı kuvvet temas gerektirmez.",
+        "Mıknatıslar pusula, buzdolabı, hoparlör ve maglev treni gibi birçok yerde kullanılır.",
+        "Şimdi kısa bir testle neler öğrendiğine bakalım!"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Mıknatıslarla ilgili verilen bilgilerden hangisi doğrudur?",
+      "options": ["Zıt kutupları birbirini iter.", "Kuzey ve güney olmak üzere iki kutbu vardır.", "Bölününce mıknatıslık özelliğini kaybeder.", "Çekim gücü en çok ortasındadır."],
+      "answer": 1,
+      "explain": "Her mıknatısın kuzey ve güney olmak üzere iki kutbu vardır. Çekim gücü en çok kutuplardadır.",
+      "scene": "s03"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi mıknatıs tarafından çekilir?",
+      "options": ["Tahta kaşık", "Cam bilye", "Porselen fincan", "Demir çivi"],
+      "answer": 3,
+      "explain": "Mıknatıs demir, nikel, kobalt ve bunları içeren cisimleri çeker. Tahta, cam ve porselen çekilmez.",
+      "scene": "s06"
+    },
+    {
+      "question": "Mıknatıs aşağıdaki madenlerden hangisini çekmez?",
+      "options": ["Nikel", "Altın", "Kobalt", "Demir"],
+      "answer": 1,
+      "explain": "Her metal mıknatısa çekilmez. Altın, gümüş ve bakır mıknatısa çekilmez.",
+      "scene": "s06"
+    },
+    {
+      "question": "İki mıknatısın güney kutupları birbirine yaklaştırılırsa ne olur?",
+      "options": ["Birbirini iter.", "Birbirini çeker.", "Hiçbir şey olmaz.", "Mıknatıslar bölünür."],
+      "answer": 0,
+      "explain": "Mıknatısların aynı kutupları birbirini iter, zıt kutupları birbirini çeker.",
+      "scene": "s04"
+    },
+    {
+      "question": "Bir çubuk mıknatıs ortasından ikiye bölünürse ne olur?",
+      "options": ["Her parça tek kutuplu olur.", "Mıknatıslık özelliği kaybolur.", "Her parça iki kutuplu bir mıknatıs olur.", "Yalnızca bir parça mıknatıs olarak kalır."],
+      "answer": 2,
+      "explain": "Mıknatıs bölündüğünde her parça yine kuzey ve güney kutbu olan bir mıknatıs olur.",
+      "scene": "s05"
+    },
+    {
+      "question": "Terzinin toplu iğneleri mıknatısla toplaması, mıknatısın hangi özelliğine örnektir?",
+      "options": ["Uyguladığı kuvvetin temas gerektirmemesine", "Her maddeyi çekmesine", "Aynı kutuplarının birbirini çekmesine", "Yalnızca dokunduğu cisimleri çekmesine"],
+      "answer": 0,
+      "explain": "Mıknatıs iğnelere dokunmadan da onları çeker. Uyguladığı kuvvet temas gerektirmeyen bir kuvvettir.",
+      "scene": "s07"
+    }
+  ]
+}
