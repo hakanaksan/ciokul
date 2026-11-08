@@ -9,7 +9,8 @@ async function fetchBadges(force = false) {
   return badgesCache;
 }
 
-const BADGE_TIERS = ['', 'bronze', 'silver', 'gold'];
+const BADGE_TIERS = ['', 'bronze', 'silver', 'gold', 'platinum', 'diamond'];
+const BADGE_TIER_NAMES = ['Bronz', 'Gümüş', 'Altın', 'Platin', 'Elmas'];
 
 function badgeTierClass(b) {
   return b.tier ? BADGE_TIERS[b.tier] : 'locked';
@@ -56,7 +57,7 @@ function badgeNextGoals(badges, count = 3) {
 }
 
 function badgeGoalMarkup(b) {
-  const nextTier = ['Bronz', 'Gümüş', 'Altın'][b.tier] || '';
+  const nextTier = BADGE_TIER_NAMES[b.tier] || '';
   return `<button type="button" class="badge-goal" data-badge-id="${esc(b.id)}">
       <span class="badge-goal-icon ${badgeTierClass(b)}">${b.icon}</span>
       <span class="badge-goal-text"><strong>${esc(b.title)}</strong><small>${esc(b.desc)}</small>${badgeProgressMarkup(b)}<small class="badge-goal-count">${esc(b.progress)} · ${nextTier} basamağı</small></span>
@@ -96,7 +97,7 @@ function badgesWidgetMarkup(data, isParent = false) {
 
 function badgeDetailOpen(b) {
   const goals = b.goals.map((goal, i) => {
-    const name = ['Bronz', 'Gümüş', 'Altın'][i];
+    const name = BADGE_TIER_NAMES[i];
     return `<li class="${i < b.tier ? 'reached ' + BADGE_TIERS[i + 1] : ''}"><span>${name}</span><strong>${goal}</strong>${i < b.tier ? '<em>✓ kazanıldı</em>' : ''}</li>`;
   }).join('');
   const wrap = document.createElement('div');

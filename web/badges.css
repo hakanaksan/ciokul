@@ -1,5 +1,5 @@
 /* Badges: levels, tier colours, goals, collection page and the celebration. Loaded after work.css. */
-:root{--tier-bronze:#c27a3a;--tier-bronze-bg:#fbeee2;--tier-silver:#8e9aa6;--tier-silver-bg:#eef2f5;--tier-gold:#e0a800;--tier-gold-bg:#fff6cc}
+:root{--tier-bronze:#c27a3a;--tier-bronze-bg:#fbeee2;--tier-silver:#8e9aa6;--tier-silver-bg:#eef2f5;--tier-gold:#e0a800;--tier-gold-bg:#fff6cc;--tier-platinum:#2f9e94;--tier-platinum-bg:#e3f6f3;--tier-diamond:#6d5dfc;--tier-diamond-bg:#eeecff}
 
 .badges-showcase-card .badges-header .btn{white-space:nowrap}
 .badges-subtitle{margin:6px 0 2px;font-size:16px}
@@ -91,3 +91,15 @@
 
 body.high-contrast .badge-level-card,body.high-contrast .badge-goal,body.high-contrast .badge-card{border:2px solid #17261d;background:#fff}
 @media(max-width:600px){.badges-showcase-card .badges-header .btn{width:100%}.badge-level-head strong{font-size:18px}}
+
+/* Platin and Elmas, the 4th and 5th tiers */
+.badge-medals i.platinum{background:var(--tier-platinum);border-color:var(--tier-platinum)}
+.badge-medals i.diamond{background:var(--tier-diamond);border-color:var(--tier-diamond)}
+.badge-item.earned.tier-platinum .badge-icon-wrap,.badge-goal-icon.platinum,.badge-detail-icon.platinum{background:var(--tier-platinum-bg);border-color:var(--tier-platinum)}
+.badge-item.earned.tier-diamond .badge-icon-wrap,.badge-goal-icon.diamond,.badge-detail-icon.diamond{background:var(--tier-diamond-bg);border-color:var(--tier-diamond)}
+.badge-item.earned.tier-platinum{border-color:var(--tier-platinum);background:#f5fcfb}
+.badge-item.earned.tier-diamond{border-color:var(--tier-diamond);background:#f8f7ff}
+.badge-card.tier-platinum{border-color:var(--tier-platinum);background:#f7fdfc}.badge-card.tier-platinum .badge-card-icon{background:var(--tier-platinum-bg);border-color:var(--tier-platinum)}
+.badge-card.tier-diamond{border-color:var(--tier-diamond);background:#faf9ff}.badge-card.tier-diamond .badge-card-icon{background:var(--tier-diamond-bg);border-color:var(--tier-diamond)}
+.badge-detail-goals li.reached.platinum{background:var(--tier-platinum-bg);border-color:var(--tier-platinum)}
+.badge-detail-goals li.reached.diamond{background:var(--tier-diamond-bg);border-color:var(--tier-diamond)}

@@ -1,7 +1,7 @@
 """Student badges: tiered achievements computed from the work already in the database.
 
-Each badge has one to three goals (Bronz, Gümüş, Altın). Every reached goal gives stars;
-stars add up to a level. Which tiers the student has already celebrated is kept in
+Each badge has up to five goals (Bronz, Gümüş, Altın, Platin, Elmas). Every reached goal gives
+stars; stars add up to a level. Video lesson quizzes count like tests (with their best score). Which tiers the student has already celebrated is kept in
 settings['badges_seen'] so a new tier is announced once, on any device.
 """
 
@@ -12,14 +12,16 @@ from collections import defaultdict
 from datetime import date, timedelta
 
 import database
+import lessons
 import reading_module
 
-TIER_NAMES = ("Bronz", "Gümüş", "Altın")
+TIER_NAMES = ("Bronz", "Gümüş", "Altın", "Platin", "Elmas")
 CATEGORIES = {
     "habit": "Çalışma alışkanlığı",
     "success": "Başarı",
     "courses": "Dersler",
     "reading": "Okuma",
+    "lessons": "Video Dersler",
     "growth": "Gelişim",
 }
 COURSES = {
@@ -31,34 +33,39 @@ COURSES = {
     "course_religion": "Din Kültürü ve Ahlak Bilgisi",
 }
 # (category, id, icon, title, description with {goal}, goals)
+# The first three goals of a badge never change, so nobody loses a tier they already have.
 BADGES = [
     ("habit", "first_step", "🌟", "İlk Adım", "İlk çalışmanı teslim et.", (1,)),
-    ("habit", "hard_worker", "🐝", "Çalışkan Arı", "{goal} çalışma teslim et.", (5, 15, 30)),
-    ("habit", "streak", "🔥", "Ateşli Seri", "Art arda {goal} gün çalışma teslim et.", (3, 7, 14)),
-    ("habit", "week_star", "📅", "Haftanın Yıldızı", "Aynı hafta içinde {goal} çalışma teslim et.", (3, 5, 7)),
-    ("habit", "on_time", "🎯", "Hedefi Tutturan", "{goal} çalışmayı hedef tarihinde ya da daha önce teslim et.", (1, 5, 15)),
-    ("habit", "early_bird", "🐦", "Erken Kuş", "{goal} çalışmayı hedef tarihten en az bir gün önce teslim et.", (1, 5, 10)),
-    ("habit", "weekend", "🏖️", "Hafta Sonu Kahramanı", "Hafta sonu {goal} çalışma teslim et.", (1, 5, 10)),
-    ("success", "perfect", "💯", "Yıldız Başarı", "{goal} testin bütün sorularını doğru yap.", (1, 3, 10)),
-    ("success", "sharpshooter", "🏹", "Keskin Nişancı", "{goal} testte soruların en az %80'ini doğru yap.", (1, 5, 15)),
-    ("success", "correct_hunter", "✅", "Doğru Cevap Avcısı", "Toplam {goal} soruyu doğru yanıtla.", (25, 100, 300)),
-    ("success", "patient", "🐢", "Sabırlı Düşünür", "{goal} soruda en az 2 dakika düşünüp doğru yanıtla.", (1, 5, 15)),
-    ("success", "comeback", "💪", "Hatasından Öğrenen", "Önce yanlış yaptığın {goal} soruyu sonra doğru yap.", (1, 5, 15)),
-    ("courses", "course_math", "📐", "Matematik Kaşifi", "{goal} Matematik testi tamamla.", (1, 3, 6)),
-    ("courses", "course_science", "🔬", "Genç Bilim İnsanı", "{goal} Fen Bilimleri testi tamamla.", (1, 3, 6)),
-    ("courses", "course_turkish", "✏️", "Kelime Ustası", "{goal} Türkçe testi tamamla.", (1, 3, 6)),
-    ("courses", "course_social", "🌍", "Gezgin Tarihçi", "{goal} Sosyal Bilgiler testi tamamla.", (1, 3, 6)),
-    ("courses", "course_english", "🗣️", "İngilizce Yıldızı", "{goal} İngilizce testi tamamla.", (1, 3, 6)),
-    ("courses", "course_religion", "🕊️", "Değerler Elçisi", "{goal} Din Kültürü testi tamamla.", (1, 3, 6)),
-    ("courses", "all_rounder", "🎨", "Çok Yönlü", "{goal} farklı dersten test tamamla.", (3, 6)),
-    ("reading", "bookworm", "📖", "Kitap Kurdu", "{goal} okuma çalışması tamamla.", (1, 5, 10)),
-    ("reading", "reading_master", "🏅", "Okuma Ustası", "{goal} okuma çalışmasından tam puan al.", (1, 3, 5)),
-    ("growth", "mistake_hunter", "🛡️", "Hata Avcısı", "Hata defterinden {goal} soruyu çözüldü olarak işaretle.", (1, 10, 25)),
-    ("growth", "honest", "🤔", "Dürüst Düşünür", "{goal} soruda “Bu sorudan emin değilim” işaretini kullan.", (1, 5, 15)),
-    ("growth", "lesson_explorer", "🎬", "Video Dersi Kâşifi", "{goal} video dersi izleyip mini testini çöz.", (1, 3, 5)),
+    ("habit", "hard_worker", "🐝", "Çalışkan Arı", "{goal} çalışma teslim et.", (5, 15, 30, 60, 100)),
+    ("habit", "streak", "🔥", "Ateşli Seri", "Art arda {goal} gün çalışma teslim et.", (3, 7, 14, 21, 30)),
+    ("habit", "week_star", "📅", "Haftanın Yıldızı", "Aynı hafta içinde {goal} çalışma teslim et.", (3, 5, 7, 10, 14)),
+    ("habit", "on_time", "🎯", "Hedefi Tutturan", "{goal} çalışmayı hedef tarihinde ya da daha önce teslim et.", (1, 5, 15, 30, 50)),
+    ("habit", "early_bird", "🐦", "Erken Kuş", "{goal} çalışmayı hedef tarihten en az bir gün önce teslim et.", (1, 5, 10, 20, 35)),
+    ("habit", "weekend", "🏖️", "Hafta Sonu Kahramanı", "Hafta sonu {goal} çalışma teslim et.", (1, 5, 10, 20, 35)),
+    ("success", "perfect", "💯", "Yıldız Başarı", "{goal} testin bütün sorularını doğru yap (video ders testleri de sayılır).", (1, 3, 10, 20, 35)),
+    ("success", "sharpshooter", "🏹", "Keskin Nişancı", "{goal} testte soruların en az %80'ini doğru yap (video ders testleri de sayılır).", (1, 5, 15, 30, 50)),
+    ("success", "correct_hunter", "✅", "Doğru Cevap Avcısı", "Toplam {goal} soruyu doğru yanıtla (video ders testleri de sayılır).", (25, 100, 300, 600, 1000)),
+    ("success", "patient", "🐢", "Sabırlı Düşünür", "{goal} soruda en az 2 dakika düşünüp doğru yanıtla.", (1, 5, 15, 30, 50)),
+    ("success", "comeback", "💪", "Hatasından Öğrenen", "Önce yanlış yaptığın {goal} soruyu sonra doğru yap.", (1, 5, 15, 30, 50)),
+    ("courses", "course_math", "📐", "Matematik Kaşifi", "{goal} Matematik testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
+    ("courses", "course_science", "🔬", "Genç Bilim İnsanı", "{goal} Fen Bilimleri testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
+    ("courses", "course_turkish", "✏️", "Kelime Ustası", "{goal} Türkçe testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
+    ("courses", "course_social", "🌍", "Gezgin Tarihçi", "{goal} Sosyal Bilgiler testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
+    ("courses", "course_english", "🗣️", "İngilizce Yıldızı", "{goal} İngilizce testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
+    ("courses", "course_religion", "🕊️", "Değerler Elçisi", "{goal} Din Kültürü testi ya da video ders testi tamamla.", (1, 3, 6, 10, 15)),
+    ("courses", "all_rounder", "🎨", "Çok Yönlü", "{goal} farklı dersten test ya da video ders testi tamamla.", (3, 6)),
+    ("reading", "bookworm", "📖", "Kitap Kurdu", "{goal} okuma çalışması tamamla.", (1, 5, 10, 20, 35)),
+    ("reading", "reading_master", "🏅", "Okuma Ustası", "{goal} okuma çalışmasından tam puan al.", (1, 3, 5, 10, 20)),
+    ("lessons", "lesson_explorer", "🎬", "Video Dersi Kâşifi", "{goal} video dersi izleyip mini testini çöz.", (1, 3, 5, 10, 20)),
+    ("lessons", "lesson_champion", "🏆", "Video Testi Şampiyonu", "{goal} video ders testinden tam puan al.", (1, 3, 6, 12, 20)),
+    ("lessons", "lesson_courses", "🧭", "Her Dersten Bir Video", "{goal} farklı dersin video ders testini çöz.", (2, 4, 6)),
+    ("growth", "mistake_hunter", "🛡️", "Hata Avcısı", "Hata defterinden {goal} soruyu çözüldü olarak işaretle.", (1, 10, 25, 50, 100)),
+    ("growth", "honest", "🤔", "Dürüst Düşünür", "{goal} soruda “Bu sorudan emin değilim” işaretini kullan.", (1, 5, 15, 30, 50)),
 ]
+# Existing level names keep their thresholds; the new tiers make room for higher levels.
 LEVELS = [(0, "Çırak"), (5, "Meraklı"), (12, "Kaşif"), (22, "Bilgin"), (35, "Usta"),
-          (55, "Uzman"), (80, "Şampiyon"), (110, "Efsane")]
+          (55, "Uzman"), (80, "Şampiyon"), (110, "Kahraman"), (150, "Yıldız"), (200, "Dâhi"),
+          (260, "Bilge"), (330, "Efsane")]
 
 
 def _days(stamps):
@@ -114,11 +121,18 @@ def _values(db):
             WHERE a.submitted_at IS NOT NULL GROUP BY a.id""").fetchall()
     graded = [t for t in tests if t["total"] and t["reviewed"] == t["total"]]
 
+    quizzes = [q for q in lessons.quiz_results(db)]
+    lesson_full = sum(1 for q in quizzes if q["best"] == q["total"])
+    lesson_80 = sum(1 for q in quizzes if q["best"] * 5 >= q["total"] * 4)
+    for q in quizzes:
+        course_tests[q["course"]] += 1
+
     full_reading_answers = """FROM reading_reviews v JOIN reading_assignments a ON a.id = v.assignment_id
             JOIN reading_questions q ON q.section_id = a.section_id AND q.number = v.number
             WHERE v.score = q.max_score"""
     correct_total = (db.execute("SELECT COUNT(*) FROM reviews WHERE grade = 'correct'").fetchone()[0]
-                     + db.execute(f"SELECT COUNT(*) {full_reading_answers}").fetchone()[0])
+                     + db.execute(f"SELECT COUNT(*) {full_reading_answers}").fetchone()[0]
+                     + sum(q["best"] for q in quizzes))
     patient = (db.execute("""SELECT COUNT(*) FROM responses r JOIN reviews v
                 ON v.assignment_id = r.assignment_id AND v.question_id = r.question_id
                 WHERE r.duration_seconds >= 120 AND v.grade = 'correct'""").fetchone()[0]
@@ -159,8 +173,8 @@ def _values(db):
         "on_time": sum(1 for g in gaps if g >= 0),
         "early_bird": sum(1 for g in gaps if g >= 1),
         "weekend": sum(1 for day in days if day.weekday() >= 5),
-        "perfect": sum(1 for t in graded if t["correct"] == t["total"]),
-        "sharpshooter": sum(1 for t in graded if t["correct"] * 5 >= t["total"] * 4),
+        "perfect": sum(1 for t in graded if t["correct"] == t["total"]) + lesson_full,
+        "sharpshooter": sum(1 for t in graded if t["correct"] * 5 >= t["total"] * 4) + lesson_80,
         "correct_hunter": correct_total,
         "patient": patient,
         "comeback": len(recovered),
@@ -169,7 +183,9 @@ def _values(db):
         "reading_master": reading_full,
         "mistake_hunter": db.execute("SELECT COUNT(*) FROM mistake_resolutions").fetchone()[0],
         "honest": db.execute("SELECT COUNT(*) FROM study_reflections WHERE uncertain = 1").fetchone()[0],
-        "lesson_explorer": db.execute("SELECT COUNT(*) FROM lesson_progress WHERE quiz_total IS NOT NULL").fetchone()[0],
+        "lesson_explorer": len(quizzes),
+        "lesson_champion": lesson_full,
+        "lesson_courses": len({q["course"] for q in quizzes}),
     }
     values.update({badge: course_tests.get(course, 0) for badge, course in COURSES.items()})
     return values, {"current": current_streak, "best": best_streak}
@@ -204,7 +220,7 @@ def calculate(db):
             "goals": list(goals), "value": value, "tier": tier, "maxTier": len(goals),
             "tierName": TIER_NAMES[tier - 1] if tier else None,
             "nextGoal": next_goal, "earned": tier > 0,
-            # The n-th tier gives n stars (Bronz 1, Gümüş 2, Altın 3).
+            # The n-th tier gives n stars (Bronz 1, Gümüş 2, Altın 3, Platin 4, Elmas 5).
             "stars": tier * (tier + 1) // 2,
             "progress": f"{min(value, next_goal)}/{next_goal}" if next_goal else "Tamamlandı",
         }
